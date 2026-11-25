@@ -188,6 +188,10 @@ public import PercLib.CriticalLRP.Analysis.Lemma_I_4_22
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_5_lt
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_5
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6
+public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Driver.Help
+public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Driver.TwoDrivers
+public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Driver.Driver
+public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Driver.Audit
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Obstruction
 public import PercLib.CriticalLRP.Analysis.SizeBiasedMGF
 public import PercLib.CriticalLRP.Analysis.WeakKernels

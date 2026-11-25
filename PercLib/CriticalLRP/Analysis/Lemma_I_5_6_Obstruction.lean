@@ -37,7 +37,7 @@ hypothesis is genuinely used.
 -/
 module
 
-public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6
+public import PercLib.CriticalLRP.Analysis.Lemma_I_5_6_Driver.Driver
 
 /-! Why regular variation and log-integrability alone cannot discard the second driver. -/
 

@@ -6,6 +6,14 @@ explicitly use a measurable second error tending to zero. The source proof's
 arbitrary regularly varying replacement driver may be discarded without
 comparing its divergent integral against the original driver's integral.
 
+`Lemma_I_5_6_Driver` supplies the corresponding positive interface.
+`lemma_I_5_6_of_driver` and its logarithmic corollary absorb a replacement
+driver H when H/h tends to one; its ratio of divergent interval integrals
+therefore tends to one as well. The earlier two-error theorems are recovered
+as consequences (`lemma_I_5_6_of_errors_of_driver` and its log form), with a
+standalone audit certifying the same conclusions. This is a second-driver
+replacement, not an assertion that the second error is absent.
+
 `Analysis/Lemma_I_5_6_Obstruction` proves the following negative statement in
 Lean. Take `a=1`, zero homogeneous error, `h(r)=r`, `H(r)=2r−3`, and
 `f(r)=2r log r + 3`. Then
