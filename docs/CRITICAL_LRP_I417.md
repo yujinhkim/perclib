@@ -161,6 +161,25 @@ Only the base marked moment remains unevaluated there. For `q ≥ 3`, a
 `q+1`-terminal tree-graph decomposition is needed; the three-terminal expansion
 does not extend merely by repetition. No general-`q` proof is claimed.
 
+## The fixed chain-witness cover fails at `q = 3`
+
+`I417/Fresh/Obstruction` proves `ds_no_chainSpider`: on the six-edge double star
+`0–1–{3,4}` and `0–2–{5,6}`, for every spine vector `u : Fin 4 → Fin 7` and
+every injective terminal assignment into `{3,4,5,6}`, the four spine connections
+and four leg connections have no pairwise edge-disjoint witnesses. Here `3,4,5`
+are the three labelled arms and `6` is the mark-connected terminal. The companion
+`ds_hubEvent` proves that all four arms are connected in that same configuration.
+
+Each separated double-star cut forces its unique edge into a connection witness.
+Pairwise disjointness therefore makes each of the six cuts serve at most one of
+the eight requirements. The finite proof `chainSepX_ge_seven` checks all
+`7^4 · 4!` spine/terminal assignments and gives a separation count at least seven.
+This contradiction rules out the fixed configurationwise cover that would
+justify a chain monomial directly by BK. It does **not** prove or refute
+`FreshCombBound π 3`, exclude other upper-bound arguments, or change the status
+of Lemma I.4.17. The finite case analysis uses ordinary `decide`, not
+`native_decide`; `ds_no_chainSpider` has only the standard axioms.
+
 ## Audits and remaining work
 
 `I417/Nonnegative/Audit.lean`, `I417/Audit.lean`, and `I417Example/Audit.lean`
@@ -170,6 +189,6 @@ with the strict warning settings and all exported declarations passed the global
 axiom audit.
 
 Still open are the rooted-tree bound on `I417Gen.jointPow`, the fresh tree
-expansion for `q ≥ 2`, and the evaluation as a finite sum of
+expansion for `q ≥ 3`, and the evaluation as a finite sum of
 `C_{p,q,ℓ} T^ℓ(x,y)(E|K|)^(2p+2q+1−ℓ)` with universal integer constants. The full
 upper diagram bound in Lemma I.4.17 is not proved.

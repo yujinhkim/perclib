@@ -121,6 +121,9 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Audit
 public import PercLib.CriticalLRP.Correlation.I417Example.Defs
 public import PercLib.CriticalLRP.Correlation.I417Example.BK
 public import PercLib.CriticalLRP.Correlation.I417Example.Branch

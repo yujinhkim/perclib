@@ -131,9 +131,13 @@ fresh-side diagram sum of Lemma I.4.17 for `q` arms, as the sum of
 
 * `freshChainBound` — the general chain of hubs `w = v 0, v 1, …, v (q+1)`, each consecutive pair
   joined by one two-point factor, each of the `q+1` arm levels carrying either a free arm
-  (`hubArmSum`) or the I.4.17 arm `y` (`τ(·,y)`).  This is the family that covers every
-  configuration; a level may stay put (`v (i+1) = v i`, `τ(v,v) = 1`), which is what lets several
-  arms hang off one hub.  The monomial has `2q + 2` two-point factors against the printed
+  (`hubArmSum`) or the I.4.17 arm `y` (`τ(·,y)`).  The direct configurationwise cover is proved
+  at `q = 1` and `q = 2`.  It does not extend in the same form to `q = 3`:
+  `Correlation/I417/Fresh/Obstruction` constructs a six-edge double star on which the four-arm
+  event holds but the eight spine-and-leg requirements have no pairwise edge-disjoint witnesses.
+  This does not refute `FreshCombBound π 3`, since an upper bound need not use that particular
+  cover.  A level may stay put (`v (i+1) = v i`, `τ(v,v) = 1`), which lets several arms hang off
+  one hub.  The monomial has `2q + 2` two-point factors against the printed
   fresh-side diagram's `2q + 1` edges: the extra factor is the loss in allowing the `y`-slot at
   every level, and no arm is ever dropped, so no unrestricted vertex sum appears;
 * `firstHubBound` — the single-hub diagram with the mark `w` as spine, which is the shape available
