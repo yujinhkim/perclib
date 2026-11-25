@@ -32,9 +32,29 @@ finite-vertex test graph.
 The equality case at zero opening probabilities checks the exact exclusion and
 window normalizations. It is not a lattice sharpness computation.
 
+## Case 2 (`d = 3α`, hydrodynamic condition)
+
+`VolumeMoments/HigherMoments/I420Case2` proves the cutoff-model
+Cauchy–Schwarz comparison. `jointMoment_le_cs` uses ENNReal Hölder and
+preserves infinite moments. `jointMoment_le_of_bounds` inserts (I.4.19) at
+order `2p+2` and universal tightness `E[|K∩B|²] ≤ M_r E|K|`. The resulting
+factor is `√(C (M₂/M₁)^(2p+1) M₁) √(M_r M₁)`.
+
+`case2_decorrelation_error` and `jointUpper_isLittleO` compare that factor to
+`|B_r| (M₂/M₁)^(p−1) M₁²` at `d = 3α`. The account uses both sides of
+`E|K| ≍ r^α`, `M₂/M₁ ≤ γ (E|K|)²`, `M_r = o(r^((d+α)/2))`, and the actual
+Lemma I.4.6 ball-volume asymptotic. They remain explicit inputs except the
+last two, whose definition of `Hydro` and `M.ball_count` are instantiated.
+
+The earlier BK/FKG Case 1 discrepancy supplies the identification of the
+mixed-window moment with the excluded-moment discrepancy needed in the final
+application, but doesn't supply (I.4.19) at order `2p+2`, universal-tightness,
+or moment–asymptotic inputs. This is therefore the Case 2 error estimate, not
+an unconditional second-induction or sharpness result.
+
 ## What is not closed
 
-- Case 2 and Case 3 require different decorrelation routes.
+- Case 3 requires the triangle-condition decorrelation route.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
   must be derived from the source model.

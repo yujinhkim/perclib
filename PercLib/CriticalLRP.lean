@@ -28,6 +28,12 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case1.Reductio
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case1.Bridge
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case1.Sharpness
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case1.Audit
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Scalar
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Assembly
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Comparator
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Audit
 public import PercLib.CriticalLRP.Analysis.Route3.Defs
 public import PercLib.CriticalLRP.Analysis.Route3.Sums
 public import PercLib.CriticalLRP.Analysis.Route3.Main
