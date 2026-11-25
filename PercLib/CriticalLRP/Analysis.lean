@@ -181,6 +181,9 @@ public import PercLib.CriticalLRP.Analysis.RVInversePotter
 public import PercLib.CriticalLRP.Analysis.GeneralInverse
 public import PercLib.CriticalLRP.Analysis.KaramataTail
 public import PercLib.CriticalLRP.Analysis.Lemma_I_4_21
+public import PercLib.CriticalLRP.Analysis.Lemma_I_4_21_Signed.I421Signed
+public import PercLib.CriticalLRP.Analysis.Lemma_I_4_21_Signed.CrossCheck
+public import PercLib.CriticalLRP.Analysis.Lemma_I_4_21_Signed.Audit
 public import PercLib.CriticalLRP.Analysis.Lemma_I_4_22
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_5_lt
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_5
