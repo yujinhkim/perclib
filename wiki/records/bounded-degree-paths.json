@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "bounded-degree-paths",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 16
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 3,
+      "label": "Positive threshold from bounded-degree paths",
+      "locator": "S001 · Chapter 1 · source lines 164–175, lower-bound part only",
+      "relationship": "Partial proof coverage with explicit low-degree cases",
+      "status": "pending",
+      "note": "8WML and YP44 cover the path-counting lower-bound mechanism and additionally bound susceptibility. The planar upper-bound half of S001, beginning at line 177, is not proved here."
+    },
+    {
+      "source": "perclib-bounded-degree",
+      "order": 0,
+      "label": "Bounded-degree simple paths and nonpercolation",
+      "locator": "Named statement start lines in the pinned source: 24, 93, 108, 128, 146, 158, 198, 217, 246, 263, 278",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "8WML supplies finite continuation-list covers, injectivity of path lists, the path count and finite-cylinder probability bound. These facts do not need ambient countability or off-host zero probabilities; the explanation distinguishes that scope from subsequent whole-cluster claims. Local finiteness gives finite bounded-walk balls and simple paths of every finite length in an infinite cluster. The source proves root and simultaneous nonpercolation using these facts, countable host containment and either natural or real degree subtraction. YP44 additionally sums path bounds for susceptibility; that conclusion is not an exported theorem of this source. The lattice source takes its degree bound as an input. Degree-zero and degree-one endpoint cases are included."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

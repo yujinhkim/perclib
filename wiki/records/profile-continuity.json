@@ -1,0 +1,59 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "profile-continuity",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 12
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-finite-cylinders",
+      "order": 0,
+      "label": "Finite cylinders",
+      "locator": "Named statement start lines in the pinned source: 32, 38, 56, 60",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "ZNMQ supplies the arbitrary-index all-open formula, its singleton and mixed open/closed forms. The target proposition is a packaging of the same all-open statement."
+    },
+    {
+      "source": "perclib-finite-expectations",
+      "order": 0,
+      "label": "Finite product expectations",
+      "locator": "Named statement start lines in the pinned source: 37, 59, 68, 78, 96",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "ZNMQ supplies full finite configuration masses, the real weighted expectation, restriction pushforward and cylinder expectation. Its empty and deterministic two-coordinate examples retain the source witnesses."
+    },
+    {
+      "source": "perclib-finite-continuity",
+      "order": 0,
+      "label": "Finite profile continuity",
+      "locator": "Named statement start lines in the pinned source: 23, 31, 48, 60, 69, 76, 91, 96, 102",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "ZNMQ supplies event sums and finite restriction; RA0Z supplies continuity and pointwise-limit consequences, including finite-domain connectivity and endpoint profiles. The source uses arbitrary filters, covered by topological continuity rather than only sequential continuity. RGN6 and ARYU are separate expository extensions, not claims about this module."
+    },
+    {
+      "source": "perclib-monotone-coupling",
+      "order": 0,
+      "label": "Ordered Bernoulli couplings",
+      "locator": "Named statement start lines in the pinned source: 22, 62, 104, 115, 124",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "6B9V supplies the three-state coordinate construction, countable product coupling, increasing-event comparison, extended nonnegative integral comparison and the countable bond specialization. Countability is retained for the joint order event; equality and extreme profiles are included."
+    },
+    {
+      "source": "perclib-product-law",
+      "order": 0,
+      "label": "Canonical Bernoulli configuration law",
+      "locator": "Named statement start lines in the pinned source: 41, 47, 59, 66, 75",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The introductory law construction explains the canonical product definition, weighted two-point coordinate measures, measurable identification of binary functions and open sets, and homogeneous sampling from a fixed subset. The probability-measure instance is discussed but is not counted among explicit definitions/theorems. These identities hold for arbitrary coordinate sets. The original product-model definition is linked, not duplicated or edited. The source retains its upstream attribution; no Lean source is copied."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

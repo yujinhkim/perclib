@@ -1,0 +1,61 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "branching-processes",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 2
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 30,
+      "label": "Galton–Watson extinction and critical estimates",
+      "locator": "Chapter 2 · Branching processes · source lines 305–377",
+      "relationship": "Source exposition with explicit correction cases",
+      "status": "pending",
+      "note": "Includes the deterministic critical exception (N-ERR-03) and periodic-support caveat (N-ERR-04). N9P5 gives the varying-law survival asymptotic under uniformly integrable squared offspring; DGVA adds the joint positive-field transform limit under the same moment control, allowing means on either side."
+    },
+    {
+      "source": "notes",
+      "order": 52,
+      "label": "Near-critical survival in an offspring-thinning family",
+      "locator": "Chapter 2 · near-critical expansion · source lines 333–346",
+      "relationship": "Precise family specialization",
+      "status": "pending",
+      "note": "A fixed finite-second-moment potential offspring law is independently thinned; the proof does not claim uniform expansions for arbitrary varying offspring distributions."
+    },
+    {
+      "source": "notes",
+      "order": 61,
+      "label": "Population on survival at a critical generation",
+      "locator": "Chapter 2, branching-process and binary-tree discussion; Chapter 3, lines 750–794",
+      "relationship": "Related finite-variance population theorem",
+      "status": "pending",
+      "note": "AYHV proves Yaglom’s exponential limit and conditional uniform integrability. It concerns generation population rather than total progeny, and needs no aperiodicity or third-moment hypothesis."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "DGVA",
+      "proof_uses": [
+        "8TFY",
+        "BFM4",
+        "N9P5"
+      ],
+      "reason": "Root decomposition and the critical fixed-point criterion, with the uniform generating-function expansion proved in N9P5; the new comparison permits either sign of the mean displacement."
+    },
+    {
+      "order": 1,
+      "tag": "AYHV",
+      "proof_uses": [
+        "8WO7",
+        "UKY4"
+      ],
+      "reason": "The finite-variance generating-function recursion and the survival asymptotic give the conditional Laplace limit; exact generation means supply uniform integrability."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+---
+{
+  "id": "critical-exponents",
+  "title": "Critical exponent conventions",
+  "subtitle": "Power laws, logarithmic limits and spatial scales",
+  "kind": "concept",
+  "category": "General theory",
+  "summary": "A logarithmic exponent records a leading power and can coexist with unbounded logarithmic corrections. The order parameter, susceptibility, volume tail, Euclidean arm and two-point function use different limits and conventions.",
+  "context": ["The parameter is the homogeneous opening probability $p$, so the symbol $\\beta$ below denotes an exponent, not an intensity.", "For the two one-sided parameter limits, assume $0<p_c<1$ and the stated observables are finite and positive where their logarithms are used.", "No existence or numerical value of a critical exponent is asserted for a model merely by introducing the notation."],
+  "related": ["criticality", "susceptibility", "triangle-condition", "branching-processes", "cutoff-families"],
+  "sourceIds": ["notes"],
+  "aliases": ["critical exponent", "logarithmic exponent", "one-arm exponent", "anomalous dimension", "power law", "logarithmic correction"],
+  "prototypeUses": []
+}
+---
+
+## Three strengths of asymptotic statement {#section-asymptotics}
+
+<a id="tag-PHLF" data-assertion="definition" data-title="Asymptotic equivalence, comparison and logarithmic power exponent"></a><p>For eventually positive functions $f,g$ as $x\to\infty$, write $f\sim g$ if $f(x)/g(x)\to1$. Write $f\asymp g$ if there are constants $0&lt;c\leq C&lt;\infty$ such that $cg(x)\leq f(x)\leq Cg(x)$ for all sufficiently large $x$. A logarithmic power exponent $\alpha\in\mathbb R$ means</p><div class="math-display">$$\lim_{x\to\infty}\frac{\log f(x)}{\log x}=\alpha,$$</div><p>equivalently $f(x)=x^{\alpha+o(1)}$. This is a weaker statement than $f\asymp x^\alpha$. At a parameter approaching zero, the corresponding definition uses $\log f(\varepsilon)/\log\varepsilon$ as $\varepsilon\downarrow0$; the denominator is negative, so inequalities must be handled with that sign in mind.</p>
+
+<a id="tag-UBFE" data-assertion="proposition" data-title="Power comparisons imply logarithmic exponents but not conversely"></a><p>For eventually positive $f$ and real $\alpha$, $f\sim c x^\alpha$ with $c&gt;0$ implies $f\asymp x^\alpha$, which implies logarithmic exponent $\alpha$. The converse implications fail. For any fixed real $b,c$,</p><div class="math-display">$$f(x)=x^\alpha(\log x)^b(\log\log x)^c$$</div><p>has logarithmic exponent $\alpha$, for sufficiently large $x$, but is not comparable to $x^\alpha$ unless $b=c=0$.</p><p><em>Proof.</em> Equivalence bounds the ratio above and below eventually. Two-sided power comparison gives $\log f(x)=\alpha\log x+O(1)$, proving the logarithmic limit. For the displayed function, division of its logarithm by $\log x$ gives</p><div class="math-display">$$\alpha+b\frac{\log\log x}{\log x}+c\frac{\log\log\log x}{\log x}\longrightarrow\alpha.$$</div><p>If $b\ne0$, the ratio to $x^\alpha$ tends to zero or infinity because $\log\log x$ dominates $\log\log\log x$; if $b=0$ and $c\ne0$, the same conclusion follows directly. Finally, $x^\alpha(2+\sin\log x)$ is comparable to $x^\alpha$ but is not asymptotic to any constant multiple of it.</p><p>Thus knowing a leading exponent does not settle logarithmic corrections or an amplitude. A statement written with $\asymp$ should not be justified merely by a logarithmic limit.</p>
+
+## Parameter and volume exponents {#section-parameter}
+
+<a id="tag-U5MC" data-assertion="definition" data-title="Logarithmic order-parameter, susceptibility and volume-tail exponents"></a><p>Fix a root $o$ and write $\theta(p)=\mathbb P_p(|K_o|=\infty)$, $\chi(p)=\mathbb E_p|K_o|$, and $a(n)=\mathbb P_{p_c}(|K_o|\geq n)$. When the following limits exist with the indicated finite values, the logarithmic exponent conventions are</p><div class="math-display">$$\beta=\lim_{\varepsilon\downarrow0}\frac{\log\theta(p_c+\varepsilon)}{\log\varepsilon},\qquad \gamma=-\lim_{\varepsilon\downarrow0}\frac{\log\chi(p_c-\varepsilon)}{\log\varepsilon},\qquad \frac1\delta=-\lim_{n\to\infty}\frac{\log a(n)}{\log n}.$$</div><p>The first limit requires $\theta(p_c+\varepsilon)&gt;0$ for sufficiently small $\varepsilon$; the second requires finite positive subcritical susceptibility; the third requires eventually positive tails and defines a finite positive $\delta$ when its reciprocal limit lies in $(0,\infty)$. In this notation the powers are respectively $\varepsilon^{\beta+o(1)}$, $\varepsilon^{-\gamma+o(1)}$ and $n^{-1/\delta+o(1)}$.</p><p>These are definitions conditional on existence of limits, not assertions that all models have exponents. Stronger claims such as $\chi(p_c-\varepsilon)\asymp\varepsilon^{-\gamma}$ must be stated separately. If $\theta(p_c)&gt;0$, then $a(n)\downarrow\theta(p_c)$ and its reciprocal-volume-exponent limit is zero, not a positive $1/\delta$. A convention allowing $\delta=\infty$ may encode that limit, but the finite-positive convention above does not.</p><p>The two parameter limits also require room on the appropriate side of $p_c$. At $p_c=1$, there is no supercritical homogeneous-probability interval within $[0,1]$; writing its order-parameter exponent formula would not define a limit of this model. Extended intensity parametrizations require their own endpoint conventions.</p>
+
+## Spatial exponents and the one-arm reciprocal {#section-spatial}
+
+<a id="tag-BLNL" data-assertion="definition" data-title="Euclidean one-arm and two-point exponent conventions"></a><p>For nearest-neighbour percolation on $\mathbb Z^d$ rooted at $o=0$, set $\Lambda_r=[-r,r]^d\cap\mathbb Z^d$ for positive integers $r$, and let $\partial\Lambda_r=\{x:\|x\|_\infty=r\}$. Put $\pi(r)=\mathbb P_{p_c}(o\leftrightarrow\partial\Lambda_r)$. When the relevant positive-probability logarithmic limits exist, define</p><div class="math-display">$$\frac1\rho=-\lim_{r\to\infty}\frac{\log\pi(r)}{\log r},\qquad d-2+\eta=-\lim_{\|x\|\to\infty}\frac{\log\tau_{p_c}(o,x)}{\log\|x\|}.$$</div><p>A finite positive $\rho$ requires a positive finite reciprocal limit. The two-point limit is a limit over all lattice vertices tending to infinity; a limit along one fixed direction alone is not the same assertion. Any fixed norm may be used in its denominator, since norms on $\mathbb R^d$ are comparable.</p><p>Under this convention a Euclidean arm decay $r^{-2+o(1)}$ corresponds to $\rho=1/2$, not $\rho=2$. An author who calls the decay power itself the one-arm exponent uses the reciprocal convention. Intrinsic arms instead ask for vertices at large graph distance inside the open cluster. They are different events and need not have the same exponent.</p><p>For long-range models, the event of hitting this vertex boundary need not coincide with reaching outside the box: an edge can jump across it. Such models must specify the spatial arm event before using an exponent symbol. A correlation-length exponent likewise requires a chosen definition of correlation length; a symbol $\nu$ alone does not identify an observable.</p>
+
+<p>The <a href="https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex#L220">critical-exponent section of the notes</a> introduces these symbols, the reciprocal convention for $\rho$, and several predicted values and logarithmic corrections. This article fixes the conventions and separates the strengths of the asymptotic statements. It does not establish the listed predictions. In particular, a branching-process calculation is not by itself a Euclidean spatial theorem, and thermodynamic consequences of a triangle condition should not be reported as a proof of every spatial exponent without the additional geometric inputs.</p>
+
+## Counting clusters from a sampled vertex {#section-box-counting}
+
+<a id="tag-OB0A" data-assertion="proposition" data-title="Finite-window cluster moments under uniform root sampling"></a>
+<p>Let $\Lambda$ be a nonempty finite vertex set in any random graph. Partition $\Lambda$ by connectivity in the full graph, and denote the nonempty intersection sizes by $S_1,\ldots,S_k$. Choose $U$ uniformly from $\Lambda$, independently of the graph, and put $X=|K_U\cap\Lambda|$. For every real $m\geq0$,</p>
+<div class="math-display">$$\mathbb E X^m=\frac1{|\Lambda|}\mathbb E\sum_{i=1}^k S_i^{m+1}.$$</div>
+<p>For $0&lt;a\leq b&lt;\infty$ and $v&gt;0$, let $N$ count the intersections with $av\leq S_i\leq bv$. Their contribution to the root moment satisfies</p>
+<div class="math-display">$$\frac{(av)^{m+1}}{|\Lambda|}\mathbb EN\leq\mathbb E\bigl[X^m\mathbf1_{\{av\leq X\leq bv\}}\bigr]\leq\frac{(bv)^{m+1}}{|\Lambda|}\mathbb EN.$$</div>
+<p><em>Proof.</em> Conditional on the graph, exactly $S_i$ choices of $U$ have $X=S_i$. Average over the $|\Lambda|$ possible roots, then over the graph. Restricting the sum to the indicated sizes and bounding each $S_i^{m+1}$ proves the inequalities.</p>
+<p>The partition uses full-graph connectivity: paths may leave and re-enter $\Lambda$. For clusters of the induced graph, the same counting identity applies to that different partition. Neither version identifies the sampled-root moment with the moment at the centre of the box. Translation invariance alone does not remove the dependence of a window intersection on the root's position within the window.</p>
+
+## What the hyperscaling picture assumes {#section-hyperscaling}
+
+<a id="tag-DEZI" data-assertion="proposition" data-title="Exponent relations conditional on finite-box moment and tail matching"></a>
+<p>Let $\Lambda_r$ be finite windows with $|\Lambda_r|\asymp r^d$, where $d&gt;0$, and use the sampled-root variable $X_r$ and intersection sizes $S_{r,i}$ above. Suppose there are scales $v_r\asymp r^{d_f}$ with $d_f&gt;0$ and nonnegative cluster counts $N_r$ with $\mathbb EN_r\asymp r^\kappa$. Assume</p>
+<div class="math-display">$$\mathbb E\sum_i S_{r,i}^2\asymp v_r^2\mathbb EN_r,\qquad \mathbb EX_r\asymp r^\alpha.$$</div>
+<p>Suppose also that a nonnegative integer-valued random variable $Z$ has $\mathbb P(Z\geq n)\asymp n^{-1/\delta}$ for a finite $\delta&gt;0$, and that the additional matching relation</p>
+<div class="math-display">$$\mathbb P(Z\geq\lceil v_r\rceil)\asymp\frac{v_r\mathbb EN_r}{|\Lambda_r|}$$</div>
+<p>holds. Then</p>
+<div class="math-display">$$\alpha=2d_f+\kappa-d,\qquad \frac{d_f}{\delta}=d-d_f-\kappa&gt;0.$$</div>
+<p>In particular, if $\kappa=0$, then</p>
+<div class="math-display">$$d_f=\frac{d\delta}{\delta+1},\qquad \alpha=d\frac{\delta-1}{\delta+1}.$$</div>
+<p><em>Proof.</em> The counting identity gives $\mathbb EX_r\asymp r^{2d_f+\kappa-d}$. Two positive power functions can be comparable at infinity only if their exponents agree. Since $v_r\to\infty$, rounding it up does not change its order. The tail assumption and matching relation give $r^{-d_f/\delta}\asymp r^{d_f+\kappa-d}$, proving the second equality and its strict positivity. Set $\kappa=0$ and solve the two equations for the last display.</p>
+<p>The <a href="https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex#L795">notes' hyperscaling discussion</a> motivates these hypotheses by a picture of $N_r$ large clusters of volume $v_r$. The counting identity alone controls only their contribution. It neither bounds the contribution of other sizes nor relates a finite-window intersection to the tail of the full cluster at a fixed root. These are precisely the two matching assumptions above. Tightness of $N_r$ alone also need not bound its expectation; rare configurations can dominate that expectation.</p>
+<p>If an independent two-point estimate supplies $\alpha=2-\eta$, the case $\kappa=0$ becomes $2-\eta=d(\delta-1)/(\delta+1)$. Substituting the mean-field values $\delta=2$ and $\eta=0$ forces $d=6$. This is a consistency calculation under the stated matching hypotheses, not a proof of an upper critical dimension. With $d_f=4$ and $\kappa=d-6$, the general relations instead give $\alpha=2$ and $\delta=2$ for every $d$; proving that cluster picture requires separate geometry. The one-arm coalescence argument in the notes likewise needs an additional spatial merging estimate and is not a consequence of the counting identity.</p>
+
+## From a spatial arm bound to a volume tail {#section-radius-volume}
+
+<a id="tag-HPE6" data-assertion="proposition" data-title="Volume-tail bound from escape probabilities and window means"></a>
+<p>Let $K$ be a random subset of a countable vertex set, and let $(\Lambda_r)_{r\geq1}$ be deterministic finite sets indexed by positive integers. Suppose that, for constants $a&gt;0$, $b\geq0$ and $C_1,C_2&lt;\infty$,</p>
+<div class="math-display">$$\mathbb P(K\not\subseteq\Lambda_r)\leq C_1r^{-a},\qquad \mathbb E|K\cap\Lambda_r|\leq C_2r^b\qquad(r\geq1).$$</div>
+<p>Then $K$ is finite almost surely and, for every integer $n\geq1$,</p>
+<div class="math-display">$$\mathbb P(|K|\geq n)\leq(2^aC_1+C_2)n^{-a/(a+b)}.$$</div>
+<p>If, in addition, this tail has a finite positive logarithmic exponent $1/\delta$, then $\delta\leq(a+b)/a$.</p>
+<p><em>Proof.</em> On $\{K\subseteq\Lambda_r\}$, the size of $K$ equals its window intersection. The union bound and Markov's inequality therefore give</p>
+<div class="math-display">$$\mathbb P(|K|\geq n)\leq\mathbb P(K\not\subseteq\Lambda_r)+\frac{\mathbb E|K\cap\Lambda_r|}{n}\leq C_1r^{-a}+C_2r^b/n.$$</div>
+<p>Take $r=\lfloor n^{1/(a+b)}\rfloor$. For $x\geq1$ one has $x/2\leq\lfloor x\rfloor\leq x$, so each term has the asserted order with the displayed constant. Letting $n\to\infty$ proves almost-sure finiteness. Finally, take logarithms of the upper bound and divide by $\log n$; the assumed tail limit gives $1/\delta\geq a/(a+b)$. No independence, translation invariance or nesting of the windows is needed for this argument.</p>
+
+<a id="tag-0RX3" data-assertion="corollary" data-title="A conditional planar volume-tail exponent inequality"></a>
+<p>Let $K_0$ be the root cluster of any random nearest-neighbour bond subgraph of $\mathbb Z^2$. Put $\Lambda_r=[-r,r]^2\cap\mathbb Z^2$ and $\partial\Lambda_r=\{x:\|x\|_\infty=r\}$. Suppose $0&lt;\eta&lt;2$ and, for finite constants $C_1,C_2$,</p>
+<div class="math-display">$$\mathbb P(0\leftrightarrow\partial\Lambda_r)\leq C_1r^{-\eta/2},\qquad \mathbb P(0\leftrightarrow x)\leq C_2(1+\|x\|_\infty)^{-\eta}$$</div>
+<p>for every integer $r\geq1$ and every $x\in\mathbb Z^2$. Then</p>
+<div class="math-display">$$\mathbb P(|K_0|\geq n)\leq C n^{-\eta/(4-\eta)}\qquad(n\geq1)$$</div>
+<p>for a finite $C$. If the positive finite volume-tail exponent $\delta$ exists, then $\delta\leq(4-\eta)/\eta$.</p>
+<p><em>Proof.</em> A nearest-neighbour path from $0$ to outside $\Lambda_r$ visits $\partial\Lambda_r$, giving the escape bound. There are $8k$ vertices on the square shell of radius $k\geq1$, so summing the two-point estimate yields</p>
+<div class="math-display">$$\mathbb E|K_0\cap\Lambda_r|\leq C_2\left(1+8\sum_{k=1}^r k(1+k)^{-\eta}\right)\leq C_3r^{2-\eta}.$$</div>
+<p>The last comparison follows by summing the power $k^{1-\eta}$, whose exponent is greater than $-1$. Apply the preceding proposition with $a=\eta/2$ and $b=2-\eta$. Its optimizing radius has order $n^{2/(4-\eta)}$.</p>
+<p>This proves the upper-tail step in the <a href="https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex#L3301">notes' planar hyperscaling discussion</a>, conditional on the two displayed spatial estimates. It proves neither RSW nor the arm-to-two-point comparison, and it does not give the reverse exponent inequality. At $\eta=2$ the shell sum is logarithmic, so the stated power estimate cannot simply be extended to that endpoint. For long-range bonds, use escape from the box directly: a bond may jump across its vertex boundary without visiting it.</p>

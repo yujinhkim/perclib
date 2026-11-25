@@ -1,0 +1,81 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-triangle-2021",
+  "entries": [
+    {
+      "id": "boundary-positive-part",
+      "title": "Positive part in the nontransitive boundary bound",
+      "status": "provisional",
+      "locator": "arXiv:2106.06400v3, Lemma 2.1 and its proof, printed pages 11–12.",
+      "claim": "The boundary susceptibility is bounded below using the square of the minimum-susceptibility deficit, without taking its positive part.",
+      "problem": "The deficit can be negative. An inequality bounding it above by a nonnegative Cauchy–Schwarz expression cannot be squared in that case. JTBG gives a connected three-vertex counterexample with finite susceptibilities and weight rows at most one.",
+      "correction": "67GX replaces the squared deficit by its squared positive part, and first proves the stronger bound using the actual nonnegative mass leaving the set. Under constant susceptibility the positive part can be omitted. This correction does not change the transitive use of that boundary lemma.",
+      "tags": [
+        "67GX",
+        "JTBG"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242"
+      ],
+      "leanImpact": "The nontransitive target is 67GX with the positive-part square (or the stronger outgoing-mass bound). JTBG records why the unsigned square cannot be the general target. A source wrapper may remove the positive part only after establishing constant susceptibility; the transitive application is unchanged."
+    },
+    {
+      "id": "triangle-numerator",
+      "title": "The stronger quantitative triangle numerator",
+      "status": "provisional",
+      "locator": "arXiv:2106.06400v3, equations (2.4)–(2.5) and their Cauchy–Schwarz derivation, printed page 12.",
+      "claim": "The source gives a susceptibility lower derivative bound with numerator chi times (chi minus the triangle diagram), over the stated quadratic diagram denominator.",
+      "problem": "The displayed Cauchy–Schwarz inputs yield a squared positive-part deficit instead. MTYL gives a normalized infinite-line counterexample to the stronger formula at small positive intensity; 1EWX shows the same small-intensity obstruction for normalized transitive models with finite critical point.",
+      "correction": "4KBG proves chi-prime at least (chi minus Delta)_+ squared divided by 3 beta squared Delta squared, almost everywhere, under its stated transitivity, mass-transport, row-sum and finite-susceptibility hypotheses. It retains the bounded-triangle susceptibility consequence but is weaker than the source formula. OVWJ recovers the hierarchical off-critical upper bounds under explicit endpoint two-point and boundary-flux assumptions; WPAD gives the resulting tail and density bounds. On the chosen finite-ball interval, the triangle is eventually at most half the susceptibility, so the corrected square suffices.",
+      "tags": [
+        "4KBG",
+        "MTYL",
+        "1EWX",
+        "OVWJ",
+        "WPAD"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242",
+        "https://github.com/tomhutchcroft/lrp/issues/353"
+      ],
+      "leanImpact": "The replacement target is the weaker differential inequality 4KBG, including its almost-everywhere qualification. MTYL and 1EWX distinguish the false stronger numerator from this target. A formal proof of the replacement cannot certify the stronger source formula; the bounded-triangle consequence needs the separate integration argument. The hierarchical application additionally needs 6F2J, the finite-ball form of 4KBG with the row-normalization factor, the triangle estimate MS6M, threshold convergence and the logarithmic inversion in OVWJ. WPAD uses X8T6. This does not discharge the endpoint assumptions or provide a Lean proof; source confirmation is still pending."
+    },
+    {
+      "id": "entropy-intensity-square",
+      "title": "The transcript entropy estimate retains the squared intensity difference",
+      "status": "provisional",
+      "locator": "arXiv:2106.06400v3, proof of Theorem 3.1, equation (3.6) and the first factor in (3.7), printed page 19. Checked in PDF text and HTML; the typeset journal version has not been checked.",
+      "claim": "The finite-transcript bound (3.6) and the first expression on the right of (3.7) use $|\\beta_1-\\beta_2|$, although the preceding single-query bound and the final expression in (3.7) use $|\\beta_1-\\beta_2|^2$.",
+      "problem": "The linear factor is false in general. Let a tree reveal the single edge of a two-vertex graph, with weight $J=1/10$ and intensities $\\beta_1=10$, $\\beta_2=20$. Set $t=e^{-1}$. Its transcript entropy is $D=t-(1-t)\\log(1+t)\\geq t^2=e^{-2}>1/20$, using $\\log(1+t)\\leq t$ and $e<3$. The printed right-hand side is $|10-20|J/(2\\min\\{10,20\\})=1/20$. Thus the discrepancy is not just an alternative weaker bound.",
+      "correction": "Restore $|\\beta_1-\\beta_2|^2$ in (3.6) and in the first factor of (3.7). KHB7 bounds each queried Bernoulli coordinate by $J_e(\\beta_1-\\beta_2)^2/(2\\min\\{\\beta_1,\\beta_2\\})$. CH4N sums these costs with revealments under the first law. For positive intensities and finite weighted cost, D66F then passes from finite transcripts to a common Borel output by finite-prefix approximation. This repairs the proof without changing the final entropy comparison or its cluster-tail consequence; infinite cost and zero intensities are not treated by division.",
+      "tags": [
+        "KHB7",
+        "CH4N",
+        "D66F",
+        "JL1S"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345#issuecomment-6901954701"
+      ],
+      "leanImpact": "The coordinate entropy bound, transcript chain rule and weighted revealment sum must retain the squared parameter difference. The existing tagged prose already has that square and needs no statement change. A formal source wrapper should target the final comparison with its positive-intensity and finite-cost qualifications, not the false intermediate linear-factor inequality. These prose links do not certify a compiled entropy proof."
+    },
+    {
+      "id": "hierarchical-fourier-dual",
+      "title": "The hierarchical Fourier transform uses a compact product dual",
+      "status": "provisional",
+      "locator": "arXiv:2106.06400v3, last paragraph of Section 2 after equation (2.10), printed page 15. Checked in PDF text and HTML; the typeset journal version has not been checked.",
+      "claim": "The paragraph treats the Fourier transform of a summable function on the discrete hierarchical lattice as a function on that same lattice, and identifies the lattice with its Pontryagin dual.",
+      "problem": "For $A=(\\mathbb Z/L\\mathbb Z)^d$, $d\\geq1$, $L\\geq2$, the discrete group $H=\\bigoplus_{i\\geq1}A$ has dual $K=\\prod_{i\\geq1}\\widehat A\\cong\\prod_{i\\geq1}A$, not the direct sum. Every sequence of coordinate characters defines a character of $H$, since an element of $H$ has finite support; conversely its restrictions to the coordinate groups determine it. The dual topology is the product topology. Thus $H$ is countable and discrete while $K$ is uncountable and compact. Restriction to finite-support characters does not supply a dual counting measure: the transform of the point mass at zero is the constant one, which is not square-summable for counting measure on $H$.",
+      "correction": "For $f\\in\\ell^1(H)$, use $\\widehat f(y)=\\sum_{x\\in H}f(x)\\exp(2\\pi i\\sum_{j\\geq1}x_j\\cdot y_j/L)$ for $y\\in K$. The inner sum is finite. Use counting measure on $H$ and normalized product Haar measure on $K$ in inversion, convolution and the integrals. This supplies the correct dual setting for the summable-kernel Fourier argument. Alternatively, the existing 87W3 and IZAO proofs compare the diagrams through finite positive matrices and an invariant trace, avoiding this Fourier identification entirely. Their finite-susceptibility conclusions are unchanged.",
+      "tags": [
+        "CS16",
+        "87W3",
+        "IZAO"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345#issuecomment-6901954701"
+      ],
+      "leanImpact": "Do not introduce a self-duality equivalence for the discrete hierarchical direct sum. A Fourier formalisation needs the compact product of character groups and its normalized Haar measure. The matrix-and-trace route CS16 to 87W3 or IZAO is an alternative dependency chain for the needed diagram bound, under its own summability and invariance hypotheses; it does not certify the incorrect dual-group identification. No compiled Fourier correspondence is asserted."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+node_modules/
+dist/assets/katex/
+dist/assets/content.js
+dist/data/

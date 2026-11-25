@@ -1,0 +1,41 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-powerlaw-2021",
+  "entries": [
+    {
+      "id": "amplification-zero-iterate",
+      "title": "The amplification exponent starts at one",
+      "status": "provisional",
+      "locator": "arXiv:2008.11197v2, Section 2.1, Theorem 2.3, equations (2.8)–(2.9).",
+      "claim": "Both amplification inequalities are stated for integers k ≥ 0.",
+      "problem": "For one bond of probability $1/2$, its two endpoints as the observation set and $\\lambda=2$, the $k=0$ inequalities require $1/2\\leq(1/2)^{4/3}$. They therefore fail at the stated endpoint.",
+      "correction": "Require integer $k\\geq1$. Tag 12NL states and proves both corrected amplification inequalities for full-cluster intersections, including roots outside the observation set. The maximum and rooted tail bounds retain the constants $1/9$ and $27$. FIXER supplies an independent marked-tree proof; no formal proof status is inferred.",
+      "tags": [
+        "12NL",
+        "4724",
+        "21D4"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/52#issuecomment-6899776898"
+      ],
+      "leanImpact": "Require integer k at least one in the source-specific amplification statement. Preserve full-cluster intersections with the observation set, allow paths outside it and a root outside it, and do not replace them by induced clusters. The corrected amplification in 12NL supplies the route to the maximum and rooted-tail targets 4724 and 21D4; their constants are unchanged."
+    },
+    {
+      "id": "recursive-retaining-threshold",
+      "title": "The recursive partition threshold",
+      "status": "provisional",
+      "locator": "arXiv:2008.11197v2, Section 2.1, proof of Lemma 2.4, recursive construction of the good partitions.",
+      "claim": "The recursive retaining exponent is inconsistent with the final marked-mass interval.",
+      "problem": "To end with marked counts in $[3^{-k}N,3^{1-k}N)$, pieces reaching the upper endpoint must still be split. The recursion must also retain vertex coverage for an unmarked prescribed root.",
+      "correction": "Retain a piece precisely when its marked count is below $3^{1-k}N$; split larger pieces into connected nonempty edge sets. DMI0 proves a partition covering every vertex with at least $3^{k-1}+1$ pieces, each in the required interval. The edge sets, rather than their endpoint sets, are disjoint; 12NL applies BK to these witnesses.",
+      "tags": [
+        "DMI0",
+        "12NL"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/52#issuecomment-6899776898"
+      ],
+      "leanImpact": "The partition helper for DMI0 must retain vertex coverage, including an unmarked prescribed root, while making the edge witnesses disjoint. These are the properties required to invoke BK in 12NL. The repair is to the recursive proof threshold; it does not change the final marked-mass interval."
+    }
+  ]
+}

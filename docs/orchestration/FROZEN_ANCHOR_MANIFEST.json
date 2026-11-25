@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "manifest_state": "AUTHOR_APPROVED",
+  "seal_limits": {
+    "max_body_lines": 3,
+    "max_body_bytes": 240
+  },
+  "anchors": [
+    {
+      "id": "source_norm_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "project author via noninteractive authorization of 2026-11-20",
+        "approved_at": "2026-11-20",
+        "approval_ref": "docs/orchestration/APPROVAL.md",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "arXiv:2508.18807v1; primary PDF supplied as attachments/i-want-you-to-ljpx/tom1.pdf",
+        "range": "Def I.1.3, normalization (*), PDF p. 7"
+      },
+      "contract": {
+        "id": "source.norm",
+        "version": "1"
+      },
+      "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+      "export": "PercLib.CriticalLRP.Orchestration.SourceNorm",
+      "split_policy": {
+        "source_group": "source_norm",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/orchestration/APPROVAL.md#no-splitting"
+      },
+      "abi_sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4",
+      "semantic_import_roots": [
+        "PercLib.CriticalLRP.Orchestration.Data.Defs"
+      ],
+      "semantic_file_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Analysis/RegularVariation.lean",
+          "sha256": "aeebcd5395fa4cb9b01c2f438d2dcbf1377c1d5aab37d77890156cb0aa343440"
+        },
+        {
+          "path": "PercLib/CriticalLRP/FiniteBernoulli.lean",
+          "sha256": "43dcc9b0d92a162c06902fc4e888dceb370758894e32370c9f7561c0216fd941"
+        },
+        {
+          "path": "PercLib/CriticalLRP/KernelGeometry.lean",
+          "sha256": "08ae54720b28433f99370e15090ef6b288f8a6152b0b808f297ab3a414cd0e10"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry.lean",
+          "sha256": "9418fe9ba9881fd3899a8f54e7b57f714a2dbee6144ce74b9a21a8dc4175128c"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell.lean",
+          "sha256": "62125e2ccb2639ebbf95249d2851012e76f584c2d7817a5b6c26c6b54c5c40b9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Asymptotic.lean",
+          "sha256": "98922a13dce3ce31c1eefd3ac037960cfa9752142e213f8c2ac637b93f32a45a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Basic.lean",
+          "sha256": "9114aec17eb4dec1545f29c88d35f63504878e8afc061eeb155f64a39f5a0a2b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Constants.lean",
+          "sha256": "b8e38f079484724ae52b80aef582119d80ef599477b543e3b8b690c61f39d40d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Counting.lean",
+          "sha256": "148f0d3266158af59e118ffa4f2ad55b19badd2f6f07ee76c40f954e907e9dcb"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Example.lean",
+          "sha256": "a97c78bc48fa74760032cad21dea361e23631c9d4537ac7b9dd64fa110ee8ca4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Normalization.lean",
+          "sha256": "33d8282b262217d70381d6d104cc32760814c031267374ebb122d63d4d9605ad"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Packing.lean",
+          "sha256": "3e8cccad8bd7cd123f51ae622f960a9fbcab3f32b626e490548eff38dbcf3005"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Radius.lean",
+          "sha256": "a287980e792475b7cce83ea9306d1f57e77091b75f5befaa67e0b894c3485db8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Remainder.lean",
+          "sha256": "417f080b4ef05d4bf67f13b7354c0efb3a58e6af6b623eaa99c82fb3115f881e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Scaling.lean",
+          "sha256": "873934003b59b2ab23eb0726dad0e6b9c1be09094587731738f49917740cee9f"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Volume.lean",
+          "sha256": "7a274b31f48f665ab6930adeade20695cae7e258cca254f5d8b68ef6470ecbd8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Data/Defs.lean",
+          "sha256": "bc51b18a74f43a328335d0b5b632b142211c121ca51d5e9ef253947ea726305a"
+        }
+      ]
+    },
+    {
+      "id": "source_model_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "project author via noninteractive authorization of 2026-11-20",
+        "approved_at": "2026-11-20",
+        "approval_ref": "docs/orchestration/APPROVAL.md",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "arXiv:2508.18807v1; primary PDF supplied as attachments/i-want-you-to-ljpx/tom1.pdf",
+        "range": "Def I.1.3, normalized kernel and error constraint, PDF pp. 6-7"
+      },
+      "contract": {
+        "id": "source.model",
+        "version": "1"
+      },
+      "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+      "export": "PercLib.CriticalLRP.Orchestration.SourceModel",
+      "split_policy": {
+        "source_group": "source_model",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/orchestration/APPROVAL.md#no-splitting"
+      },
+      "abi_sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326",
+      "semantic_import_roots": [
+        "PercLib.CriticalLRP.Orchestration.SourceModel"
+      ],
+      "semantic_file_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Analysis/RegularVariation.lean",
+          "sha256": "aeebcd5395fa4cb9b01c2f438d2dcbf1377c1d5aab37d77890156cb0aa343440"
+        },
+        {
+          "path": "PercLib/CriticalLRP/FiniteBernoulli.lean",
+          "sha256": "43dcc9b0d92a162c06902fc4e888dceb370758894e32370c9f7561c0216fd941"
+        },
+        {
+          "path": "PercLib/CriticalLRP/KernelGeometry.lean",
+          "sha256": "08ae54720b28433f99370e15090ef6b288f8a6152b0b808f297ab3a414cd0e10"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry.lean",
+          "sha256": "9418fe9ba9881fd3899a8f54e7b57f714a2dbee6144ce74b9a21a8dc4175128c"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell.lean",
+          "sha256": "62125e2ccb2639ebbf95249d2851012e76f584c2d7817a5b6c26c6b54c5c40b9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Asymptotic.lean",
+          "sha256": "98922a13dce3ce31c1eefd3ac037960cfa9752142e213f8c2ac637b93f32a45a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Basic.lean",
+          "sha256": "9114aec17eb4dec1545f29c88d35f63504878e8afc061eeb155f64a39f5a0a2b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Constants.lean",
+          "sha256": "b8e38f079484724ae52b80aef582119d80ef599477b543e3b8b690c61f39d40d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Counting.lean",
+          "sha256": "148f0d3266158af59e118ffa4f2ad55b19badd2f6f07ee76c40f954e907e9dcb"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Example.lean",
+          "sha256": "a97c78bc48fa74760032cad21dea361e23631c9d4537ac7b9dd64fa110ee8ca4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Normalization.lean",
+          "sha256": "33d8282b262217d70381d6d104cc32760814c031267374ebb122d63d4d9605ad"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Packing.lean",
+          "sha256": "3e8cccad8bd7cd123f51ae622f960a9fbcab3f32b626e490548eff38dbcf3005"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Radius.lean",
+          "sha256": "a287980e792475b7cce83ea9306d1f57e77091b75f5befaa67e0b894c3485db8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Remainder.lean",
+          "sha256": "417f080b4ef05d4bf67f13b7354c0efb3a58e6af6b623eaa99c82fb3115f881e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Scaling.lean",
+          "sha256": "873934003b59b2ab23eb0726dad0e6b9c1be09094587731738f49917740cee9f"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Volume.lean",
+          "sha256": "7a274b31f48f665ab6930adeade20695cae7e258cca254f5d8b68ef6470ecbd8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Data/Defs.lean",
+          "sha256": "bc51b18a74f43a328335d0b5b632b142211c121ca51d5e9ef253947ea726305a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+          "sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+          "sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4"
+        }
+      ]
+    },
+    {
+      "id": "theorem_I_1_6_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "project author via noninteractive authorization of 2026-11-20",
+        "approved_at": "2026-11-20",
+        "approval_ref": "docs/orchestration/APPROVAL.md",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "arXiv:2508.18807v1; primary PDF supplied as attachments/i-want-you-to-ljpx/tom1.pdf",
+        "range": "Thm I.1.6 with shared A, PDF pp. 10-11; displays (I.1.6)-(I.1.7)"
+      },
+      "contract": {
+        "id": "hutchcroft.i.1.6",
+        "version": "1"
+      },
+      "path": "PercLib/CriticalLRP/Orchestration/Frozen/HighDimensionalMoments.lean",
+      "export": "PercLib.CriticalLRP.Orchestration.theorem_I_1_6",
+      "implementation": {
+        "module": "PercLib.CriticalLRP.Orchestration.Providers.HighDimensionalMoments",
+        "export": "PercLib.CriticalLRP.Orchestration.theorem_I_1_6"
+      },
+      "split_policy": {
+        "source_group": "hutchcroft.i.1.6",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/orchestration/APPROVAL.md#no-splitting"
+      },
+      "prefix_sha256": "d82af1512890debb36166d13c2a4ab7316d2b20ee53e4ed4a19d9a1c35933737",
+      "suffix_sha256": "cfabb7166bebcfb0c7010e6af38a2a9dda2d234203e018f445e19091a919cffb",
+      "abi_sha256": "1de8ef21dfc1913f0b19b9e87efeacaec3341c1e048943bbe6d868bdf7a14e59",
+      "definition_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+          "sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+          "sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326"
+        }
+      ],
+      "state": "DRAFT_SORRY",
+      "draft_allowlist": {
+        "frozen_paths": [
+          "PercLib/CriticalLRP/Orchestration/Frozen/HighDimensionalMoments.lean"
+        ],
+        "audit_paths": []
+      },
+      "semantic_import_roots": [
+        "PercLib.CriticalLRP.Orchestration.Defs"
+      ],
+      "semantic_file_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Analysis/RegularVariation.lean",
+          "sha256": "aeebcd5395fa4cb9b01c2f438d2dcbf1377c1d5aab37d77890156cb0aa343440"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Base.lean",
+          "sha256": "8eb71ffef28cb4959ba58e3f711d10b2f7429dcb6c6bc1a7f79fbfd9650c6d4a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Compatibility.lean",
+          "sha256": "7eff2912e65270ea668e91523d022af0a7182a453e3fda50e490867c7a876050"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Critical.lean",
+          "sha256": "c983d193f44a794ba36bda9030bf1c2eef9a43314295d0d19b19a408ccdc8edd"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Lattice.lean",
+          "sha256": "39dc2332fba0fd07c736487350c5c77dd7c8f98d94796448962ccd21ed543533"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Marks.lean",
+          "sha256": "119f2f2c25fcce18d9167804f48ded7ea2df5e1f1022e4cc7a959e8b61e59eb5"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/TwoPoint.lean",
+          "sha256": "1dbf1b1a0774ab5350a95a9d863ebe9a46f0fcec9bdb992fba2055d6228d4801"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/ZeroOne.lean",
+          "sha256": "fd65928bb528c4d8b37f873d33eefa9141613ca497f46b2c829ee76f60f1d94d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/FiniteBernoulli.lean",
+          "sha256": "43dcc9b0d92a162c06902fc4e888dceb370758894e32370c9f7561c0216fd941"
+        },
+        {
+          "path": "PercLib/CriticalLRP/KernelGeometry.lean",
+          "sha256": "08ae54720b28433f99370e15090ef6b288f8a6152b0b808f297ab3a414cd0e10"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry.lean",
+          "sha256": "9418fe9ba9881fd3899a8f54e7b57f714a2dbee6144ce74b9a21a8dc4175128c"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell.lean",
+          "sha256": "62125e2ccb2639ebbf95249d2851012e76f584c2d7817a5b6c26c6b54c5c40b9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Asymptotic.lean",
+          "sha256": "98922a13dce3ce31c1eefd3ac037960cfa9752142e213f8c2ac637b93f32a45a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Basic.lean",
+          "sha256": "9114aec17eb4dec1545f29c88d35f63504878e8afc061eeb155f64a39f5a0a2b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Constants.lean",
+          "sha256": "b8e38f079484724ae52b80aef582119d80ef599477b543e3b8b690c61f39d40d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Counting.lean",
+          "sha256": "148f0d3266158af59e118ffa4f2ad55b19badd2f6f07ee76c40f954e907e9dcb"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Example.lean",
+          "sha256": "a97c78bc48fa74760032cad21dea361e23631c9d4537ac7b9dd64fa110ee8ca4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Normalization.lean",
+          "sha256": "33d8282b262217d70381d6d104cc32760814c031267374ebb122d63d4d9605ad"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Packing.lean",
+          "sha256": "3e8cccad8bd7cd123f51ae622f960a9fbcab3f32b626e490548eff38dbcf3005"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Radius.lean",
+          "sha256": "a287980e792475b7cce83ea9306d1f57e77091b75f5befaa67e0b894c3485db8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Remainder.lean",
+          "sha256": "417f080b4ef05d4bf67f13b7354c0efb3a58e6af6b623eaa99c82fb3115f881e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Scaling.lean",
+          "sha256": "873934003b59b2ab23eb0726dad0e6b9c1be09094587731738f49917740cee9f"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Volume.lean",
+          "sha256": "7a274b31f48f665ab6930adeade20695cae7e258cca254f5d8b68ef6470ecbd8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Data/Defs.lean",
+          "sha256": "bc51b18a74f43a328335d0b5b632b142211c121ca51d5e9ef253947ea726305a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Defs.lean",
+          "sha256": "a16e23ff4311f807d54f5a601609664ac77d49d27f197d6c16f2880343949ea9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+          "sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+          "sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/Canonical.lean",
+          "sha256": "c6eb6600bba2ef26f8a25587a06cacd11eb422cc7502954e5c129b69fe55230a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/DiscreteLayerCake.lean",
+          "sha256": "a769f58b637b547504dd5c80cc99330382e382d7bb5a3a5ddd670cbd668b681b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MaxCluster.lean",
+          "sha256": "0c2433d7c6a83b056a71013cc5984f713445aaa5692387cdffaaa56496b0e622"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MomentRatio.lean",
+          "sha256": "fd843daf47da8e3f5fba9af205a675fe4149c70f41a738988f44a2e88906c2db"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MomentRatioAux.lean",
+          "sha256": "1505d90d6c9b4c424e268af54892e825453e777b3cf43b153f21565d387df2c6"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/TailEstimates.lean",
+          "sha256": "7f51a5b5cfd99088dbca98cf448394aa61d3e17f5c662ec25c3ba78f7e97238e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/VolumeMoments/DFactorial.lean",
+          "sha256": "4cc54fa7492e69768d5394493b11db1693451fa7ff3ff2975bdf80e634e6ce97"
+        },
+        {
+          "path": "PercLib/Meta/Tag.lean",
+          "sha256": "536a0687ab007056253092cf4ce984dd1f8403c1c3761d9cba51ded7290ef525"
+        },
+        {
+          "path": "PercLib/Percolation/Bond/Basic.lean",
+          "sha256": "81a66257b8d35e7457c614dd6929512a43612e6fcdb31ecbf9aea4cd0ae79de4"
+        },
+        {
+          "path": "PercLib/Percolation/Bond/Susceptibility.lean",
+          "sha256": "a5ef39f558ea37e036787ba1557d6b48cebfc886d88984b3410ae14ce101665f"
+        },
+        {
+          "path": "PercLib/Probability/BKEndpoints.lean",
+          "sha256": "91d3a4dc533f15be324f6fceb7764ecc943153f05b16cd4edb24a7065fd4080d"
+        },
+        {
+          "path": "PercLib/Probability/Cylinder.lean",
+          "sha256": "43273590e389153a15f3c2af7b95e349ff4f37f8428c250d9d8392851256f0ad"
+        },
+        {
+          "path": "PercLib/Probability/DisjointOccurrence.lean",
+          "sha256": "756b40ac102f7b4d2e8f9714ba96a56d842f100917bccdd0f4311f9a38115941"
+        },
+        {
+          "path": "PercLib/Probability/FiniteExpectation.lean",
+          "sha256": "fa91224570598aa64cb3e6bf473e5287390a79cfde6d28ca9f9bc3081c2f4ab3"
+        },
+        {
+          "path": "PercLib/Probability/ProdBernoulli.lean",
+          "sha256": "4db2c26436591db4ad275c4e18307695016829dd3c149c1a23502c5b0d61bd5b"
+        },
+        {
+          "path": "PercLib/Probability/ProdBernoulliIndependence.lean",
+          "sha256": "6ba1fa708232ea168e7801bdecdd4c465efbe91617a84480d21db70c6f5fa60f"
+        },
+        {
+          "path": "PercLib/Probability/ProductExpectation.lean",
+          "sha256": "45181ddfd8655c5270b76f582121e0f157d37786f96633389be08d3bc56caccc"
+        }
+      ]
+    },
+    {
+      "id": "theorem_I_1_15_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "project author via noninteractive authorization of 2026-11-20",
+        "approved_at": "2026-11-20",
+        "approval_ref": "docs/orchestration/APPROVAL.md",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "arXiv:2508.18807v1; primary PDF supplied as attachments/i-want-you-to-ljpx/tom1.pdf",
+        "range": "Thm I.1.15 with joint A/Astar, PDF p. 17; displays (I.1.16)-(I.1.17)"
+      },
+      "contract": {
+        "id": "hutchcroft.i.1.15",
+        "version": "1"
+      },
+      "path": "PercLib/CriticalLRP/Orchestration/Frozen/CriticalDimensionMoments.lean",
+      "export": "PercLib.CriticalLRP.Orchestration.theorem_I_1_15",
+      "implementation": {
+        "module": "PercLib.CriticalLRP.Orchestration.Providers.CriticalDimensionMoments",
+        "export": "PercLib.CriticalLRP.Orchestration.theorem_I_1_15"
+      },
+      "split_policy": {
+        "source_group": "hutchcroft.i.1.15",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/orchestration/APPROVAL.md#no-splitting"
+      },
+      "prefix_sha256": "edfceaddc9f3d9a3097989625e99fe132fcfe8f9a9d78307d922ba7514e3f27a",
+      "suffix_sha256": "cfabb7166bebcfb0c7010e6af38a2a9dda2d234203e018f445e19091a919cffb",
+      "abi_sha256": "567d1220587aa715d9046f1f89f7ef6cf404d04da5e175637b7cb165b774e186",
+      "definition_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+          "sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+          "sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326"
+        }
+      ],
+      "state": "DRAFT_SORRY",
+      "draft_allowlist": {
+        "frozen_paths": [
+          "PercLib/CriticalLRP/Orchestration/Frozen/CriticalDimensionMoments.lean"
+        ],
+        "audit_paths": []
+      },
+      "semantic_import_roots": [
+        "PercLib.CriticalLRP.Orchestration.Defs"
+      ],
+      "semantic_file_closure": [
+        {
+          "path": "PercLib/CriticalLRP/Analysis/RegularVariation.lean",
+          "sha256": "aeebcd5395fa4cb9b01c2f438d2dcbf1377c1d5aab37d77890156cb0aa343440"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Base.lean",
+          "sha256": "8eb71ffef28cb4959ba58e3f711d10b2f7429dcb6c6bc1a7f79fbfd9650c6d4a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Compatibility.lean",
+          "sha256": "7eff2912e65270ea668e91523d022af0a7182a453e3fda50e490867c7a876050"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Critical.lean",
+          "sha256": "c983d193f44a794ba36bda9030bf1c2eef9a43314295d0d19b19a408ccdc8edd"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Lattice.lean",
+          "sha256": "39dc2332fba0fd07c736487350c5c77dd7c8f98d94796448962ccd21ed543533"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/Marks.lean",
+          "sha256": "119f2f2c25fcce18d9167804f48ded7ea2df5e1f1022e4cc7a959e8b61e59eb5"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/TwoPoint.lean",
+          "sha256": "1dbf1b1a0774ab5350a95a9d863ebe9a46f0fcec9bdb992fba2055d6228d4801"
+        },
+        {
+          "path": "PercLib/CriticalLRP/CountableProduct/ZeroOne.lean",
+          "sha256": "fd65928bb528c4d8b37f873d33eefa9141613ca497f46b2c829ee76f60f1d94d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/FiniteBernoulli.lean",
+          "sha256": "43dcc9b0d92a162c06902fc4e888dceb370758894e32370c9f7561c0216fd941"
+        },
+        {
+          "path": "PercLib/CriticalLRP/KernelGeometry.lean",
+          "sha256": "08ae54720b28433f99370e15090ef6b288f8a6152b0b808f297ab3a414cd0e10"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry.lean",
+          "sha256": "9418fe9ba9881fd3899a8f54e7b57f714a2dbee6144ce74b9a21a8dc4175128c"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell.lean",
+          "sha256": "62125e2ccb2639ebbf95249d2851012e76f584c2d7817a5b6c26c6b54c5c40b9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Asymptotic.lean",
+          "sha256": "98922a13dce3ce31c1eefd3ac037960cfa9752142e213f8c2ac637b93f32a45a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Basic.lean",
+          "sha256": "9114aec17eb4dec1545f29c88d35f63504878e8afc061eeb155f64a39f5a0a2b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Constants.lean",
+          "sha256": "b8e38f079484724ae52b80aef582119d80ef599477b543e3b8b690c61f39d40d"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Counting.lean",
+          "sha256": "148f0d3266158af59e118ffa4f2ad55b19badd2f6f07ee76c40f954e907e9dcb"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Example.lean",
+          "sha256": "a97c78bc48fa74760032cad21dea361e23631c9d4537ac7b9dd64fa110ee8ca4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Normalization.lean",
+          "sha256": "33d8282b262217d70381d6d104cc32760814c031267374ebb122d63d4d9605ad"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Packing.lean",
+          "sha256": "3e8cccad8bd7cd123f51ae622f960a9fbcab3f32b626e490548eff38dbcf3005"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Radius.lean",
+          "sha256": "a287980e792475b7cce83ea9306d1f57e77091b75f5befaa67e0b894c3485db8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Remainder.lean",
+          "sha256": "417f080b4ef05d4bf67f13b7354c0efb3a58e6af6b623eaa99c82fb3115f881e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Scaling.lean",
+          "sha256": "873934003b59b2ab23eb0726dad0e6b9c1be09094587731738f49917740cee9f"
+        },
+        {
+          "path": "PercLib/CriticalLRP/LatticeGeometry/Cell/Volume.lean",
+          "sha256": "7a274b31f48f665ab6930adeade20695cae7e258cca254f5d8b68ef6470ecbd8"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Data/Defs.lean",
+          "sha256": "bc51b18a74f43a328335d0b5b632b142211c121ca51d5e9ef253947ea726305a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/Defs.lean",
+          "sha256": "a16e23ff4311f807d54f5a601609664ac77d49d27f197d6c16f2880343949ea9"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceModel.lean",
+          "sha256": "5af7b482bbb43c14213af498db1be3f8e6420d9b32afee2f97e5ca6924d4a326"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Orchestration/SourceNorm.lean",
+          "sha256": "39af7555be928257d3b3448fecbaca57a30d812d76f13eafeda3638fb48883b4"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/Canonical.lean",
+          "sha256": "c6eb6600bba2ef26f8a25587a06cacd11eb422cc7502954e5c129b69fe55230a"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/DiscreteLayerCake.lean",
+          "sha256": "a769f58b637b547504dd5c80cc99330382e382d7bb5a3a5ddd670cbd668b681b"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MaxCluster.lean",
+          "sha256": "0c2433d7c6a83b056a71013cc5984f713445aaa5692387cdffaaa56496b0e622"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MomentRatio.lean",
+          "sha256": "fd843daf47da8e3f5fba9af205a675fe4149c70f41a738988f44a2e88906c2db"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/MomentRatioAux.lean",
+          "sha256": "1505d90d6c9b4c424e268af54892e825453e777b3cf43b153f21565d387df2c6"
+        },
+        {
+          "path": "PercLib/CriticalLRP/Tightness/TailEstimates.lean",
+          "sha256": "7f51a5b5cfd99088dbca98cf448394aa61d3e17f5c662ec25c3ba78f7e97238e"
+        },
+        {
+          "path": "PercLib/CriticalLRP/VolumeMoments/DFactorial.lean",
+          "sha256": "4cc54fa7492e69768d5394493b11db1693451fa7ff3ff2975bdf80e634e6ce97"
+        },
+        {
+          "path": "PercLib/Meta/Tag.lean",
+          "sha256": "536a0687ab007056253092cf4ce984dd1f8403c1c3761d9cba51ded7290ef525"
+        },
+        {
+          "path": "PercLib/Percolation/Bond/Basic.lean",
+          "sha256": "81a66257b8d35e7457c614dd6929512a43612e6fcdb31ecbf9aea4cd0ae79de4"
+        },
+        {
+          "path": "PercLib/Percolation/Bond/Susceptibility.lean",
+          "sha256": "a5ef39f558ea37e036787ba1557d6b48cebfc886d88984b3410ae14ce101665f"
+        },
+        {
+          "path": "PercLib/Probability/BKEndpoints.lean",
+          "sha256": "91d3a4dc533f15be324f6fceb7764ecc943153f05b16cd4edb24a7065fd4080d"
+        },
+        {
+          "path": "PercLib/Probability/Cylinder.lean",
+          "sha256": "43273590e389153a15f3c2af7b95e349ff4f37f8428c250d9d8392851256f0ad"
+        },
+        {
+          "path": "PercLib/Probability/DisjointOccurrence.lean",
+          "sha256": "756b40ac102f7b4d2e8f9714ba96a56d842f100917bccdd0f4311f9a38115941"
+        },
+        {
+          "path": "PercLib/Probability/FiniteExpectation.lean",
+          "sha256": "fa91224570598aa64cb3e6bf473e5287390a79cfde6d28ca9f9bc3081c2f4ab3"
+        },
+        {
+          "path": "PercLib/Probability/ProdBernoulli.lean",
+          "sha256": "4db2c26436591db4ad275c4e18307695016829dd3c149c1a23502c5b0d61bd5b"
+        },
+        {
+          "path": "PercLib/Probability/ProdBernoulliIndependence.lean",
+          "sha256": "6ba1fa708232ea168e7801bdecdd4c465efbe91617a84480d21db70c6f5fa60f"
+        },
+        {
+          "path": "PercLib/Probability/ProductExpectation.lean",
+          "sha256": "45181ddfd8655c5270b76f582121e0f157d37786f96633389be08d3bc56caccc"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "ordered-product-association",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 18
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-ordered-harris",
+      "order": 0,
+      "label": "Complete named-statement source index",
+      "locator": "Named statement start lines in the pinned source: 76, 143, 152, 159, 190, 198, 217, 226, 232, 240, 249, 256, 290, 363, 431, 517, 539",
+      "relationship": "Source-inspected contracts; grouped exposition with explicit scope limits",
+      "status": "pending",
+      "note": "The seventeen source statements include one-coordinate covariance; measurable splicing without probability hypotheses; product-law preservation; bounded section integrability; an integrable-function mean identity; monotonicity under coordinate preorders; averaging measurability, norm bounds, finite dependence and fixed functions; L1 contraction; finite-dimensional association; directed finite-coordinate approximation; general measurable-event Harris and its two Bernoulli numerical forms. Some helpers use total integral conventions without section integrability or function measurability. WBBE presents their ordinary measurable/integrable specializations and does not claim the unrestricted helper contracts as classical integration statements. This source index records those distinctions, not full one-to-one assertion correspondence."
+    },
+    {
+      "source": "perclib-ordered-harris",
+      "order": 1,
+      "label": "One coordinate and finite-dimensional association",
+      "locator": "Source lines 76–127 and 285–353",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "P52U gives the one-dimensional integral inequality; 9U6I gives finite-coordinate bounded-function association. Linear order and measurability are separate hypotheses."
+    },
+    {
+      "source": "perclib-ordered-harris",
+      "order": 2,
+      "label": "Splicing and averaging",
+      "locator": "Source lines 129–281",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "WBBE gives measurable splicing, the preserved product law, mean identities, sup and L1 contraction, finite dependence and monotonicity. Integrable functions have almost-everywhere integrable sections. Statements about nonmeasurable functions under Lean’s total integral convention are not asserted as ordinary integration theorems."
+    },
+    {
+      "source": "perclib-ordered-harris",
+      "order": 3,
+      "label": "Cylinder approximation and arbitrary-product association",
+      "locator": "Source lines 355–506",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "NPRG keeps the all-finite-supersets quantifier. 9U6I passes to measurable increasing events without enumerating the coordinate set or requiring finite open witnesses. The Bernoulli specialization is X5SS."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "branching-random-walk",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 6
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 38,
+      "label": "Branching random walk and dimension-counting diagrams",
+      "locator": "Chapter 2 · Branching random walk and the upper critical dimension · source lines 481–531",
+      "relationship": "Exact identities and scoped diagram calculation",
+      "status": "pending",
+      "note": "Occupation first moments are exact. Fourier thresholds are proved for lazy nearest-neighbour walk; transferring the Green-function picture to percolation remains a separate hypothesis or heuristic."
+    },
+    {
+      "source": "notes",
+      "order": 62,
+      "label": "Step-law assumptions behind the Green-function comparison",
+      "locator": "Chapter 2, Branching random walk and the upper critical dimension, source lines 481–531, especially 483–487",
+      "relationship": "Long-range extension and explicit hypothesis correction",
+      "status": "pending",
+      "note": "VJCW/1POM/KEPD prove symbol estimates, diagram thresholds and discount orders for a symmetric lazy power-law step law. The alpha=2 logarithm changes the boundary case. T79N requires a separate pointwise Green domination before transferring a finite diagram to percolation. These are not source-specific percolation exponent theorems."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "1POM",
+      "proof_uses": [
+        "VJCW"
+      ],
+      "reason": "Fourier inversion of discounted convolution powers and monotone convergence reduce finiteness to the symbol estimate."
+    },
+    {
+      "order": 1,
+      "tag": "KEPD",
+      "proof_uses": [
+        "VJCW",
+        "1POM"
+      ],
+      "reason": "Split the discounted radial integral at its small-frequency scale, retaining the logarithm at alpha=2."
+    },
+    {
+      "order": 2,
+      "tag": "T79N",
+      "proof_uses": [
+        "1POM"
+      ],
+      "reason": "Termwise comparison transfers the finite Green diagrams only under explicit pointwise domination."
+    }
+  ]
+}

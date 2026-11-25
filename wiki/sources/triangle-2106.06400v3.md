@@ -1,0 +1,75 @@
+# Triangle paper: initial source check
+
+Inspected [HTML](https://arxiv.org/html/2106.06400v3) and
+[PDF text](https://arxiv.org/pdf/2106.06400v3), 15 November 2026.
+
+| Locators | Wiki disposition |
+| --- | --- |
+| Lemma 2.1, printed pp. 11–12 | [Positive-part correction and counterexample](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L17) |
+| Equations (2.4)–(2.5), printed p. 12 | [Squared-numerator consequence](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L61) |
+| Proposition 1.8; Appendix A | [Mass-transport diagram bound](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L110) |
+
+Both renditions contain the boundary formula and Cauchy–Schwarz inputs discussed
+in the linked article. The correction concerns the nontransitive lemma; the
+stronger numerator also has a [small-intensity counterexample](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L78). The source diagnoses remain provisional pending author confirmation.
+
+## Expanded reading map
+
+The initial heading and three locators are retained. The following map adds 24 passage groups across Sections 1–4 and Appendix A of arXiv:2106.06400v3. The PDF is dated 28 July 2022; the later HTML conversion date is not a new paper edition. Numbered locators refer to this version, not an unchecked journal edition.
+
+Article links preserve the historical critical-methods revision 18ab9d7cfea0056c5f234b744386bc7420fa6f86 inspected for this map. They identify existing exposition, alternative arguments and gaps; they are not reviewed source occurrences or evidence of Lean compilation. A passage count measures the reading inventory, not completed mathematics.
+
+## Section 1: statements and dependencies
+
+| Source locator | Existing exposition and remaining obligation |
+| --- | --- |
+| Theorem 1.1; Proposition 1.7 | [4KBG](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L61) proves the corrected squared-positive-part inequality almost everywhere. Its row bound, finite susceptibility and mass-transport assumptions are explicit. [MTYL and 1EWX](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L78) refute the stronger numerator. These are replacement targets, not exact source correspondences. |
+| Corollary 1.2 | [6PGV](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/integrated-susceptibility.md#L153) integrates the corrected inequality. Its prefactor has a factor two in the correction term and it needs no endpoint divergence. [TC6Q](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/integrated-susceptibility.md#L121) retains its separate, stronger differential hypothesis; the two statements must not be conflated. |
+| Theorem 1.3; Remarks 1.4–1.5 | [JL1S](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L31) supplies the tail comparison for positive intensities and positive integer thresholds. The truncated-cluster estimate stays available when susceptibility is infinite. The historical comparison of methods is not a further proved assertion. |
+| Corollary 1.6 and its proof | [6PGV](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/integrated-susceptibility.md#L153) and [QS3L](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L43) give a route from diagram control to logarithmic upper bounds. Matching lower bounds and optimal logarithmic exponents remain separate. The wiki does not turn the surrounding predictions into theorems. |
+| Proposition 1.8 | [IZAO](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L110) proves the diagram comparison under an explicit mass-transport property and finite susceptibility. Its current statement does not cover infinite susceptibility merely because the source locator does. |
+| Section 1.4; Theorem 1.9 | The [hierarchical reading map](sources/hierarchical-2103.17013v1.md) tracks the critical two-point inputs. [MS6M](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/hierarchical-runaway.md#L123) supplies a conditional diagram calculation. Neither pointer proves the off-critical correlation-length application inventoried below. |
+
+## Section 2: the susceptibility argument
+
+| Source locator | Existing exposition and remaining obligation |
+| --- | --- |
+| Equation (2.1) | [4800](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/integrated-susceptibility.md#L68) supplies a two-cluster derivative identity on a countable group with its own integrability assumptions. [4KBG](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L61) uses an integrated Russo argument for the boundary functional. A lower Dini derivative and an almost-everywhere derivative are not interchangeable without that passage. |
+| Lemma 2.1; equation (2.3) | [67GX](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L17) retains the positive part before squaring, the last-exit path outside the set and a finite uniform susceptibility bound. [JTBG](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L32) explains the nontransitive obstruction. The original three-entry check above is preserved. |
+| Equations (2.4)–(2.7) | [Weighted cluster moments](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L44) and [4KBG](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L61) keep the susceptibility factors through the random-cluster Cauchy–Schwarz calculation. The three tree orientations supply the denominator estimate; they do not recover the stronger numerator. |
+| Equations (2.8)–(2.10) | [CS16](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L80) and [IZAO](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L110) provide a matrix-and-trace route. The Fourier argument and its choice of dual group are not separately supplied by these articles. No Fourier source correspondence is inferred from the common conclusion. |
+
+## Section 3: entropy and exploration
+
+| Source locator | Existing exposition and remaining obligation |
+| --- | --- |
+| Theorem 3.1; Remark 3.2 | [D66F](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L35) uses one Borel output rule for the full transcript and assumes positive intensities and finite weighted cost. It covers infinite runs. Completion of a sigma-algebra separately under each law does not supply the required rule. |
+| Equations (3.2)–(3.3); Lemma 3.3 | [Entropy chain rule](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L17), [58HC](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L23) and [KHB7](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L27) supply the event comparison and coordinate cost. The Bernoulli estimate uses a Poisson comparison; zero-weight coordinates have zero cost. General measure-space entropy theory is not claimed here. |
+| Equations (3.5)–(3.7) | [CH4N](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L29) gives the finite-transcript identity with revealments under the first law. [D66F](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/entropy-comparison.md#L35) passes to Borel events by finite-prefix approximation. This alternative proof avoids a separate theorem on infinite-transcript relative entropy. |
+| Equations (3.8)–(3.9) | [28UY and PWBU](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L17) construct a fair countable exploration; [DCRV](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L25) bounds weighted cost; [JL1S](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L31) performs the probability comparison. Halting and Borel computation are kept distinct, including on graphs of infinite degree. |
+
+## Section 4: the hierarchical application
+
+| Source locator | Existing exposition and remaining obligation |
+| --- | --- |
+| Theorems 1.9 and 4.1 | The current articles do not give a complete proof of these applications. [QS3L](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/stopped-exploration.md#L43) handles logarithmic susceptibility inputs; a general power-law input needs its own optimization. Critical two-point bounds alone are not an off-critical susceptibility theorem. |
+| Equation (4.5) | The finite-volume application must use [the corrected quadratic inequality](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/boundary-susceptibility.md#L61). The positive part can be compared with susceptibility only after a uniform separation from the triangle diagram has been established. This map does not silently import the stronger printed formula. |
+| Lemma 4.2; equation (4.6) | [The finite-set criterion](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/integrated-susceptibility.md#L246) and [FF30](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/hierarchical-runaway.md#L55) provide related first-exit and boundary-flux inputs. The root-containing set, restricted connection law and intensity normalization must agree before reusing them in this application. |
+| Equation (4.7); Lemma 4.3 | The scale defined by successive boundary thresholds and the off-critical block comparison still need dedicated exposition. [7YNX](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/hierarchical-runaway.md#L98) concerns critical two-point bounds and does not fill this gap. |
+| Proposition 4.4; Remarks 4.5–4.6 | The remaining application needs uniform finite-block diagram estimates, integration over the threshold interval, and conversion back to the chosen length scale. [MS6M](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/hierarchical-runaway.md#L123) supplies a critical diagram input only. Improved multipoint estimates and optimal exponents remain separate tasks. |
+
+## Appendix A: matrix and trace arguments
+
+| Source locator | Existing exposition and remaining obligation |
+| --- | --- |
+| Lemma A.1; Remark A.2 | [70KD](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L17) proves positive semidefiniteness from the cluster partition, without independence. A uniform strictly positive lower operator bound from singleton probabilities is not part of that assertion. |
+| Lemma A.3 | [UZ7J](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L28) and [C2YT](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L65) give the cubic diagonal and first diagram comparisons. Their finite diagonal bounds and symmetry assumptions are explicit. The existing open-triangle decay proof is a separate result. |
+| Proposition A.4; Theorems A.5–A.6; Lemmas A.7–A.8 | [CS16](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L80) proves the finite comparison by an eigenvector expansion; [87W3](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L91) passes its needed special case to the countable connection kernel by finite principal matrices. These do not reproduce the general Schur, Ando or block-matrix theorems. The order is positive semidefinite order, not entrywise order. |
+| Lemma A.9; Proposition A.10; Lemma A.11 | [IZAO](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L110) proves the signed trace identity after establishing absolute convergence. Its final quadratic form avoids the general square-root and positive-trace-product lemmas. Those general statements remain outside the supplied exposition. |
+| Final proof of Proposition 1.8 | [IZAO](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/articles/connection-kernels.md#L110) completes the finite-susceptibility diagram comparison. A source claim at an endpoint with divergent susceptibility needs a separately justified limiting argument; a limit of the diagrams is not supplied merely by citing this tag. |
+
+## Recorded source corrections and Lean obligations
+
+The [source-correction concordance](sources/source-corrections-b20bbd7.md) preserves the existing provisional boundary-positive-part and triangle-numerator records. Their [current pinned source record](https://github.com/tomhutchcroft/lrp/blob/18ab9d7cfea0056c5f234b744386bc7420fa6f86/wiki/errata/hutchcroft-triangle-2021.json) gives the affected tags and formal obligations. The corresponding [private errata page](https://perclib-private-preview.tomhutchcroft.chatgpt.site/errata/hutchcroft-triangle-2021/) may advance after this map's snapshot.
+
+A Lean proof of the corrected inequality must retain its hypotheses and almost-everywhere qualification; it cannot certify the stronger printed numerator. The reciprocal integration and logarithmic transfer are separate obligations. No assertion tag, mathematical statement, source verdict or compiled association is added here. The general Appendix A results, the hierarchical off-critical application, the bibliography and journal-version reconciliation remain unfinished.

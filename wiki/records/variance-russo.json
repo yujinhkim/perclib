@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "variance-russo",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 15
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-elementary-square",
+      "order": 0,
+      "label": "Elementary square inequality",
+      "locator": "Named statement start lines in the pinned source: 11",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The source is the initial real inequality 2ab <= a^2+b^2, with unrestricted real a and b. The variance proof explains it from (a-b)^2 >= 0 and records the corresponding two-point convexity identity. Variance tensorization and derivative bounds are expository results; they are not attributed to this one-theorem source."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

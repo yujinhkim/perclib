@@ -1,0 +1,39 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "integrated-lower-tails",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 14
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 14,
+      "label": "Four mean-field conditions with explicit endpoint hypotheses",
+      "locator": "Chapter 6 · Equivalent mean-field conditions · source lines 2503–2597 (S015)",
+      "relationship": "Complete conditional implication cycle with almost-everywhere derivative scope",
+      "note": "Finite susceptibility on (a,b), divergence at b, transitivity and a finite positive weight row are assumed. Tonelli justifies summing tail derivatives; the negative term is retained until susceptibility diverges. Critical-parameter identification remains separate."
+    },
+    {
+      "source": "notes",
+      "order": 16,
+      "label": "Susceptibility and critical-tail mean-field equivalence",
+      "locator": "Chapter 6 · Equivalent mean-field conditions · source lines 2503–2558 (S015)",
+      "relationship": "Two-condition equivalence under explicit finite-susceptibility and blow-up hypotheses",
+      "note": "Combines the entropy and OSSS implications with the tree-graph integrated lower bound and a pointwise-upgrade argument. The four-condition theorem extends this implication cycle under the same explicit endpoint hypotheses."
+    },
+    {
+      "source": "notes",
+      "order": 40,
+      "label": "Integrated lower-tail argument",
+      "locator": "Chapter 4 · Integrated lower tails · S007 · source lines 1365–1420",
+      "relationship": "Conditional proof mechanism",
+      "status": "pending",
+      "note": "Explicit endpoint domination, continuous unbounded means and cubic second moments. Choosing the first-moment scale avoids continuity of the second-to-first moment ratio; model-specific verification remains separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

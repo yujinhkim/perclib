@@ -1,0 +1,47 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "marginal-ode",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 13
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 0,
+      "label": "Marginal deficit cancellation and power-log tail normalization",
+      "locator": "Chapter 9 · S029–S031 · lines 4337–4360 and 4871–5094",
+      "relationship": "Conditional analytic consequences of explicit moment and deficit inputs",
+      "note": "The ratio f/m^3 cancels the common deficit exactly. Spatial deficit asymptotics and the full double-factorial moment input remain unproved here; inverse-scale normalization retains the factor (2 alpha)^(-1/4) in the marginal tail."
+    },
+    {
+      "source": "notes",
+      "order": 39,
+      "label": "Marginal ODE",
+      "locator": "Chapter 9 · named statement S032 · source lines 5095–5133",
+      "relationship": "Explicit regularity and proof",
+      "status": "pending",
+      "note": "The integrating-factor proof includes positivity and regularity hypotheses. Exact solutions illustrate the role of the integrable error; percolation moment and tail applications remain separate."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 54,
+      "label": "Polynomial mixed-moment induction",
+      "locator": "arXiv:2508.18807v1 HTML, Lemmas I.5.26-I.5.29, Proposition I.5.30 and proof of Theorem I.5.21",
+      "relationship": "Signed analytic step, exact derivative and conditional recurrence closure",
+      "status": "pending",
+      "note": "2KB9 supplies the signed ODE lemma; VMEJ the absolute moment bound; 1K61 the exact two-cluster derivative. IX97 proves the diagram recurrence by generating functions, and GY8M closes the induction conditional on the factorized differential equation and one-point/scalar boundary limits. The source collision estimate is still a separate model input. Three formula/proof-line diagnoses are provisional and confined to the inspected HTML."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "2KB9",
+      "proof_uses": [],
+      "reason": "A regularly varying integrating factor and a positive forcing-index gap identify signed asymptotics without differentiating the normalization."
+    }
+  ]
+}

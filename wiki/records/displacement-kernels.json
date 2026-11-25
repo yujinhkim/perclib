@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "displacement-kernels",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 9
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 4,
+      "label": "Omitted rows for Euclidean power kernels",
+      "locator": "Chapter 1 · source lines 291–304; Chapter 9 · cutoff comparison at lines 5247–5273",
+      "relationship": "Explicit sufficient kernel-tail estimate",
+      "status": "pending",
+      "note": "Supremum-norm shell counts give two-sided R^(-alpha) tails under pointwise power-kernel bounds. Only the upper kernel bound is needed for the omitted probability row. Finite cutoff cluster moments are not inferred from finite range."
+    },
+    {
+      "source": "perclib-translation-models",
+      "order": 0,
+      "label": "Displacement kernels and translation-invariant model bounds",
+      "locator": "Named statement start lines in the pinned source: 40, 49, 59, 67, 77, 85, 93, 104, 111, 118",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The source uses an additive group without assuming commutativity; its y-x convention is the multiplicative y x^{-1} convention in U8CI. Kernel descent and deterministic row identities do not need countability; the article states a countable context because its probability applications do. R01V gives the row identity and total-mass upper bound. The probability and intensity applications include the source bounds from a finite total-mass majorant and explain the stronger off-diagonal version separately. Each point mass sums to one, so the two-point kernel has mass two even when its two support points coincide. The source axis witness is the displayed two-point example on an integer lattice, not the full nearest-neighbour kernel. Conjugacy criteria and Euclidean power-tail estimates are expository additions, not statements of this source module."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

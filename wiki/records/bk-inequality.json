@@ -1,0 +1,43 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "bk-inequality",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 11
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 18,
+      "label": "Finite increasing-event BK and its finite-witness extension",
+      "locator": "Chapter 4 · Harris and BK · S005 · lines 1223–1233",
+      "relationship": "Quoted finite theorem and proved extension",
+      "status": "pending",
+      "note": "Finite BK is proved by a coordinate induction, independent bit blocks and endpoint continuity. The countable extension explicitly uses finite certificates and does not assert a broader witness convention or the nonmonotone Reimer theorem."
+    },
+    {
+      "source": "perclib-low-density-bk",
+      "order": 0,
+      "label": "Homogeneous low-density BK induction",
+      "locator": "Named statement start lines in the pinned source: 35, 41, 47, 53, 81, 131, 138, 157, 167, 178, 214, 259, 305, 310, 332, 346, 374, 395, 414, 422",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The source proves homogeneous finite-coordinate BK for probabilities at most one half. The article explains increasing sections, the closed-section identity, open-section containment, inclusion-exclusion indicator bound, weighted recursion and arithmetic remainder. Its algebra paragraph preserves arbitrary-real-parameter splitting and coordinate reindexing, versus nonnegative probability weights needed for monotonicity. Finite indicator expectations become probabilities only on the probability interval. The article goes further through inhomogeneous induction, independent OR blocks, endpoint limits and countable witnesses; those extensions are not attributed to this source module."
+    }
+  ],
+  "occursIn": [
+    {
+      "order": 6,
+      "source": "notes",
+      "tag": "BNY8",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 4, Harris and BK: S005, quoted increasing-event finite BK theorem (lines 1223–1230).",
+      "relationship": "source-statement",
+      "note": "Both statements concern increasing events depending on finitely many independent Bernoulli coordinates and disjoint open witnesses. BNY8 explicitly spells out arbitrary coordinate probabilities, including endpoints. The article supplies a finite-coordinate proof by induction, independent bit blocks and endpoint continuity; neither this record nor the countable finite-witness extension certifies a formal proof or covers the nonmonotone Reimer theorem."
+    }
+  ],
+  "proofUses": []
+}

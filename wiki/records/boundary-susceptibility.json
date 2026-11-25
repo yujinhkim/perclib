@@ -1,0 +1,30 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "boundary-susceptibility",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 15
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 1,
+      "label": "Boundary susceptibility and the unimodular diagram comparison",
+      "locator": "Chapter 5 · Quantitative triangle inequality · source lines 1688–2031 (S010–S012)",
+      "relationship": "Corrected nontransitive boundary estimate and explicit counterexample",
+      "note": "The unsigned-square boundary formula needs a positive part. The diagram comparison uses mass transport. The squared-numerator derivative bound is proved; the stronger source formula has a small-intensity counterexample even on the infinite line."
+    },
+    {
+      "source": "hutchcroft-triangle-2021",
+      "order": 1,
+      "label": "Boundary formula and proof arithmetic",
+      "locator": "Lemma 2.1 and equations (2.4)–(2.5); PDF printed pp. 11–12",
+      "relationship": "Correction and weaker proved consequence",
+      "note": "Independent counterexamples address both the nontransitive boundary formula and the stronger small-intensity derivative formula."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

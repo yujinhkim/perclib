@@ -1,0 +1,7 @@
+.tags.lock
+tags.json.*.tmp
+node_modules/
+dist/
+.artifacts/
+
+__pycache__/

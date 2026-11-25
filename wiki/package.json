@@ -1,0 +1,13 @@
+{
+  "name": "perclib-wiki",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static mathematical reference for PercLib",
+  "dependencies": {
+    "katex": "0.19.1"
+  },
+  "scripts": {
+    "build": "node --test tests/*.test.mjs && node src/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

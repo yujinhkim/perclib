@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "connection-kernels",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 7
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 43,
+      "label": "Connection-kernel positivity and diagram comparisons",
+      "locator": "Chapter 5 · definition at line 1841 and proof at lines 1931–2028",
+      "relationship": "Detailed proofs with explicit group scope for the second comparison",
+      "status": "pending",
+      "note": "Cluster positivity and the first comparison use finite restrictions. The second comparison is proved with finite susceptibility under an explicit mass-transport property, including regular group actions."
+    },
+    {
+      "source": "notes",
+      "order": 44,
+      "label": "Open-triangle localization",
+      "locator": "Chapter 5 · Open triangles · source lines 1458–1480 (S009)",
+      "relationship": "Proof of three-link decay with explicit uniform and symmetry hypotheses",
+      "status": "pending",
+      "note": "A uniform finite diagonal triangle bound gives decay outside finite sets at each root. Transitive metric-preserving symmetry gives uniform separation-scale decay; no finite susceptibility is assumed. Later path-surgery estimates remain separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

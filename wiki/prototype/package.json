@@ -1,0 +1,13 @@
+{
+  "name": "percolation-wiki-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A mathematical reference prototype for the percolation library",
+  "dependencies": {
+    "katex": "0.19.1"
+  },
+  "scripts": {
+    "build": "npm --prefix .. run build",
+    "test": "npm --prefix .. test"
+  }
+}

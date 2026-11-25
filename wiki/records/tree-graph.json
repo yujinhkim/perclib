@@ -1,0 +1,13 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "tree-graph",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 8
+    }
+  ],
+  "sourceOccurrences": [],
+  "occursIn": [],
+  "proofUses": []
+}

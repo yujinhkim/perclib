@@ -1,0 +1,1149 @@
+{
+  "candidates": [
+    {
+      "declared_cross_slice_dependencies": 29,
+      "edges": 99,
+      "name": "i1",
+      "native_validation": "VALIDATED_WITH_DECLARED_OPEN_LINKS",
+      "outside_root_closure": 7,
+      "path": "docs/orchestration/candidates/i1.md",
+      "records": 44,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": 37,
+      "sha256": "ac97d85af81ca65f0fcd436a5612cab6336977ddd40cc157eccabf1fca398f32"
+    },
+    {
+      "declared_cross_slice_dependencies": 3,
+      "declared_open_proof_sources": [
+        "hutchcroft.i.1.beta_c.bilat:step-finite"
+      ],
+      "disputed_nodes": [
+        "hutchcroft.i.1.beta_c.bilat:step-finite"
+      ],
+      "edges": 102,
+      "name": "i23",
+      "native_validation": "VALIDATED_WITH_DECLARED_OPEN_LINKS",
+      "path": "docs/orchestration/candidates/i23.md",
+      "records": 68,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": null,
+      "sha256": "39485e7ba437008b9a6f81b861176b54c342ee92322f7284837defe630380fb4"
+    },
+    {
+      "declared_cross_slice_dependencies": 4,
+      "edges": 135,
+      "name": "i41",
+      "native_validation": "VALIDATED_WITH_DECLARED_OPEN_LINKS",
+      "path": "docs/orchestration/candidates/i41.md",
+      "records": 80,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": null,
+      "sha256": "4d9ee9639a0ab95d97eddf9564fd6e9f57d395f319115e75682a6e210c821112"
+    },
+    {
+      "declared_cross_slice_dependencies": 8,
+      "edges": 117,
+      "name": "i423",
+      "native_validation": "VALIDATED_WITH_DECLARED_OPEN_LINKS",
+      "path": "docs/orchestration/candidates/i423.md",
+      "records": 47,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": null,
+      "sha256": "c3d0027c24a7dfbfddeaa9533c1296ebf5249b558b24be821adef078e99e0ccb"
+    },
+    {
+      "declared_cross_slice_dependencies": 2,
+      "edges": 133,
+      "name": "i5152",
+      "native_validation": "VALIDATED_WITH_DECLARED_OPEN_LINKS",
+      "path": "docs/orchestration/candidates/i5152.md",
+      "records": 61,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": null,
+      "sha256": "750705b15974fd0dd491cc243070fa17a9aec834d44a5f4abf4e18c5d9874646"
+    },
+    {
+      "declared_cross_slice_dependencies": 0,
+      "declared_open_proof_sources": [
+        "I.5.25"
+      ],
+      "edges": 137,
+      "name": "i5354",
+      "native_validation": "VALIDATED",
+      "path": "docs/orchestration/candidates/i5354.md",
+      "records": 68,
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": null,
+      "sha256": "7c99c750e30c1133e6dbbe8608fe47c33681f40f6ec00bddafca09b89a0a3c56"
+    },
+    {
+      "case_route_closure_audit": {
+        "hutchcroft.i.1.6.hd1": 47,
+        "hutchcroft.i.1.6.hd2": 65,
+        "hutchcroft.i.1.6.hd3": 65
+      },
+      "change_from_prepared_base": {
+        "edges": 2,
+        "records": 2
+      },
+      "critical_parameter_provider": {
+        "bilat_finiteness": "hutchcroft.i.1.2.betac.fin",
+        "bilat_positivity": "hutchcroft.i.1.beta_c.bilat:step-positive",
+        "source_regimes": "The kernel class of Definition I.1.3, with either d\u22652 and \u03b1>0, or d=1 and 0<\u03b1\u22641. The separate d=1, \u03b1>1 problem is not discharged here.",
+        "withdrawn_record_consumed": false
+      },
+      "declared_cross_slice_dependencies": 0,
+      "declared_open_proof_sources": [
+        "hutchcroft.i.1.beta_c.bilat:step-finite"
+      ],
+      "disputed_nodes": [
+        "hutchcroft.i.1.beta_c.bilat:step-finite"
+      ],
+      "edges": 453,
+      "name": "combined",
+      "native_validation": "VALIDATED",
+      "outside_root_closure": 85,
+      "path": "docs/orchestration/candidates/combined.md",
+      "per_root_closure_audit": {
+        "hutchcroft.i.1.15": {
+          "closure_nodes": 91,
+          "conditional_scope": "Hydro case derivations only; no HD, triangle or log-integrable branch",
+          "excluded_displays": {
+            "hutchcroft.i.1.6.disp.I.1.6": true,
+            "hutchcroft.i.1.6.disp.I.1.7": true
+          }
+        },
+        "hutchcroft.i.1.6": {
+          "closure_nodes": 130,
+          "conditional_scope": "three case-scoped HD routes; no Hydro branch; HD3 uses the printed v1 case, with the v2 interpretation outside the root closure",
+          "excluded_displays": {
+            "hutchcroft.i.1.15.disp.I.1.16": true,
+            "hutchcroft.i.1.15.disp.I.1.17": true
+          }
+        }
+      },
+      "records": 239,
+      "regularization_obligation": {
+        "deps": [
+          "hutchcroft.i.4.2.c2",
+          "hutchcroft.i.4.15.c2",
+          "hutchcroft.def.rv",
+          "ext.bgt.thm1.5.12"
+        ],
+        "node": "hutchcroft.i.1.15.step.objects.regularization",
+        "proof_completed": false,
+        "source_gap": true
+      },
+      "review_status": "candidate, with explicit DISPUTED state only for the withdrawn finite-range reconstruction; pending independent per-node and global topology review",
+      "root_closure_nodes": 154,
+      "scoped_excluded_nodes": {
+        "hutchcroft.i.1.15": {
+          "hutchcroft.a.logint": false,
+          "hutchcroft.a.triangle": false
+        },
+        "hutchcroft.i.1.6": {
+          "hutchcroft.a.hydro": false
+        },
+        "route.hd.case3": false
+      },
+      "sha256": "976d330c6e193e43fff4f1a36a761a70351582e374c72e7b88d9fa60abf9319c"
+    }
+  ],
+  "schema": "source-packet-review-validation-v4",
+  "scope": "Native syntax/topology and scoped closure checks only; no record is promoted, globally reviewed, or proved. Explicit withdrawn reconstructions are marked DISPUTED; other nodes remain PROPOSED",
+  "source_revision": "bd9fbaf851deaec761a71492c2e4d99b87978fe7",
+  "status": "PROPOSED_CANDIDATES_ONLY_NO_GLOBAL_REVIEWER",
+  "verification": {
+    "anchor_semantic_guard": {
+      "manifest_sha256": "bb855df26fab249019a04a395d3e613446796ce0d4d6a648a58e969359011c36",
+      "semantic_pins": {
+        "source_model_v1": 19,
+        "source_norm_v1": 17,
+        "theorem_I_1_15_v1": 44,
+        "theorem_I_1_6_v1": 44
+      }
+    },
+    "base_revision_at_verification": "4140ac56119d2cd80995f91886669efe004839d5",
+    "candidate_structural_review": {
+      "artifact": ".scratch/verification/differences.json",
+      "scope": "Bounded independent before/after diff over the four-packet graph and its two additional open obligations; not independent global topology or Lean proof approval.",
+      "sha256": "9614e29ba40e62b6137d933b6e8ec47c6c965e2a3ac454f3bf7f4b64aa9948b2",
+      "slice_combined_edge_divergences": 0,
+      "slice_combined_field_divergences": 0
+    },
+    "coverage_manifest": {
+      "path": "docs/orchestration/candidates/I5_COVERAGE.md",
+      "sha256": "86fe016a27ef20033431dd55edf0091d041e24a8a5f4aa18fa459ae1d3784921",
+      "status": "all PROPOSED",
+      "typed_items": 152,
+      "unnumbered_display_exclusions": 77
+    },
+    "failed_kernel_replays": [
+      {
+        "artifact": ".scratch/verification/replay-PowerLawHighTemp.log",
+        "command": "leanchecker PercLib.CriticalLRP.PowerLawHighTemp",
+        "exit_code": -9,
+        "module": "PercLib.CriticalLRP.PowerLawHighTemp",
+        "outcome": "killed external checker; no completed kernel replay and no proof-failure conclusion"
+      }
+    ],
+    "frozen_draft_audit": {
+      "artifact": ".scratch/verification/current-frozen-draft-check.log",
+      "quarantined_draft_anchors": 2,
+      "sealed_this_turn": 0
+    },
+    "full_axiom_audit": {
+      "artifact": ".scratch/verification/current-full-axioms.json",
+      "declarations": 11862,
+      "nonstandard_axioms": 0,
+      "sorryAx": 0
+    },
+    "import_closure": {
+      "production_modules": 625
+    },
+    "kernel_replay": [
+      {
+        "artifact": ".scratch/verification/replay-FiniteFirstMoment.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.FiniteFirstMoment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.FiniteFirstMoment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BinaryTree-Subcritical.log",
+        "command": "leanchecker PercLib.Models.BinaryTree.Subcritical.Basic",
+        "exit_code": 0,
+        "module": "PercLib.Models.BinaryTree.Subcritical.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SecondMoment.log",
+        "command": "leanchecker PercLib.CriticalLRP.VolumeMoments.SecondMoment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.VolumeMoments.SecondMoment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SecondMomentFirstMoment.log",
+        "command": "leanchecker PercLib.CriticalLRP.VolumeMoments.SecondMomentFirstMoment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.VolumeMoments.SecondMomentFirstMoment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CutoffThirdMomentFinite.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.CutoffThirdMomentFinite",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.CutoffThirdMomentFinite"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CutoffThirdMomentHighTemp.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.CutoffThirdMomentHighTemp",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.CutoffThirdMomentHighTemp"
+      },
+      {
+        "artifact": ".scratch/verification/replay-NormalizedAEndpoint.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.NormalizedAEndpoint",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.NormalizedAEndpoint"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-MomentTransfer.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.MomentTransfer",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.MomentTransfer"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-WindowMoments.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.WindowMoments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.WindowMoments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-CutoffMomentAudit.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.CutoffMomentAudit",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.CutoffMomentAudit"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-CutoffParameterMonotonicity.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.CutoffParameterMonotonicity",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.CutoffParameterMonotonicity"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-CutoffMomentConvergence.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.CutoffMomentConvergence",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.CutoffMomentConvergence"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-SourceModelMoments.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.SourceModelMoments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.SourceModelMoments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-SourceModelCutoffLimit.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.SourceModelCutoffLimit",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.SourceModelCutoffLimit"
+      },
+      {
+        "artifact": ".scratch/verification/replay-MomentMonotonicity-StrictCutoffEpsilon.log",
+        "command": "leanchecker PercLib.CriticalLRP.MomentMonotonicity.StrictCutoffEpsilon",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.MomentMonotonicity.StrictCutoffEpsilon"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Orchestration-ModelWitness-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Orchestration.ModelWitness.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Orchestration.ModelWitness.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Orchestration-FlatNorm-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Orchestration.FlatNorm.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Orchestration.FlatNorm.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Orchestration-SourceModelNonvacuity.log",
+        "command": "leanchecker PercLib.CriticalLRP.Orchestration.SourceModelNonvacuity",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Orchestration.SourceModelNonvacuity"
+      },
+      {
+        "artifact": ".scratch/verification/replay-ErrorFunctions.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.ErrorFunctions",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.ErrorFunctions"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BallRatioLogError.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.BallRatioLogError",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.BallRatioLogError"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SubcriticalRadius.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.SubcriticalRadius",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.SubcriticalRadius"
+      },
+      {
+        "artifact": ".scratch/verification/replay-TriTail-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.TriTail.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.TriTail.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-TriTail.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.TriTail",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.TriTail"
+      },
+      {
+        "artifact": ".scratch/verification/replay-TriTailSqrt.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.TriTailSqrt",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.TriTailSqrt"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BallAverage-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.BallAverage.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.BallAverage.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BallAverage.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.BallAverage",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.BallAverage"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CountableProduct-Renewal-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.Renewal.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.Renewal.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CountableProduct-Renewal.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.Renewal",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.Renewal"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CountableProduct-MomentRecursion-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.MomentRecursion.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.MomentRecursion.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CountableProduct-MomentRecursion.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.MomentRecursion",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.MomentRecursion"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CountableProduct-SetEncCard.log",
+        "command": "leanchecker PercLib.CriticalLRP.CountableProduct.SetEncCard",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.CountableProduct.SetEncCard"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-Envelope-Defs.log",
+        "command": "leanchecker PercLib.Probability.Exploration.Envelope.Defs",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.Envelope.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-Envelope.log",
+        "command": "leanchecker PercLib.Probability.Exploration.Envelope",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.Envelope"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-PGF.log",
+        "command": "leanchecker PercLib.Probability.Exploration.PGF",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.PGF"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-MomentBound.log",
+        "command": "leanchecker PercLib.Probability.Exploration.MomentBound",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.MomentBound"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-AdaptedReveal-Defs.log",
+        "command": "leanchecker PercLib.Probability.Exploration.AdaptedReveal.Defs",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.AdaptedReveal.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-AdaptedReveal-Reveal.log",
+        "command": "leanchecker PercLib.Probability.Exploration.AdaptedReveal.Reveal",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.AdaptedReveal.Reveal"
+      },
+      {
+        "artifact": ".scratch/verification/replay-Probability-Exploration-AdaptedReveal-PGF.log",
+        "command": "leanchecker PercLib.Probability.Exploration.AdaptedReveal.PGF",
+        "exit_code": 0,
+        "module": "PercLib.Probability.Exploration.AdaptedReveal.PGF"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Basic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Basic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-History.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.History",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.History"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Measurable.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Measurable",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Measurable"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Counting.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Counting",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Counting"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Limit.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Limit",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Limit"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-RevealData.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.RevealData",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.RevealData"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-BFSProduct.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.BFSProduct",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.BFSProduct"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Exploration.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Scalar.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Scalar",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Scalar"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Budget.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Budget",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Budget"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Rows-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Rows.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Rows.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Fresh-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Fresh.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Fresh.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Limit.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Limit",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Limit"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Assemble.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Assemble",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Assemble"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Poisson-Nonvacuous.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Poisson.Nonvacuous",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Poisson.Nonvacuous"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Generation-History-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Generation.History.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Generation.History.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Generation-RowCharge.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Generation.RowCharge",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Generation.RowCharge"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Generation-Arithmetic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Generation.Arithmetic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Generation.Arithmetic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Generation-Fresh.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Generation.Fresh",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Generation.Fresh"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-Generation-Step.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.Generation.Step",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.Generation.Step"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-HighTemperature-FiniteHorizon.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.HighTemperature.FiniteHorizon",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.HighTemperature.FiniteHorizon"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-HighTemperature-Moment-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-HighTemperature-Moment-Induction.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Induction",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Induction"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-HighTemperature-Moment-Cluster.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Cluster",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Cluster"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BFS-HighTemperature-Moment-Natural.log",
+        "command": "leanchecker PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Natural",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Exploration.BFS.HighTemperature.Moment.Natural"
+      },
+      {
+        "artifact": ".scratch/verification/replay-IntensityMoments.log",
+        "command": "leanchecker PercLib.CriticalLRP.IntensityMoments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.IntensityMoments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-HighTemperatureTail.log",
+        "command": "leanchecker PercLib.CriticalLRP.HighTemperatureTail",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.HighTemperatureTail"
+      },
+      {
+        "artifact": ".scratch/verification/replay-PowerLawHighTemp-Moments.log",
+        "command": "leanchecker PercLib.CriticalLRP.PowerLawHighTemp.Moments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.PowerLawHighTemp.Moments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-PowerLawHighTemp-Tail.log",
+        "command": "leanchecker PercLib.CriticalLRP.PowerLawHighTemp.Tail",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.PowerLawHighTemp.Tail"
+      },
+      {
+        "artifact": ".scratch/verification/replay-BushRefute.log",
+        "command": "leanchecker PercLib.CriticalLRP.BushRefute",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.BushRefute"
+      },
+      {
+        "artifact": ".scratch/verification/replay-RayRefutation.log",
+        "command": "leanchecker PercLib.CriticalLRP.RayRefutation",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.RayRefutation"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-BK.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.BK",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.BK"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Shapes.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Shapes",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Shapes"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Assembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Assembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Assembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Moment.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Moment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Moment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-FullMoment.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.FullMoment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.FullMoment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Arms.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Arms",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Arms"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Attach.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Attach",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Attach"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Bridge.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Bridge",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Bridge"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CubicMixed-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.CubicMixed.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.CubicMixed.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CubicMixed-Basic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.CubicMixed.Basic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.CubicMixed.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-CubicMixed-Moments.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.CubicMixed.Moments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.CubicMixed.Moments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Mixed-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Mixed.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Mixed.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Mixed.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Mixed",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Mixed"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Transport.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Transport",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Transport"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Sum.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Sum",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Sum"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Slot.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Slot",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Slot"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Event.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Event",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Event"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-Final.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Final",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.Final"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-MixedK2-RootIndependence.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.RootIndependence",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.MixedK2.RootIndependence"
+      },
+      {
+        "artifact": ".scratch/verification/replay-FourthMoment-Cases.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.FourthMoment.Cases",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.FourthMoment.Cases"
+      },
+      {
+        "artifact": ".scratch/verification/replay-PowerLawTreeMoments.log",
+        "command": "leanchecker PercLib.CriticalLRP.PowerLawTreeMoments",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.PowerLawTreeMoments"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-FullMoment.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.FullMoment",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.FullMoment"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SecondMomentPermutation.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SecondMomentPermutation",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SecondMomentPermutation"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-MomentAssembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.MomentAssembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.MomentAssembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Regroup.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Regroup",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Regroup"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Eval.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Eval",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Eval"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Main.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Assembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Assembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Assembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Fork-Nontrivial.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Fork.Nontrivial",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Fork.Nontrivial"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Basic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Basic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Cover.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Cover",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Cover"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Split.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Split",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Split"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Perm.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Perm",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Perm"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Main.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Final.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Final",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Final"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Attachment-Assembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Assembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Attachment.Assembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Basic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Basic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineFold.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFold",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFold"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineShape.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineShape",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineShape"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineCover.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineCover",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineCover"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Consumer.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Consumer",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Consumer"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Eval.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Eval",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Eval"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Main.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineBridge.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineBridge",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineBridge"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineIntegration.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineIntegration",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineIntegration"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineFull.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFull",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFull"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Assembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Assembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Assembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Cases.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Cases",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Cases"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Nonnegative.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Nonnegative.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Nonnegative.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-TwoCopy.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Final",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Final"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Counterexample.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Fails",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Fails"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Printed.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417Example.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417Example.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Lattice.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417Example.Lattice",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417Example.Lattice"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Defs.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Defs",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Defs"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Basic.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Basic",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Basic"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineFold.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFold",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFold"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineShape.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineShape",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineShape"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineCover.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineCover",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineCover"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Consumer.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Consumer",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Consumer"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Eval.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Eval",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Eval"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Main.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineBridge.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineBridge",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineBridge"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineIntegration.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineIntegration",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineIntegration"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-NineFull.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFull",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.NineFull"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Ordinary-Assembly.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Assembly",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Ordinary.Assembly"
+      },
+      {
+        "artifact": ".scratch/verification/replay-SixPoint-Cases.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.SixPoint.Cases",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.SixPoint.Cases"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Nonnegative.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Nonnegative.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Nonnegative.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-TwoCopy.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Final",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Final"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Counterexample.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417.Fails",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417.Fails"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Printed.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417Example.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417Example.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I417-Lattice.log",
+        "command": "leanchecker PercLib.CriticalLRP.Correlation.I417Example.Lattice",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Correlation.I417Example.Lattice"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-KernelPower-Main.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.KernelPower.Main",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.KernelPower.Main"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-KernelPower-Model.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.KernelPower.Model",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.KernelPower.Model"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-KernelPower-Nonvacuity.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.KernelPower.Nonvacuity",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.KernelPower.Nonvacuity"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Cutoff-Translation.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Cutoff.Translation",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Cutoff.Translation"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Cutoff-Monotone.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Cutoff.Monotone",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Cutoff.Monotone"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Cutoff-KpowSum.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Cutoff.KpowSum",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Cutoff.KpowSum"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Polygon-Model.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Polygon.Model",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Polygon.Model"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Polygon-Bridge.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Polygon.Bridge",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Polygon.Bridge"
+      },
+      {
+        "artifact": ".scratch/verification/replay-I418-Polygon-Consumer.log",
+        "command": "leanchecker PercLib.CriticalLRP.Analysis.Polygon.Consumer",
+        "exit_code": 0,
+        "module": "PercLib.CriticalLRP.Analysis.Polygon.Consumer"
+      }
+    ],
+    "kernel_replay_scope": "Exact named modules executed above, not a claim of global mathematical closure or of a whole-repository replay unless separately recorded.",
+    "lake_build": {
+      "artifact": ".scratch/verification/current-build.log",
+      "command": "lake build --wfail",
+      "jobs": 9672
+    },
+    "python_tests": 64,
+    "quarantine_note": "Both moment roots are registered DRAFT_SORRY files. Latest successful build and production-only axiom audit are not source fidelity, global topology review, or proof of the root theorems.",
+    "source_restitution": {
+      "inequality_annotations": 287,
+      "math_annotations": 2838
+    }
+  }
+}

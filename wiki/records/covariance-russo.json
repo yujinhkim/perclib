@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "covariance-russo",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 14
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 21,
+      "label": "Finite covariance form of Russo and coefficient bounds",
+      "locator": "Chapter 6 · OSSS and ghost fields · source lines 2634–2643",
+      "relationship": "Finite-coordinate derivation",
+      "status": "pending",
+      "note": "Exact coefficients and a conditional revealment conversion; S017 is not assumed, and no infinite-volume derivative is claimed."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

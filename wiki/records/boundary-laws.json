@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "boundary-laws",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 10
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 2,
+      "label": "Finite-size contraction and critical boundary flux",
+      "locator": "S003 · Chapter 4 · source lines 985–1040, finite-size criterion portion",
+      "relationship": "Partial proof with finite-truncation argument",
+      "status": "pending",
+      "note": "YLZV proves a uniform local criterion using finite truncations instead of dividing by infinite susceptibility. R84Z derives the necessary critical flux by parameter continuity. The converse criterion and supercritical inequality are supplied in the separate sharpness article."
+    },
+    {
+      "source": "dct-sharpness",
+      "order": 1,
+      "label": "Restricted-domain first-exit inequality",
+      "locator": "arXiv:1502.03050v3, Lemma 1.5, printed page 6",
+      "relationship": "Countable product-law generalization",
+      "status": "pending",
+      "note": "USAC retains the domain, target set and suffix connection. The source intensity profile is a specialization; the wiki proof needs countability and product independence, not transitivity. This is pending mathematical correspondence, not a compiled association."
+    },
+    {
+      "source": "perclib-boundary-wiring",
+      "order": 0,
+      "label": "Independent boundary marks and their laws",
+      "locator": "Named statement start lines in the pinned source: 23, 31, 41, 65, 129, 150",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "AGF6 and ZANA cover countable boundary/internal independence and boundary marginal laws. QH7Q in finite-transcripts covers arbitrary injective sampling, arbitrary disjoint block families, and fixed-vertex closed products without requiring the vertex to lie inside a boundary domain. Its countable closed-product event may include a diagonal coordinate; the boundary interpretation does not."
+    },
+    {
+      "source": "perclib-first-exit",
+      "order": 0,
+      "label": "First-exit decomposition and the boundary functional",
+      "locator": "Named statement start lines in the pinned source: 24, 42, 75, 101, 126, 139, 145, 161, 185",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "ROY9 covers finite-domain escape, infinite-cluster comparison, singleton and zero-boundary cases. 6J9C supplies the exact ray escape and boundary sums, with both endpoint parameters. Its discussion retains deterministic first exit on arbitrary domains and independence for a countable domain in an arbitrary ambient space. The two source representations of the boundary sum describe the same nonnegative quantity."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "finite-random-graphs",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 5
+    },
+    {
+      "collection": "critical-theory",
+      "order": 3
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "heydenreich-hofstad",
+      "order": 3,
+      "label": "Finite-size scaling and random graphs",
+      "locator": "Author manuscript · Chapter 13",
+      "relationship": "Source theorem family",
+      "status": "pending",
+      "note": "Critical windows on finite graphs require definitions distinct from infinite-cluster thresholds."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

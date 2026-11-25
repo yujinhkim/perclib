@@ -1,0 +1,93 @@
+.tag-citations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.tag-citations a {
+  font:
+    11px ui-monospace,
+    monospace;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+:target {
+  scroll-margin-top: 92px;
+}
+.context-rail a {
+  display: block;
+  margin: 7px 0;
+}
+.record {
+  overflow-wrap: anywhere;
+}
+.record dt {
+  font-weight: 600;
+  margin-top: 14px;
+}
+.record dd {
+  margin: 4px 0 14px 16px;
+}
+.search-trigger {
+  white-space: nowrap;
+}
+@media (max-width: 850px) {
+  .header-tools .search-trigger {
+    width: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+.running-context {
+  padding: 20px 24px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  margin: 24px 0;
+}
+.running-context h2 {
+  font-size: 18px;
+}
+.running-context li {
+  font: 16px/1.7 var(--serif);
+}
+.formal-assertion {
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.formal-assertion summary {
+  cursor: pointer;
+  line-height: 1.8;
+}
+.formal-assertion .status {
+  white-space: normal;
+}
+.lean-statement {
+  overflow: auto;
+  max-width: 100%;
+  padding: 16px;
+  background: var(--panel);
+  font:
+    13px/1.6 ui-monospace,
+    monospace;
+}
+#formal-evidence code {
+  overflow-wrap: anywhere;
+}
+
+.history-chart { display: block; width: 100%; max-width: 720px; height: auto; font: 12px sans-serif; }
+.history-table { overflow-x: auto; max-width: 100%; }
+.history-table table { border-collapse: collapse; width: 100%; }
+.history-table th, .history-table td { padding: .6rem; border-bottom: 1px solid #ccd7d1; text-align: left; white-space: nowrap; }
+.history-table caption { text-align: left; font-weight: bold; }
+
+.history-point circle { fill: #20745e; stroke: white; stroke-width: 1; }
+.history-point:hover circle, .history-point:focus circle { fill: #16382f; stroke: #e59b24; stroke-width: 3; r: 7px; }
+
+.reading-map-prose { overflow-wrap: anywhere; }

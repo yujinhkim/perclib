@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "window-tightness-interfaces",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 20
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-tightness-interface",
+      "order": 0,
+      "label": "Finite-window definitions and singleton witnesses",
+      "locator": "Named statement start lines in the pinned source: 56, 60, 64, 70, 89, 102, 111",
+      "relationship": "Source-inspected target definitions and witness identities",
+      "status": "pending",
+      "note": "C5Q9 and JGZB define the two universal properties without asserting that all countable vertex sets satisfy them. The source generalizes from weighted exponential profiles to all Bernoulli profiles; the amplification property uses k>=1 on the recorded reading of issue 52. Maximum and rooted intersections use full clusters, the root may lie outside the window, and singleton maximum/quantile values are one/two. The article exhibits the false k=0 endpoint and leaves the marked-tree partition and target proofs as obligations."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

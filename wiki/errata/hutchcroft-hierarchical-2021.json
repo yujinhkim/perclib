@@ -1,0 +1,112 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-hierarchical-2021",
+  "entries": [
+    {
+      "id": "quantile-continuity",
+      "title": "Finite-volume quantiles need only a one-sided limit",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Section 2.1, paragraph defining M_n immediately before equation (2.1), and the endpoint step in Proposition 2.2.",
+      "claim": "The integer-valued quantile is described as continuous in the intensity.",
+      "problem": "For a two-vertex ball with bond rate $j>0$, the quantile is $2$ when $1-e^{-\\beta j}\\leq e^{-1}$ and $3$ otherwise. It jumps at the threshold.",
+      "correction": "At every finite positive endpoint the quantile is locally constant from the left. The endpoint argument in 2XJX uses continuity of each fixed finite-volume tail probability and quantile minimality to retain the full endpoint quantile. It does not assume continuity of the quantile itself.",
+      "tags": [
+        "2XJX"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991",
+        "https://github.com/tomhutchcroft/lrp/pull/341"
+      ],
+      "leanImpact": "Merged main b65a568 contains finite-vertex quantile left-stability and positive-endpoint squared-bound transfer in Tightness/FiniteQuantile.lean (PR 341). These use continuity of fixed tail probabilities and quantile minimality, not global continuity of the integer quantile. The continuity and transfer statements require finite ambient vertices, so an application to the internal finite blocks in 2XJX must make that restriction explicit. The helper does not supply the hierarchical bound to be transferred or establish reviewed correspondence for 2XJX; formal status remains read from compiled evidence."
+    },
+    {
+      "id": "zero-intensity-division",
+      "title": "The quantile estimate at zero intensity",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Section 2.1, Proposition 2.2 and Corollary 2.3.",
+      "claim": "The upper bound divides by the intensity while including zero in its range.",
+      "problem": "The displayed real quotient is undefined at $\\beta=0$, where the quantile is $2$. The positive-intensity claim is not disproved.",
+      "correction": "Use the squared estimate $\\beta M_n(\\beta)^2\\leq A_M L^{(d+\\alpha)n}$, which is meaningful at zero. Tags 2XJX and FF30 supply the positive-intensity estimate, finite critical intensity and endpoint passage. After bounding $\\beta_c$, the displayed positive-intensity form follows with an adjusted constant.",
+      "tags": [
+        "2XJX",
+        "FF30"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991"
+      ],
+      "leanImpact": "Use the squared estimate in 2XJX for a contract that includes zero intensity. Restrict division by the intensity to positive values. The passage to the critical endpoint also needs the finite-threshold result FF30; the upper estimate must not assume that conclusion in order to prove it."
+    },
+    {
+      "id": "scaled-truncation",
+      "title": "Uniform truncation must retain the intensity scale",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Section 2.2, Lemma 2.9 and its use in Lemma 2.8.",
+      "claim": "An unscaled geometric cutoff is asserted to retain a uniform fraction of the mean.",
+      "problem": "FIXER constructs kernels with one common lower power-law envelope and increasingly strong short bonds. At suitable subcritical intensities, the retained-mean ratio at cutoff $L^{(d+\\alpha)n/2}$ tends to zero. No common upper envelope is imposed in the lemma.",
+      "correction": "For the internal root-cluster size $Y_n$ and its block-maximum quantile $M_n$, the rooted tails give $\\mathbb E\\min(Y_n,t)\\geq\\tfrac12\\min\\{1,t/(99M_n)\\}\\mathbb EY_n$. Choose $t=[c\\beta L^{-(d+\\alpha)(n+1)}]^{-1/2}$ and use the squared quantile estimate. The tagged replacement route is 12NL → 2XJX → 655W: its proof retains half the mean at a constant multiple of $M_n$ and obtains the required sibling recursion.",
+      "tags": [
+        "12NL",
+        "2XJX",
+        "655W"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991"
+      ],
+      "leanImpact": "The formal dependency chain must supply the rooted-tail estimate 12NL and squared quantile estimate 2XJX before deriving the sibling recursion 655W. Keep the intensity-dependent cutoff or a constant multiple of the quantile in that derivation. A small exceptional probability by itself does not control the discarded expectation."
+    },
+    {
+      "id": "root-containing-criterion",
+      "title": "The finite-set criterion requires the root",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Section 2.4, proof of Proposition 2.12, the displayed characterization of the critical parameter.",
+      "claim": "The boundary-flux condition is quantified over every finite set.",
+      "problem": "An empty set, or a set omitting the root, has zero rooted boundary flux. Such sets cannot satisfy the claimed lower bound. The cited Duminil-Copin–Tassion criterion includes root membership.",
+      "correction": "Quantify over finite $S\\ni0$. At a finite positive critical intensity, $\\phi_{\\beta_c}(S)\\geq1$ for these sets. FF30 retains the root requirement and proves the intensity-weighted flux bound used in 7YNX.",
+      "tags": [
+        "FF30",
+        "7YNX"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991"
+      ],
+      "leanImpact": "Quantify the finite-set criterion over finite sets containing the root. FF30 uses this hypothesis in the critical boundary-flux argument, and 7YNX uses its conclusion. The Duminil-Copin–Tassion source already includes root membership; the omission belongs to the hierarchical quotation."
+    },
+    {
+      "id": "susceptibility-lower-coefficient",
+      "title": "The critical lower bound retains a coefficient",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Section 2.4, Proposition 2.12, its second conclusion and final boundary-flux estimate.",
+      "claim": "The internal critical susceptibility is bounded below by the geometric scale with coefficient one.",
+      "problem": "FIXER gives a positive radial counterexample with $d=1$, $L=2$, $\\alpha=1/2$, first-shell rate $2^{-30}$ and rate $2^{-3\\ell/2}$ on shells $\\ell\\geq2$. FIXER’s estimate $\\beta_c<2^{26}$ gives $\\mu_1(\\beta_c)\\leq17/16<\\sqrt2$. This refutes the coefficient-one conclusion, not the comparability theorem.",
+      "correction": "For $0<\\beta_c<\\infty$, retain $\\mu_n(\\beta_c)\\geq[(L^\\alpha-1)/(C\\beta_c)]L^{\\alpha n}$. The zero kernel shows that an upper envelope alone does not ensure finite critical intensity. FF30 supplies finiteness under a positive lower envelope; 7YNX retains the boundary-flux coefficient. The comparability statements W498, V4QQ and YWTU remain unchanged.",
+      "tags": [
+        "FF30",
+        "7YNX",
+        "W498",
+        "V4QQ",
+        "YWTU"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991"
+      ],
+      "leanImpact": "Retain the explicit coefficient and the finite positive critical-intensity hypotheses in the lower-bound step of 7YNX. FF30 supplies finiteness under a positive lower envelope; an upper envelope alone is insufficient. The comparability targets W498, V4QQ and YWTU need no change, but proving a coefficient-one intermediate statement would not be a faithful route to them."
+    },
+    {
+      "id": "density-saturation",
+      "title": "The supercritical density comparison uses a minimum",
+      "status": "provisional",
+      "locator": "arXiv:2103.17013v1, Corollary 1.4, printed p. 5, final display.",
+      "claim": "The density of the infinite cluster is compared with max{beta minus beta_c, 1} for every beta above beta_c.",
+      "problem": "The displayed maximum grows without bound, but the density is a probability. Its claimed uniform positive lower comparison therefore fails at large intensity.",
+      "correction": "The saturated formulation uses $\\min\\{\\beta-\\beta_c,1\\}$. A valid two-sided linear comparison near $\\beta_c$ extends to this global form using monotonicity and the bound by one. The triangle criterion MS6M is unchanged; this range correction does not prove the probabilistic near-critical comparison from that criterion.",
+      "tags": [
+        "MS6M",
+        "U5MC"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Keep the near-critical order-parameter convention U5MC separate from a global comparison. MS6M supplies a diagram estimate, not the entire density theorem. A source-specific density statement still needs the probability implications and their hypotheses before it can receive compiled correspondence evidence."
+    }
+  ]
+}

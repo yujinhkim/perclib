@@ -1,0 +1,41 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "universal-tightness",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 7
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 25,
+      "label": "Universal tightness for maximum clusters",
+      "locator": "Chapter 6 · named statement S020 · source line 3149",
+      "relationship": "Source theorem",
+      "status": "pending",
+      "note": "Nonempty regions, quantile conventions, and parameter ranges must be made explicit before formal implementation."
+    },
+    {
+      "source": "hutchcroft-powerlaw-2021",
+      "order": 1,
+      "label": "Universal cluster-size tightness",
+      "locator": "Theorem 2.2 (existing published-edition locator; numbering in arXiv v2 not yet checked)",
+      "relationship": "Source theorem",
+      "status": "pending",
+      "note": "The precise quantile and finite-graph conventions require their own checked implementation."
+    },
+    {
+      "source": "hutchcroft-lrp-2",
+      "order": 1,
+      "label": "Finite-cluster control and hyperscaling",
+      "locator": "Universal tightness and low-dimensional applications",
+      "relationship": "Application",
+      "status": "pending",
+      "note": "A universal finite-graph input can be reused without importing the whole paper’s model-specific assumptions."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

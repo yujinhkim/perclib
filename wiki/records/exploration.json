@@ -1,0 +1,13 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "exploration",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 3
+    }
+  ],
+  "sourceOccurrences": [],
+  "occursIn": [],
+  "proofUses": []
+}

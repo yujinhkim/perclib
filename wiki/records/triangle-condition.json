@@ -1,0 +1,41 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "triangle-condition",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 1
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 24,
+      "label": "Triangle-condition mean-field theorem",
+      "locator": "Chapter 5 · named statement S008 · source line 1441",
+      "relationship": "Source theorem",
+      "status": "pending",
+      "note": "A model-specific verification of the triangle condition is a separate result from its mean-field consequences."
+    },
+    {
+      "source": "heydenreich-hofstad",
+      "order": 2,
+      "label": "Critical exponents and the triangle condition",
+      "locator": "Author manuscript · Chapter 4",
+      "relationship": "Source theorem family",
+      "status": "pending",
+      "note": "The abstract implications and the later lace-expansion verification occupy different pages."
+    },
+    {
+      "source": "hutchcroft-triangle-2021",
+      "order": 0,
+      "label": "Quantitative mean-field implications",
+      "locator": "Susceptibility inequalities and diagram comparison",
+      "relationship": "Alternative proof route",
+      "status": "pending",
+      "note": "Finite triangle control and slowly divergent triangle control yield different quantitative conclusions."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

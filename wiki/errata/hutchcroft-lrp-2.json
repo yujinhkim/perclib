@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-lrp-2",
+  "entries": [
+    {
+      "id": "multiscale-tower-indices",
+      "title": "Intersection ranges in the multiscale tower identity",
+      "status": "provisional",
+      "locator": "arXiv:2508.18808v1 HTML, §II.5.3, proof of Proposition II.5.9: first equality in the tower-property display following the conditional Harris inequality. The PDF rendition has not been compared at this location.",
+      "claim": "The probability of all mass events A_1 through A_n and the joining events G_1 through G_i is equated with an expectation conditioned on F_i using A_1 through A_(i+1) and G_1 through G_n.",
+      "problem": "These are different intersections. Moreover, G_n is not a joining event for a child: the root has no parent. The next line of the display has the intended ranges, so this is a local indexing mismatch, not a counterexample to the proposition.",
+      "correction": "Keep all A_j and only G_j with j at most i inside the first conditional expectation. Extract the F_i-measurable indicators of A_j for j at most i and G_j for j less than i. Conditional association then gives P(all A, G_1,...,G_i) at least q times P(all A, G_1,...,G_(i-1)). L5IG proves this recurrence with explicit scale separation and iterates it n-1 times.",
+      "tags": [
+        "L5IG",
+        "2BBE"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "An eventual formal proof must use the correctly indexed finite intersections and prove measurability of earlier joining events from the separated radii before applying conditional expectation. This changes no tagged statement or claimed exponent and supplies no compiled Lean result. The diagnosis remains provisional pending source-author confirmation."
+    }
+  ]
+}

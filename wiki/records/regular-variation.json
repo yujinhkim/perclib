@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "regular-variation",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 9
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 33,
+      "label": "Regular variation and Laplace-tail conversion",
+      "locator": "Chapter 2 · Regular variation and Tauberian conversion · S002 · source lines 590–648",
+      "relationship": "Quoted analytic input with precise transform normalization",
+      "status": "pending",
+      "note": "Karamata is stated with index strictly between zero and one and the Gamma normalization fixed. The Abelian implication is proved by a dyadic tail bound and dominated convergence; the converse uses polynomial approximation for tilted tail measures and monotonicity. No local point-mass equivalent is inferred."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

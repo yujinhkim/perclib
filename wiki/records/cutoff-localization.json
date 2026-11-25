@@ -1,0 +1,22 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "cutoff-localization",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 12
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 5,
+      "label": "Correlation lengths and weak cutoff localization",
+      "locator": "Chapter 9 · Effectively long-range critical behaviour · source lines 5661–5715 (S037–S039)",
+      "relationship": "Definitions, first-moment localization and an explicit sufficient moment-ratio criterion",
+      "note": "CL and wCL remain distinct hypotheses. The sufficient criterion assumes uniform ratios through the seventh volume moment; model-specific localization and the Sak upper bound are not inferred."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

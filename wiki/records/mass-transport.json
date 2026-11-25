@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "mass-transport",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 13
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 19,
+      "label": "Mass transport on groups",
+      "locator": "Chapter 5 · Mass transport and independent clusters · source lines 1532–1539",
+      "relationship": "Countable-group case and applications",
+      "status": "pending",
+      "note": "The group-inversion proof covers Cayley graphs; the general unimodular-graph formulation and independent-cluster diagram argument remain separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

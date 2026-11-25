@@ -1,0 +1,91 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "multipoint-trees",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 16
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 50,
+      "label": "Multipoint tree-graph and cluster-moment inequalities",
+      "locator": "Chapter 4 · S006 · source lines 1287–1347",
+      "relationship": "Detailed proof from finite BK",
+      "status": "pending",
+      "note": "Includes repeated terminals, trivalent refinement, shape count and uniform-susceptibility moment summation. A countable counterexample separates a finite root mean from a uniform bound; the linked exponential consequence retains both parameters. Sharpness remains separate."
+    },
+    {
+      "source": "notes",
+      "order": 99,
+      "label": "Low-dimensional long-range multipoint bound",
+      "locator": "S045 · source lines 6202–6213",
+      "relationship": "Conditional lower bound from explicit cutoff inputs; upper bound retains higher-point inputs",
+      "status": "pending",
+      "note": "2BBE derives the lower bound from YJ5E through local mass, scale persistence and fresh-edge joining. The pointwise pair upper bound and higher-point product inequalities supply the upper bound separately. This is not a claim that a pointwise two-point estimate alone proves the lower bound."
+    },
+    {
+      "source": "hutchcroft-lrp-2",
+      "order": 59,
+      "label": "Multiscale cluster persistence and multipoint joining",
+      "locator": "arXiv:2508.18808v1 HTML, §II.5.3, Proposition II.5.9 and Lemma II.5.11",
+      "relationship": "Detailed conditional reconstruction with explicit input and coupling contracts",
+      "status": "pending",
+      "note": "F4RR–2BBE separate the last-exit estimate, localized moments, conditional persistence and the association recurrence. The power-law application uses YJ5E; identification of every model satisfying the paper’s wCL assumptions remains separate. A provisional erratum records the mismatched index ranges in the displayed tower identity."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "F4RR",
+      "proof_uses": [
+        "BEJT"
+      ],
+      "reason": "The independent-layer last-exit exploration also controls expected cluster size conditional on the original cluster."
+    },
+    {
+      "order": 1,
+      "tag": "D6CQ",
+      "proof_uses": [
+        "QMN5",
+        "AWWU"
+      ],
+      "reason": "Use the ordered negligibility limit and localization, then Hölder with the stated moment scales; no moment order is substituted for negligibility."
+    },
+    {
+      "order": 2,
+      "tag": "JC24",
+      "proof_uses": [
+        "F4RR",
+        "D6CQ"
+      ],
+      "reason": "Weight the cluster-extension estimate by the small-scale bad event and divide by the fixed large-scale local-mass lower bound."
+    },
+    {
+      "order": 3,
+      "tag": "L5IG",
+      "proof_uses": [
+        "JC24",
+        "CS13"
+      ],
+      "reason": "Order and separate the sweep radii, then use conditional Harris on fresh independent Poisson increments."
+    },
+    {
+      "order": 4,
+      "tag": "2BBE",
+      "proof_uses": [
+        "YJ5E",
+        "D6CQ",
+        "JC24",
+        "L5IG",
+        "C4E9",
+        "WDGK",
+        "C4A5"
+      ],
+      "reason": "The cutoff criterion supplies moments and negligibility, the soft kernel supplies both row and joining bounds, and the upper bound retains the separate higher-point assumptions."
+    }
+  ]
+}

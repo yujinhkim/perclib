@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "ghost-fields",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 8
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 32,
+      "label": "Ghost fields and magnetization",
+      "locator": "Chapter 2 · Ghost fields · source lines 532–589",
+      "relationship": "Source exposition with explicit zero-field convention",
+      "status": "pending",
+      "note": "Distinguishes the empty literal zero field from its positive-field limit; source correction issue #238. Derivatives in the percolation parameter remain separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

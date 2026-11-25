@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "forest-connections",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 6
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-forest-interface",
+      "order": 0,
+      "label": "Support, forest paths and ray specialization",
+      "locator": "Named statement start lines in the pinned source: 23, 35, 41, 50, 68, 79, 86, 96, 116, 140, 152, 182, 193, 202",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "XHFN and its proof cover positive-coordinate support; 8KVE covers unique paths, disconnected components and extended susceptibility. The deterministic path equivalence is explicitly valid without countability. TGL4 and the path description cover ray support, ordered/unordered endpoint distances and the geometric endpoint sum, including zero/one parameters and arbitrary diagonals."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

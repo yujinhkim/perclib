@@ -1,0 +1,127 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "subcritical-bound",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 5
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 22,
+      "label": "The elementary small-intensity bound",
+      "locator": "Chapter 4 · Sharpness · paragraph preceding the sharpness theorem",
+      "relationship": "Generalisation",
+      "status": "pending",
+      "note": "The prototype gives a countable-host row-sum argument; the notes state its intensity-model consequence."
+    },
+    {
+      "source": "hutchcroft-powerlaw-2021",
+      "order": 0,
+      "label": "Positive lower bound on the critical intensity",
+      "locator": "Section 1, Introduction; unnumbered paragraph immediately after the displayed definition of beta_c and before the discussion of the one-dimensional non-trivial phase transition.",
+      "relationship": "Source consequence",
+      "status": "pending",
+      "note": "The prototype proves the more general uniform row-sum susceptibility estimate in natural language."
+    }
+  ],
+  "occursIn": [
+    {
+      "order": 0,
+      "source": "hutchcroft-powerlaw-2021",
+      "tag": "JZ47",
+      "source_url": "https://arxiv.org/abs/2008.11197v2",
+      "edition": "arXiv:2008.11197v2 · 12 February 2021",
+      "locator": "Section 1, Introduction; unnumbered paragraph immediately after the displayed definition of beta_c and before the discussion of the one-dimensional non-trivial phase transition.",
+      "relationship": "generalization",
+      "note": "For symmetric summable J on Z^d, the source derives absence of infinite clusters when beta times the total kernel mass is below one, then the reciprocal-mass lower bound. JZ47 permits non-transitive uniform row bounds and explicitly handles zero mass. Source total mass includes J(0); the graph's off-diagonal mass is at most this total."
+    },
+    {
+      "order": 4,
+      "source": "notes",
+      "tag": "JZ47",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 4, Sharpness and Correlation Inequalities; section Sharpness; source lines 954–962, paragraph immediately before the named sharpness theorem (which begins at line 964).",
+      "relationship": "generalization",
+      "note": "The source gives the positive critical-intensity lower bound for a transitive integrable weighted graph. JZ47 extends it to uniformly bounded off-diagonal rows, distinguishes root and global thresholds, and explicitly treats zero row sum. The source paragraph is not a statement of the full arbitrary-profile susceptibility estimate."
+    }
+  ],
+  "proofUses": [
+    {
+      "order": 1,
+      "tag": "YFF7",
+      "proof_uses": [
+        "T90E",
+        "5PAT"
+      ],
+      "reason": "Reduce a finite open connection to a vertex-simple path and apply the finite-cylinder formula to its distinct edges."
+    },
+    {
+      "order": 2,
+      "tag": "5C44",
+      "proof_uses": [
+        "YFF7"
+      ],
+      "reason": "Use the simple-path witness and its product probability, then the countable union bound over finite paths."
+    },
+    {
+      "order": 3,
+      "tag": "UMQY",
+      "proof_uses": [
+        "I9QY"
+      ],
+      "reason": "Expand the defined walk-weight sum by its first step; nonnegative summation and induction give the geometric row bound."
+    },
+    {
+      "order": 4,
+      "tag": "F12C",
+      "proof_uses": [
+        "8DSI",
+        "5C44",
+        "UMQY"
+      ],
+      "reason": "Express susceptibility as a two-point sum, bound connections by simple paths, enlarge to walk weights and sum their geometric bound."
+    },
+    {
+      "order": 5,
+      "tag": "012G",
+      "proof_uses": [
+        "F12C",
+        "INZI"
+      ],
+      "reason": "The walk-sum estimate gives finite susceptibility at each root; finite expectation excludes an infinite cluster at that root, and countability makes the conclusion simultaneous."
+    },
+    {
+      "order": 6,
+      "tag": "53Z9",
+      "proof_uses": [
+        "F12C",
+        "012G"
+      ],
+      "reason": "Assemble the quantitative susceptibility estimate and simultaneous cluster finiteness. This avoids making the combined theorem a prerequisite of its own component arguments."
+    },
+    {
+      "order": 7,
+      "tag": "E771",
+      "proof_uses": [
+        "A65C",
+        "53Z9"
+      ],
+      "reason": "Use the exponential intensity profile and 1-exp(-t) <= t to obtain a probability-row bound, then apply the row-sum theorem."
+    },
+    {
+      "order": 8,
+      "tag": "JZ47",
+      "proof_uses": [
+        "E771",
+        "INZI",
+        "8DAH",
+        "JZN0"
+      ],
+      "reason": "Below reciprocal positive row mass, finite susceptibility gives zero rooted percolation probability, hence the root threshold bound; use the global/root threshold identity. The zero-row branch is checked directly from vanishing off-diagonal intensities, not by dividing by zero."
+    }
+  ]
+}

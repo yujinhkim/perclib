@@ -1,0 +1,54 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "sharpness",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 6
+    },
+    {
+      "collection": "critical-theory",
+      "order": 0
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 23,
+      "label": "Sharpness of the phase transition",
+      "locator": "Chapter 4 · named statement S003 · source line 964",
+      "relationship": "Correction to review",
+      "status": "pending",
+      "note": "The printed exponential tail bound fails at n = 1. The page distinguishes the intended large-cluster conclusion from that endpoint formulation."
+    },
+    {
+      "source": "grimmett",
+      "order": 3,
+      "label": "Exponential decay",
+      "locator": "Chapter 5 · Exponential Decay",
+      "relationship": "Subject correspondence",
+      "status": "pending",
+      "note": "Spatial and cluster-volume decay statements must retain their respective hypotheses."
+    },
+    {
+      "source": "heydenreich-hofstad",
+      "order": 1,
+      "label": "Uniqueness of the phase transition",
+      "locator": "Author manuscript · Chapter 3",
+      "relationship": "Alternative proof routes",
+      "status": "pending",
+      "note": "The Duminil-Copin–Tassion and Aizenman–Barsky approaches can be represented as different routes to related conclusions."
+    },
+    {
+      "source": "dct-sharpness",
+      "order": 0,
+      "label": "The finite-size criterion and sharpness",
+      "locator": "Percolation sharpness argument",
+      "relationship": "Proof route",
+      "status": "pending",
+      "note": "The finite-range spatial-decay conclusion must not be promoted to a general long-range spatial-decay statement."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,74 @@
+kind	starred	line	chapter_number	chapter_title	title
+chapter	True	75		Preface	Preface
+chapter	True	87		A Roadmap for the Reader	A Roadmap for the Reader
+part	False	102		A Roadmap for the Reader	Foundations and Scaling
+chapter	False	104	1	Critical Phenomena and Percolation	Critical Phenomena and Percolation
+section	False	106	1	Critical Phenomena and Percolation	Phase transitions and critical behaviour
+section	False	120	1	Critical Phenomena and Percolation	Bernoulli bond percolation
+section	False	220	1	Critical Phenomena and Percolation	Critical exponents
+section	False	275	1	Critical Phenomena and Percolation	What a proof should explain
+section	False	291	1	Critical Phenomena and Percolation	Long-range models as a running test case
+chapter	False	303	2	The Mean-Field Reference Models	The Mean-Field Reference Models
+section	False	305	2	The Mean-Field Reference Models	Branching processes
+section	False	379	2	The Mean-Field Reference Models	Critical percolation on the binary tree
+section	False	473	2	The Mean-Field Reference Models	Large critical trees and the continuum random tree
+section	False	481	2	The Mean-Field Reference Models	Branching random walk and the upper critical dimension
+section	False	532	2	The Mean-Field Reference Models	Ghost fields
+section	False	590	2	The Mean-Field Reference Models	Regular variation and Tauberian conversion
+chapter	False	649	3	Scaling and Hyperscaling	Scaling and Hyperscaling
+section	False	651	3	Scaling and Hyperscaling	Scaling relations
+section	False	750	3	Scaling and Hyperscaling	The incipient infinite cluster
+section	False	795	3	Scaling and Hyperscaling	Hyperscaling and many large clusters
+section	False	908	3	Scaling and Hyperscaling	The critical dimension six
+section	False	926	3	Scaling and Hyperscaling	Universal tightness as a rigorous substitute
+part	False	946	3	Scaling and Hyperscaling	Inequalities, Exponent Relations, and Mean-Field Criteria
+chapter	False	948	4	Sharpness and Correlation Inequalities	Sharpness and Correlation Inequalities
+section	False	950	4	Sharpness and Correlation Inequalities	Sharpness
+section	False	1082	4	Sharpness and Correlation Inequalities	Russo formulae and the supercritical bound
+section	False	1160	4	Sharpness and Correlation Inequalities	Harris and BK
+section	False	1287	4	Sharpness and Correlation Inequalities	Tree-graph inequalities
+section	False	1365	4	Sharpness and Correlation Inequalities	Integrated lower tails
+chapter	False	1421	5	The Triangle Condition	The Triangle Condition
+section	False	1423	5	The Triangle Condition	The triangle diagram
+section	False	1458	5	The Triangle Condition	Open triangles
+section	False	1496	5	The Triangle Condition	Susceptibility differential inequalities
+section	False	1532	5	The Triangle Condition	Mass transport and independent clusters
+section	False	1686	5	The Triangle Condition	A quantitative triangle inequality
+section	False	2068	5	The Triangle Condition	From susceptibility to other exponents
+section	False	2122	5	The Triangle Condition	What the triangle condition does not say
+chapter	False	2128	6	Entropy, Decision Trees, and Universal Bounds	Entropy, Decision Trees, and Universal Bounds
+section	False	2134	6	Entropy, Decision Trees, and Universal Bounds	Relative entropy
+section	False	2175	6	Entropy, Decision Trees, and Universal Bounds	Decision trees
+section	False	2311	6	Entropy, Decision Trees, and Universal Bounds	Derivatives versus second moments
+section	False	2503	6	Entropy, Decision Trees, and Universal Bounds	Equivalent mean-field conditions
+section	False	2616	6	Entropy, Decision Trees, and Universal Bounds	OSSS and ghost fields
+section	False	2804	6	Entropy, Decision Trees, and Universal Bounds	Intrinsic geometry criterion
+section	False	2965	6	Entropy, Decision Trees, and Universal Bounds	Extrinsic arms, backbone, and bubble
+section	False	3134	6	Entropy, Decision Trees, and Universal Bounds	Universal tightness
+part	False	3297	6	Entropy, Decision Trees, and Universal Bounds	Low-Dimensional and Continuum Geometry
+chapter	False	3299	7	Two Dimensions and Continuum \(k\)-Point Functions	Two Dimensions and Continuum \(k\)-Point Functions
+section	False	3301	7	Two Dimensions and Continuum \(k\)-Point Functions	Planar RSW and hyperscaling
+section	False	3369	7	Two Dimensions and Continuum \(k\)-Point Functions	Continuum \(k\)-point functions
+section	False	3423	7	Two Dimensions and Continuum \(k\)-Point Functions	Gladkov's inequality
+section	False	3644	7	Two Dimensions and Continuum \(k\)-Point Functions	Recursive \(k\)-point geometry
+part	False	3875	7	Two Dimensions and Continuum \(k\)-Point Functions	Long-Range Models and Cutoff Renormalization
+chapter	False	3877	8	Long-Range Percolation	Long-Range Percolation
+section	False	3879	8	Long-Range Percolation	The model
+section	False	3917	8	Long-Range Percolation	The predicted regimes
+section	False	4005	8	Long-Range Percolation	Hierarchical models
+section	False	4264	8	Long-Range Percolation	Critical two-point functions and known long-range results
+section	False	4323	8	Long-Range Percolation	High-dimensional cluster moments
+section	False	4399	8	Long-Range Percolation	Superprocess scaling limits
+chapter	False	4448	9	Cutoff Renormalization and Effective Long-Range Behaviour	Cutoff Renormalization and Effective Long-Range Behaviour
+section	False	4450	9	Cutoff Renormalization and Effective Long-Range Behaviour	Cutoff kernels
+section	False	4489	9	Cutoff Renormalization and Effective Long-Range Behaviour	Cluster moments and moment flows
+section	False	4863	9	Cutoff Renormalization and Effective Long-Range Behaviour	Critical-dimensional logarithms
+section	False	5180	9	Cutoff Renormalization and Effective Long-Range Behaviour	Size biasing and the volume tail
+section	False	5364	9	Cutoff Renormalization and Effective Long-Range Behaviour	Spatial moments
+section	False	5653	9	Cutoff Renormalization and Effective Long-Range Behaviour	Effectively long-range critical behaviour
+section	False	5746	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics
+part	False	6216	9	Cutoff Renormalization and Effective Long-Range Behaviour	Retrospective
+chapter	False	6218	10	A Roadmap of the Proof Techniques	A Roadmap of the Proof Techniques
+section	False	6220	10	A Roadmap of the Proof Techniques	From definitions to inequalities
+section	False	6235	10	A Roadmap of the Proof Techniques	From inequalities to exponents
+section	False	6275	10	A Roadmap of the Proof Techniques	From exponents to geometry

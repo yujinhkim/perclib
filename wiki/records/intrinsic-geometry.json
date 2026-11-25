@@ -1,0 +1,30 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "intrinsic-geometry",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 18
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 12,
+      "label": "Kozma–Nachmias intrinsic one-arm bootstrap",
+      "locator": "Chapter 6 · Intrinsic geometry criterion · source lines 2908–2963 (S018)",
+      "relationship": "Stopping-layer recursion and complete prefactor bootstrap",
+      "note": "Assumes finite susceptibility below the endpoint and finite weight rows. Handles integer cutoffs and passes to the endpoint by stabilization of finite intrinsic balls, without sphere-event monotonicity."
+    },
+    {
+      "source": "notes",
+      "order": 13,
+      "label": "Intrinsic geometry criterion: basic comparisons",
+      "locator": "Chapter 6 · Intrinsic geometry criterion · source lines 2804–2907",
+      "relationship": "Definitions, short-path thinning, renewal lower bound and conditional radius-volume implication",
+      "note": "The renewal proof specifies the conditional product law outside the explored interior and assumes finite bond rows and infinite susceptibility. The subsequent bootstrap has separate endpoint-tail and finite-susceptibility hypotheses; sphere nonmonotonicity is explicit."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

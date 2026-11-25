@@ -1,0 +1,59 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "walk-kernels",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 19
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-walk-sums",
+      "order": 0,
+      "label": "Extended nonnegative walk sums",
+      "locator": "Named statement start lines in the pinned source: 39, 43, 47, 54, 59, 62, 67, 81, 98, 107, 116, 121, 125, 132, 139",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "O357 and HDHT give explicit sequence weights, their recursion, geometric row control and diagonal removal. Arbitrary vertices, nonsymmetric kernels and infinite weights are retained. The singleton and infinite-diagonal examples reflect the source boundary cases."
+    },
+    {
+      "source": "perclib-row-sum",
+      "order": 0,
+      "label": "Simple paths and the row-sum susceptibility bound",
+      "locator": "Named statement start lines in the pinned source: 28, 39, 53, 62, 76, 84, 99, 124, 133, 142, 156, 162",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "The simple-path-to-sequence argument identifies distinct edge products and preserves injectivity of the continuation list, including the endpoint. It connects the general kernel bound to 53Z9 and its finiteness consequence, with arbitrary diagonal probabilities. BPR6 and the bond discussion retain the root lower bound and the zero off-diagonal case."
+    },
+    {
+      "source": "perclib-intensity-definitions",
+      "order": 0,
+      "label": "Finite intensities and extended thresholds",
+      "locator": "Named statement start lines in the pinned source: 31, 41, 47",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "BPR6 specifies the finite exponential profile and the distinct root/global infinite-cluster thresholds, with infimum of the empty set infinity. No threshold is defined by susceptibility, and no probability law at an infinite parameter is introduced. Probability interpretations are restricted to countable vertices."
+    },
+    {
+      "source": "perclib-intensity-bounds",
+      "order": 0,
+      "label": "Small-intensity bounds from off-diagonal rows",
+      "locator": "Named statement start lines in the pinned source: 44, 51, 61, 70, 90, 97, 104, 115, 125, 135, 144, 154, 163, 173, 183",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "BPR6 gives the zero/monotone/linear profile bounds, row comparison, susceptibility, simultaneous finiteness and root/global threshold lower bounds. Zero off-diagonal rows imply singleton clusters and infinite thresholds even when diagonal intensities do not vanish. Finite intensity parameters and finite row bound M are explicit."
+    },
+    {
+      "source": "perclib-finite-graphs",
+      "order": 0,
+      "label": "Finite graph and complete graph row bounds",
+      "locator": "Named statement start lines in the pinned source: 40, 69, 83",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The finite-host application bounds each rooted susceptibility using maximum degree and an upper edge probability; only non-diagonal off-host pairs must have probability zero. The complete-graph application has row (n-1)p, arbitrary diagonal probabilities, and susceptibility one at n=1. At n=0 there is no root. The examples at n=3, p=1/4 and n=2, p=1/2 illustrate the source witnesses. The frozen finite random graph article states the averaged consequence, not the full rooted source statement."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

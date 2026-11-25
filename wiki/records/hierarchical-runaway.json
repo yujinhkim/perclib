@@ -1,0 +1,104 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "hierarchical-runaway",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 10
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 7,
+      "label": "Hierarchical two-point proof mechanism",
+      "locator": "Chapter 8 · Hierarchical models · source lines 4178–4263",
+      "relationship": "Conditional boundary-flux lower bound, direct sibling connection and scale decomposition",
+      "note": "Uses upper/lower kernel bounds, finite subcritical susceptibility, rooted damping and explicit endpoint flux inequalities. Both path pieces in the upper bound are estimated in the larger block; the geometric ratio is L^(-(d-alpha)). Volume-tail benchmarks remain separate."
+    },
+    {
+      "source": "notes",
+      "order": 8,
+      "label": "Hierarchical sibling-block expected-size recursion",
+      "locator": "Chapter 8 · Hierarchical models · source lines 4140–4177",
+      "relationship": "Conditional relative-mean truncation, sibling merging and normalized recursion",
+      "note": "Rooted damping is explicit. The quantile bound controls the linearization range; translations within the block and independence of the two interiors give the quadratic recursion. The following two-point theorem adds a boundary-flux input."
+    },
+    {
+      "source": "notes",
+      "order": 9,
+      "label": "Hierarchical runaway observable and amplification",
+      "locator": "Chapter 8 · Hierarchical models · source lines 4040–4139 (S026–S027)",
+      "relationship": "Explicit block amplification and finite-susceptibility contradiction",
+      "note": "Uses independent block interiors, a direct-edge union bound, explicit constants and left-continuity of the finite-block quantile. Later sections supply the expected-size and two-point steps with additional rooted-damping and boundary-flux inputs."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 2,
+      "label": "Block amplification",
+      "locator": "Lemma 2.4; Proposition 2.2 and its proof",
+      "relationship": "Adapted argument",
+      "status": "pending",
+      "note": "7AER and 2XJX use explicit constants and endpoint hypotheses. The displayed bound in Proposition 2.2 differs from its proof; no literal equivalence is asserted."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 3,
+      "label": "Restricted means",
+      "locator": "Proposition 2.7; Lemmas 2.8–2.9",
+      "relationship": "Conditional argument",
+      "status": "pending",
+      "note": "655W retains rooted damping as an input."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 4,
+      "label": "Two-point transfer",
+      "locator": "Propositions 2.10 and 2.12",
+      "relationship": "Conditional argument",
+      "status": "pending",
+      "note": "7YNX retains boundary flux as an input."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 7,
+      "label": "Triangle threshold",
+      "locator": "Corollary 1.4; section 2.5",
+      "relationship": "Related deterministic criterion",
+      "status": "pending",
+      "note": "MS6M derives the complete finite-block triangle trichotomy from explicit two-sided kernel bounds. It does not establish the probabilistic exponent consequences."
+    },
+    {
+      "source": "hutchcroft-triangle-2021",
+      "order": 4,
+      "label": "Off-critical endpoint bounds",
+      "locator": "Section 4, Lemmas 4.2–4.3, Proposition 4.4 and Theorems 1.9/4.1",
+      "relationship": "Conditional implication with corrected differential input",
+      "status": "pending",
+      "note": "The endpoint two-point upper bound and boundary flux are explicit assumptions. Finite-ball normalization, positive-part separation and logarithmic inversion are proved; the source numerator diagnosis remains provisional."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "OVWJ",
+      "proof_uses": [
+        "6F2J",
+        "MS6M",
+        "4KBG",
+        "MLLO"
+      ],
+      "reason": "Finite-ball comparison, triangle growth, the corrected quadratic inequality after weight normalization, and independent sprinkling. Endpoint hypotheses remain explicit in the statement."
+    },
+    {
+      "order": 1,
+      "tag": "WPAD",
+      "proof_uses": [
+        "OVWJ",
+        "X8T6"
+      ],
+      "reason": "Apply the susceptibility bounds to the power-law exploration comparison; gamma < 2 gives the stated range."
+    }
+  ]
+}

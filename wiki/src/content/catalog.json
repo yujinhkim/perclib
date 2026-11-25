@@ -1,0 +1,631 @@
+{
+  "sources": [
+    {
+      "id": "notes",
+      "shortName": "Hutchcroft notes",
+      "title": "Critical Percolation, Scaling, and Long-Range Models",
+      "author": "Tom Hutchcroft",
+      "year": 2026,
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "description": "A broad route through critical phenomena, general inequalities, mean-field mechanisms, planar multipoint geometry, and long-range renormalisation.",
+      "coverageNote": "Selected correspondences for this prototype. The snapshot has 10 numbered chapters, 45 named statements and definitions, and 698 outer displayed-math blocks. These are document counts, not a complete assertion census or verified-proof count."
+    },
+    {
+      "id": "grimmett",
+      "shortName": "Grimmett",
+      "title": "Percolation",
+      "author": "Geoffrey Grimmett",
+      "year": 1999,
+      "edition": "Second edition · Springer · provisional project edition",
+      "url": "https://link.springer.com/book/10.1007/978-3-662-03981-6",
+      "description": "A baseline for classical percolation: basic techniques, phase transitions, subcritical and supercritical theory, renormalisation, critical phenomena, planar theory, and extensions.",
+      "coverageNote": "Chapter-level navigation samples only. The complete edition-specific inventory, including exercises and precise claims in prose, remains to be made. No claim of book-level formal coverage is made here."
+    },
+    {
+      "id": "heydenreich-hofstad",
+      "shortName": "Heydenreich–van der Hofstad",
+      "title": "Progress in High-Dimensional Percolation and Random Graphs",
+      "author": "Markus Heydenreich and Remco van der Hofstad",
+      "year": 2017,
+      "edition": "Springer book; chapter locators below checked against the author manuscript of 17 March 2017",
+      "url": "https://www.win.tue.nl/~rhofstad/survey-high-d-percolation.pdf",
+      "description": "A route from the basic model to mean-field mechanisms, lace expansion, the IIC, finite-size scaling, random graphs, and related models.",
+      "coverageNote": "Selected chapter-level links, not a statement census. Published-edition pagination and theorem numbering must be reconciled with the accessible author manuscript. Exercises, survey material, and open problems remain in scope."
+    },
+    {
+      "id": "mathlib",
+      "shortName": "mathlib",
+      "title": "The Lean mathematical library",
+      "author": "The mathlib community",
+      "year": 2026,
+      "edition": "Project pin: 56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/56a005855ea17e0b0958f73ec801ae140b0a1679/Mathlib/Probability/ProductMeasure.lean",
+      "description": "The existing Lean dependency of lrp, providing reusable foundations for measures, independent coordinates, graphs, sums, and analysis.",
+      "coverageNote": "The pinned library supplies the underlying measure, graph and analytic APIs. Source inspection and a dependency pin do not establish compiled proof status or prose correspondence; those are read from the supplied manifest and matching review records."
+    },
+    {
+      "id": "hutchcroft-hierarchical-2021",
+      "shortName": "Hierarchical two-point function",
+      "title": "The critical two-point function for long-range percolation on the hierarchical lattice",
+      "author": "Tom Hutchcroft",
+      "year": 2021,
+      "edition": "arXiv:2103.17013v1 · 31 March 2021",
+      "url": "https://arxiv.org/abs/2103.17013v1",
+      "description": "Averaged and pointwise critical connection estimates on the hierarchical lattice.",
+      "coverageNote": "Version-specific reading map: 1.1–1.6 and 2.1–2.14, including remarks, are inventoried in wiki/sources/hierarchical-2103.17013v1.md. This is not complete prose coverage or a formal correspondence certificate. Existing article statements and tags are unchanged."
+    },
+    {
+      "id": "dct-sharpness",
+      "shortName": "Duminil-Copin–Tassion",
+      "title": "A new proof of the sharpness of the phase transition for Bernoulli percolation and the Ising model",
+      "author": "Hugo Duminil-Copin and Vincent Tassion",
+      "year": 2015,
+      "edition": "arXiv:1502.03050v3 · revised 21 January 2018",
+      "url": "https://arxiv.org/abs/1502.03050v3",
+      "description": "A finite-size criterion and differential-inequality route to sharpness.",
+      "coverageNote": "The percolation statements are a source for the planned shared critical theory. The prototype does not include a Lean implementation of the finite-size criterion or the sharpness proof."
+    },
+    {
+      "id": "hutchcroft-triangle-2021",
+      "shortName": "Quantitative triangle bounds",
+      "title": "On the derivation of mean-field percolation critical exponents from the triangle condition",
+      "author": "Tom Hutchcroft",
+      "year": 2021,
+      "edition": "arXiv:2106.06400v3 · revised 27 July 2022",
+      "url": "https://arxiv.org/abs/2106.06400v3",
+      "description": "Quantitative implications of triangle-diagram control, including slowly diverging diagrams.",
+      "coverageNote": "Partial source map in wiki/sources/. The boundary, derivative, transcript-entropy and Fourier-duality diagnoses in the errata are provisional and await Tom’s confirmation; their locators refer to arXiv v3, not an unchecked journal edition."
+    },
+    {
+      "id": "hutchcroft-powerlaw-2021",
+      "shortName": "Power-law bounds",
+      "title": "Power-law bounds for critical long-range percolation below the upper-critical dimension",
+      "author": "Tom Hutchcroft",
+      "year": 2021,
+      "edition": "arXiv:2008.11197v2 · 12 February 2021",
+      "url": "https://arxiv.org/abs/2008.11197v2",
+      "description": "Critical long-range estimates and universal finite-graph tools that serve several parts of the library.",
+      "coverageNote": "The threshold-bound locator refers to the arXiv v2 Introduction. Published version: DOI 10.1007/s00440-021-01043-7; edition equivalence and published pagination are not certified. Universal tightness is a separate formalisation target."
+    },
+    {
+      "id": "gladkov-decision-trees",
+      "shortName": "Gladkov decision trees",
+      "title": "Percolation Inequalities and Decision Trees",
+      "author": "Nikita Gladkov",
+      "year": 2024,
+      "edition": "arXiv:2408.08457v2 · revised 22 August 2024",
+      "url": "https://arxiv.org/abs/2408.08457v2",
+      "description": "Decision-tree inequalities and S-disjoint constructions used in finite and countable multipoint percolation bounds.",
+      "coverageNote": "Definition 4.2 and the applications in Theorem 5.2, Corollary 5.3 and Section 6.1 were checked on the primary PDF on 19 November 2026. The two local notation/direction discrepancies are provisional; this is not a claim that the adaptive decision-tree theorem or every displayed multipoint bound has been formalized."
+    },
+    {
+      "id": "hutchcroft-lrp-1",
+      "shortName": "Critical LRP I",
+      "title": "Critical long-range percolation I: High effective dimension",
+      "author": "Tom Hutchcroft",
+      "year": 2025,
+      "edition": "arXiv:2508.18807v1",
+      "url": "https://arxiv.org/abs/2508.18807v1",
+      "description": "High-dimensional cluster laws and spatial scaling through a real-space analysis of cutoff models.",
+      "coverageNote": "The version-specific reading map covers cutoff spatial moments and the passage to large-volume conditioning. The wiki gives the normalized Euclidean d > 3 alpha spatial-moment limit under explicit endpoint assumptions; the canonical cutoff-removal argument retains its continuum construction and moment-formula inputs. Other model regimes, full prose coverage and source correspondence remain incomplete."
+    },
+    {
+      "id": "hutchcroft-lrp-2",
+      "shortName": "Critical LRP II",
+      "title": "Critical long-range percolation II: Low effective dimension",
+      "author": "Tom Hutchcroft",
+      "year": 2025,
+      "edition": "arXiv:2508.18808v1",
+      "url": "https://arxiv.org/abs/2508.18808v1",
+      "description": "Localisation, multipoint inequalities, and the geometry of the low-dimensional long-range regime.",
+      "coverageNote": "Initial version-specific reading map under wiki/sources/; source contracts and full coverage remain unfinished."
+    },
+    {
+      "id": "hutchcroft-lrp-3",
+      "shortName": "Critical LRP III",
+      "title": "Critical long-range percolation III: The upper critical dimension",
+      "author": "Tom Hutchcroft",
+      "year": 2025,
+      "edition": "arXiv:2508.18809v1",
+      "url": "https://arxiv.org/abs/2508.18809v1",
+      "description": "Critical-dimensional logarithmic corrections and the hydrodynamic input for long-range scaling.",
+      "coverageNote": "A source link in the prototype, not a completed theorem inventory. This upper-critical regime is distinct from the alpha = 2 marginal lace-expansion regime."
+    },
+    {
+      "id": "percolation-audit",
+      "shortName": "PercolationAudit",
+      "title": "PercolationAudit",
+      "author": "Ahmed Bou-Rabee; development with ChatGPT and Claude, building on Anthropic PercolationContinuity",
+      "year": 2026,
+      "edition": "Pinned revision a5cc72bd7627f313abbb00bcb47616678abbeb35 · Apache-2.0",
+      "url": "https://github.com/nitromannitol/percolation-after-anthropic/tree/a5cc72bd7627f313abbb00bcb47616678abbeb35/PercolationAudit",
+      "description": "An audited Lean percolation development. The lrp adaptation reuses selected Bernoulli and site-connectivity foundations with retained source notices.",
+      "coverageNote": "Upstream source, CI and comparator evidence have been inspected. Selected foundations have been ported to lrp’s pinned toolchain; see the reused-library register for the exact build evidence and scope. The upstream criticality certificate is not imported by this small port."
+    },
+    {
+      "id": "hutchcroft-l2-2020",
+      "shortName": "L² boundedness and multiple arms",
+      "title": "The L² boundedness condition in nonamenable percolation",
+      "author": "Tom Hutchcroft",
+      "year": 2020,
+      "edition": "arXiv:1904.05804v2 · 23 September 2020",
+      "url": "https://arxiv.org/abs/1904.05804v2",
+      "description": "Operator bounds, cluster geometry and multiple-arm estimates for nonamenable percolation.",
+      "coverageNote": "The reported discrepancy in Lemma 5.3 is provisional and awaits Tom’s confirmation; the bubble-only correction remains unresolved."
+    },
+    {
+      "id": "perclib-diagonal",
+      "shortName": "PercLib loop erasure",
+      "title": "Diagonal coordinates and graph observables",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Diagonal/Probability.lean",
+      "description": "The source-inspected loop-erasure interface and its cluster consequences.",
+      "coverageNote": "All 9 explicit named theorems were inspected. Pending source records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-configuration-conditioning",
+      "shortName": "PercLib configuration spaces",
+      "title": "Countable configuration spaces and conditional distributions",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Defs.lean",
+      "description": "Standard-Borel structure for countable canonical configurations.",
+      "coverageNote": "Source inspection identifies the countability-dependent measurable-space interface. It is not a compiled association of the new prose tags or a correspondence review. The explicit fixed-subset kernel in the article is a separate expository construction."
+    },
+    {
+      "id": "perclib-bounded-degree",
+      "shortName": "PercLib Bounded-degree simple paths and nonpercolation",
+      "title": "Bounded-degree simple paths and nonpercolation",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/SelfAvoiding.lean",
+      "description": "Source-inspected finite path and transcript interfaces.",
+      "coverageNote": "All 11 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-finite-cylinders",
+      "shortName": "PercLib finite cylinders",
+      "title": "Finite cylinders",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Cylinder.lean",
+      "description": "Source-inspected finite-product interface and endpoint specializations.",
+      "coverageNote": "All 4 named top-level definitions/theorems in this module were inspected at the pinned revision. This is a scoped source correspondence, not compiled tag association, fingerprint-bound review or coverage certification for imported modules."
+    },
+    {
+      "id": "perclib-finite-expectations",
+      "shortName": "PercLib finite product expectations",
+      "title": "Finite product expectations",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/ProductExpectation.lean",
+      "description": "Source-inspected finite-product interface and endpoint specializations.",
+      "coverageNote": "All 5 named top-level definitions/theorems in this module were inspected at the pinned revision. This is a scoped source correspondence, not compiled tag association, fingerprint-bound review or coverage certification for imported modules."
+    },
+    {
+      "id": "perclib-finite-continuity",
+      "shortName": "PercLib finite profile continuity",
+      "title": "Finite profile continuity",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/FiniteContinuity.lean",
+      "description": "Source-inspected finite-product interface and endpoint specializations.",
+      "coverageNote": "All 9 named top-level definitions/theorems in this module were inspected at the pinned revision. This is a scoped source correspondence, not compiled tag association, fingerprint-bound review or coverage certification for imported modules."
+    },
+    {
+      "id": "perclib-block-independence",
+      "shortName": "PercLib coordinate and block independence",
+      "title": "Coordinate and block independence",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/ProdBernoulliIndependence.lean",
+      "description": "Source-inspected product-law statements and their graph applications.",
+      "coverageNote": "All 7 named theorems in this module were inspected. The record remains pending independent correspondence review and is not a compiled tag association. Imported declarations and anonymous witnesses are outside the named-theorem count."
+    },
+    {
+      "id": "perclib-open-event-harris",
+      "shortName": "PercLib finite witnesses and harris applications",
+      "title": "Finite witnesses and Harris applications",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/OpenEventHarris.lean",
+      "description": "Source-inspected product-law statements and their graph applications.",
+      "coverageNote": "All 22 named theorems in this module were inspected. The record remains pending independent correspondence review and is not a compiled tag association. Imported declarations and anonymous witnesses are outside the named-theorem count."
+    },
+    {
+      "id": "perclib-monotone-coupling",
+      "shortName": "PercLib ordered bernoulli couplings",
+      "title": "Ordered Bernoulli couplings",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Coupling/Monotone.lean",
+      "description": "Source-inspected coupling and transport of the canonical product law.",
+      "coverageNote": "All 5 named theorems in this module were inspected. This scoped record is pending correspondence review, not a compiled tag association or coverage certification for imported modules."
+    },
+    {
+      "id": "perclib-reindexing",
+      "shortName": "PercLib transport under coordinate bijections",
+      "title": "Transport under coordinate bijections",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Transport/Reindexing.lean",
+      "description": "Source-inspected coupling and transport of the canonical product law.",
+      "coverageNote": "All 7 named theorems in this module were inspected. This scoped record is pending correspondence review, not a compiled tag association or coverage certification for imported modules."
+    },
+    {
+      "id": "perclib-ordered-harris",
+      "shortName": "PercLib ordered-product Harris",
+      "title": "Association and finite-coordinate averaging",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Harris.lean",
+      "description": "General ordered-coordinate association and the averaging argument for arbitrary product index sets.",
+      "coverageNote": "All 17 explicit named theorems were inspected. Individual source contracts are enumerated, while their exposition remains grouped by argument. Ordinary integral claims retain measurable or integrable hypotheses; total-integral conventions outside that scope are not silently imported. This is not compiled tag association or completed independent correspondence review."
+    },
+    {
+      "id": "perclib-finite-polynomial",
+      "shortName": "PercLib homogeneous finite expectation polynomial",
+      "title": "Homogeneous finite expectation polynomial",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/FiniteExpectation.lean",
+      "description": "Source-inspected polynomial and finite-support differentiation interfaces.",
+      "coverageNote": "All 6 named definitions/theorems in this module were inspected. The correspondence is pending independent review and is not a compiled tag association. Source within-derivative predicates and ordinary limit derivatives are distinguished explicitly."
+    },
+    {
+      "id": "perclib-cylinder-russo",
+      "shortName": "PercLib signed russo for cylinder events",
+      "title": "Signed Russo for cylinder events",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/RussoCylinder.lean",
+      "description": "Source-inspected polynomial and finite-support differentiation interfaces.",
+      "coverageNote": "All 9 named definitions/theorems in this module were inspected. The correspondence is pending independent review and is not a compiled tag association. Source within-derivative predicates and ordinary limit derivatives are distinguished explicitly."
+    },
+    {
+      "id": "perclib-bond-interface",
+      "shortName": "PercLib Canonical bond graphs and cluster conventions",
+      "title": "Canonical bond graphs and cluster conventions",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Basic.lean",
+      "description": "Source-inspected foundational definitions and statements.",
+      "coverageNote": "All 29 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-susceptibility-interface",
+      "shortName": "PercLib susceptibility interface",
+      "title": "Measurable cluster volume and the susceptibility sum",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Susceptibility.lean",
+      "description": "Random-cluster measurability, extended volume and the nonnegative two-point sum.",
+      "coverageNote": "All 6 named definitions/theorems were inspected at the pinned revision. This is a pending source correspondence, not compiled tag association or independent correspondence review."
+    },
+    {
+      "id": "perclib-host-support",
+      "shortName": "PercLib host support",
+      "title": "Host graphs as supported bond profiles",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Host.lean",
+      "description": "Countable configuration and graph containment under zero outside probabilities.",
+      "coverageNote": "All four named definitions/theorems were inspected. The record is pending correspondence review and is not a compiled tag association. The source assumes zero probabilities on every outside pair, including diagonals."
+    },
+    {
+      "id": "perclib-window-tails",
+      "shortName": "PercLib finite-window tails",
+      "title": "Cluster-tail witnesses and finite-edge limits",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/ClusterTails.lean",
+      "description": "Finite observation-window tail identities, certificates and exhaustion limits.",
+      "coverageNote": "All 11 named theorems were inspected. The source correspondence is pending review, not a compiled tag association. The module supplies limit identities, not a quantitative tail or tightness bound."
+    },
+    {
+      "id": "perclib-forest-interface",
+      "shortName": "PercLib forest interface",
+      "title": "Support forests and exact ray connections",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Forest.lean",
+      "description": "Positive support, deterministic path equivalence, exact connection products and ray susceptibility.",
+      "coverageNote": "All 14 named theorems were inspected. The pending correspondence groups deterministic helpers with their probability applications; it is not a compiled tag association or independent correspondence review."
+    },
+    {
+      "id": "perclib-local-connectivity",
+      "shortName": "PercLib local connectivity",
+      "title": "Induced graphs, measurable domains and local connection limits",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/LocalConnectivity.lean",
+      "description": "Local graph restrictions and countability-sensitive connection events.",
+      "coverageNote": "All 13 named theorems were inspected. This is a pending source correspondence, not a compiled association. The source also writes measure expressions for arbitrary domains; the exposition makes probability-limit claims only when the relevant events are measurable."
+    },
+    {
+      "id": "perclib-boundary-wiring",
+      "shortName": "PercLib independent boundary marks and their laws",
+      "title": "Independent boundary marks and their laws",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Wiring/BoundaryLaw.lean",
+      "description": "Source-inspected boundary probability and first-exit interfaces.",
+      "coverageNote": "All 6 named theorems were inspected. Their pending source correspondence is not a compiled tag association or independent correspondence review; the hypotheses differ between general coordinate sampling and countable boundary events."
+    },
+    {
+      "id": "perclib-first-exit",
+      "shortName": "PercLib first-exit decomposition and the boundary functional",
+      "title": "First-exit decomposition and the boundary functional",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/FirstExit.lean",
+      "description": "Source-inspected boundary probability and first-exit interfaces.",
+      "coverageNote": "All 9 named theorems were inspected. Their pending source correspondence is not a compiled tag association or independent correspondence review; the hypotheses differ between general coordinate sampling and countable boundary events."
+    },
+    {
+      "id": "perclib-cluster-partition",
+      "shortName": "PercLib cluster partition",
+      "title": "Clusters as components and finite root sums",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/ClusterPartition.lean",
+      "description": "Deterministic cluster equivalence classes and size-weighted component sums.",
+      "coverageNote": "All 8 named theorems were inspected. This is pending source correspondence, not compiled tag association or independent correspondence review. No probability or transitivity hypothesis is introduced into the deterministic identities."
+    },
+    {
+      "id": "perclib-walk-sums",
+      "shortName": "PercLib extended nonnegative walk sums",
+      "title": "Extended nonnegative walk sums",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/WalkSum.lean",
+      "description": "Source-inspected deterministic row control and its bond-intensity applications.",
+      "coverageNote": "All 15 named definitions/theorems were inspected. The pending source correspondence is not a compiled tag association or independent correspondence review. Deterministic extended sums and probability-law claims retain their different hypotheses."
+    },
+    {
+      "id": "perclib-row-sum",
+      "shortName": "PercLib simple paths and the row-sum susceptibility bound",
+      "title": "Simple paths and the row-sum susceptibility bound",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/RowSum.lean",
+      "description": "Source-inspected deterministic row control and its bond-intensity applications.",
+      "coverageNote": "All 12 named definitions/theorems were inspected. The pending source correspondence is not a compiled tag association or independent correspondence review. Deterministic extended sums and probability-law claims retain their different hypotheses."
+    },
+    {
+      "id": "perclib-intensity-definitions",
+      "shortName": "PercLib finite intensities and extended thresholds",
+      "title": "Finite intensities and extended thresholds",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Intensity/Defs.lean",
+      "description": "Source-inspected deterministic row control and its bond-intensity applications.",
+      "coverageNote": "All 3 named definitions/theorems were inspected. The pending source correspondence is not a compiled tag association or independent correspondence review. Deterministic extended sums and probability-law claims retain their different hypotheses."
+    },
+    {
+      "id": "perclib-intensity-bounds",
+      "shortName": "PercLib small-intensity bounds from off-diagonal rows",
+      "title": "Small-intensity bounds from off-diagonal rows",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Intensity.lean",
+      "description": "Source-inspected deterministic row control and its bond-intensity applications.",
+      "coverageNote": "All 15 named definitions/theorems were inspected. The pending source correspondence is not a compiled tag association or independent correspondence review. Deterministic extended sums and probability-law claims retain their different hypotheses."
+    },
+    {
+      "id": "perclib-finite-graphs",
+      "shortName": "PercLib Finite graph and complete graph row bounds",
+      "title": "Finite graph and complete graph row bounds",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Models/FiniteGraph.lean",
+      "description": "Source-inspected model instances of the row-sum estimates.",
+      "coverageNote": "All 3 named theorems were inspected. These pending source records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-translation-models",
+      "shortName": "PercLib Displacement kernels and translation-invariant model bounds",
+      "title": "Displacement kernels and translation-invariant model bounds",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Models/TranslationInvariant.lean",
+      "description": "Source-inspected model instances of the row-sum estimates.",
+      "coverageNote": "All 10 named theorems were inspected. These pending source records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-hierarchical-model",
+      "shortName": "PercLib Hierarchical radial model bounds",
+      "title": "Hierarchical radial model bounds",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Models/Hierarchical.lean",
+      "description": "Source-inspected model statements and their scope.",
+      "coverageNote": "All 7 explicit named definitions/theorems were inspected. These pending records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-site-interface",
+      "shortName": "PercLib Site configurations and threshold conventions",
+      "title": "Site configurations and threshold conventions",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Models/Site/Basic.lean",
+      "description": "Source-inspected model statements and their scope.",
+      "coverageNote": "All 23 explicit named definitions/theorems were inspected. These pending records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-site-harris",
+      "shortName": "PercLib Site association and profile monotonicity",
+      "title": "Site association and profile monotonicity",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Models/Site/Harris.lean",
+      "description": "Source-inspected model statements and their scope.",
+      "coverageNote": "All 19 explicit named definitions/theorems were inspected. These pending records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-disjoint-certificates",
+      "shortName": "PercLib Finite forcing certificates",
+      "title": "Finite forcing certificates",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/DisjointOccurrence.lean",
+      "description": "Source-inspected finite-certificate interfaces and BK statements.",
+      "coverageNote": "All 12 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-disjoint-algebra",
+      "shortName": "PercLib Algebra of disjoint finite occurrence",
+      "title": "Algebra of disjoint finite occurrence",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/DisjointOccurrenceAlgebra.lean",
+      "description": "Source-inspected finite-certificate interfaces and BK statements.",
+      "coverageNote": "All 9 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-cylinder-disjoint",
+      "shortName": "PercLib Coordinate restriction of disjoint occurrence",
+      "title": "Coordinate restriction of disjoint occurrence",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/CylinderDisjointOccurrence.lean",
+      "description": "Source-inspected finite-certificate interfaces and BK statements.",
+      "coverageNote": "All 4 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-bk-endpoints",
+      "shortName": "PercLib Deterministic endpoint laws and BK",
+      "title": "Deterministic endpoint laws and BK",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/BKEndpoints.lean",
+      "description": "Source-inspected finite-certificate interfaces and BK statements.",
+      "coverageNote": "All 7 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-low-density-bk",
+      "shortName": "PercLib Homogeneous low-density BK induction",
+      "title": "Homogeneous low-density BK induction",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/BKLowDensity.lean",
+      "description": "Source-inspected finite-certificate interfaces and BK statements.",
+      "coverageNote": "All 20 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-exploration-transcripts",
+      "shortName": "PercLib Finite adaptive transcript laws",
+      "title": "Finite adaptive transcript laws",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Exploration/Transcript.lean",
+      "description": "Source-inspected finite path and transcript interfaces.",
+      "coverageNote": "All 6 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-product-law",
+      "shortName": "PercLib Canonical Bernoulli configuration law",
+      "title": "Canonical Bernoulli configuration law",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/ProdBernoulli.lean",
+      "description": "Source-inspected probability foundations and finite derivative formulas.",
+      "coverageNote": "All 5 explicit named definitions/theorems were inspected. This count excludes separately declared helper lemmas and instances. Pending source records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-finite-russo",
+      "shortName": "PercLib Finite-profile Russo algebra and probability transport",
+      "title": "Finite-profile Russo algebra and probability transport",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Probability/Russo.lean",
+      "description": "Source-inspected probability foundations and finite derivative formulas.",
+      "coverageNote": "All 21 explicit named definitions/theorems were inspected. This count excludes separately declared helper lemmas and instances. Pending source records are not compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-elementary-square",
+      "shortName": "PercLib Elementary square inequality",
+      "title": "Elementary square inequality",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Basic.lean",
+      "description": "Source-inspected foundational definitions and statements.",
+      "coverageNote": "All 1 explicit named definitions/theorems were inspected. Pending source records do not imply compiled tag associations or independent correspondence reviews."
+    },
+    {
+      "id": "perclib-tightness-interface",
+      "shortName": "PercLib finite-window tightness targets",
+      "title": "Finite-window observables and tightness targets",
+      "author": "PercLib contributors",
+      "year": 2026,
+      "edition": "Repository source at 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "url": "https://github.com/tomhutchcroft/lrp/blob/3c0755b692bb6fa71ff6521ce423948feae4fe40/PercLib/Percolation/Bond/Tightness/Defs.lean",
+      "description": "Full-cluster intersection observables, a quantile scale and two proposition-valued proof targets.",
+      "coverageNote": "All 7 explicit named definitions/theorems were inspected. Two definitions package universal claims; they are not proofs of those claims. The singleton theorems test the observable and quantile conventions. No compiled tag association is asserted."
+    }
+  ],
+  "collections": [
+    {
+      "id": "models",
+      "title": "Models & geometry",
+      "description": "The probability laws and geometric settings in which the theory lives."
+    },
+    {
+      "id": "observables",
+      "title": "Objects & observables",
+      "description": "Connections, cluster volumes, thresholds, and the quantities used to describe criticality."
+    },
+    {
+      "id": "methods",
+      "title": "Methods & inequalities",
+      "description": "Reusable arguments that connect one observable to another."
+    },
+    {
+      "id": "critical-theory",
+      "title": "Critical theory",
+      "description": "General mechanisms and model-specific conclusions, with their assumptions kept visible."
+    }
+  ]
+}

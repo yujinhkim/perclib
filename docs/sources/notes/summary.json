@@ -1,0 +1,218 @@
+{
+  "inventory_kind": "mechanical_screening_not_semantic_claim_census",
+  "identifier_policy": "Snnn and Pnnnn identifiers are provisional mechanical IDs for this source snapshot, not canonical mathematical assertion IDs.",
+  "source_path": "sources/notes/book_draft.tex",
+  "source_sha256": "61c11fcbd2d4ac600e9b96b6b1a81c399b6e049dd208e8790d5f06e1b02b5fd4",
+  "bytes": 286293,
+  "physical_lines_splitlines": 6307,
+  "newline_characters": 6307,
+  "headings_total": 73,
+  "headings_by_kind": {
+    "chapter": 12,
+    "part": 5,
+    "section": 56
+  },
+  "numbered_chapters": 10,
+  "theorem_environments_declared": [
+    {
+      "environment": "theorem",
+      "unnumbered": false,
+      "line": 14
+    },
+    {
+      "environment": "lemma",
+      "unnumbered": false,
+      "line": 15
+    },
+    {
+      "environment": "prop",
+      "unnumbered": false,
+      "line": 16
+    },
+    {
+      "environment": "corollary",
+      "unnumbered": false,
+      "line": 17
+    },
+    {
+      "environment": "conjecture",
+      "unnumbered": false,
+      "line": 18
+    },
+    {
+      "environment": "defn",
+      "unnumbered": false,
+      "line": 20
+    },
+    {
+      "environment": "example",
+      "unnumbered": false,
+      "line": 21
+    },
+    {
+      "environment": "remark",
+      "unnumbered": false,
+      "line": 23
+    },
+    {
+      "environment": "warning",
+      "unnumbered": true,
+      "line": 24
+    }
+  ],
+  "named_statement_environments_total": 45,
+  "named_statement_environments_by_kind": {
+    "corollary": 3,
+    "defn": 3,
+    "lemma": 8,
+    "prop": 11,
+    "theorem": 20
+  },
+  "named_statement_environments_with_label": 7,
+  "explicit_proof_environments": 22,
+  "outer_display_math_blocks": 698,
+  "display_blocks_by_kind": {
+    "\\[...\\]": 697,
+    "align*": 1
+  },
+  "nested_math_environments_by_kind": {
+    "aligned": 15,
+    "cases": 3
+  },
+  "all_labels_total": 7,
+  "mechanical_candidate_paragraphs": 363,
+  "candidate_paragraphs_with_display": 274,
+  "candidate_paragraphs_without_display": 89,
+  "candidate_paragraphs_overlapping_named_statement": 46,
+  "candidate_paragraphs_overlapping_explicit_proof": 57,
+  "candidate_paragraphs_with_neither_named_statement_nor_explicit_proof": 260,
+  "candidate_paragraph_tags": {
+    "heuristic_or_expectation_language": 90,
+    "quoted_or_external_input_language": 30,
+    "conditional_language": 155,
+    "definition_language": 116,
+    "proof_language": 134
+  },
+  "chapter_counts": [
+    {
+      "chapter_number": null,
+      "title": "Preface",
+      "start_line": 75,
+      "sections": 0,
+      "named_statements": 0,
+      "proof_environments": 0,
+      "display_blocks": 0,
+      "candidate_paragraphs": 0
+    },
+    {
+      "chapter_number": null,
+      "title": "A Roadmap for the Reader",
+      "start_line": 87,
+      "sections": 0,
+      "named_statements": 0,
+      "proof_environments": 0,
+      "display_blocks": 0,
+      "candidate_paragraphs": 4
+    },
+    {
+      "chapter_number": 1,
+      "title": "Critical Phenomena and Percolation",
+      "start_line": 104,
+      "sections": 5,
+      "named_statements": 1,
+      "proof_environments": 1,
+      "display_blocks": 23,
+      "candidate_paragraphs": 27
+    },
+    {
+      "chapter_number": 2,
+      "title": "The Mean-Field Reference Models",
+      "start_line": 303,
+      "sections": 6,
+      "named_statements": 1,
+      "proof_environments": 0,
+      "display_blocks": 52,
+      "candidate_paragraphs": 25
+    },
+    {
+      "chapter_number": 3,
+      "title": "Scaling and Hyperscaling",
+      "start_line": 649,
+      "sections": 5,
+      "named_statements": 0,
+      "proof_environments": 0,
+      "display_blocks": 45,
+      "candidate_paragraphs": 21
+    },
+    {
+      "chapter_number": 4,
+      "title": "Sharpness and Correlation Inequalities",
+      "start_line": 948,
+      "sections": 5,
+      "named_statements": 5,
+      "proof_environments": 5,
+      "display_blocks": 62,
+      "candidate_paragraphs": 25
+    },
+    {
+      "chapter_number": 5,
+      "title": "The Triangle Condition",
+      "start_line": 1421,
+      "sections": 7,
+      "named_statements": 5,
+      "proof_environments": 4,
+      "display_blocks": 78,
+      "candidate_paragraphs": 49
+    },
+    {
+      "chapter_number": 6,
+      "title": "Entropy, Decision Trees, and Universal Bounds",
+      "start_line": 2128,
+      "sections": 8,
+      "named_statements": 9,
+      "proof_environments": 5,
+      "display_blocks": 135,
+      "candidate_paragraphs": 67
+    },
+    {
+      "chapter_number": 7,
+      "title": "Two Dimensions and Continuum \\(k\\)-Point Functions",
+      "start_line": 3299,
+      "sections": 4,
+      "named_statements": 3,
+      "proof_environments": 3,
+      "display_blocks": 59,
+      "candidate_paragraphs": 35
+    },
+    {
+      "chapter_number": 8,
+      "title": "Long-Range Percolation",
+      "start_line": 3877,
+      "sections": 6,
+      "named_statements": 5,
+      "proof_environments": 0,
+      "display_blocks": 52,
+      "candidate_paragraphs": 35
+    },
+    {
+      "chapter_number": 9,
+      "title": "Cutoff Renormalization and Effective Long-Range Behaviour",
+      "start_line": 4448,
+      "sections": 7,
+      "named_statements": 16,
+      "proof_environments": 4,
+      "display_blocks": 186,
+      "candidate_paragraphs": 67
+    },
+    {
+      "chapter_number": 10,
+      "title": "A Roadmap of the Proof Techniques",
+      "start_line": 6218,
+      "sections": 3,
+      "named_statements": 0,
+      "proof_environments": 0,
+      "display_blocks": 6,
+      "candidate_paragraphs": 8
+    }
+  ]
+}

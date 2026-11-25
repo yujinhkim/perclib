@@ -1,0 +1,11 @@
+# One-sided cutoff corner derivatives
+
+`Analysis/Cutoff/CornerOneSided/Defs.lean` defines the strict (left) derivative weight `cutEdgeDerivLeft` and the scalar edge-probability function used by the explicit corner example. `Analysis/Cutoff/CornerOneSided.lean`, accepted from swarm `smwtvrwnn` member `m8`, proves the corresponding one-sided edge and finite-window Russo formulas at an arbitrary normalized `SourceModelData`.
+
+The closed-cutoff convention `s ≤ r` is preserved. The exact decomposition says that the closed and strict weights differ only on edges of length exactly `r`, where the difference is `βc (-K'(r))`. The actual edge probability has a left derivative with the strict weight and a right derivative with the closed weight at every radius where `K` is differentiable. No off-corner premise is needed for these one-sided statements. Finite edge-window expectations have the analogous left and right Russo identities unconditionally: finite windows require no moment or majorant hypothesis.
+
+`sum_cutEdgeDeriv_sub_sum_left` identifies the exact derivative jump. A nonzero jump rules out a two-sided derivative of the finite-window expectation; positive corner flux makes the strict inequality explicit. `two_edge_path_oneSided_deriv_ne` and `two_edge_path_linear_witness` provide a concrete two-edge product-probability example with different one-sided values. This example is a scalar product edge probability, not a formal identification with an infinite-volume two-point connectivity function.
+
+`hasDerivWithinAt_cutMassReal_Iic_of_interval_deriv` gives a conditional **left** cutoff-mass derivative at an endpoint. It assumes differentiability on the adjacent open interval with an explicit derivative family, convergence of that family from the left, positive endpoint radius, and finite cutoff mass at the endpoint. Left continuity of the mass is supplied by the existing continuity package.
+
+This package does not prove a right-hand infinite-volume cutoff-mass derivative, a two-sided derivative at an attained radius, a cutoff shell FTC identity, or termwise differentiation of the infinite two-point sum at a corner. Continuity at an endpoint is used only as an endpoint fact, never as evidence for a slope.

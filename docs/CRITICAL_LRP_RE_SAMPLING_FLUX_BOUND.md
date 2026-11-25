@@ -1,0 +1,9 @@
+# Open-coordinate resampling and cutoff-flux localisation
+
+`Analysis/Cutoff/Resampling/Defs.lean` contains the mixed cluster density and the standardized edge weight `c_r(e)/q_e(r)`. `Analysis/Cutoff/Resampling.lean` is an **intermediate packet**, independently compiled and audited after the second-round D1A submission. It does not mark D1A solved.
+
+The main new results are `lintegral_forceOn_mix`, the single-coordinate open/closed law mixture; `measure_preimage_forceOn_le_div` and `openProb_mul_real_preimage_le`, the corresponding forced-preimage estimate; and `cutEdgeDeriv_mul_pivotalFlux_le`, which bounds the literal per-edge two-point Russo term by the standardized edge weight times the probability of the coupled connectivity/touching event. Positive standardized weight and positive open probability are explicit where required. The `1/q_e` factor is retained rather than incorrectly removed by stochastic domination.
+
+The package also proves nonnegativity and local support of the singleton pivotal difference, a localised total-flux estimate, `summable_mixedFluxDensity` from a finite second cutoff moment, and elementary negative evidence showing why a positive constant or the pinned `2Dχ` total-mass bound is not a summable per-vertex majorant. `no_uniform_majorant_of_per_radius_mass` shows that pointwise-in-radius summability plus monotonicity does not give uniformity.
+
+Older `exists_summable_perY_fluxMajorant` and `hasDerivAt_cutMassReal_of_mixedMoment` consumers are retained only as conditional interfaces: their mixed domination premise is not discharged here. The remaining work is explicit finite incident-edge transport from the standardized weights to `D_std(r)|K_0|`, proof and estimation of `D_std`, monotonicity of the mixed density to one larger cutoff, and then a genuinely summable radius-uniform majorant. There is no unconditional cutoff-mass derivative or standardized `paperSum` identity in this packet.

@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "product-symmetries",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 1
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-diagonal",
+      "order": 0,
+      "label": "Loop-erased law and insensitive observables",
+      "locator": "Named statement start lines in the pinned source: 22, 29, 37, 57, 70, 79, 93, 102, 111",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "LNKT covers deterministic graph invariance, measurable loop erasure, its zero-diagonal pushforward law, and equal laws for measurable diagonal-insensitive observables or events when profiles agree off the diagonal. These statements hold for arbitrary vertex sets. EYCQ covers countable-vertex two-point probabilities, the full extended cluster-volume law and susceptibility, including infinite values. The two-vertex opposite-diagonal example and infinite complete-graph example illustrate the source witnesses. No conditioning on all loops being closed is used."
+    },
+    {
+      "source": "perclib-diagonal",
+      "order": 1,
+      "label": "Connections, volume laws and susceptibility",
+      "locator": "Countable-vertex connection, full cluster-volume law and susceptibility consequences",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "EYCQ retains the countability condition and extended-valued susceptibility; it does not assert equality of the full configuration laws."
+    },
+    {
+      "source": "perclib-reindexing",
+      "order": 0,
+      "label": "Transport under coordinate bijections",
+      "locator": "Named statement start lines in the pinned source: 20, 26, 48, 54, 61, 71, 84",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "6RZ8 supplies measurable reindexing, transported law and event probabilities; VEUZ supplies profile-preserving invariance; 6VY0 supplies the induced unordered-pair transport and invariance, including diagonal coordinates. Arbitrary coordinate sets and endpoint profiles are retained. Real and extended probability forms agree since these are probability measures."
+    },
+    {
+      "source": "perclib-host-support",
+      "order": 0,
+      "label": "Configuration and graph containment",
+      "locator": "Named statement start lines in the pinned source: 31, 45, 52, 56",
+      "relationship": "Source-inspected exposition with explicit converse extensions",
+      "status": "pending",
+      "note": "H48I retains the source’s countability and all-pair support hypothesis for full configuration containment. The weaker graph-only condition and converse implications are identified as additional expository consequences, not claimed as exported source statements."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

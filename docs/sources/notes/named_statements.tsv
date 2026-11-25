@@ -1,0 +1,46 @@
+statement_id	environment	start_line	end_line	chapter_number	chapter_title	section_title	title	labels	tags
+S001	prop	160	162	1	Critical Phenomena and Percolation	Bernoulli bond percolation	Non-triviality of the phase transition		
+S002	theorem	607	619	2	The Mean-Field Reference Models	Regular variation and Tauberian conversion	Karamata's Tauberian theorem; quoted analytic input, informal normalization		heuristic_or_expectation_language; quoted_or_external_input_language; conditional_language; definition_language
+S003	theorem	964	984	4	Sharpness and Correlation Inequalities	Sharpness	Sharpness of the phase transition		conditional_language; definition_language; proof_language
+S004	theorem	1164	1169	4	Sharpness and Correlation Inequalities	Harris and BK	Harris-FKG inequality		conditional_language
+S005	theorem	1225	1230	4	Sharpness and Correlation Inequalities	Harris and BK	BK/Reimer inequality; quoted standard input		quoted_or_external_input_language
+S006	prop	1297	1314	4	Sharpness and Correlation Inequalities	Tree-graph inequalities	Tree-graph and moment inequalities; proved here from BK		
+S007	prop	1370	1381	4	Sharpness and Correlation Inequalities	Integrated lower tails	Aizenman--Barsky integrated lower tail; proved here from sharpness and tree-graph bounds		
+S008	theorem	1441	1452	5	The Triangle Condition	The triangle diagram	Triangle-condition mean-field theorem; quoted classical theorem		quoted_or_external_input_language; conditional_language
+S009	lemma	1474	1479	5	The Triangle Condition	Open triangles	Open-triangle localization from the triangle condition; quoted input		quoted_or_external_input_language; conditional_language; proof_language
+S010	theorem	1690	1698	5	The Triangle Condition	A quantitative triangle inequality	Quantitative susceptibility inequality		definition_language
+S011	lemma	1712	1734	5	The Triangle Condition	A quantitative triangle inequality	Boundary susceptibility lower bound		definition_language
+S012	lemma	1923	1928	5	The Triangle Condition	A quantitative triangle inequality	Diagram comparison		definition_language
+S013	theorem	2189	2198	6	Entropy, Decision Trees, and Universal Bounds	Decision trees	Generalized Dewan--Muirhead entropy comparison		definition_language
+S014	prop	2385	2397	6	Entropy, Decision Trees, and Universal Bounds	Derivatives versus second moments	Durrett--Nguyen susceptibility derivative bound	prop:durrett-nguyen	conditional_language; definition_language
+S015	theorem	2505	2522	6	Entropy, Decision Trees, and Universal Bounds	Equivalent mean-field conditions	Equivalent mean-field conditions; derived from quoted inputs	thm:equivalent-mean-field-conditions	quoted_or_external_input_language
+S016	prop	2559	2577	6	Entropy, Decision Trees, and Universal Bounds	Equivalent mean-field conditions	Cluster-tail derivative inequality	prop:cluster-tail-derivative	conditional_language
+S017	prop	2621	2632	6	Entropy, Decision Trees, and Universal Bounds	OSSS and ghost fields	OSSS covariance inequality; quoted standard input	prop:osss-covariance	quoted_or_external_input_language; definition_language
+S018	theorem	2908	2918	6	Entropy, Decision Trees, and Universal Bounds	Intrinsic geometry criterion	Kozma-Nachmias bootstrap		
+S019	prop	3003	3016	6	Entropy, Decision Trees, and Universal Bounds	Extrinsic arms, backbone, and bubble	Backbone scaling from the bubble condition		conditional_language; definition_language
+S020	theorem	3149	3169	6	Entropy, Decision Trees, and Universal Bounds	Universal tightness	Universal tightness for maximum clusters; proved here from BK and splitting		
+S021	corollary	3220	3241	6	Entropy, Decision Trees, and Universal Bounds	Universal tightness	Hyperscaling inequalities from universal tightness		conditional_language
+S022	theorem	3427	3436	7	Two Dimensions and Continuum \(k\)-Point Functions	Gladkov's inequality	Gladkov's three-point inequality		
+S023	theorem	3495	3510	7	Two Dimensions and Continuum \(k\)-Point Functions	Gladkov's inequality	Higher-order Gladkov inequality	thm:higher-order-gladkov	definition_language
+S024	theorem	3778	3795	7	Two Dimensions and Continuum \(k\)-Point Functions	Recursive \(k\)-point geometry	Planar \(k\)-point lower bound from RSW gluing	thm:planar-k-point-gluing	
+S025	theorem	4013	4030	8	Long-Range Percolation	Hierarchical models	Hierarchical long-range critical exponents; benchmark theorem		
+S026	prop	4053	4059	8	Long-Range Percolation	Hierarchical models	Hierarchical runaway observable		conditional_language
+S027	lemma	4064	4076	8	Long-Range Percolation	Hierarchical models	Runaway amplification		conditional_language
+S028	theorem	4288	4299	8	Long-Range Percolation	Critical two-point functions and known long-range results	Euclidean long-range two-point estimates; quoted status summary		quoted_or_external_input_language
+S029	theorem	4337	4357	8	Long-Range Percolation	High-dimensional cluster moments	High-dimensional cutoff moments and volume tail; quoted input	thm:hd-cutoff-moments-book	quoted_or_external_input_language; conditional_language
+S030	theorem	4871	4885	9	Cutoff Renormalization and Effective Long-Range Behaviour	Critical-dimensional logarithms	Long-range critical-dimensional logarithms; quoted theorem		quoted_or_external_input_language; conditional_language
+S031	prop	4904	4973	9	Cutoff Renormalization and Effective Long-Range Behaviour	Critical-dimensional logarithms	Second-order cutoff equation at \(d=3\alpha\); quoted input		quoted_or_external_input_language; conditional_language; definition_language
+S032	lemma	5095	5109	9	Cutoff Renormalization and Effective Long-Range Behaviour	Critical-dimensional logarithms	Marginal ODE		definition_language
+S033	corollary	5189	5204	9	Cutoff Renormalization and Effective Long-Range Behaviour	Size biasing and the volume tail	Size-biased cutoff volume limit; derived from cutoff moments		conditional_language
+S034	prop	5210	5245	9	Cutoff Renormalization and Effective Long-Range Behaviour	Size biasing and the volume tail	Volume tail from size-biased cutoff asymptotics		conditional_language; definition_language
+S035	lemma	5400	5425	9	Cutoff Renormalization and Effective Long-Range Behaviour	Spatial moments	Second spatial moment derivative		conditional_language
+S036	theorem	5546	5576	9	Cutoff Renormalization and Effective Long-Range Behaviour	Spatial moments	Cutoff spatial mixed moments and superprocess convergence; quoted conditional input		quoted_or_external_input_language; conditional_language
+S037	defn	5661	5677	9	Cutoff Renormalization and Effective Long-Range Behaviour	Effectively long-range critical behaviour	Correlation-length condition (CL)		conditional_language; definition_language
+S038	defn	5689	5698	9	Cutoff Renormalization and Effective Long-Range Behaviour	Effectively long-range critical behaviour	Weak cutoff localization (wCL)		conditional_language; definition_language
+S039	lemma	5700	5704	9	Cutoff Renormalization and Effective Long-Range Behaviour	Effectively long-range critical behaviour	Moment localization as a cutoff input		
+S040	theorem	5717	5726	9	Cutoff Renormalization and Effective Long-Range Behaviour	Effectively long-range critical behaviour	Effective long-range localization and Sak upper bound; quoted sufficient theorem		quoted_or_external_input_language
+S041	theorem	5760	5774	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics	Low-effective-dimensional long-range hyperscaling; conditional theorem		conditional_language
+S042	defn	5786	5791	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics	Hydrodynamic condition		conditional_language
+S043	prop	5803	5817	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics	Failure of hydrodynamics below \(3\alpha\)		conditional_language
+S044	lemma	6068	6081	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics	Mesoscopic negligibility; tail-extraction input		
+S045	corollary	6202	6212	9	Cutoff Renormalization and Effective Long-Range Behaviour	Low effective dimensions and hydrodynamics	Low-dimensional long-range \(k\)-point bound; conditional on pointwise input		heuristic_or_expectation_language; conditional_language

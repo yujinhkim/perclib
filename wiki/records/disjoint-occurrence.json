@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "disjoint-occurrence",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 2
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-disjoint-certificates",
+      "order": 0,
+      "label": "Finite forcing certificates",
+      "locator": "Named statement start lines in the pinned source: 37, 41, 45, 49, 54, 61, 67, 72, 89, 98, 108, 120",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "OQN6 separates universal forcing from finite certificates. Forcing itself permits arbitrary sets; the accompanying paragraph records membership and intersection consequences without assuming finiteness. X7ET and HRBD give containment, symmetry, monotonicity and the open-witness characterization. Singleton and empty-certificate examples include distinct coordinates, a repeated indispensable coordinate, and the empty coordinate type."
+    },
+    {
+      "source": "perclib-disjoint-algebra",
+      "order": 0,
+      "label": "Algebra of disjoint finite occurrence",
+      "locator": "Named statement start lines in the pinned source: 22, 28, 33, 45, 50, 66, 74, 96, 110",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "Impossible and sure event identities retain their finite-coordinate qualifications. 17DW gives binary-union distribution for increasing events; HP3X gives triple witnesses and associativity. Three distinct singleton witnesses and repeated-coordinate failure are explained. No arbitrary-event associativity is inferred."
+    },
+    {
+      "source": "perclib-cylinder-disjoint",
+      "order": 0,
+      "label": "Coordinate restriction of disjoint occurrence",
+      "locator": "Named statement start lines in the pinned source: 28, 34, 49, 68",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "VMVX includes configuration extension with unchanged exterior, restriction of forcing sets, and the pointwise and event-level equivalences. Neither ambient nor retained coordinates need be finite or countable, and events need not be increasing. The universal forcing restriction works even before imposing finite certificates."
+    },
+    {
+      "source": "perclib-bk-endpoints",
+      "order": 0,
+      "label": "Deterministic endpoint laws and BK",
+      "locator": "Named statement start lines in the pinned source: 29, 35, 42, 49, 56, 67, 73",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "E7K6 gives the arbitrary-coordinate deterministic law equality and finite-observable endpoint expectations. E7HI gives BK for arbitrary events in finite volume, including mixed zero-one profiles. No increasingness is required there, and no probability-one claim for a possibly nonmeasurable singleton is substituted for measure equality. The empty-coordinate case is included."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

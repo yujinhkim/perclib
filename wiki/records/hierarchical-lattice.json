@@ -1,0 +1,41 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "hierarchical-lattice",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 8
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 5,
+      "label": "Hierarchical cutoff blocks and omitted rows",
+      "locator": "Chapter 8 · Hierarchical models at lines 4005–4012; cutoff row estimate used in Chapter 9",
+      "relationship": "Exact geometric tail and finite-block confinement",
+      "status": "pending",
+      "note": "Level truncation confines every cluster to a finite subgroup coset and gives an exact geometric omitted row. These elementary facts do not identify a critical intensity or prove critical moment asymptotics."
+    },
+    {
+      "source": "notes",
+      "order": 20,
+      "label": "Hierarchical lattice geometry",
+      "locator": "Chapter 8 · Hierarchical models · source lines 4005–4012",
+      "relationship": "Concrete construction and elementary bounds",
+      "status": "pending",
+      "note": "Direct-sum model, exact block/shell counts and radial row-sum estimates; critical two-point and exponent claims remain separate."
+    },
+    {
+      "source": "perclib-hierarchical-model",
+      "order": 0,
+      "label": "Hierarchical radial model bounds",
+      "locator": "Named statement start lines in the pinned source: 50, 91, 122, 147, 155, 164, 173",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "The seven named theorems concern ball-count upper bounds, radial sums, total mass at most 2C, descent to unordered pairs, and three intensity applications. 9408 and 6KJQ give stronger exact shell formulas; these are not attributed to the source, which proves only upper bounds. B6KD includes its conservative 2C susceptibility and threshold bounds and the d=1, L=2, C=1, r=1/4 witness. The algebraic descent also holds at zero modulus without the nonzero-modulus assumption used for the finite ball counts; the final paragraph explains this separate scope. KL29 is an expository addition."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "product-model",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 0
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 20,
+      "label": "Bernoulli bond percolation",
+      "locator": "Chapter 1 · Bernoulli bond percolation · source line 120",
+      "relationship": "Generalisation",
+      "status": "pending",
+      "note": "The wiki starts from an inhomogeneous edge profile; the notes introduce the homogeneous law first."
+    },
+    {
+      "source": "grimmett",
+      "order": 0,
+      "label": "The basic percolation model",
+      "locator": "Chapter 1 · What is Percolation?",
+      "relationship": "Subject correspondence",
+      "status": "pending",
+      "note": "A precise statement-level mapping will follow the edition audit."
+    },
+    {
+      "source": "mathlib",
+      "order": 0,
+      "label": "Infinite product probability measure",
+      "locator": "Mathlib.Probability.ProductMeasure · Measure.infinitePi",
+      "relationship": "Formal foundation",
+      "status": "pending",
+      "note": "The compiled Lrp.Probability.ProdBernoulli adapter reuses this foundation. A full correspondence with the bond-percolation article remains pending."
+    },
+    {
+      "source": "mathlib",
+      "order": 1,
+      "label": "Homogeneous Bernoulli random subsets",
+      "locator": "Mathlib.Probability.Distributions.SetBernoulli",
+      "relationship": "Related formal construction",
+      "status": "pending",
+      "note": "The compiled Lrp.Probability.ProdBernoulli adapter reuses this foundation. A full correspondence with the bond-percolation article remains pending."
+    }
+  ],
+  "occursIn": [
+    {
+      "order": 1,
+      "source": "notes",
+      "tag": "2ML7",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 1, Bernoulli bond percolation: standard monotone coupling (lines 148–152).",
+      "relationship": "generalization",
+      "note": "The notes couple all homogeneous parameters using independent uniform edge variables. The wiki uses the same construction for edge-dependent profiles ordered coordinatewise, on a finite or countable host graph."
+    },
+    {
+      "order": 2,
+      "source": "notes",
+      "tag": "8NWX",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 1, Bernoulli bond percolation: configuration space and product law (lines 122–130).",
+      "relationship": "generalization",
+      "note": "The notes define the homogeneous product law on a connected, locally finite graph. The wiki allows an edge-dependent profile on a finite or countable simple host graph, without connectedness or local finiteness. The source law is the constant-profile case."
+    }
+  ],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "5PAT",
+      "proof_uses": [
+        "8NWX"
+      ],
+      "reason": "Intended prose proof: compute a finite cylinder under the product Bernoulli law. This is a prerequisite plan, not extracted Lean evidence."
+    }
+  ]
+}

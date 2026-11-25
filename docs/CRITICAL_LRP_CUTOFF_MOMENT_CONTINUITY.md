@@ -1,0 +1,11 @@
+# Radius regularity of higher cutoff moments
+
+Accepted from `smwtzmkep/m6` and integrated in `Analysis/Cutoff/CutoffMomentContinuity{,/Defs}.lean`.  `cutMoment_eq_mark` represents every natural cutoff cluster moment on the common mark space as the integral of `markVolPow`; `cutMomentReal` is its `ENNReal.toReal` form.  The case `p=1` is identified with the existing cutoff mass.
+
+`tendsto_cutMomentReal_nhdsLT` gives left continuity at a positive radius, assuming finite `cutMoment p r0`.  Right continuity, two-sided continuity and compact-window continuity require `1≤p` and finiteness of that same moment at one strictly larger radius.  The common-mark-space increment bound adds two terms: the changing-box contribution and an escape contribution.  The finite larger moment makes the relevant power integrable and the infinite-escape intersection null.  These hypotheses are not replaced by small-cutoff finiteness, finite boxes, or a zero percolation probability.
+
+The finite-exception FTC and bounded-derivative consequences keep every differentiability, continuous-majorant, corner-finiteness and larger-moment premise explicit.  `cutMoment_le_window` and `cutMoment_ne_top_on_window` give only monotone window bounds; they do not establish finite large-radius moments.
+
+For the moving-window defect statistics, this packet supplies `pairMass_eq_mark` and `connMass_eq_mark`, radius monotonicity, and window finiteness/local boundedness from a larger finite value; it does not itself prove continuity for `pairMass`, `connMass`, `exclMass`, or `cutE1`.
+
+The separate `Analysis/Cutoff/ConnMassRegularity` packet subsequently proves right continuity of `connMass` from a finite larger third moment, identifies the left limit as the strict-window `connMassLt`, and derives left/two-sided continuity only at radii with no lattice sphere (see `CRITICAL_LRP_CONN_MASS_REGULARITY.md`).  It does not assert unconditional left continuity or continuity of `pairMass`, `exclMass`, or `cutE1`.  Those changing windows and moment-existence inputs remain open, and no derivative or ODE result is inferred.  Both modules in this base packet built in production, and their independent fresh strict axiom reports contained only the standard three axioms.

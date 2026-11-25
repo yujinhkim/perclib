@@ -1,0 +1,243 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-lrp-1",
+  "entries": [
+    {
+      "id": "levy-first-moment-weight",
+      "title": "First-moment weighting in the displacement-density proof",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1 HTML, proof of Lemma I.5.17; compare the bounded-jump L\u00e9vy measure in (I.5.16). The PDF rendition has not been checked at this location.",
+      "claim": "The density argument calls the measure (Euclidean norm of x, capped at one) times Pi finite.",
+      "problem": "Near zero, the displayed L\u00e9vy density is comparable to norm(x) to the power -d-alpha. Its first absolute moment is infinite for 1 <= alpha < 2, a range allowed in the spatial theorem. Absolute continuity of this weighted measure does not make its mass finite. This does not refute the asserted existence of a displacement density.",
+      "correction": "MWZ7 proves existence of a density by Fourier inversion: the characteristic exponent is bounded below by a positive multiple of norm(xi)^alpha at large frequencies, making each positive-time characteristic function integrable. Mixture over the exponential time then gives the probability density kappa. The proof uses the finite second truncated moment, and norm equivalence gives the same small-ball lower bound for the paper\u2019s general norm.",
+      "tags": [
+        "MWZ7"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Do not introduce finiteness of the first absolute L\u00e9vy moment as an input for the whole alpha < 2 regime. Use the finite second truncated moment and justify Fourier inversion and the exponential mixture, or verify the exact hypotheses of the cited absolute-continuity theorem. The source diagnosis is provisional; no compiled L\u00e9vy-process result is claimed."
+    },
+    {
+      "id": "spatial-normalization-indices",
+      "title": "Regular-variation indices after changing to spatial radius",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1 HTML, opening of section I.5.4, immediately after the definitions of eta(R) and zeta(R); compare (I.1.14) and the later factor in the proof of Lemma I.5.36. The PDF rendition has not been checked at this location.",
+      "claim": "The normalization paragraph assigns eta and zeta indices -alpha and 2 alpha as functions of the spatial radius R.",
+      "problem": "For alpha > 2, the spatial scale has index alpha/2 in the cutoff radius, so its inverse has index 2/alpha. Composition therefore gives indices -2 and 4 in R. The stated indices agree with these only in the alpha <= 2 regimes. This is a mismatch of scale variables, not a counterexample to the scaling-limit theorem.",
+      "correction": "Use beta = min(alpha, 2): eta has index -beta and zeta has index 2 beta. 57FJ proves the composition rule with explicit hypotheses. At alpha = 2 the indices agree, with logarithmic terms retained in the slowly varying factors. The later s-factor in the proof of Lemma I.5.36 already uses min(alpha, 2).",
+      "tags": [
+        "57FJ",
+        "L9YJ",
+        "BB3O"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Distinguish the cutoff-radius parameter from the physical-radius parameter in any formal scaling interface. Compose the moment scales with the inverse spatial scale before asserting regular-variation indices or estimating the omitted-edge term. No Lean scaling theorem is claimed; the source diagnosis awaits author confirmation."
+    },
+    {
+      "id": "mixed-moment-cluster-index",
+      "title": "The moved marked vertices belong to the second cluster",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1 HTML, displayed identity in Lemma I.5.28; compare the first expression in (I.5.35). PDF rendition not checked at this location.",
+      "claim": "The displayed mixed-moment derivative sums every marked vertex over the root cluster, including the vertices assigned to the other side of the joining edge.",
+      "problem": "Opening a closed edge adds the cluster at its other endpoint. In the expansion of the change of a product of cluster sums, each factor assigned to the new side must be summed over that other cluster. Using the old root cluster for both sets of marked vertices gives a different observable. The following display (I.5.35) uses the two separate cluster sums.",
+      "correction": "Use the exact product-increment formula 1K61: vertices indexed by I lie in K_y and the remaining vertices lie in K_0, with y outside K_0. The finite-volume identity and its dominated countable-volume passage are proved, including for signed polynomial weights.",
+      "tags": [
+        "1K61",
+        "GY8M"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "In a formal mixed-moment Russo identity, retain the two distinct cluster carriers until the separately justified factorization step. A product of root-cluster moments cannot replace the exact derivative by definition. No Lean mixed-moment theorem is claimed; author confirmation remains pending."
+    },
+    {
+      "id": "mixed-moment-radius-factor",
+      "title": "Missing radius power in the factorized mixed-moment formula",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1 HTML, display in Lemma I.5.29; compare the explicit r to the q(S) factor in (I.5.44). PDF rendition not checked at this location.",
+      "claim": "The factorized derivative contains an integral of the joining-displacement monomial over the unit ball, without the radius power supplied by that monomial.",
+      "problem": "If its degree is q, summing this weight over the radius-r ball produces an additional factor r^q beyond the volume factor. For a quadratic monomial assigned entirely to the joining displacement, the missing factor is r squared. The normalization of the remaining cluster factors does not supply it.",
+      "correction": "Include r^{q(S)} multiplying the unit-ball integral in each split. GY8M states this factor explicitly and derives both the long-range recurrence and the disappearance of positive-q terms when r/sigma(r) tends to zero. The later source equation (I.5.44) already retains this factor.",
+      "tags": [
+        "1K61",
+        "IX97",
+        "GY8M"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Keep the dilation Jacobian and polynomial homogeneity as separate factors when passing from a discrete ball sum to a unit-ball integral. In the effectively long-range regime the omitted term has leading order; it cannot be absorbed into the displayed little-o error. This is a provisional formula correction, not a claim that the final theorem is false."
+    },
+    {
+      "id": "signed-ode-shift-derivative",
+      "title": "Derivative of the integral shift in the signed ODE proof",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1 HTML, proof of Lemma I.5.26, the display differentiating f_lambda after its integral definition. PDF rendition not checked at this location.",
+      "claim": "After defining f_lambda(r) = f(r) + lambda times the integral of h(s)/s, the first derivative equality adds lambda h(r).",
+      "problem": "The derivative of that integral is h(r)/r, so the equality is missing the denominator r. The subsequent rearrangement has the intended overall 1/r scale.",
+      "correction": "Replace the added term by lambda h(r)/r. The direct integrating-factor proof 2KB9 avoids the shift and proves a stronger signed statement without assuming a prior O(h) bound.",
+      "tags": [
+        "2KB9"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Differentiate the normalized integral with its full integrand. The stronger analytic lemma may be proved directly using a regularly varying integrating factor; it supplies no percolation differential estimate. The source statement is not contradicted by this provisional proof-line typo."
+    },
+    {
+      "id": "karamata-negative-index-tail",
+      "title": "The negative-index Karamata tail constant",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Lemma I.2.10, negative-index display, supplied PDF p. 26. Checked against the rendered source text, not only HTML.",
+      "claim": "For regularly varying f of index alpha < -1, the tail integral is asymptotic to r f(r)/(1-alpha).",
+      "problem": "For f(s) = s^alpha, direct integration gives the constant -1/(alpha+1) = 1/(-alpha-1), not 1/(1-alpha). At alpha = -2, for example, the source coefficient is 1/3 but the integral coefficient is 1. This is a local normalization error, not a defect in the positive-index half or in the distinct Laplace-tail theorem I.2.11.",
+      "correction": "Use the equivalent forms -r f(r)/(alpha+1) or r f(r)/(-alpha-1). Substitution s = r u explains the sign and denominator. The partial-coverage theorem Analysis.lemma_I_2_10_tail proves the corrected negative-index conclusion for the retained source hypotheses.",
+      "tags": [
+        "3491"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Export Analysis.lemma_I_2_10_tail with constant -1/(alpha+1), verified directly below at UniformConvergence.lean:815. Do not replace it by a wrapper for SLGY, the different fractional-index Laplace-tail equivalence. Link this record to the underlying regular-variation assertion 3491 rather than treating that definition as the corrected integral theorem."
+    },
+    {
+      "id": "two-cluster-fresh-copy-exclusion",
+      "title": "The I.4.12 fresh-copy identity needs a separate exclusion case",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, proof of Lemma I.4.12, final cluster-factorization display, supplied PDF p. 39. Compare the exclusion in Lemma I.4.11 on p. 40.",
+      "claim": "The displayed calculation identifies the independent two-cluster gap directly with the fresh-copy event for z belonging to the restored y cluster but not the original one.",
+      "problem": "The two-cluster event used by I.4.11 explicitly requires y not to belong to K_0. The printed fresh-copy identity does not isolate the case y in K_0. On that case, the excluded event with y outside K_0 has probability zero, while the independent gap is generally nonzero. This is a missing case in the printed argument, not by itself a disproof of the final five-factor upper bound.",
+      "correction": "Separate the root-connected case and its cluster-preservation argument before applying the fresh-walk/BK alternative. The repaired proof keeps exactly the root cluster and splits according to whether an avoiding fresh walk exists. The source apartSet is strictly different from a disjoint-occurrence disjSet and cannot be replaced by a notation alias.",
+      "tags": [
+        "J1LW"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Use I411.twoCluster_gap_apart and longRange_twoClusterGapApart, which prove the actual five-factor statement with the required exclusion event, instead of reusing the printed factorization. These discharge the source statement I.4.12 by a supplied argument; they do not complete every model input of I.4.11."
+    },
+    {
+      "id": "gyration-long-jump-exponent",
+      "title": "The long-jump radius-of-gyration exponent is alpha, not twice alpha",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Proposition I.5.2(3) and the immediately following asymptotic for xi_2, supplied PDF pp. 53-54. Verified on rendered PDF page 54.",
+      "claim": "For alpha > 2, the two formulas print xi_2 squared asymptotic to A r^(2 alpha), and then xi_2 asymptotic to sqrt(A) r^(alpha/2).",
+      "problem": "Taking square roots gives incompatible growth orders. Moreover, the second spatial moment has index 2 alpha while the first cluster-volume moment has index alpha; their quotient therefore has index alpha. The corrected exponent is the one already required by the proposition's final formula for xi_2.",
+      "correction": "Use xi_2 squared asymptotic to A r^alpha for alpha > 2, with the corresponding second-moment normalization written in terms of xi_2 squared. The covariance-matrix constant must not be confused with a change of exponent.",
+      "tags": [
+        "GAF9",
+        "Z11O"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Analysis.Gyration.tendsto_xi2sq_of_gt proves the corresponding quotient reduction F/(r^alpha G) -> A beta/alpha from F/r^(2 alpha) -> A and G/r^alpha -> alpha/beta. This verifies the corrected analytic scale, not the percolation gyration ODE, unit-trace condition, or positive-definiteness of the limiting matrix."
+    },
+    {
+      "id": "remark-i111-zeta-exponent",
+      "title": "The scaling normalization depends on the inverse square root of zeta",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Remark I.1.11, immediately before display (I.1.10), supplied PDF p. 13 (ordinary extracted text p. 12). Also compare the table on p. 12 and the discussion on p. 14. Checked against the source TeX and the hierarchy of moment/tail formulas.",
+      "claim": "After invoking the volume tail, the remark states eta(R) asymptotic to const. zeta(R)^(-2).",
+      "problem": "All three rows of the theorem's normalization table give eta(R) asymptotic to const. zeta(R)^(-1/2). Moreover, the displayed definitions give eta*zeta = E|K|, with zeta having index twice the first-moment index. Applying the volume tail also requires exactly the inverse-square-root scale to convert the mass law into a probability conditional on large clusters. The printed exponent -2 would not support the deduction.",
+      "correction": "Use eta(R) asymptotic to const. zeta(R)^(-1/2). Independently, the paper itself states the corresponding relation eta(R) \u224d zeta(R)^(-1/2) on p. 14. The normalization table and the first-moment/tail relation give the same formula in each regime.",
+      "tags": [
+        "Y3SX"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Do not derive the conditional limit (I.1.10) or I.1.18 from the printed zeta^-2 identity. Use zeta^-1/2, with the normalization table and volume tail, and no silently modified implication. The error is local; the main \u03b6/\u03b7 normalization table is not said to be false."
+    },
+    {
+      "id": "superprocess-tree-vertex-indexing",
+      "title": "The moment-formula trees need the origin-labelled root vertex",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, the paragraph after display (I.1.11), supplied PDF p. 13: leaves labelled 0,...,n and x_0 = 0, followed by the convention that the vertex set is {1,...,2n-1} and internal vertices {n+1,...,2n-1}.",
+      "claim": "The moment formula uses leaf labels 0 through n and the 2n-1 variables x_1,...,x_(2n-1), with x_0 fixed to zero; the following sentence describes the tree's vertex set as 1 through 2n-1 only.",
+      "problem": "The stated labels force a root leaf labelled 0 and n other labelled leaves, with the n-1 internal vertices n+1 through 2n-1. That is 2n vertices, labelled 0 through 2n-1. Starting at 1 omits the origin vertex and is inconsistent with the variable bound, while n=1 should leave the single edge from the origin to the test vertex.",
+      "correction": "Index vertices by 0 through 2n-1. Keep root leaf 0 at the origin, other leaves 1 through n carrying the test functions, and internal vertices n+1 through 2n-1 of degree three. The degree sum gives E = ((n+1) + 3(n-1))/2 = 2n-1 for n >= 1; in particular n=1 gives one edge. Do not change the displayed coefficient 2^{2n-2} because of this vertex/edge bookkeeping. As a consequence, the n=1 formula is the expected one-point function integral of G(x)phi(x) dx.",
+      "tags": [
+        "IX97",
+        "GY8M"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Freeze the moment formula only with this index convention. Equality of the relevant tree-shape representatives must fix every leaf 0,...,n, while internal vertices remain unlabelled isomorphically. Any graph using the printed 1-based set must be corrected explicitly rather than silently changing the prefactor or the origin convention."
+    },
+    {
+      "id": "figure-1-d1-no-transition",
+      "title": "The Figure 1 caption's one-dimensional no-transition clause conflicts with the percolation model",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Figure 1 caption, supplied PDF p. 4, HTML id S1.F1: where there is either no phase transition when alpha > 1 or a discontinuous phase transition when alpha = 1 [5,41].",
+      "claim": "For one-dimensional Bernoulli bond long-range percolation, the caption asserts no phase transition for alpha > 1 and a discontinuous transition at alpha = 1.",
+      "problem": "For every alpha > 0 the stated kernel class is summable, features positive finite weights in every nonzero direction, and has 0 < beta_c < infinity. For example, in d=1 with J(r)=r^(-3) (alpha=2) the first-moment walk bound and the nearest-neighbour line lower bound contradict any reading of no phase transition as the absence of 0 < beta_c < infinity. This is distinct from the correct alpha=1 discontinuity clause and from slow/no spontaneous-magnetization statements for the Ising model. Some cited full texts remain unread here, so this does not certify a bibliographic attribution.",
+      "correction": "Delete the no-transition clause for this Bernoulli percolation model, or qualify it explicitly as a statement about another model with exact hypotheses. Do not use it to restrict percolation theorem domains. For summable translation-invariant Bernoulli kernels, state the nonemptiness of the transition separately from whether it is continuous.",
+      "tags": [],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Do not narrow I.1.6, I.1.15, or future one-dimensional roots using the caption. Record beta_c positivity/finiteness as a derived model obligation, not as a new free premise."
+    },
+    {
+      "id": "hd-log-singularity",
+      "title": "The third HD logarithmic correction needs a positive regularization",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, third hypothesis of (HD), supplied PDF p. 10; compare the log(1+norm) corrections in Lemma I.4.3.",
+      "claim": "For d = 6 and alpha = 2, the two-point bound uses (log ||x-y||)^(-1)||x-y||^(-d+2) for all x != y.",
+      "problem": "At norm one the logarithm is zero and its reciprocal is not a finite real bound. Lean totalizes the reciprocal to zero, and for positive norm below one it is negative. A normalized norm attaining rho(x-y)=1 therefore makes a literal real reading impose zero two-point probability, contrary to the intended subcritical model. This does not refute the intended two-point estimate.",
+      "correction": "Adopt an explicitly ruled positive regularization, preserving the large-distance logarithmic factor. Version 2 uses (log(1+||x-y||))^(-1); log(1+rho)/log rho tends to one at infinity and the arbitrary positive comparison constant absorbs bounded short-scale comparisons. This is not an assertion of literal equality with the singular printed formula.",
+      "tags": [],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Do not certify theorem_I_1_6 v1. Use HD_v2 and a separately reviewed theorem_I_1_6_v2, leaving the rest of the moment/tail statement unchanged. This is a versioned source interpretation, not an added model axiom."
+    },
+    {
+      "id": "remark-i116-astar-exponent",
+      "title": "The inverse-scale correction in Remark I.1.16 has exponent minus one half",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Remark I.1.16, supplied PDF p. 17; compare Theorem I.1.15 mutual inverses and Section I.3.2.",
+      "claim": "The remark states A_r ~ A(log r)^(-1/2) and then A*_n ~ (2 alpha)^(1/2) A(log n)^(1/2).",
+      "problem": "Mutual inverse scaling gives A*_n = A_{sigma-bar(n)}, where sigma-bar inverts r -> A_r r^(2 alpha). Since log sigma-bar(n) = (1/(2 alpha))log n (1+o(1)), the logarithm of A*_n has exponent -1/2, not +1/2.",
+      "correction": "Use A*_n ~ (2 alpha)^(1/2) A(log n)^(-1/2). This is conditional on the A_r asymptotic attributed to Theorem III.1.2; the third-paper input is not being re-proved.",
+      "tags": [],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Keep MutuallyInverse in theorem_I_1_15 and reject nodes conjoining it with the positive-exponent formula. The root needs no change; two independent source extractions found the sign, while author confirmation remains pending."
+    },
+    {
+      "id": "lemma-i418-ell3-diagonal",
+      "title": "The polygon-diagonal bound in Lemma I.4.18 fails at ell = 3",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, Lemma I.4.18 and proof, supplied PDF p. 46; consumers on pp. 47 and 52 (Propositions I.4.15 and I.4.20) and pp. 86-87 (Lemma I.5.29).",
+      "claim": "The estimate sup_x T^ell(0,x) = T^ell(0,0) <= C(nabla_{r^c}+r^(-c))(E|K|)^(ell-3) is asserted for every ell >= 3.",
+      "problem": "At ell = 3 the right side tends to zero, but T(x,x)=1 gives T^3(0,0) >= 1 through the three diagonal connection events. The proof also uses an (E|K|)^(ell-4) local bound that needs ell >= 4, whereas the consumers include ell = 3.",
+      "correction": "Restrict the polygon estimate to ell >= 4 and handle ell = 3 by averaging, not by the printed supremum bound. For 0 < theta < 1, split the radius-r ball at radius r^theta. The far terms are bounded using the critical open triangle tail, while the near terms use the diagonal maximum and the ratio |B_{r^theta}|/|B_r|. This gives a bound of the form G_r = nabla_{r^theta} + C r^{-d(1-theta)} nabla_{beta_c}, which tends to zero and is log-integrable whenever nabla_r is. The earlier proposed bound using total summable triangle mass is invalid: the source triangle condition bounds the diagonal value, not total triangle mass. The three consumer applications need separate, small positive constants re-chosen for this two-scale term; no unproved superiority to the printed bound is claimed.",
+      "tags": [],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Never use the printed ell = 3 supremum estimate as a library result or external leaf. Preserve T(x,x)=1 and model the ell >= 4 and averaged ell = 3 estimates separately. No proof of I.4.18, I.4.15 or I.4.20 is claimed here."
+    },
+    {
+      "id": "lemma-i419-substitution",
+      "title": "The substitution constant in Lemma I.4.19 is 1/c",
+      "status": "provisional",
+      "locator": "arXiv:2508.18807v1, proof of Lemma I.4.19, supplied PDF p. 47, logarithmic integral display.",
+      "claim": "The substitution s = C r^c is printed with prefactor 1/(c C^(1-c)) for conversion of |h(Cr^c)| dr/r to |h(s)| ds/s.",
+      "problem": "Since ds/s = c dr/r, the factor is 1/c. The printed extra C-dependent factor is inconsistent when C differs from one.",
+      "correction": "Use the direct change-of-variables calculation with factor 1/c. The lemma conclusion and its asymptotic consumers are unchanged.",
+      "tags": [],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Use the corrected direct calculation in any formal proof; no extra analytic assumption is needed."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "criticality",
+  "collections": [
+    {
+      "collection": "observables",
+      "order": 2
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "grimmett",
+      "order": 2,
+      "label": "Critical probabilities",
+      "locator": "Chapter 3 · Critical Probabilities",
+      "relationship": "Subject correspondence",
+      "status": "pending",
+      "note": "Source conventions for the threshold will be mapped explicitly to the common definitions."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "connectivity",
+  "collections": [
+    {
+      "collection": "observables",
+      "order": 0
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "grimmett",
+      "order": 1,
+      "label": "Connections and basic techniques",
+      "locator": "Chapter 2 · Some Basic Techniques",
+      "relationship": "Subject correspondence",
+      "status": "pending",
+      "note": "The shared event API will support the source’s model-specific arguments."
+    },
+    {
+      "source": "perclib-bond-interface",
+      "order": 1,
+      "label": "Finite paths and measurable events",
+      "locator": "Source lines 172–237",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "7QJG supplies countable-path measurability. Infinite clusters are characterized by escape from every finite set; the Harris article spells out this representation. Deterministic representations do not require countability, while the measurability argument does."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

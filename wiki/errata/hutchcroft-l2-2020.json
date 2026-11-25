@@ -1,0 +1,35 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "hutchcroft-l2-2020",
+  "entries": [
+    {
+      "id": "reverse-bk-cancellation",
+      "title": "The reverse-BK switching cancellation",
+      "status": "provisional",
+      "locator": "arXiv:1904.05804v2, Section 5, proof of Lemma 5.3: the equality of the 01 gain and 10 loss probabilities in the edge interpolation.",
+      "claim": "The proof identifies the 01 gain and 10 loss probabilities, then bounds the remaining both-open gain by a bubble convolution.",
+      "problem": "The exact one-coordinate increment also contains a nonnegative overlap term. X4OE exhibits unequal gain and loss probabilities on a three-vertex star. This is a counterexample to the asserted cancellation, not to the final backbone theorem.",
+      "correction": "XWH4 supplies the exact increment, including the additional p(1-p) overlap term. The three-vertex calculation X4OE disproves the stated cancellation step for this ghost interpolation. No corrected bubble-only lemma has been established here. The triangle replacement DTVY/79WX has stronger assumptions and does not certify the published switching argument. FIXER’s later reports rule out two auxiliary routes: a graph-uniform lower comparison of the one-configuration disjoint-path probability (either matching allowed) with the probability of nonempty, vertex-disjoint fixed-terminal path backbones in two independent copies, and the coefficient-one bubble convolution on arbitrary independent-bond graphs. The latter report gives a computer-assisted counterexample on the complete graph with 65536 vertices and bond probability 1/65536. With $\\chi=\\mathbb E|K_a|$, $B=\\sum_z\\tau(a,z)^2$ and $S=\\sum_{x,y}\\mathbb P(\\{a\\leftrightarrow x\\}\\circ\\{a\\leftrightarrow y\\})$, the reported bounds imply $\\chi^2>BS+68$. These are obstructions to proposed repairs, not additional claims attributed to the source. They do not settle the arbitrary-constant lattice theorem. FIXER’s resumed critical-dimensional investigation gives the baseline m2/chi <= S <= chi squared, hence r^(2alpha)/sqrt(log r) <= const. S <= const. r^(2alpha) under the cited cutoff moments. The desired S comparable to chi squared remains unresolved. 44CZ records the moment proof; K9H7/GKBQ/JFE6 retain the within-cluster cycle increment and give the finite-volume derivative reduction. TJXV proves that an additive lower derivative bound of order -1/[r(log r)^2] for W=S/chi squared would suffice, but that bound has not been established for this observable. These are subsequent reductions, not a correction already proved for the published lemma. FIXER’s subsequent follow-up records a continuous interpolation with an accumulated overlap term, a mixed-moment upper bound and a covariance form of the cutoff cancellation. Neither the required uniform overlap bound nor the sufficient signed derivative estimate is proved there. These additional reductions leave the source correction and the critical-dimensional target unresolved.",
+      "tags": [
+        "X4OE",
+        "XWH4",
+        "DTVY",
+        "79WX",
+        "44CZ",
+        "K9H7",
+        "GKBQ",
+        "JFE6",
+        "TJXV"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6899706862",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6900538580",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6901311038",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6902840243",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6903148948"
+      ],
+      "leanImpact": "Keep the exact increment XWH4 and the cancellation counterexample X4OE separate from the desired bubble-only theorem. NGRO’s independent-copy separation does not supply the one-configuration comparison. Do not assume that every independent-bond block satisfies the proposed coefficient-one pointwise inequality: FIXER’s complete-graph report refutes that general premise. Existing restricted-graph results and conditional block-gluing arguments are unaffected, but they do not establish the lattice target. The numerical certificate, its recurrences and its truncation bound are not Lean proofs or compiled evidence. DTVY and 79WX still require stronger hypotheses. FIXER owns the unresolved comparison on issue #242. The new generator theorem GKBQ is finite-volume. Any lattice derivative theorem must justify convergence of the integrated expressions, including the closed within-cluster term. The additive estimate in TJXV is a hypothesis, not a proved percolation input. Do not change the source status or claim the critical-dimensional target from these reductions. In the continuous interpolation route, finite-volume endpoint sums converge separately; monotone convergence of the overlap events must not be assumed. The new mixed-moment estimate does not supply the missing signed cancellation. See the latest linked FIXER record before selecting a formal target."
+    }
+  ]
+}

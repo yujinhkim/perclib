@@ -1,0 +1,57 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "stopped-exploration",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 12
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 15,
+      "label": "Refined subcritical cutoff and mean-field second moments",
+      "locator": "Chapter 6 · Equivalent mean-field conditions and cluster-tail inequality · source lines 2503–2614",
+      "relationship": "Explicit integrated cutoff and entropy-based moment implication",
+      "note": "Retains the square-root endpoint prefactor and the additive differential term. The second-moment lower bound follows by comparing tails at a small fixed multiple of the cutoff scale; the summed tail derivative argument supplies the reverse moment-to-derivative implication."
+    },
+    {
+      "source": "notes",
+      "order": 17,
+      "label": "Durrett–Nguyen susceptibility derivative bound",
+      "locator": "Chapter 6 · Derivatives versus second moments · source lines 2385–2501 (S014)",
+      "relationship": "Exploration-score proof and integrated finite-volume passage",
+      "note": "The countable bound holds almost everywhere on intervals of finite root second moment. Transitivity and tree-graph moments supply this hypothesis when susceptibility is finite; sharpness remains separate."
+    },
+    {
+      "source": "notes",
+      "order": 37,
+      "label": "Stopped cluster exploration and weighted revealment",
+      "locator": "Chapter 6 · Decision trees · source lines 2266–2310",
+      "relationship": "Construction and proof details",
+      "status": "pending",
+      "note": "A fair priority rule handles infinite-degree graphs and non-halting negative instances. The weighted cost uses the truncated cluster expectation. The entropy comparison gives the explicit two-parameter tail bound, then critical-tail and density upper bounds from the stated susceptibility control. Critical-tail lower bounds are supplied in integrated-lower-tails under its endpoint hypotheses; density lower bounds remain separate."
+    },
+    {
+      "source": "hutchcroft-triangle-2021",
+      "order": 5,
+      "label": "Power-law susceptibility transfer",
+      "locator": "Theorem 1.3 and the conclusion of Section 4",
+      "relationship": "Susceptibility-to-tail implication",
+      "status": "pending",
+      "note": "X8T6 keeps the susceptibility power and logarithmic factor explicit; decay requires gamma < 2. No new source or compiled correspondence is certified."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "X8T6",
+      "proof_uses": [
+        "JL1S"
+      ],
+      "reason": "Use separation n^(-1/2) for the finite tail and a fixed two-sided intensity separation before passing to the infinite-cluster event."
+    }
+  ]
+}

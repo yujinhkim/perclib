@@ -1,0 +1,29 @@
+# Long-range I: spatial-limit reading map
+
+Inspected [versioned HTML](https://arxiv.org/html/2508.18807v1), 15–16 November 2026, concentrating on §I.5.2–I.5.4. The arXiv version line is dated August 2025 while the rendered title displays August 2026. The PDF rendition has not been compared in this pass. This is a partial correspondence map, not a claim of full source coverage or formalization.
+
+| Locators | Topic | Wiki disposition |
+| --- | --- | --- |
+| Definition I.5.1 | Four alternatives for the spatial theory | Retain the source’s kernel assumptions and model-specific alternatives; no unrestricted dimension claim |
+| (I.5.16)–(I.5.20), Definition I.5.16 | Bounded-jump cutoff motion, exponential stopping and displacement kernel | [MWZ7](../articles/spatial-cutoff-moments.md#section-displacement-kernel); separate from full stable motion |
+| Lemma I.5.17 | Existence of a displacement density | Fourier proof in MWZ7; [provisional first-moment-weight erratum](../errata/hutchcroft-lrp-1.json) |
+| Proposition I.5.14 and Lemma I.5.27 | One-point moments and absolute mixed-moment bounds | [LDR1](../articles/spatial-cutoff-moments.md#section-displacement-asymptotics) proves the normalized Euclidean case above three alpha; [VMEJ](../articles/spatial-cutoff-moments.md#section-mixed-moment-bounds) gives the general size-bias bound |
+| Lemma I.5.26 | Signed ODE estimate | [2KB9](../articles/marginal-ode.md#section-signed-forcing), with no prior O(h) assumption; provisional derivative-line typo recorded |
+| Lemma I.5.28 | Exact mixed-moment differentiation | [1K61](../articles/spatial-cutoff-moments.md#section-mixed-russo) proves the two-cluster identity and countable-volume passage; the wrong cluster index in the HTML display is recorded provisionally |
+| Lemma I.5.29 | Asymptotic factorization | [2VIE](../articles/spatial-cutoff-moments.md#section-high-dimensional-factorization) proves the d > 3 alpha error estimate under the stated absolute moment bounds; the missing radius power is recorded provisionally. Other model alternatives remain separate |
+| Proposition I.5.30 | Diagram recurrences | [IX97](../articles/spatial-cutoff-moments.md#section-diagram-recurrence) gives a generating-function proof, including the general norm-ball normalization |
+| Theorem I.5.21 | Polynomial mixed-moment asymptotics | [GY8M](../articles/spatial-cutoff-moments.md#section-mixed-hierarchy) closes the conditional induction. [HBLN](../articles/spatial-cutoff-moments.md#section-high-dimensional-mixed-limit) supplies its inputs for the Euclidean model with d > 3 alpha under 7F5O's endpoint assumptions |
+| Corollary I.5.22 | Size-biased cutoff random-measure limit | Y3SX supplies tightness and moment determinacy once the polynomial asymptotics hold |
+| Theorem I.5.24 and Remark I.5.23 | CRT scaling convention and reduced edge lengths | [45EB](../articles/size-biased-laws.md#section-reduced-tree-mixture) proves the chi-square/gamma mixture; the unit-mass reduced-tree distribution and spatial construction remain cited inputs |
+| §I.5.4, opening normalization | Cutoff radius versus spatial radius | [57FJ](../articles/spatial-cutoff-moments.md#section-physical-normalization); provisional scale-index erratum |
+| (I.5.49)–(I.5.50) | Added cluster mass and ghost comparison | [AYPN/L9YJ](../articles/size-biased-laws.md#section-added-mass) prove the last-exit comparison and the ordered regular-variation limit |
+| Proof of Theorems I.1.9 and I.1.17 | Transfer of the cutoff double limit and large-volume conditioning | [BB3O](../articles/size-biased-laws.md#section-cutoff-removal) separates rare-event normalization, cutoff convergence and the no-atom condition |
+| (I.1.11), Lemma I.5.34 | Factorial compact-test moments | [5VYE](../articles/spatial-cutoff-moments.md#section-green-moments) proves the continuum binary-tree integral bound under the stated Green-kernel bound and moment formula |
+| Lemma I.5.32 | Spatial tightness | [ALO4](../articles/spatial-cutoff-moments.md#section-full-spatial-tightness) combines one fixed cutoff second moment with the added-mass estimate |
+| Lemma I.5.35 | Resolvent rescaling to the Green kernel | [42PB](../articles/spatial-cutoff-moments.md#section-kernel-rescaling) proves domination and local L1 convergence for the normalized isotropic jump process and nondegenerate Brownian motion; general-norm estimates remain to be checked |
+| Lemma I.5.36 | Canonical diagram limit and scale constants | [DX2Y](../articles/size-biased-laws.md#section-cutoff-ratio-laws) derives the fixed-ratio measure by undoing bias, with the factor 4 and all spatial Jacobians retained |
+| Lemma I.5.37 and proof of Lemma I.5.33 | Local moments to total-mass-weighted laws | [W9BP](../articles/size-biased-laws.md#section-local-moment-identification) weights first by a local mass, then uses spatial tightness to obtain the canonical double limit |
+
+The first part of §I.5.3 distinguishes integrated moment asymptotics from conjectural pointwise multipoint equivalents. Preserve that distinction. The source’s inverse-total-mass moment formula corresponds to ordinary size-biased moment measures after inserting one additional constant test; Y3SX makes that shift explicit.
+
+The reconstruction of §I.5.4 separates the cutoff mixed-moment asymptotics, full volume tail, omitted-edge row estimate, fixed-cutoff second spatial moments, and existence and moment formula of the intended canonical measure. In the normalized Euclidean d > 3 alpha model, HBLN, 26NT, C4E9 and Z11O now supply the percolation inputs under 7F5O; existence and the moment formula of the canonical measure remain cited construction inputs. Those inputs are not inferred solely from volume moments. The isotropic kernel calculation is not a verification of every general-norm case in Definition I.5.1. No Lean scaling-limit theorem is claimed.

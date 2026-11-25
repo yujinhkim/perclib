@@ -1,0 +1,30 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "mesoscopic-tail-transfer",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 14
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 3,
+      "label": "Conditional low-dimensional cutoff criterion and tail extraction",
+      "locator": "Chapter 9 · Low effective dimensions and hydrodynamics · source lines 5760–5774 and 6068–6200 (S041, S044)",
+      "relationship": "Differential criterion for negligibility and conditional full-tail transfer",
+      "note": "The transfer assumes explicit moments and a multiplicative ghost comparison; it proves two-sided bounds, not an exact amplitude. Negligibility follows from explicit fixed-truncation differential inequalities; the first is derived under explicit domination and susceptibility assumptions, while localization and rooted damping supply the moment ratios for the collision bound. The final criterion still assumes those inputs and the cutoff susceptibility order. The soft-cutoff comparison is supplied separately."
+    },
+    {
+      "source": "hutchcroft-lrp-2",
+      "order": 2,
+      "label": "Cutoff moments and tail extraction",
+      "locator": "Sections II.4–II.5; equation (II.5.10)",
+      "relationship": "Explicit sufficient conditions",
+      "note": "The fractional-tail argument excludes the discontinuous endpoint."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

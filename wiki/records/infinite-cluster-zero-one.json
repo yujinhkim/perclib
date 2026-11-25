@@ -1,0 +1,30 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "infinite-cluster-zero-one",
+  "collections": [
+    {
+      "collection": "observables",
+      "order": 5
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 0,
+      "label": "Global zero-one law and root/global threshold conventions",
+      "locator": "Chapter 1 · unnumbered assertions before S001 · lines 139–153",
+      "relationship": "Finite-change invariance and a direct product-law proof",
+      "note": "Countability is retained for global measurability and the union over roots. A root event is not itself a tail event; transitivity identifies root/global threshold parameter sets without deciding their endpoints."
+    },
+    {
+      "source": "perclib-intensity-definitions",
+      "order": 1,
+      "label": "Root/global thresholds and positive-support components",
+      "locator": "Definitions and interface comments at pinned main 3c0755b692bb6fa71ff6521ce423948feae4fe40",
+      "relationship": "Expository consequences of the inspected threshold conventions",
+      "note": "The global-infimum identity, positive-path comparison, non-attainment example and decorated-ray separation of susceptibility from percolation are additional prose arguments, not asserted compiled correspondences. Finite parameters, extended thresholds and infimum of the empty set infinity are retained."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

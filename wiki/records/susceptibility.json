@@ -1,0 +1,41 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "susceptibility",
+  "collections": [
+    {
+      "collection": "observables",
+      "order": 1
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 21,
+      "label": "Susceptibility as a sum of connection probabilities",
+      "locator": "Chapter 1 · Bernoulli bond percolation · unnumbered definitions and identity",
+      "relationship": "Shared definition and identity",
+      "status": "pending",
+      "note": "The expectation is initially an extended nonnegative quantity. The source-to-formal mapping is not yet reviewed."
+    },
+    {
+      "source": "heydenreich-hofstad",
+      "order": 0,
+      "label": "The model and its observables",
+      "locator": "Author manuscript · Chapter 1 · Introduction and motivation",
+      "relationship": "Subject correspondence",
+      "status": "pending",
+      "note": "The full, truncated, and finite-volume observables will keep separate canonical definitions."
+    },
+    {
+      "source": "perclib-susceptibility-interface",
+      "order": 1,
+      "label": "Susceptibility identity",
+      "locator": "Source lines 54–70",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "8DSI retains the root contribution and equality in the extended nonnegative reals, including infinite expectation."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

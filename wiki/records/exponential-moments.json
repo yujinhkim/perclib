@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "exponential-moments",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 15
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 42,
+      "label": "Exponential moments from tree-graph bounds",
+      "locator": "Chapter 4 · Tree-graph inequalities · source lines 1349–1362",
+      "relationship": "Conditional analytic implication with explicit endpoints",
+      "status": "pending",
+      "note": "Proves weighted/ordinary exponential-moment bounds from the full moment hypothesis; retains tail prefactors or an eventual threshold range, addressing N-ERR-02 without asserting the underlying tree-graph theorem."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

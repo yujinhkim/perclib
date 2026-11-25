@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "critical-exponents",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 6
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 41,
+      "label": "Critical exponent conventions",
+      "locator": "Chapter 1 · Critical exponents · source lines 220–274",
+      "relationship": "Definitions and asymptotic conventions",
+      "status": "pending",
+      "note": "Distinguishes logarithmic limits, two-sided comparison and exact equivalents; fixes the reciprocal Euclidean arm convention. Numerical predictions and model-specific exponent theorems remain separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

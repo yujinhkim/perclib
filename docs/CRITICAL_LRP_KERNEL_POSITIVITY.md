@@ -1,0 +1,11 @@
+# Conditional cutoff-kernel positivity
+
+Accepted from `smwtzmkep/m5`, direction d8, and integrated in `Analysis/Cutoff/Kernel/{StrictDecrease,IncidentWiring}.lean`.
+
+`K_eq_lintegral` states the tail integral form of the source profile directly.  `K_lt_of_deriv_ne_zero` proves strict decrease for `0<s<r` **assuming `0<|K'(t)|` throughout `(s,r)`**.  It splits the tail integral into the compact interval and outer tail, shows that the interior contribution is positive using its support and positive volume, and only then invokes `toReal` additivity.  `cutoffProfile_pos_of_lt` and `cutKernel_pos_of_lt` provide the corresponding non-loop positive kernel facts in that density regime.  Off-corner forms eliminate an exact attained distance from the in-range support; they do not prove positivity when that distance is allowed to equal the cutoff.
+
+`exists_deriv_pos_of_gt` supplies pointwise positive density from the model's tail bounds, and `exists_cutKernel_pos_of_offCorner` gives the resulting positivity on edges longer than that threshold.  The finite incident wrappers preserve every remaining nonloop, support, card, parameter-sign and mixed-moment premise.  In particular, `sum_stdEdgeWeight_mixed_le_offCorner` and `sum_abs_flux_le_offCorner` are finite-edge, nonempty-window bounds with an explicit `kernelFloor`, not the full uniform incident majorant.  The large-density-radius variant requires a positive lower source-distance bound on every edge.
+
+No global strict decrease is asserted.  Bounded flat intervals of the source profile are compatible with the data, so these are conditional helper results even though stronger flat-gap/off-corner per-radius bounds are now available separately in `Analysis/Cutoff/OffCorner`.  No zero percolation probability to finite-moment inference, no global Russo identity, no finite large-radius cutoff moment and no ODE statement follows.
+
+Both helper modules passed fresh strict checks and production-target builds; the seven plus four independent axiom reports use only the standard foundational axioms.

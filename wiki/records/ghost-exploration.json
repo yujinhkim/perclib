@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "ghost-exploration",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 17
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 19,
+      "label": "Cluster-tail derivative and reverse mean-field implication",
+      "locator": "Chapter 6 · source lines 2561–2614 (S016 and part of S015)",
+      "relationship": "Finite ghost proof and justified countable-volume differential bound",
+      "status": "pending",
+      "note": "Uniform stopped-tree cost supplies local Lipschitz regularity before passing an integrating-factor inequality through finite-volume exhaustion. The stopped-exploration article then derives susceptibility control from a uniform square-root endpoint tail. The integrated-lower-tails article supplies matching lower bounds and the four-condition equivalence under explicit endpoint hypotheses."
+    },
+    {
+      "source": "notes",
+      "order": 51,
+      "label": "Finite green-cluster exploration and covariance",
+      "locator": "Chapter 6 · lines 2645–2672 and 2792–2802",
+      "relationship": "Finite algorithm and corrected covariance scope",
+      "status": "pending",
+      "note": "Proves endpoint revealment bounds and the bond-only covariance identity; ghost-connection itself need not have zero covariance with the marks. The finite covariance theorem and a finite-volume limiting argument now supply the countable cluster-tail derivative inequality; no infinite all-marks-first algorithm is used."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

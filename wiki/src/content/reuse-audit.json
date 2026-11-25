@@ -1,0 +1,191 @@
+{
+  "libraries": [
+    {
+      "id": "lrp-adapters",
+      "name": "The lrp foundation port",
+      "url": "https://github.com/tomhutchcroft/lrp/pull/2",
+      "commit": "4b1f7bf859d00d0a5fff781820f1cf7312f2e2bf",
+      "license": "Apache-2.0 for the adapted upstream material",
+      "leanVersion": "4.35.0",
+      "mathlibRevision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "status": "Build & axiom audit passed",
+      "summary": "Verification snapshot: lake build --wfail passed at this exact commit. The transitive Lrp audit checked 47 declarations against propext, Classical.choice, and Quot.sound. This count includes generated declarations; it is not a count of 47 mathematical theorems. The adaptation is in draft PR #2.",
+      "attribution": "Upstream source authors and notices retained; compatibility changes and new specialization corollaries recorded in the port.",
+      "buildUrl": "https://github.com/tomhutchcroft/lrp/actions/runs/43324614451",
+      "pullRequestUrl": "https://github.com/tomhutchcroft/lrp/pull/2",
+      "modules": [
+        {
+          "path": "Lrp/Probability/ProdBernoulli.lean",
+          "title": "Inhomogeneous product Bernoulli law",
+          "url": "https://github.com/tomhutchcroft/lrp/blob/4b1f7bf859d00d0a5fff781820f1cf7312f2e2bf/Lrp/Probability/ProdBernoulli.lean",
+          "declarations": [
+            "Lrp.Probability.prodBernoulli",
+            "Lrp.Probability.prodBernoulli_eq_weighted",
+            "Lrp.Probability.prodBernoulli_eq_map",
+            "Lrp.Probability.prodBernoulli_indicator",
+            "Lrp.Probability.prodBernoulli_const"
+          ],
+          "auditStatus": "Build and transitive axiom audit passed",
+          "note": "Directly imports Mathlib.Probability.Distributions.SetBernoulli. Adapted from the pinned PercolationContinuity sources; namespace and current API spellings are documented."
+        },
+        {
+          "path": "Lrp/Percolation/Site/Basic.lean",
+          "title": "Site connectivity and measurable cluster events",
+          "url": "https://github.com/tomhutchcroft/lrp/blob/4b1f7bf859d00d0a5fff781820f1cf7312f2e2bf/Lrp/Percolation/Site/Basic.lean",
+          "declarations": [
+            "Lrp.Percolation.Site.siteConn_self",
+            "Lrp.Percolation.Site.siteCluster_of_notMem",
+            "Lrp.Percolation.Site.measurableSet_siteConn",
+            "Lrp.Percolation.Site.measurableSet_siteInfinite",
+            "Lrp.Percolation.Site.criticalProbSite_mem_Icc"
+          ],
+          "auditStatus": "Build and transitive axiom audit passed",
+          "note": "Imports the product-law module, SimpleGraph.Hasse and Measure.Real. The public chain Lrp → Lrp.Percolation → Lrp.Percolation.Site.Basic includes these declarations in the checked root."
+        }
+      ]
+    },
+    {
+      "id": "mathlib",
+      "name": "Mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "license": "Apache-2.0",
+      "leanVersion": "4.35.0",
+      "mathlibRevision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "status": "Direct import at the project pin",
+      "summary": "Probability laws, product measures and simple graphs are imported from the existing mathlib dependency. The lrp adapters passed the build and axiom audit at the revision shown above.",
+      "modules": [
+        {
+          "path": "Mathlib/Probability/Distributions/SetBernoulli.lean",
+          "title": "Bernoulli random subsets",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/56a005855ea17e0b0958f73ec801ae140b0a1679/Mathlib/Probability/Distributions/SetBernoulli.lean",
+          "declarations": [
+            "ProbabilityTheory.setBernoulli",
+            "ProbabilityTheory.setBernoulli_eq_map"
+          ],
+          "auditStatus": "Pinned source inspected",
+          "note": "Imported directly by the new product-law module. The source credits Yaël Dillies."
+        },
+        {
+          "path": "Mathlib/Probability/Distributions/Bernoulli.lean",
+          "title": "Bernoulli distributions",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/56a005855ea17e0b0958f73ec801ae140b0a1679/Mathlib/Probability/Distributions/Bernoulli.lean",
+          "declarations": [
+            "ProbabilityTheory.bernoulliMeasure"
+          ],
+          "auditStatus": "Pinned source inspected",
+          "note": "Existing Mathlib probability law; current source credits Etienne Marion and David Ledvinka."
+        },
+        {
+          "path": "Mathlib/Probability/Independence/InfinitePi.lean",
+          "title": "Independence of arbitrary product coordinates",
+          "url": "https://github.com/leanprover-community/mathlib4/blob/56a005855ea17e0b0958f73ec801ae140b0a1679/Mathlib/Probability/Independence/InfinitePi.lean",
+          "declarations": [
+            "ProbabilityTheory.iIndepFun_infinitePi",
+            "MeasureTheory.Measure.map_infinitePi_infinitePi_of_inj"
+          ],
+          "auditStatus": "Source inspected; available for future reuse",
+          "note": "Available at the current pin for future coupling and independence modules; not claimed as a new lrp theorem."
+        }
+      ],
+      "pullRequestUrl": "https://github.com/tomhutchcroft/lrp/pull/2",
+      "attribution": "The mathlib community; individual source headers retain their authors."
+    },
+    {
+      "id": "percolation-after-anthropic",
+      "name": "Percolation after Anthropic / PercolationAudit",
+      "url": "https://github.com/nitromannitol/percolation-after-anthropic",
+      "commit": "a5cc72bd7627f313abbb00bcb47616678abbeb35",
+      "license": "Apache-2.0",
+      "leanVersion": "4.32.0",
+      "mathlibRevision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "status": "Selected foundations ported",
+      "summary": "Actual source and successful exact-revision CI and comparator logs inspected. A small attributed foundation port has passed CI on lrp's existing Lean 4.35 pin. The headline site-criticality certificate remains upstream.",
+      "modules": [
+        {
+          "path": "PercolationAudit/SiteCriticality/SolutionBasic.lean",
+          "title": "Independent statement vocabulary",
+          "url": "https://github.com/nitromannitol/percolation-after-anthropic/blob/a5cc72bd7627f313abbb00bcb47616678abbeb35/PercolationAudit/SiteCriticality/SolutionBasic.lean",
+          "declarations": [
+            "KNAll.StatementAudit.SiteCriticality.criticalProbSite_mem_Icc",
+            "KNAll.StatementAudit.SiteCriticality.criticalProbSiteI"
+          ],
+          "auditStatus": "Selected port: lrp build and axiom audit passed",
+          "note": "Mathlib-only vocabulary; selected definitions and interval proofs adapted into Lrp.Percolation.Site.Basic."
+        },
+        {
+          "path": "Hypergraph/SiteStatements.lean",
+          "title": "Site connectivity and measurable events",
+          "url": "https://github.com/nitromannitol/percolation-after-anthropic/blob/a5cc72bd7627f313abbb00bcb47616678abbeb35/Hypergraph/SiteStatements.lean",
+          "declarations": [
+            "KNAll.Site.siteConn_self",
+            "KNAll.Site.siteCluster_of_notMem",
+            "KNAll.Site.measurableSet_siteConn",
+            "KNAll.Site.measurableSet_siteInfinite"
+          ],
+          "auditStatus": "Selected port: lrp build and axiom audit passed",
+          "note": "Selected definitions and proofs adapted into Lrp.Percolation.Site.Basic with source attribution and retained notices."
+        },
+        {
+          "path": "PercolationAudit/SiteCriticality/Solution.lean",
+          "title": "Site criticality certificate",
+          "url": "https://github.com/nitromannitol/percolation-after-anthropic/blob/a5cc72bd7627f313abbb00bcb47616678abbeb35/PercolationAudit/SiteCriticality/Solution.lean",
+          "declarations": [
+            "KNAll.StatementAudit.SiteCriticality.site_no_percolation_at_critical"
+          ],
+          "auditStatus": "Upstream comparator accepted; not imported into lrp",
+          "note": "Observed run 43273970309: nanoda accepted and comparator succeeded. Nearest-neighbour site percolation on integer lattices, dimension ≥3. Not yet imported into lrp; not a general long-range theorem."
+        },
+        {
+          "path": "PercolationAudit/SiteCriticality/Challenge.lean",
+          "title": "Statement comparison challenge",
+          "url": "https://github.com/nitromannitol/percolation-after-anthropic/blob/a5cc72bd7627f313abbb00bcb47616678abbeb35/PercolationAudit/SiteCriticality/Challenge.lean",
+          "declarations": [
+            "KNAll.StatementAudit.SiteCriticality.site_no_percolation_at_critical"
+          ],
+          "auditStatus": "Comparison fixture; excluded from lrp",
+          "note": "One intentional sorry in the comparison challenge. Never import this module into the production library."
+        }
+      ],
+      "pullRequestUrl": "https://github.com/tomhutchcroft/lrp/pull/2",
+      "attribution": "Ahmed Bou-Rabee; development with ChatGPT and Claude. Historical foundations: Anthropic, PBC."
+    },
+    {
+      "id": "percolation-continuity",
+      "name": "Anthropic PercolationContinuity",
+      "url": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation",
+      "commit": "795efb86f191735c5481675763537cfb4ff37e55",
+      "license": "Apache-2.0",
+      "leanVersion": "4.32.0",
+      "mathlibRevision": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "status": "Selected foundations ported",
+      "summary": "The pinned historical dependency supplies the inhomogeneous product-Bernoulli definitions and elementary proofs used by the checked lrp adaptation. Copyright 2026 Anthropic, PBC; original source and notices retained.",
+      "modules": [
+        {
+          "path": "Percolation/Literature/LatticeModels/ProdBernoulli.lean",
+          "title": "Inhomogeneous Bernoulli configurations",
+          "url": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/Percolation/Literature/LatticeModels/ProdBernoulli.lean",
+          "declarations": [
+            "Percolation.Literature.LatticeModels.prodBernoulli",
+            "Percolation.Literature.LatticeModels.instIsProbabilityMeasureProdBernoulli",
+            "Percolation.Literature.LatticeModels.prodBernoulli_eq_map"
+          ],
+          "auditStatus": "Selected port: lrp build and axiom audit passed",
+          "note": "Adapted into Lrp.Probability.ProdBernoulli. The new rfl identity records agreement with the upstream weighted-Dirac definition."
+        },
+        {
+          "path": "Percolation/Literature/LatticeModels/ProdBernoulliProofs.lean",
+          "title": "Specialization to Mathlib's existing law",
+          "url": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/Percolation/Literature/LatticeModels/ProdBernoulliProofs.lean",
+          "declarations": [
+            "Percolation.Literature.LatticeModels.prodBernoulli_indicator_holds"
+          ],
+          "auditStatus": "Selected port: lrp build and axiom audit passed",
+          "note": "Adapted as the direct equality theorem Lrp.Probability.prodBernoulli_indicator; no new probability library is introduced."
+        }
+      ],
+      "pullRequestUrl": "https://github.com/tomhutchcroft/lrp/pull/2",
+      "attribution": "Copyright 2026 Anthropic, PBC."
+    }
+  ]
+}

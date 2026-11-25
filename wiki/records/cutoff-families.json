@@ -1,0 +1,54 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "cutoff-families",
+  "collections": [
+    {
+      "collection": "observables",
+      "order": 3
+    },
+    {
+      "collection": "critical-theory",
+      "order": 4
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 27,
+      "label": "Cutoff kernels and moment flows",
+      "locator": "Chapter 9 · Cutoff kernels · source line 4450",
+      "relationship": "Definition correspondence",
+      "status": "pending",
+      "note": "The integral cutoff, hard edge truncation, and finite-box restriction are distinct constructions."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 0,
+      "label": "Cutoff models and moment flow",
+      "locator": "Cutoff construction and cluster-moment analysis",
+      "relationship": "Definition and method correspondence",
+      "status": "pending",
+      "note": "Kernel normalisations and the distinction between cutoff and full laws are part of the mathematical statement."
+    },
+    {
+      "source": "hutchcroft-lrp-2",
+      "order": 0,
+      "label": "Localisation hypotheses",
+      "locator": "Correlation-length and weak cutoff-localisation conditions",
+      "relationship": "Hypothesis correspondence",
+      "status": "pending",
+      "note": "CL, wCL, and the hydrodynamic condition remain distinct propositions with explicit model assumptions."
+    },
+    {
+      "source": "hutchcroft-lrp-3",
+      "order": 0,
+      "label": "Marginal cutoff flow",
+      "locator": "Critical-dimensional moment analysis",
+      "relationship": "Application",
+      "status": "pending",
+      "note": "Exact logarithmic statements require the source’s dimension range, normalisation, and error estimates."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

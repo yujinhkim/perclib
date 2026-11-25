@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "binary-tree-percolation",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 3
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 31,
+      "label": "Rooted binary-tree percolation",
+      "locator": "Chapter 2 · Critical percolation on the binary tree · source lines 379–471",
+      "relationship": "Exact source model and explicit joint-limit hypotheses",
+      "status": "pending",
+      "note": "Uses two distinguished children at every vertex. Gives the Catalan law and critical constants; the exponential cutoff approximation specifies n epsilon^4 tending to zero."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

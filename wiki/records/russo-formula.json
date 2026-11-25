@@ -1,0 +1,61 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "russo-formula",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 1
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 29,
+      "label": "Finite-coordinate intensity Russo formula",
+      "locator": "Chapter 4 · Russo formulae and the supercritical bound · source lines 1082–1101",
+      "relationship": "Finite-profile generalization and explanation of closed-pivotal form",
+      "status": "pending",
+      "note": "Covers the finite-coordinate formulas, including their boundary interpretation. The supercritical sharpness proof and passage to infinite-volume derivatives are not supplied by this article."
+    },
+    {
+      "source": "perclib-finite-polynomial",
+      "order": 0,
+      "label": "Homogeneous finite expectation polynomial",
+      "locator": "Named statement start lines in the pinned source: 36, 41, 45, 52, 58, 64",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "7WIO restricts to the homogeneous real polynomial, giving its evaluation and differentiability on the entire real line and its probability-law interpretation on the unit interval. Empty blocks, the zero observable and the one-coordinate observable are specializations. The source packages the polynomial and its evaluation separately."
+    },
+    {
+      "source": "perclib-cylinder-russo",
+      "order": 0,
+      "label": "Signed Russo for cylinder events",
+      "locator": "Named statement start lines in the pinned source: 20, 42, 48, 55, 82, 92, 101, 112, 136",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "XU3W covers restriction/forcing identities, signed differentiation on the finite support, vanishing outside it, pivotal conversion for increasing measurable events and intensity specialization. It imposes accumulation of the parameter domain when interpreting the derivative as a unique limit; the formal within-derivative predicate also admits isolated-point cases. No regularity of the ambient profile outside the support is assumed."
+    },
+    {
+      "source": "perclib-finite-russo",
+      "order": 0,
+      "label": "Finite-profile Russo algebra and probability transport",
+      "locator": "Named statement start lines in the pinned source: 30, 35, 38, 41, 45, 49, 52, 61, 139, 159, 167, 184, 187, 191, 218, 226, 300, 328, 361, 392, 402",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "71GK and 7WIO explain forced configurations, increments, finite weights and the expectation polynomial. The proof expansion describes deleted weights, signed coordinate factors and flip pairing without endpoint division. It also explains the binary-to-set bijection and insertion/deletion interpretation. The source algebra holds for all real profiles, intensities and parameters; probability interpretations require a valid profile on the specified domain. WU9R, 4IHK and IENL give increasing-event, homogeneous and intensity applications. Within-domain derivatives are formalized without requiring the base point to be an accumulation point; the article imposes accumulation when interpreting a unique ordinary or one-sided derivative. The census counts explicit definitions and theorems, not the separately declared helper lemmas; their relevant algebra is explained in the proof. Closed-pivotal conversion is an expository consequence, not attributed to this source module."
+    }
+  ],
+  "occursIn": [
+    {
+      "order": 3,
+      "source": "notes",
+      "tag": "IENL",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 4, Russo formulae and the supercritical bound: finite-coordinate intensity derivative and closed-pivotal formula (lines 1084–1097).",
+      "relationship": "generalization",
+      "note": "The notes give the exponential-intensity derivative for observables depending on finitely many edges and its closed-pivotal form for increasing events. The wiki states this for arbitrary finite coordinate sets, includes the equivalent state-independent pivotal formula with its exponential factor, and specifies the right derivative at zero. This record does not extend the formula to arbitrary infinite-volume events."
+    }
+  ],
+  "proofUses": []
+}

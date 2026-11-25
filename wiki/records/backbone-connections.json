@@ -1,0 +1,65 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "backbone-connections",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 19
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 11,
+      "label": "Backbone scaling: counting and ghost reduction",
+      "locator": "Chapter 6 · Extrinsic arms, backbone, and bubble · source lines 2965–3133 (S019)",
+      "relationship": "Disjoint-connection count, group reindexing, BK upper bound and two-ghost limit",
+      "note": "The uniform reverse-BK estimate under the bubble condition remains an input. The observable counts edge-disjoint connections and can include dangling-cycle vertices; it is not chemical distance or pivotal count."
+    },
+    {
+      "source": "hutchcroft-lrp-3",
+      "order": 63,
+      "label": "Cutoff moments used in the critical-dimensional backbone reduction",
+      "locator": "arXiv:2508.18809v1, Section III.1.3, equations (III.1.16) and (III.1.18)",
+      "relationship": "Moment inputs for a separate backbone bound",
+      "status": "pending",
+      "note": "For d=3alpha<6 these inputs give the logarithmic lower bound through 44CZ. The paper is not being cited as a proof of the requested backbone comparability. The new finite generator and conditional derivative criterion record FIXER’s issue #242 reduction."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "44CZ",
+      "proof_uses": [
+        "RIRJ"
+      ],
+      "reason": "Keep the two-arm event intact after splitting at the three-terminal median; invariant counting and BK give the finite upper bound."
+    },
+    {
+      "order": 1,
+      "tag": "K9H7",
+      "proof_uses": [
+        "EJHT"
+      ],
+      "reason": "The increment uses edge-disjoint path witnesses, retains diagonal counts, and distinguishes a bridge from an edge inside a cluster."
+    },
+    {
+      "order": 2,
+      "tag": "GKBQ",
+      "proof_uses": [
+        "K9H7"
+      ],
+      "reason": "Finite-product differentiation of cluster-functional densities, with the closed-edge factor and both unordered-edge normalization factors explicit."
+    },
+    {
+      "order": 3,
+      "tag": "JFE6",
+      "proof_uses": [
+        "GKBQ",
+        "RIRJ"
+      ],
+      "reason": "BK bounds both weighted two-cluster deficits; differentiation of S divided by susceptibility squared retains the cycle contribution."
+    }
+  ]
+}

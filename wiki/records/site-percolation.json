@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "site-percolation",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 7
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-site-interface",
+      "order": 0,
+      "label": "Site configurations and threshold conventions",
+      "locator": "Named statement start lines in the pinned source: 60, 65, 69, 73, 77, 85, 89, 105, 110, 116, 121, 131, 136, 143, 162, 177, 190, 205, 214, 219, 223, 231, 236",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "8FLS explains open-graph adjacency, open-root reachability, empty closed-root clusters, symmetry and connection endpoints. Fixed-list open-walk events are measurable for arbitrary vertex sets; connection and infinite-cluster measurability use countability, while the witness and finite-set escape identities do not. The nearest-neighbour integer lattice and its capped real-valued threshold appear in 8EIH, including the unit-interval bounds and evaluation at the threshold without a criticality claim. The census counts explicit named definitions and theorems, not abbreviations, instances or anonymous examples. The source retains its upstream attribution; no Lean source is copied into this article."
+    },
+    {
+      "source": "perclib-site-harris",
+      "order": 0,
+      "label": "Site association and profile monotonicity",
+      "locator": "Named statement start lines in the pinned source: 22, 28, 31, 35, 39, 44, 48, 53, 59, 67, 76, 84, 97, 103, 108, 115, 119, 130, 150",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "Deterministic monotonicity, symmetry, transitivity and equality of connected clusters hold without countability. 9R9K supplies self and adjacent connection identities; those cylinder identities also hold for arbitrary vertex sets even though the article uses a countable probability context. AR5B gives Harris and its connection/infinite-cluster consequences. M28D gives countable profile monotonicity, homogeneous monotonicity and the zero/positive sides of the capped lattice threshold. Zero-profile and strict two-vertex examples illustrate the source witnesses. No claim of zero percolation probability at the critical parameter is made."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

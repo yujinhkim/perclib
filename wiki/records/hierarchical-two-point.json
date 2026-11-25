@@ -1,0 +1,54 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "hierarchical-two-point",
+  "collections": [
+    {
+      "collection": "models",
+      "order": 4
+    },
+    {
+      "collection": "critical-theory",
+      "order": 2
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 26,
+      "label": "Hierarchical benchmark",
+      "locator": "Chapter 8 · named statement S025 · source line 4013",
+      "relationship": "Hypotheses to reconcile",
+      "status": "pending",
+      "note": "The averaged and radial pointwise two-point statements must be separated; the later volume-tail theorem has a different kernel contract."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 0,
+      "label": "Averaged critical two-point estimate",
+      "locator": "Theorem 1.1",
+      "relationship": "Source theorem",
+      "status": "pending",
+      "note": "Retain the source’s symmetry and kernel hypotheses."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 1,
+      "label": "Pointwise critical two-point estimate",
+      "locator": "Corollary 1.2",
+      "relationship": "Source corollary",
+      "status": "pending",
+      "note": "Radial symmetry is required for the pointwise form; constrained and unrestricted connections are distinguished."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 6,
+      "label": "Remaining source targets",
+      "locator": "Corollary 1.4; Theorems 2.1 and 2.5; Remarks 1.3, 1.6, 2.6, 2.11, 2.13",
+      "relationship": "Reading worklist",
+      "status": "pending",
+      "note": "Source-level contracts and remaining proof dependencies still need reconciliation."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

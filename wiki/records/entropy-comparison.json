@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "entropy-comparison",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 11
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 18,
+      "label": "Finite OSSS covariance inequality",
+      "locator": "Chapter 6 · OSSS and ghost fields · source lines 2621–2633 (S017)",
+      "relationship": "Finite proof with the increasing-comparator hypothesis restored",
+      "status": "pending",
+      "note": "A hybrid-coordinate telescoping proof gives the absolute covariance bound for a [0,1]-valued computed observable and an increasing comparator. Degenerate coordinates are included. The closed-bit counterexample explains N-ERR-05."
+    },
+    {
+      "source": "notes",
+      "order": 36,
+      "label": "Relative entropy and decision-tree comparison",
+      "locator": "Chapter 6 · source lines 2134–2272 · named statement S013 at line 2189",
+      "relationship": "Explicit hypotheses and proof",
+      "status": "pending",
+      "note": "Positive finite intensities and finite individual weights are explicit; the theorem gives a finite bound when the weighted revealment cost is finite. Infinite transcripts are treated by common Borel finite-prefix approximation. The cluster-exploration application is separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

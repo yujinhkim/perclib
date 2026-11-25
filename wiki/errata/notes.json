@@ -1,0 +1,268 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "notes",
+  "entries": [
+    {
+      "id": "ghost-zero-field",
+      "title": "Literal zero field and the positive-field limit",
+      "status": "provisional",
+      "locator": "Chapter 2, Ghost fields, lines 532–589, especially the binary-tree formula at line 567.",
+      "claim": "The supercritical binary-tree expression assigns a nonzero magnetization at zero field after defining the ghost event by independent marks.",
+      "problem": "With marking probability 1 minus exp(-h), the field at h=0 is empty and its connection probability is zero. The nonzero expression instead describes the right-hand limit as h decreases to zero.",
+      "correction": "8B62 distinguishes M(0)=0 from M(0+)=the probability of an infinite cluster. 4QV6 gives the binary-tree recursion for positive field and identifies its supercritical limit. No change to the positive-field formulas is needed.",
+      "tags": [
+        "8B62",
+        "4QV6"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/238",
+        "https://github.com/tomhutchcroft/lrp/issues/242"
+      ],
+      "leanImpact": "Keep the literal zero-field event and the positive-field limit as separate statements. A formalisation of 8B62 must allow infinite clusters and must not substitute the right-hand limit for the value at zero. The positive-field binary-tree formula in 4QV6 is unaffected."
+    },
+    {
+      "id": "boundary-positive-part",
+      "title": "Positive part in the nontransitive boundary bound",
+      "status": "provisional",
+      "locator": "S011, lines 1712–1801 in the pinned notes.",
+      "claim": "The boundary susceptibility is bounded below using the square of the minimum-susceptibility deficit, without taking its positive part.",
+      "problem": "The deficit can be negative. An inequality bounding it above by a nonnegative Cauchy–Schwarz expression cannot be squared in that case. JTBG gives a connected three-vertex counterexample with finite susceptibilities and weight rows at most one.",
+      "correction": "67GX replaces the squared deficit by its squared positive part, and first proves the stronger bound using the actual nonnegative mass leaving the set. Under constant susceptibility the positive part can be omitted. This correction does not change the transitive use of that boundary lemma.",
+      "tags": [
+        "67GX",
+        "JTBG"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242"
+      ],
+      "leanImpact": "The nontransitive target is 67GX with the positive-part square (or the stronger outgoing-mass bound). JTBG records why the unsigned square cannot be the general target. A source wrapper may remove the positive part only after establishing constant susceptibility; the transitive application is unchanged."
+    },
+    {
+      "id": "triangle-numerator",
+      "title": "The stronger quantitative triangle numerator",
+      "status": "provisional",
+      "locator": "S010 and its proof, lines 1688–2031 in the pinned notes.",
+      "claim": "The source gives a susceptibility lower derivative bound with numerator chi times (chi minus the triangle diagram), over the stated quadratic diagram denominator.",
+      "problem": "The displayed Cauchy–Schwarz inputs yield a squared positive-part deficit instead. MTYL gives a normalized infinite-line counterexample to the stronger formula at small positive intensity; 1EWX shows the same small-intensity obstruction for normalized transitive models with finite critical point.",
+      "correction": "4KBG proves chi-prime at least (chi minus Delta)_+ squared divided by 3 beta squared Delta squared, almost everywhere, under its stated transitivity, mass-transport, row-sum and finite-susceptibility hypotheses. It retains the bounded-triangle susceptibility consequence but is weaker than the source formula.",
+      "tags": [
+        "4KBG",
+        "MTYL",
+        "1EWX"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242"
+      ],
+      "leanImpact": "The replacement target is the weaker differential inequality 4KBG, including its almost-everywhere qualification. MTYL and 1EWX distinguish the false stronger numerator from this target. A formal proof of the replacement cannot certify the stronger source formula; the bounded-triangle consequence needs the separate integration argument."
+    },
+    {
+      "id": "reverse-bk-cancellation",
+      "title": "The reverse-BK switching cancellation",
+      "status": "provisional",
+      "locator": "S019, lines 3042–3088; compare the preceding backbone proposition at lines 3004–3017.",
+      "claim": "Splitting an edge between the two configurations is said to contribute only the both-open transition, leading to a bubble-error bound and a uniform reverse-BK estimate.",
+      "problem": "The exact one-coordinate increment also contains a nonnegative overlap term. X4OE exhibits unequal gain and loss probabilities on a three-vertex star. This is a counterexample to the asserted cancellation, not to the final backbone theorem.",
+      "correction": "XWH4 gives the exact increment: p squared times the both-open gain, plus p(1-p) times the overlap contribution. NGRO gives a valid separation bound in independent configurations. The uniform comparison for homogeneous ghost fields with disjoint connections in one configuration remains unproved. DTVY and 79WX supply a replacement under stronger triangle/high-dimensional assumptions; they do not settle the bubble-only claim. FIXER’s later reports rule out two auxiliary routes: a graph-uniform lower comparison of the one-configuration disjoint-path probability (either matching allowed) with the probability of nonempty, vertex-disjoint fixed-terminal path backbones in two independent copies, and the coefficient-one bubble convolution on arbitrary independent-bond graphs. The latter report gives a computer-assisted counterexample on the complete graph with 65536 vertices and bond probability 1/65536. With $\\chi=\\mathbb E|K_a|$, $B=\\sum_z\\tau(a,z)^2$ and $S=\\sum_{x,y}\\mathbb P(\\{a\\leftrightarrow x\\}\\circ\\{a\\leftrightarrow y\\})$, the reported bounds imply $\\chi^2>BS+68$. These are obstructions to proposed repairs, not additional claims attributed to the source. They do not settle the arbitrary-constant lattice theorem. FIXER’s resumed critical-dimensional investigation gives the baseline m2/chi <= S <= chi squared, hence r^(2alpha)/sqrt(log r) <= const. S <= const. r^(2alpha) under the cited cutoff moments. The desired S comparable to chi squared remains unresolved. 44CZ records the moment proof; K9H7/GKBQ/JFE6 retain the within-cluster cycle increment and give the finite-volume derivative reduction. TJXV proves that an additive lower derivative bound of order -1/[r(log r)^2] for W=S/chi squared would suffice, but that bound has not been established for this observable. These are subsequent reductions, not a correction already proved for the published lemma. FIXER’s subsequent follow-up records a continuous interpolation with an accumulated overlap term, a mixed-moment upper bound and a covariance form of the cutoff cancellation. Neither the required uniform overlap bound nor the sufficient signed derivative estimate is proved there. These additional reductions leave the source correction and the critical-dimensional target unresolved.",
+      "tags": [
+        "X4OE",
+        "XWH4",
+        "NGRO",
+        "DTVY",
+        "79WX",
+        "44CZ",
+        "K9H7",
+        "GKBQ",
+        "JFE6",
+        "TJXV"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/242",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6899706862",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6900538580",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6901311038",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6902840243",
+        "https://github.com/tomhutchcroft/lrp/issues/242#issuecomment-6903148948"
+      ],
+      "leanImpact": "Keep the exact increment XWH4 and the cancellation counterexample X4OE separate from the desired bubble-only theorem. NGRO’s independent-copy separation does not supply the one-configuration comparison. Do not assume that every independent-bond block satisfies the proposed coefficient-one pointwise inequality: FIXER’s complete-graph report refutes that general premise. Existing restricted-graph results and conditional block-gluing arguments are unaffected, but they do not establish the lattice target. The numerical certificate, its recurrences and its truncation bound are not Lean proofs or compiled evidence. DTVY and 79WX still require stronger hypotheses. FIXER owns the unresolved comparison on issue #242. The new generator theorem GKBQ is finite-volume. Any lattice derivative theorem must justify convergence of the integrated expressions, including the closed within-cluster term. The additive estimate in TJXV is a hypothesis, not a proved percolation input. Do not change the source status or claim the critical-dimensional target from these reductions. In the continuous interpolation route, finite-volume endpoint sums converge separately; monotone convergence of the overlap events must not be assumed. The new mixed-moment estimate does not supply the missing signed cancellation. See the latest linked FIXER record before selecting a formal target."
+    },
+    {
+      "id": "susceptibility-tail-index",
+      "title": "The susceptibility tail sum starts at one",
+      "status": "provisional",
+      "locator": "Chapter 3, Scaling relations, lines 666–674 of the pinned notes; baseline source audit N-ERR-01.",
+      "claim": "The exact susceptibility identity sums the probabilities of cluster size at least n starting at n=0.",
+      "problem": "For a singleton cluster the expectation is one, whereas the zero-based sum is two. The term at zero adds one whenever the expectation is finite.",
+      "correction": "CSY8 uses $\\mathbb EX=\\sum_{n\\geq1}\\mathbb P(X\\geq n)$ for a nonnegative integer-valued random variable, allowing infinity. Pointwise, $X=\\sum_{n\\geq1}\\mathbf1_{\\{X\\geq n\\}}$, and Tonelli gives the identity. This repairs the equality without changing the subsequent scaling heuristic.",
+      "tags": [
+        "CSY8"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Use the positive-integer tail sum, or sum the strict events X>n from n=0. Preserve extended nonnegative expectations; finiteness is not needed for Tonelli. An asymptotic scaling relation must not be used to justify the incorrectly indexed exact identity."
+    },
+    {
+      "id": "sharpness-tail-endpoint",
+      "title": "The exponential cluster tail needs a prefactor",
+      "status": "provisional",
+      "locator": "Chapter 4, S003, lines 964–973; compare the moment argument at lines 1350–1365. Baseline source audit N-ERR-02.",
+      "claim": "The subcritical cluster tail is bounded by exp(-c n), with c>0, for every integer n at least one.",
+      "problem": "A bond cluster contains its root, so the probability at n=1 is one and exceeds exp(-c).",
+      "correction": "SNB3 retains the prefactor: under the stated moment bounds, $\\mathbb P(X\\geq n)\\leq(1+\\chi^{-1})e^{-n/(2\\chi^2)}$. For $n\\geq4\\chi^2\\log(1+\\chi^{-1})$ it also gives the unprefactored bound $e^{-n/(4\\chi^2)}$. Thus either retain the prefactor for all thresholds or state the eventual range. Sharpness itself is unaffected.",
+      "tags": [
+        "SNB3",
+        "0BQB"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Apply the exponential-moment estimate 0BQB before Markov’s inequality, keeping the prefactor or threshold from SNB3. Do not alter the bond-cluster convention to remove the root. This is a correction to the cluster-volume tail, not to a spatial exit-probability estimate."
+    },
+    {
+      "id": "deterministic-critical-offspring",
+      "title": "Critical extinction excludes deterministic one-child offspring",
+      "status": "provisional",
+      "locator": "Chapter 2, Branching processes, lines 309 and 329; baseline source audit N-ERR-03.",
+      "claim": "Every Galton–Watson process with offspring mean at most one becomes extinct almost surely.",
+      "problem": "If each individual has exactly one child, every generation has size one and extinction never occurs, although the offspring mean is one. Its generating function is the identity, so every point is a fixed point.",
+      "correction": "BFM4 states almost-sure extinction for mean below one, and for mean one provided the offspring law is not deterministic at one. The deterministic critical law survives surely; a law of mean greater than one survives with positive probability. The finite, nonzero variance hypothesis in the later asymptotic results excludes the exception there, but does not repair the earlier unrestricted sentence.",
+      "tags": [
+        "BFM4",
+        "8TFY"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Keep the least-fixed-point result 8TFY separate from the extinction criterion BFM4. Include the critical nondegeneracy hypothesis in any source wrapper; convexity alone cannot make the fixed point unique when the generating function is the identity."
+    },
+    {
+      "id": "local-progeny-support",
+      "title": "Local progeny asymptotics must respect lattice support",
+      "status": "provisional",
+      "locator": "Chapter 2, Branching processes, lines 365–370; baseline source audit N-ERR-04.",
+      "claim": "The critical generating-function singularity is used to claim a positive n-to-the-minus-three-halves local probability on every sufficiently large integer.",
+      "problem": "For offspring zero or two with equal probabilities, every finite family tree has odd size: the number of edges is twice the number of parents and also equals total size minus one. Every even-size probability is zero.",
+      "correction": "Keep the transform result OVG9 and tail result MIFH separate from a local theorem. RL1L gives Dwass’s formula. In the zero-or-two example AGPB gives $\\mathbb P(T=2k+1)=\\frac1{k+1}\\binom{2k}{k}2^{-(2k+1)}$, with zero mass at even sizes. Its local equivalent is $\\sqrt{2/\\pi}\\,n^{-3/2}$ along odd n; the tail equivalent $\\sqrt{2/\\pi}\\,n^{-1/2}$ holds along all integers.",
+      "tags": [
+        "OVG9",
+        "MIFH",
+        "RL1L",
+        "AGPB"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "A tail or generating-function theorem does not supply a local probability theorem. State the support restriction and any local-limit hypotheses explicitly. The exact periodic example AGPB provides a concrete check; it is not the Binomial(2,1/2) offspring law of binary-tree bond percolation."
+    },
+    {
+      "id": "osss-increasing-comparator",
+      "title": "OSSS covariance needs an increasing comparator",
+      "status": "provisional",
+      "locator": "Chapter 6, S017, lines 2621–2632; baseline source audit N-ERR-05.",
+      "claim": "The absolute event covariance is bounded by revealments times coordinate covariances without a monotonicity assumption.",
+      "problem": "For one fair bit, let both events be that the bit is zero and let the tree query that bit. The left side is 1/4, while the sole covariance on the right is -1/4.",
+      "correction": "29WG proves the finite Bernoulli-product inequality with an increasing comparator g and a tree computing f with values in [0,1]. No monotonicity of f is required. For the notes’ notation this requires A to be increasing; the tree computes B. The proof includes deterministic coordinates. Infinite-volume applications require their separate approximation argument.",
+      "tags": [
+        "29WG"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Put monotonicity on the event appearing in each coordinate covariance, not on the event computed by the tree. Keep the finite product and non-repeating tree hypotheses of 29WG. The finite theorem does not itself certify the notes’ unrestricted infinite-product formulation."
+    },
+    {
+      "id": "closed-pivotal-qualifier",
+      "title": "The intensity derivative must specify closed pivotality",
+      "status": "provisional",
+      "locator": "Chapter 6, Derivatives versus second moments, lines 2323–2330; compare the correct closed-pivotal formulas at lines 1084–1095 and 1506.",
+      "claim": "The susceptibility derivative is written as rates times pivotal probabilities without specifying that the pivotal edge is closed.",
+      "problem": "With state-independent pivotality, the single-bond event has derivative $J e^{-\\beta J}$ rather than J. The notes use the correct closed-pivotal convention earlier; the later display must retain that qualifier or the missing factor.",
+      "correction": "For a finite increasing event, IENL gives $\\frac{d}{d\\beta}\\mathbb P_\\beta(A)=\\sum_eJ_e e^{-\\beta J_e}\\mathbb P_\\beta(e\\text{ pivotal})=\\sum_eJ_e\\mathbb P_\\beta(e\\text{ closed pivotal})$. Removing the exponential factor gives an upper bound, so the subsequent BK upper estimate can survive this correction. Infinite-volume differentiation still needs justification.",
+      "tags": [
+        "71GK",
+        "IENL",
+        "TAVM",
+        "MXGM"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Compose the coordinate Russo identity 71GK with the intensity derivative in IENL. TAVM supplies the finite-volume susceptibility estimate; MXGM supplies the integrated and almost-everywhere infinite-volume version under its hypotheses. Do not claim everywhere differentiability by formally interchanging an infinite sum and derivative."
+    },
+    {
+      "id": "ghost-coordinate-covariance",
+      "title": "Ghost-coordinate covariance does not vanish for magnetization",
+      "status": "provisional",
+      "locator": "Chapter 6, OSSS and ghost fields, lines 2792–2802.",
+      "claim": "After revealing the ghost field, its coordinate covariances are discarded when applying OSSS to the ghost-connection event.",
+      "problem": "For an isolated root with mark indicator G of parameter $q\\in(0,1)$, the ghost-connection indicator equals G and has covariance $q(1-q)>0$ with G. Conditioning on the marks makes them constant, but does not establish the claimed unconditional cancellation.",
+      "correction": "6X74 gives zero ghost-coordinate covariance for a comparison event depending only on the bonds, such as a cluster-volume event. Use a tree computing the ghost-connection event and that bond-measurable increasing comparator in 29WG. XZ7B supplies the revealment bound and JM30 the resulting cluster-tail derivative inequality. This route does not justify deleting the ghost terms in a direct magnetization variance inequality.",
+      "tags": [
+        "6X74",
+        "XZ7B",
+        "JM30",
+        "29WG"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Keep the computed event and the comparator distinct in the product space of bonds and marks. Bond measurability of the comparator is the hypothesis that removes ghost-coordinate terms. A direct magnetization inequality needs those terms, or a separately justified conditional argument."
+    },
+    {
+      "id": "four-point-prescribed-matching",
+      "title": "The four-point bound retains the matching maximum",
+      "status": "provisional",
+      "locator": "Chapter 7, after S023, lines 3521–3542: the symmetric sum bound and the following claim for a chosen partition.",
+      "claim": "A single chosen partition is used to bound the four-point connection probability by its corresponding matching product.",
+      "problem": "Take deterministic bonds x1–x2 and x3–x4 joined by a bond x2–x3 of probability q. The four-point probability is q; the product of all six pair probabilities is q^4. The prescribed matching 13|24 would give q^4 at most C q^6, impossible for a universal C as q tends to zero. Relabelling gives the same obstruction for any prescribed matching.",
+      "correction": "2GTM keeps the maximum over the three matchings, with constant 746496 in the fourth-power inequality. Replacing the maximum by the sum gives the source’s valid symmetric consequence, conditional on the higher-order inequality. A fixed partition contributes a term to the maximum; it is not itself an upper bound for the full event.",
+      "tags": [
+        "2GTM"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "Preserve the maximization when applying the higher-order input and the three-point inequality. The higher-order result remains an explicit hypothesis of 2GTM. Neither the counterexample nor this algebra changes the symmetric sum statement or supplies a proof of that input."
+    },
+    {
+      "id": "walk-step-assumptions",
+      "title": "Gaussian Green decay needs assumptions on the step law",
+      "status": "provisional",
+      "locator": "Chapter 2, Branching random walk and the upper critical dimension, lines 483–487; the opening step distribution is unspecified before the displayed Green-function decay.",
+      "claim": "For a critical branching random walk with a random-walk step distribution on the integer lattice, expected occupation is identified with a Green function having decay |x|^(2-d) when d>2.",
+      "problem": "The occupation identity is correct, but the spatial decay does not follow for an arbitrary step distribution. On Z^3, take a symmetric lazy walk whose nonzero step probabilities are proportional to |x|^(-4). Its bubble is finite by 1POM (alpha=1 and d=3>2alpha). A lower bound G(x) >= c|x|^(-1) for all sufficiently large x would instead force the bubble to diverge. This is a summable long-range lattice law, not a change to the branching mechanism.",
+      "correction": "Keep the exact occupation identity 94E7. State the step-law hypotheses needed for any spatial Green estimate. E9BP proves the nearest-neighbour diagram thresholds without using a spatial decay theorem; VJCW and 1POM give the power-law symbol and diagram replacements, including the logarithmic alpha=2 boundary. KEPD supplies discounted orders. T79N separately states the domination required for a percolation consequence.",
+      "tags": [
+        "94E7",
+        "E9BP",
+        "VJCW",
+        "1POM",
+        "KEPD",
+        "T79N"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/359"
+      ],
+      "leanImpact": "An occupation-expectation identity for a general Markov kernel must not imply a spatial Green bound or a dimensional diagram threshold. Formalize the step-law assumptions with the Fourier statement, and keep pointwise domination of the percolation two-point function as a separate input until proved. No Lean declaration or existing statement is changed by this source diagnosis."
+    },
+    {
+      "id": "cutoff-displacement-kernel",
+      "title": "The cutoff displacement kernel retains bounded jumps and exponential killing",
+      "status": "provisional",
+      "locator": "S036, source lines 5546–5652, especially the description of kappa after the mixed-moment display; compare Critical LRP I, Definition I.5.16 and Corollary I.5.22.",
+      "claim": "The cutoff mixed-moment formula describes its continuum kernel as stable in the long-range regime, and calls it a potential kernel while asserting that each tree integral with constant tests equals one.",
+      "problem": "For alpha below two, the cutoff displacement law in the cited paper is a bounded-jump Lévy process at an independent exponential time. It has exponential moments near zero. The corresponding untruncated stable process at an exponential time has infinite second moment; an unkilled potential measure has infinite total mass. These choices cannot be interchanged in an all-polynomial, unit-mass diagram formula.",
+      "correction": "Use the probability resolvent of the bounded-jump motion for the cutoff theorem, and the Brownian probability resolvent in the Brownian regimes. MWZ7 proves the relevant integrability and distinction; GFEM gives unit-mass tree diagrams. Y3SX supplies the conditional measure-limit argument and 45EB explains the CRT mass mixture. The stable motion without cutoff belongs to the subsequent cutoff-removal theorem.",
+      "tags": [
+        "MWZ7",
+        "GFEM",
+        "Y3SX",
+        "45EB"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/361"
+      ],
+      "leanImpact": "Define the Lévy jump cutoff and killing rate explicitly; a source wrapper for S036 cannot silently substitute the full stable kernel or an infinite potential measure. The mixed-moment asymptotics and CRT geometric input remain proof obligations. No existing tagged statement or formal status is changed."
+    }
+  ]
+}

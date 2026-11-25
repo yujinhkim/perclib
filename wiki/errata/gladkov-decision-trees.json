@@ -1,0 +1,38 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "gladkov-decision-trees",
+  "entries": [
+    {
+      "id": "s-disjoint-overbar",
+      "title": "S-disjointness uses the geometric complement of the marked set",
+      "status": "provisional",
+      "locator": "Gladkov, Percolation Inequalities and Decision Trees, arXiv:2408.08457v2, Definition 4.2 on PDF p. 5 and the sentence above display (16) on PDF p. 9. Both were inspected as rendered mathematics.",
+      "claim": "A plain-text extraction of Definition 4.2 can suggest I intersect J lies in unbarred S; near (16), the printed sentence also says that the two S-bar approach witnesses have intersection in unbarred S.",
+      "problem": "The definition and geometric construction use the complement of S-bar, not plain S. Reading S instead would make the restriction vacuous when S consists of every edge and would not recover the product event at empty S. Later in the proof the same barred condition is needed to recognize the already-defined S-disjoint event.",
+      "correction": "Retain I intersect J as a subset of the complement of S-bar throughout the definition and the application above (16). The formal GladkovS.sdisjoint encoding uses I intersect J as a subset of the complement of S exactly for this purpose; there is no claim here of an OCR defect in the definition itself.",
+      "tags": [
+        "87RB"
+      ],
+      "issues": [
+        "https://github.com/yujinhkim/lrp/blob/bba247bdab8e1228791d5c48dff94d0d39c93f74/docs/SOURCE_AUDIT.md#g-lr-01-the-overbar-in-gladkovs-s-disjoint-witnesses"
+      ],
+      "leanImpact": "Keep the geometric complement convention in every extraction, DFS reconstruction and S-disjoint application. This repairs a local notation reading; it does not establish the full DFS construction or Theorems 4.3, 5.2 and 6.1, and it does not show formal correspondence for 87RB merely by choosing the corrected set."
+    },
+    {
+      "id": "thm52-application-directions",
+      "title": "The cited Theorem 5.2 supplies a lower, not an upper, joint bound",
+      "status": "provisional",
+      "locator": "Gladkov, Percolation Inequalities and Decision Trees, arXiv:2408.08457v2, Theorem 5.2 (7), proof step (10), Corollary 5.3 (11)-(12) on PDF pp. 7-8, and Section 6.1 display (15). Checked directly in the primary PDF.",
+      "claim": "The cited applications print an upper inequality in Corollary 5.3 and an equality in display (15) as consequences of Theorem 5.2.",
+      "problem": "Theorem 5.2 and its proof step (10) give the joint lower bound P(C_1 in B, C_1 -> C_2 in B) >= P(B)^2/P(A), not the displayed upper direction or equality. Thus those lines do not follow by only invoking the cited theorem. This is a scoped proof-gap diagnosis, not a claim that no alternative argument could prove the stronger literal formulas.",
+      "correction": "Carry the lower bound through the application. In Section 6, the Theorem 5.2 lower bound and the two S-disjoint upper bounds from Theorem 4.3 can be multiplied and divided to derive the intended estimate with the displayed positive factors and any necessary positivity of P(A).",
+      "tags": [
+        "87RB"
+      ],
+      "issues": [
+        "https://github.com/yujinhkim/lrp/blob/bba247bdab8e1228791d5c48dff94d0d39c93f74/docs/SOURCE_AUDIT.md#g-lr-02-inequality-directions-in-theorem-52s-applications"
+      ],
+      "leanImpact": "The finite reductions use >=, while the theorem thm52_div handles the leaf partition and division on its own hypotheses. Require P(A) > 0 exactly when division is performed and do not assert identities with zero denominators. The corrected direction is not a proof of the adaptive decision-tree premise itself or of all the literal printed corollaries."
+    }
+  ]
+}

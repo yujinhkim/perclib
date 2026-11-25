@@ -1,0 +1,52 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "harris-inequality",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 0
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 28,
+      "label": "Harris inequality",
+      "locator": "Chapter 4 · Harris and BK · named statement S004 · source lines 1164–1221",
+      "relationship": "Source theorem with explicit measurability and arbitrary-index proof",
+      "status": "pending",
+      "note": "The finite-coordinate argument is extended by approximation in measure; no enumeration is needed. A compiled tag association and correspondence review remain separate."
+    },
+    {
+      "source": "grimmett",
+      "order": 4,
+      "label": "Positive association",
+      "locator": "Second edition (1999), §2.2, Theorem (2.4), pp. 34–36",
+      "relationship": "Standard product-measure inequality",
+      "status": "pending",
+      "note": "Locator recorded in the formalization source header; source-edition correspondence has not been independently certified by this article."
+    },
+    {
+      "source": "perclib-open-event-harris",
+      "order": 0,
+      "label": "Finite witnesses and Harris applications",
+      "locator": "Named statement start lines in the pinned source: 49, 72, 77, 87, 93, 99, 113, 121, 138, 143, 148, 171, 178, 183, 189, 198, 206, 211, 217, 223, 231, 240",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "22S9 covers finite intersections. H4OA and 5CN6 cover upper-set and finite-witness arguments; the connection and escape discussion retains arbitrary vertex subsets. X5SS applies to pairs of connection, escape and infinite-cluster events, including a mixed connection/infinite-cluster pair. UPFU is the three-point lower bound. Cluster growth and path witnesses supply the graph monotonicity steps. The larger Harris module and its general ordered-coordinate integration helpers are not included in this module census."
+    }
+  ],
+  "occursIn": [
+    {
+      "order": 5,
+      "source": "notes",
+      "tag": "X5SS",
+      "source_url": "https://github.com/tomhutchcroft/lrp/blob/7a303901b9e4708259bf74ca2333c0515a784af8/sources/notes/book_draft.tex",
+      "edition": "Uploaded preliminary draft · snapshot 12 November 2026",
+      "locator": "Chapter 4, Harris and BK: S004, Harris-FKG inequality (lines 1164–1169); proof at lines 1171–1221.",
+      "relationship": "generalization",
+      "note": "The notes state positive association for increasing events of independent Bernoulli variables and pass to infinitely many coordinates by enumeration. The wiki makes measurability explicit and treats an arbitrary index set using finite-coordinate approximation. This record locates that relationship; it is not a compiled association or a correspondence-review certificate."
+    }
+  ],
+  "proofUses": []
+}

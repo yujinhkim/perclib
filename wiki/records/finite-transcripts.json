@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "finite-transcripts",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 4
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-configuration-conditioning",
+      "order": 0,
+      "label": "Countable configuration space",
+      "locator": "Standard-Borel instance and countable unordered-pair configuration example",
+      "relationship": "Source-inspected exposition",
+      "status": "pending",
+      "note": "784S gives a complete separable metric realizing the coordinate sigma-algebra; it does not extend the claim to arbitrary uncountable coordinate sets."
+    },
+    {
+      "source": "perclib-configuration-conditioning",
+      "order": 1,
+      "label": "Conditional configuration law",
+      "locator": "Single-bond conditional-distribution example",
+      "relationship": "Explicit expository extension",
+      "status": "pending",
+      "note": "D9KI constructs a version for any deterministic observed subset of countably many coordinates. This stronger explicit kernel is not claimed as a theorem exported by the inspected module, and it is not an infinite adaptive-exploration theorem."
+    },
+    {
+      "source": "perclib-block-independence",
+      "order": 0,
+      "label": "Coordinate and block independence",
+      "locator": "Named statement start lines in the pinned source: 29, 44, 50, 57, 65, 74, 83",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "DYU8 includes mutual coordinate independence, two deterministic disjoint blocks, measurable block observables and event factorization. The blocks and ambient type can be infinite or uncountable. The fixed-block statement does not assert independence for randomly selected blocks."
+    },
+    {
+      "source": "perclib-exploration-transcripts",
+      "order": 0,
+      "label": "Finite adaptive transcript laws",
+      "locator": "Named statement start lines in the pinned source: 24, 32, 50, 79, 110, 127",
+      "relationship": "Source-inspected statement correspondence with scope qualifications",
+      "status": "pending",
+      "note": "QH7Q supplies the arbitrary-index injective sampling law. EE11 gives finite transcript weights and factorization against arbitrary measurable events on the complement. 86IX identifies adaptive answers with their fixed-string cylinder without a no-repeat hypothesis; only the subsequent product formula requires distinct queries along that string. Conditional division in 56TE requires positive transcript probability and is an expository consequence. No independence of the random queried set is inferred. Empty transcripts and distinct loop/non-loop coordinates are included. Infinite explorations and general randomized rules are not established by this source module."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

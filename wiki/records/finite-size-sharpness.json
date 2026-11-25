@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "finite-size-sharpness",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 17
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 1,
+      "label": "Sharpness and the supercritical bound",
+      "locator": "S003 · Chapter 4 · source lines 964–1157",
+      "relationship": "Proof of the finite-susceptibility and density conclusions",
+      "status": "pending",
+      "note": "HATE first reduces the long-range escape event to a finite wired graph. L0TE identifies the finite-size and percolation thresholds via an integrated differential inequality. Critical nonpercolation and spatial exponential decay are not asserted. RDF0 proves finite-susceptibility equivalence and critical left blow-up, without asserting critical percolation or its absence."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "size-biased-laws",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 10
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 2,
+      "label": "Soft-cutoff ghost comparison",
+      "locator": "Chapter 9 · Volume-tail comparison · source lines 5247–5273 and 6068–6200",
+      "relationship": "Independent-layer extension of the retained-edge comparison",
+      "note": "The added layer also contains short bonds. A dyadic row bound handles decreasing power-law kernels; cutoff cluster finiteness remains explicit."
+    },
+    {
+      "source": "notes",
+      "order": 34,
+      "label": "Size-biased cluster laws and the critical tree conditioning limit",
+      "locator": "Chapter 3 · Scaling relations and The incipient infinite cluster · lines 688–698 and 750–794",
+      "relationship": "Generalisation",
+      "status": "pending",
+      "note": "The wiki proves the finite-variance critical branching-process version and specializes its exact moment formulas to the binary tree. Euclidean IIC existence is not claimed."
+    },
+    {
+      "source": "notes",
+      "order": 48,
+      "label": "Size-biased cutoff volume limits",
+      "locator": "Chapter 9 · Size biasing and the volume tail · source lines 5180–5314 (S033–S034)",
+      "relationship": "Moment-method proof and fixed-scale transform consequences",
+      "status": "pending",
+      "note": "Derives the squared-normal limit from all specified cutoff moment asymptotics, then fixed-positive-scale tail and ghost-transform limits. The subsequent transfer theorem proves the order of limits and tail asymptotic in the fractional range a > 1, conditional on an explicit multiplicative cutoff comparison and an eventually invertible regularly varying scale. The omitted-edge lemma supplies the comparison for transitive independent bonds under a uniform omitted-kernel row bound and finite cutoff clusters. Model-specific moment and kernel-tail estimates remain inputs."
+    },
+    {
+      "source": "notes",
+      "order": 60,
+      "label": "Near-critical branching cutoff and volume bias",
+      "locator": "Chapter 2, lines 333–346 and 455–471; Chapter 3, lines 688–698",
+      "relationship": "Related branching-process benchmark",
+      "status": "pending",
+      "note": "0OEW proves a finite-progeny squared-normal limit from uniformly integrable offspring second moments, on both sides of criticality. KOY8 gives fixed positive-scale finite-tail and ghost limits. This is not a local limit theorem, an all-integer point-mass estimate, or an identification of a percolation scaling limit."
+    },
+    {
+      "source": "notes",
+      "order": 62,
+      "label": "Spine construction and varying survival horizons",
+      "locator": "Chapter 3, The incipient infinite cluster, lines 750–794",
+      "relationship": "Strengthening of the fixed-prefix branching example",
+      "status": "pending",
+      "note": "RMFH constructs the infinite critical tree; SYJ4 controls the entire observed prefix for r=o(R); OBSY distinguishes comparable-horizon population laws from the spine limit. These additions assert no Euclidean IIC construction."
+    },
+    {
+      "source": "notes",
+      "order": 100,
+      "label": "Cutoff spatial diagrams and the size-biased measure limit",
+      "locator": "S036 and following explanation · source lines 5546–5652",
+      "relationship": "Conditional reconstruction with corrected cutoff displacement convention",
+      "status": "pending",
+      "note": "MWZ7 distinguishes bounded-jump displacement from the stable process without cutoff. GFEM normalizes the diagrams; Y3SX proves the random-measure moment method; 45EB derives the mass mixture given the unit-mass CRT reduced-tree law. The percolation mixed-moment asymptotics and construction of the tree-indexed motion remain inputs."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 53,
+      "label": "Cutoff displacement and superprocess moment method",
+      "locator": "arXiv:2508.18807v1 HTML, section I.5.4: normalization, (I.5.49)-(I.5.50), Lemmas I.5.32-I.5.37; moment formula (I.1.11)",
+      "relationship": "Analytic ingredients and conditional identification",
+      "status": "pending",
+      "note": "AYPN/L9YJ control added mass from the full tail; BB3O transfers the finite weighted laws and large-volume conditioning. 57FJ tracks the spatial scale. 5VYE/42PB supply continuum tree bounds and resolvent rescaling; ALO4 gives spatial tightness. DX2Y/W9BP reconstruct the canonical double limit from explicit cutoff-diagram, full-tail, spatial-moment and canonical-measure inputs. Isotropic jump normalization is stated; general-norm Green estimates and percolation polynomial asymptotics remain separate. The scale-index diagnosis is provisional."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 53,
+      "label": "Removing the cutoff and canonical compact-test moments",
+      "locator": "arXiv:2508.18807v1 HTML, section I.5.4: normalization, (I.5.49)-(I.5.50), Lemmas I.5.32-I.5.37; moment formula (I.1.11)",
+      "relationship": "Conditional transfer and explicit analytic estimates",
+      "status": "pending",
+      "note": "AYPN/L9YJ control added mass from the full tail; BB3O transfers the finite weighted laws and large-volume conditioning. 57FJ tracks the spatial scale. 5VYE/42PB supply continuum tree bounds and resolvent rescaling; ALO4 gives spatial tightness. DX2Y/W9BP reconstruct the canonical double limit from explicit cutoff-diagram, full-tail, spatial-moment and canonical-measure inputs. Isotropic jump normalization is stated; general-norm Green estimates and percolation polynomial asymptotics remain separate. The scale-index diagnosis is provisional."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "0OEW",
+      "proof_uses": [
+        "DGVA",
+        "N9P5"
+      ],
+      "reason": "Differentiate the progeny generating equation at positive field, normalize the finite-progeny expectation, and apply Laplace-transform convergence."
+    },
+    {
+      "order": 1,
+      "tag": "KOY8",
+      "proof_uses": [
+        "0OEW",
+        "7W00",
+        "N9P5"
+      ],
+      "reason": "Apply the fixed-scale size-bias transfer to the finite-progeny law and keep the survival atom separate."
+    },
+    {
+      "order": 2,
+      "tag": "RMFH",
+      "proof_uses": [
+        "XCA8",
+        "BFM4",
+        "NT0R"
+      ],
+      "reason": "The marked-tree product weights realize the consistent size-biased restrictions; extinction of the countably many ordinary grafts gives a unique infinite ray."
+    },
+    {
+      "order": 3,
+      "tag": "SYJ4",
+      "proof_uses": [
+        "RMFH",
+        "8WO7"
+      ],
+      "reason": "The branching conditional density is dominated by the spine density up to a scalar. A mixture decomposition bounds total variation, and the survival ratio tends to one for r=o(R)."
+    },
+    {
+      "order": 4,
+      "tag": "OBSY",
+      "proof_uses": [
+        "AYHV",
+        "RMFH",
+        "SYJ4",
+        "8WO7"
+      ],
+      "reason": "Uniform integrability permits biasing the Yaglom limit. The branching survival weight gives comparable-horizon laws; total variation transfers the spine limit when the horizon is much farther away."
+    },
+    {
+      "order": 5,
+      "tag": "Y3SX",
+      "proof_uses": [
+        "XA7C",
+        "GFEM"
+      ],
+      "reason": "Size bias inserts one marked vertex; finite moment-measure convergence gives spatial tightness and the exponential total-mass bound gives uniqueness."
+    },
+    {
+      "order": 6,
+      "tag": "45EB",
+      "proof_uses": [
+        "GFEM",
+        "Y3SX"
+      ],
+      "reason": "Gamma duplication identifies the mixed edge lengths; the unit-mass CRT reduced-tree law and construction of its spatial motion remain explicit cited inputs."
+    },
+    {
+      "order": 7,
+      "tag": "AYPN",
+      "proof_uses": [],
+      "reason": "Condition on the lower cluster and use the last exit to a ghost-marked vertex; the outside product law and added-edge row bound control the discrepancy."
+    },
+    {
+      "order": 8,
+      "tag": "L9YJ",
+      "proof_uses": [
+        "AYPN",
+        "3491",
+        "C4E9"
+      ],
+      "reason": "A truncated-tail integral and fixed-multiplier regular variation make the omitted mass negligible at the rare-event normalization."
+    },
+    {
+      "order": 9,
+      "tag": "BB3O",
+      "proof_uses": [
+        "L9YJ"
+      ],
+      "reason": "Bounded-Lipschitz tests transfer finite weighted laws; upper-tail control and absence of a threshold atom justify conditioning."
+    },
+    {
+      "order": 10,
+      "tag": "DX2Y",
+      "proof_uses": [
+        "57FJ",
+        "GFEM",
+        "42PB",
+        "Y3SX",
+        "45EB"
+      ],
+      "reason": "Undo size bias away from zero mass, retain the scale factors, and change all tree coordinates to identify the rescaled-kernel diagrams."
+    },
+    {
+      "order": 11,
+      "tag": "W9BP",
+      "proof_uses": [
+        "5VYE",
+        "42PB",
+        "DX2Y",
+        "ALO4",
+        "BB3O"
+      ],
+      "reason": "Weight first by a compact local mass to obtain finite measures; factorial moments identify that limit, and spatial tightness then replaces local mass by total mass."
+    }
+  ]
+}

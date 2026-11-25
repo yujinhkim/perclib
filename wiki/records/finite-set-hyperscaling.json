@@ -1,0 +1,31 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "finite-set-hyperscaling",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 9
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 10,
+      "label": "Hyperscaling inequalities from universal tightness",
+      "locator": "Chapter 6 · Universal tightness · source lines 3220–3298 (S021)",
+      "relationship": "Conditional finite-set calculation and explicit exponent passage",
+      "note": "Uses the uniform global tail and rooted damping as inputs. Quantile minimality supplies the lower second moment; pointwise two-point asymptotics and existence of exponents are not inferred."
+    },
+    {
+      "source": "hutchcroft-hierarchical-2021",
+      "order": 5,
+      "label": "Hyperscaling",
+      "locator": "Theorem 2.14; Corollary 1.5",
+      "relationship": "Related argument",
+      "status": "pending",
+      "note": "WRHL and 7VCS are independently stated conditional results, not source-specific wrappers."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

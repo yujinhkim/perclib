@@ -1,0 +1,23 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "cutoff-scaling",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 5
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 35,
+      "label": "Conditional cutoff scaling relations",
+      "locator": "Chapter 3 · Scaling relations · lines 651–748",
+      "relationship": "Conditional precise formulation",
+      "status": "pending",
+      "note": "Uniform tail and spatial bounds are explicit hypotheses. Supercritical matching is additional; general percolation scaling relations are not asserted as proved."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

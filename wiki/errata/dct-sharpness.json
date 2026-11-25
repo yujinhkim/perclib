@@ -1,0 +1,39 @@
+{
+  "schema": "perclib-source-errata-v1",
+  "source": "dct-sharpness",
+  "entries": [
+    {
+      "id": "closed-pivotal-derivative",
+      "title": "The intensity derivative uses closed pivotality",
+      "status": "provisional",
+      "locator": "arXiv:1502.03050v3, Section 1.3, proof of Lemma 1.4, equation (1.8); the same formula appears in Section 1.5, equation (1.15).",
+      "claim": "The derivative sums rates times state-independent pivotal probabilities without the closed-edge factor.",
+      "problem": "For the single-bond event the derivative is $J e^{-\\beta J}$, whereas the displayed formula gives $J$. Pivotality was defined independently of the bond state.",
+      "correction": "IENL gives $\\frac{d}{d\\beta}\\mathbb P_\\beta(A)=\\sum_e J_e e^{-\\beta J_e}\\mathbb P_\\beta(e\\text{ pivotal})=\\sum_eJ_e\\mathbb P_\\beta(e\\text{ closed pivotal})$ for finite increasing events. FIXER derives the finite-set differential inequality by wiring the exterior to a sink and conditioning on the unexplored interior. This repairs the sharpness argument without differentiating an infinite-volume limit.",
+      "tags": [
+        "71GK",
+        "IENL"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/53#issuecomment-6899820991"
+      ],
+      "leanImpact": "When composing the product-coordinate Russo formula 71GK with the intensity parametrisation in IENL, retain the derivative of the bond-opening probability. A finite-set sharpness proof can then condition on the finite sink exploration and pass to the limit afterwards. It must not replace state-independent pivotality by closed pivotality without the closed-edge factor."
+    },
+    {
+      "id": "critical-field-saturation",
+      "title": "Critical field lower bounds require saturation",
+      "status": "provisional",
+      "locator": "arXiv:1502.03050v3, Proposition 1.3 (printed p. 5) and Proposition 2.3 (p. 11); final conclusions of Sections 1.5 and 2.6.",
+      "claim": "The percolation and Ising magnetizations are bounded below by positive multiples of h^(1/2) and h^(1/3), respectively, for every h>0.",
+      "problem": "Both magnetizations are at most one, while these powers are unbounded. No fixed positive constant can make the stated global ranges hold.",
+      "correction": "Restrict to small fields or saturate the power at one. Under its explicit transitive summable-kernel and finite-critical-intensity hypotheses, 36PN proves $M(h)\\geq\\frac{1-e^{-1}}{2\\sqrt2}\\min\\{\\sqrt h,1\\}$ for every h>0 by moment interpolation. For Ising, saturation would be $\\min\\{h^{1/3},1\\}$; the separate Ising proof is not supplied by 36PN.",
+      "tags": [
+        "36PN"
+      ],
+      "issues": [
+        "https://github.com/tomhutchcroft/lrp/issues/345"
+      ],
+      "leanImpact": "36PN is a percolation replacement only. A source wrapper must keep its hypotheses and field range. A bounded, nondecreasing magnetization extends a small-field power bound to a saturated global one; this observation does not establish the small-field Ising input or formalise that model."
+    }
+  ]
+}

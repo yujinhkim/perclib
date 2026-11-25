@@ -1,0 +1,32 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "finite-volume",
+  "collections": [
+    {
+      "collection": "methods",
+      "order": 9
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "perclib-window-tails",
+      "order": 0,
+      "label": "Finite-window identities and finite-edge limits",
+      "locator": "Named statement start lines in the pinned source: 23, 42, 51, 59, 66, 84, 93, 101, 120, 130, 134",
+      "relationship": "Source-inspected statement correspondence",
+      "status": "pending",
+      "note": "FD69 retains arbitrary vertices for the deterministic tail representation, including roots outside the window and zero/impossible thresholds. F0I9 gives simultaneous finite witnesses; SFLE gives monotone event and probability limits. The source exhausts all unordered pairs; the article notes that covering the non-diagonal pairs suffices for graph observables. A finite window is not asserted to be a fixed finite-coordinate support."
+    },
+    {
+      "source": "perclib-local-connectivity",
+      "order": 0,
+      "label": "Restrictions, local witnesses and limits",
+      "locator": "Named statement start lines in the pinned source: 27, 33, 39, 45, 53, 60, 66, 72, 78, 103, 113, 133, 141",
+      "relationship": "Source-inspected exposition with explicit measurable scope",
+      "status": "pending",
+      "note": "7BMQ gives restriction measurability, induced graph identity, support dependence, monotonicity and finite vertex witnesses without ambient countability. Countability of the domain alone suffices for local-event measurability. The restriction pushforward law is an additional expository cylinder argument. SFLE and 5UJQ supply the countable-exhaustion connection limits; no probability interpretation of unverified measurable ambient events is added."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

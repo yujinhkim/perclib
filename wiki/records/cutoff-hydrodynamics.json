@@ -1,0 +1,22 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "cutoff-hydrodynamics",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 13
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 4,
+      "label": "Hydrodynamics and low-dimensional moment growth",
+      "locator": "Chapter 9 · Low effective dimensions and hydrodynamics · source lines 5786–6050 (S042–S043)",
+      "relationship": "Hydrodynamic definition, finite-window comparisons and conditional all-scale quantile order",
+      "note": "The last-good-scale proof permits discontinuous quantiles. Model-specific derivative/error bounds remain hypotheses; full critical tail extraction is separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "spatial-cutoff-moments",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 11
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 6,
+      "label": "Soft cutoffs and second spatial moments",
+      "locator": "Chapter 9 · Cutoff kernels and Spatial moments · source lines 4450–4488 and 5363–5545 (S035)",
+      "relationship": "Strict cutoff domination, exact spatial derivative and conditional linear-ODE regimes",
+      "note": "Finite-volume integration and weighted BK domination justify the a.e. derivative. The diagonal is excluded. Factorization-error estimates, their integrability and superprocess convergence are not asserted."
+    },
+    {
+      "source": "notes",
+      "order": 100,
+      "label": "Cutoff spatial diagrams and the size-biased measure limit",
+      "locator": "S036 and following explanation · source lines 5546–5652",
+      "relationship": "Conditional reconstruction with corrected cutoff displacement convention",
+      "status": "pending",
+      "note": "MWZ7 distinguishes bounded-jump displacement from the stable process without cutoff. GFEM normalizes the diagrams; Y3SX proves the random-measure moment method; 45EB derives the mass mixture given the unit-mass CRT reduced-tree law. The percolation mixed-moment asymptotics and construction of the tree-indexed motion remain inputs."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 52,
+      "label": "Cutoff displacement and superprocess moment method",
+      "locator": "arXiv:2508.18807v1 HTML, §I.5.2–I.5.3: (I.5.16), Definition I.5.16, Theorem I.5.21, Corollary I.5.22, Theorem I.5.24",
+      "relationship": "Analytic ingredients and conditional identification",
+      "status": "pending",
+      "note": "The source has separate model-specific alternatives in Definition I.5.1. The new prose isolates the probability kernel and the passage from polynomial diagrams to a size-biased finite-measure limit. No pointwise multipoint estimate or full-model limit without cutoff is inferred. The density-proof erratum is provisional and confined to the inspected HTML."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 53,
+      "label": "Removing the cutoff and canonical compact-test moments",
+      "locator": "arXiv:2508.18807v1 HTML, section I.5.4: normalization, (I.5.49)-(I.5.50), Lemmas I.5.32-I.5.37; moment formula (I.1.11)",
+      "relationship": "Conditional transfer and explicit analytic estimates",
+      "status": "pending",
+      "note": "AYPN/L9YJ control added mass from the full tail; BB3O transfers the finite weighted laws and large-volume conditioning. 57FJ tracks the spatial scale. 5VYE/42PB supply continuum tree bounds and resolvent rescaling; ALO4 gives spatial tightness. DX2Y/W9BP reconstruct the canonical double limit from explicit cutoff-diagram, full-tail, spatial-moment and canonical-measure inputs. Isotropic jump normalization is stated; general-norm Green estimates and percolation polynomial asymptotics remain separate. The scale-index diagnosis is provisional."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 54,
+      "label": "Polynomial mixed-moment induction",
+      "locator": "arXiv:2508.18807v1 HTML, Lemmas I.5.26-I.5.29, Proposition I.5.30 and proof of Theorem I.5.21",
+      "relationship": "Signed analytic step, exact derivative and conditional recurrence closure",
+      "status": "pending",
+      "note": "2KB9 supplies the signed ODE lemma; VMEJ the absolute moment bound; 1K61 the exact two-cluster derivative. IX97 proves the diagram recurrence by generating functions, and GY8M closes the induction conditional on the factorized differential equation and one-point/scalar boundary limits. The source collision estimate is still a separate model input. Three formula/proof-line diagnoses are provisional and confined to the inspected HTML."
+    },
+    {
+      "source": "hutchcroft-lrp-1",
+      "order": 55,
+      "label": "High-dimensional Euclidean mixed-moment limit",
+      "locator": "arXiv:2508.18807v1 HTML, Proposition I.5.14, Lemma I.5.29 case d > 3 alpha, and Theorem I.5.21",
+      "relationship": "Proof for the normalized Euclidean model under explicit endpoint hypotheses",
+      "status": "pending",
+      "note": "QLN7/LDR1 supply all one-point spatial moments, 2VIE bounds the mixed collision error, and HBLN proves the polynomial tree-moment and size-biased random-measure limit under 7F5O. For alpha >= 2 this keeps d > 3 alpha; it does not cover the whole d > 6 range. General norms, critical-dimensional factorization and the named superprocess construction remain separate."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": [
+    {
+      "order": 0,
+      "tag": "MWZ7",
+      "proof_uses": [],
+      "reason": "Direct Lévy cumulant integration and Fourier inversion; the first absolute moment of the Lévy measure is not assumed."
+    },
+    {
+      "order": 1,
+      "tag": "GFEM",
+      "proof_uses": [
+        "SO5J",
+        "MWZ7"
+      ],
+      "reason": "Use independent edge increments and the unit-Jacobian tree-coordinate transformation."
+    },
+    {
+      "order": 2,
+      "tag": "57FJ",
+      "proof_uses": [
+        "3491"
+      ],
+      "reason": "Compose regular-variation ratios with the inverse spatial scale."
+    },
+    {
+      "order": 3,
+      "tag": "5VYE",
+      "proof_uses": [
+        "SO5J"
+      ],
+      "reason": "The Riesz-kernel estimate H*(H*1_B)^2 <= C(H*1_B) bounds each binary-tree integral; counting labelled shapes gives the factorial."
+    },
+    {
+      "order": 4,
+      "tag": "42PB",
+      "proof_uses": [
+        "MWZ7",
+        "5VYE"
+      ],
+      "reason": "The omitted Lévy intensity equals the rescaled killing rate; compound-Poisson coupling dominates the resolvent by the Green kernel, and local L1 convergence passes through integrable tree diagrams."
+    },
+    {
+      "order": 5,
+      "tag": "ALO4",
+      "proof_uses": [
+        "BB3O"
+      ],
+      "reason": "Choose one auxiliary cutoff to control added mass, then a large spatial ball to control its second moment."
+    },
+    {
+      "order": 6,
+      "tag": "VMEJ",
+      "proof_uses": [],
+      "reason": "Conditional Holder and arithmetic-geometric mean reduce products to one displacement; size bias and Cauchy-Schwarz separate volume and spatial moments."
+    },
+    {
+      "order": 7,
+      "tag": "1K61",
+      "proof_uses": [
+        "AFH6"
+      ],
+      "reason": "Finite-volume Russo expands the cluster-union increment. Weighted two-cluster BK/tree bounds justify exhaustion and parameter integration."
+    },
+    {
+      "order": 8,
+      "tag": "IX97",
+      "proof_uses": [
+        "MWZ7",
+        "GFEM"
+      ],
+      "reason": "The cumulant Euler identity gives one-edge replacement by two resolvent steps and a joining displacement; cutting a marked edge yields the binary-tree split recurrence."
+    },
+    {
+      "order": 9,
+      "tag": "GY8M",
+      "proof_uses": [
+        "2KB9",
+        "VMEJ",
+        "1K61",
+        "IX97"
+      ],
+      "reason": "Lexicographic induction isolates the n+1 self terms. The signed ODE limit and diagram recurrence identify the constants; collision factorization and boundary moments remain inputs."
+    },
+    {
+      "order": 10,
+      "tag": "QLN7",
+      "proof_uses": [
+        "AFH6",
+        "1K61"
+      ],
+      "reason": "A path-power tree bound controls all even spatial weights. BK/Harris bound the one-point derivative error by a four-point collision."
+    },
+    {
+      "order": 11,
+      "tag": "LDR1",
+      "proof_uses": [
+        "QLN7",
+        "7F5O",
+        "Z11O",
+        "2KB9",
+        "IX97"
+      ],
+      "reason": "Induction in the even degree identifies all directional moments; polarization gives the polynomial one-point limits."
+    },
+    {
+      "order": 12,
+      "tag": "2VIE",
+      "proof_uses": [
+        "1K61",
+        "VMEJ"
+      ],
+      "reason": "BK/Harris bound each split error by an (n+2)-point collision. The relative error is O(r^(3 alpha-d)); the joining-ball Riemann sum retains r^q."
+    },
+    {
+      "order": 13,
+      "tag": "HBLN",
+      "proof_uses": [
+        "7F5O",
+        "K3DB",
+        "LDR1",
+        "VMEJ",
+        "2VIE",
+        "GY8M",
+        "Y3SX"
+      ],
+      "reason": "The normalized Euclidean endpoint assumptions supply all scalar, displacement and factorization inputs above d=3 alpha; the diagram induction then gives the random-measure limit."
+    }
+  ]
+}

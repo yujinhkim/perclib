@@ -1,0 +1,50 @@
+{
+  "schema": "perclib-article-records-v1",
+  "article": "integrated-susceptibility",
+  "collections": [
+    {
+      "collection": "critical-theory",
+      "order": 8
+    }
+  ],
+  "sourceOccurrences": [
+    {
+      "source": "notes",
+      "order": 45,
+      "label": "Upper susceptibility differential inequality",
+      "locator": "Chapter 5 · Susceptibility differential inequalities · source lines 1496–1523",
+      "relationship": "Finite-volume pivotal bound and justified infinite-volume passage",
+      "status": "pending",
+      "note": "Uses finite BK and finite-coordinate Russo. Proves local Lipschitz regularity where transitive susceptibility is finite; the lower blow-up bound explicitly assumes infinite susceptibility at a finite endpoint. Sharpness and identification of that endpoint remain separate."
+    },
+    {
+      "source": "notes",
+      "order": 46,
+      "label": "Two-cluster susceptibility derivative identity",
+      "locator": "Chapter 5 · Mass transport and independent clusters · source lines 1532–1547",
+      "relationship": "Exact derivative identity for a countable-group intensity model",
+      "status": "pending",
+      "note": "Finite-volume pivotal identities pass to the limit by summable BK domination; translation reindexes the distinguished vertex. The two clusters belong to one configuration. General unimodular actions remain separate; the following source occurrence records the coupling-error comparison."
+    },
+    {
+      "source": "notes",
+      "order": 47,
+      "label": "Distinct-cluster coupling and weighted open-triangle error",
+      "locator": "Chapter 5 · Mass transport and independent clusters · source lines 1549–1644",
+      "relationship": "Cluster-deletion proof of a five-factor comparison and weighted summation",
+      "status": "pending",
+      "note": "Conditions on an almost surely finite first cluster and uses the product law outside it. The resulting weighted error includes nearby endpoints; far-separation decay alone does not establish the small-error hypothesis. Endpoint-separating surgery remains separate."
+    },
+    {
+      "source": "notes",
+      "order": 49,
+      "label": "Integrating the quantitative susceptibility inequality",
+      "locator": "Chapter 5 · source lines 2036–2066; differential input at lines 1688–1701",
+      "relationship": "Conditional analytic derivation",
+      "status": "pending",
+      "note": "Preserves the linear error term, proves the integrated prefactor and logarithmic upper bound; the quantitative reverse differential inequality remains an input; a separate lower-bound section states the endpoint blow-up hypotheses."
+    }
+  ],
+  "occursIn": [],
+  "proofUses": []
+}
