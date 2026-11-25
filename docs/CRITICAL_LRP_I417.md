@@ -125,6 +125,24 @@ from the ordinary full tree expansion. In particular, plain rooted trees can
 also produce depth-one marks; this module does not silently prove away that
 structural issue.
 
+## The one-arm marked factor, completed
+
+`I417/Base/MarkedOne` proves `branch_three`, a deterministic decomposition of
+any two connections `x ↔ u` and `x ↔ w` at a common branch point into pairwise
+edge-disjoint open witnesses. Geodesic splitting and maximally overlapping
+supports handle both degenerate and non-degenerate branches. Iterated BK then
+proves `jointPow π x 1 w ≤ χ · T²(x,w)` for a constant two-point row sum. This
+is the marked base input at `p = 1`, not a false replacement by a single
+two-point factor.
+
+`I417/Base/One.moment_gap_one_one_le` inserts it into the general polygon
+composition and proves, with the same constant mean assumption and BK alone,
+`momentProd − rawDiff ≤ χ² · T³(x,y)`. The one-by-one case of Lemma I.4.17 is
+therefore closed in the canonical model; the general-`p` `hjoint` remains open.
+The unused draft `twoLeafMarked` index family was deliberately not integrated:
+the underlying `RTree.depth` increment convention gives a two-leaf marked path
+depth `2`, matching the above bound.
+
 ## Fresh-side spine and one-hub reductions
 
 `I417/Fresh` retains the mark and all labelled arms in `freshMark_subset_hubStar`.

@@ -47,14 +47,40 @@ The abstract edge split alone does not supply that estimate. In particular,
 no inhomogeneous moment inequality without the necessary translation
 invariance is inferred here.
 
+## Finite graph configuration realization and BK union bound
+
+`TreeExpansion/AtlasRealization` now supplies a substantial part of the missing
+all-configurations step. `Real.exists_realization` constructs, recursively, a
+rooted binary shape for every nonempty finite terminal-label set connected
+through a finite open witness, with distinct atlas positions and pairwise
+edge-disjoint witnesses for all `2p - 1` atlas-edge events. Terminal labels are
+distinct; image vertices need not be. The all-coincident case uses empty paths,
+not fictitious open edges. This is not a permutation sweep over one chain.
+
+`Real.prob_le_sum_shapes` applies general finite-index [`BKIncreasing`] and
+finite unions to obtain the probability bound as a sum over all labelled shapes
+and internal-vertex positions. `ex_realization` and `ex_cover` prove a concrete
+interior-root path instance with `∅`, `{0}`, `{1}` witnesses. This is not less
+than diagram combinatorics: it proves realization and its precise finite BK
+probability bound, with only standard axioms in the independent and package
+audits.
+
+Still missing are the equality of each position sum to the normalized tree
+weight, transport of the hub star partition into `k` three-point factors, and
+conversion from finite `V`, `E`, real-valued Bernoulli configurations to the
+canonical countable independent-edge law. The source moment estimate is not
+discharged merely by this finite cover.
+
+
 ## Source/counting notes
 
 The lemma statement has coefficient `(2p-3)!!`. The proof text mentions
 `(2p-1)!!` for the tree count; this is an index discrepancy in the source's
 proof commentary, not an altered hypothesis in these files.
 
-The existing `TreeExpansion/Basic.lean` docstring refers to
-`RTree.card_labelled`. The available declaration used by this work is instead
-`Count.card_LT_fin_le`, and it gives a counting upper bound. No new exact
-atlas-cardinality theorem is claimed here. The stale reference is recorded
-rather than silently changing the frozen source module.
+The existing `TreeExpansion/Basic.lean` docstring mentions `RTree.card_labelled`
+as an intended tree-count interface; there is no Lean declaration of that name
+in the current implementation. The available `Count.card_LT_fin_le` is instead
+an **upper bound** for plane trees. No exact atlas-cardinality theorem is
+claimed by the realization work either: the shape set is a genuine labelled
+binary family, but its exact unlabelled cardinality remains a separate issue.

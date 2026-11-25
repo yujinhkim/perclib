@@ -27,6 +27,12 @@ public import PercLib.CriticalLRP.TreeExpansion.Atlas.Arms
 public import PercLib.CriticalLRP.TreeExpansion.Atlas.Structure
 public import PercLib.CriticalLRP.TreeExpansion.Atlas.Check
 public import PercLib.CriticalLRP.TreeExpansion.Atlas.Audit
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Defs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Realize
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Cover
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.ExampleDefs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Example
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Audit
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Basic
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.ThirdMoment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Alignment
