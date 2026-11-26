@@ -65,11 +65,30 @@ than diagram combinatorics: it proves realization and its precise finite BK
 probability bound, with only standard axioms in the independent and package
 audits.
 
-Still missing are the equality of each position sum to the normalized tree
-weight, transport of the hub star partition into `k` three-point factors, and
-conversion from finite `V`, `E`, real-valued Bernoulli configurations to the
-canonical countable independent-edge law. The source moment estimate is not
-discharged merely by this finite cover.
+`WeightBridge.posSumWt_eq_wtL` and `posSumWtE_eq_wtE` now prove the internal
+position sum equals the ordinary tree weight, recursively through root and child
+edges. `AtlasRealization.Hub` separately transports the hub edge partition to the
+realized atlas, proves every hub star's three edges share the intended vertex,
+groups the product into `3k` versus `2p - 1 - 3k` factors, and applies BK to
+finite shape sums. It distinguishes the joint three-point event from its product
+bound.
+
+The remaining coefficient issue is now sharper: `RTree` enumerates plane trees.
+The source's isomorphism classes are overcounted by `2^(p-1)` in the finite plane
+probabilistic consequence. `Orbit` records child-swap invariance of weights, but a
+realization transport between all representatives is still missing. The existing
+`Count.card_LT_fin_le` is an upper bound, not an exact atlas-cardinality count.
+The current full source moment bound isn't claimed until that representative/orbit
+transport and a canonical countable-law counting step are supplied.
+
+## Case 3 decorrelation wrapper
+
+`HigherMoments/I420Case3` assembles the triangle-condition decorrelation chain
+from the actual excluded mixed expectations, tree polygons, finite moment
+conversions, little-o comparison, and the smaller-moment IH. It explicitly retains
+I.4.17/I.4.18 as inputs plus homogeneity, finite moments and the separate first
+versus p-moment comparison; it doesn't prove general tree expansions, Polygon
+model hypotheses, or I.4.20 itself.
 
 
 ## Source/counting notes

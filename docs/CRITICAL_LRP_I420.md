@@ -74,6 +74,24 @@ application, but doesn't supply (I.4.19) at order `2p+2`, universal-tightness,
 or moment–asymptotic inputs. This is therefore the Case 2 error estimate, not
 an unconditional second-induction or sharpness result.
 
+## Case 3 (triangle condition), conditional decorrelation chain
+
+`HigherMoments/I420Case3` builds the desired normalized decorrelation interface
+from canonical pair factors and excluded moments. `HasTreeExpansion` and
+`HasPolygonBound` retain the actual general I.4.17 and I.4.18 inputs.
+The proof sums over ball vertices then path lengths to obtain the polygon bound,
+turns it into the averaged discrepancy in the real numbers, and proves this is
+little-o of the induction target.
+
+`case3_hAend_hAmid` and `case3_hAend_hAmid_of_hIH` formulate exactly the two
+limits consumed by the second induction. For middle indices, the comparison is
+derived from smaller-moment asymptotics, not assumed; at the zero index the
+comparison against the estimated moment is a separate explicit hypothesis.
+Non-degeneracy of balls, homogeneity and finite moments are retained, while
+positivity is deduced from root inclusion in the cluster. This is a genuine Case
+3 conditional chain, not completion of I.4.20 or of the source's triangle-bound
+verification.
+
 ## What is not closed
 
 - Case 3 requires the triangle-condition decorrelation route.

@@ -38,6 +38,12 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Scalar
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Assembly
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Comparator
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Audit
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Polygon
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Bound
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Compare
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Audit
 public import PercLib.CriticalLRP.Analysis.Route3.Defs
 public import PercLib.CriticalLRP.Analysis.Route3.Sums
 public import PercLib.CriticalLRP.Analysis.Route3.Main
