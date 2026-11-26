@@ -167,6 +167,7 @@ public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.PerDe
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.HubStar
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Audit

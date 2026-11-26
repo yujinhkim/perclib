@@ -326,6 +326,25 @@ Only the base marked moment remains unevaluated there. For `q ≥ 3`, a
 `q+1`-terminal tree-graph decomposition is needed; the three-terminal expansion
 does not extend merely by repetition. No general-`q` proof is claimed.
 
+## The fresh hub star is a canonical marked terminal event
+
+`I417/Fresh/HubStar.hubStar_eq_labelEvent_markedExtend` proves the exact set identity
+between `hubStar y w g` and the canonical terminal event rooted at `w`, with arms `g` and
+marked terminal `y`. In particular the fresh root and mark are kept in the right roles, and
+no finite approximation to the restored cluster is involved.
+`tsum_hubStar_eq_jointPow` then gives the exact identification
+`∑'_g P(hubStar y w g) = I417Gen.jointPow π w q y`.
+
+Consequently the non-plane marked-depth evaluation applies to the hub star.
+`tsum_hubStar_le_nonplane_markedDepth` and
+`tsum_freshMark_le_nonplane_markedDepth` bound their respective sums by the finite
+non-plane polynomial with root `w` and distinguished endpoint `y`, for `q ≥ 1` and a
+constant two-point row sum. The second statement uses the existing *containment*
+`freshMark ⊆ hubStar`; it does not equate the fresh event with the hub star or with the old
+base cluster. It provides a larger-event upper bound, not the explicit chain-cover or
+full polygon assembly required for the final general-`p,q` theorem. Those remaining
+composition and coefficient steps are not hidden in this identity.
+
 ## The fixed chain-witness cover fails at `q = 3`
 
 `I417/Fresh/Obstruction` proves `ds_no_chainSpider`: on the six-edge double star
