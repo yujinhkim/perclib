@@ -124,3 +124,33 @@ position chain and the side of insertion. Consequently
 child-swap classes for `p ≥ 1`. The separate statements
 `card_swapOrbits_fin_zero` and `card_swapOrbits_fin_zero_ne_M` show why `p = 0`
 must be excluded rather than interpreted as one labelled tree.
+
+## Parent-aware up-arm slots
+
+`Canonical/Hub/UpArm` integrates the independently rebuilt `smwx4z71g/m1`
+artifact.  Relative to the address-level `src_upEdge`, it names the actual
+parent vertex and gives per-hub comparisons for Lemma I.4.16's joint hub
+blocks (paper pp. 43--44).
+
+* `HubUpArm.IsRootIpos`, `parentIPos`, and `hubUpSrc` distinguish the root-leaf
+  coordinate `c` from the position of the internal parent.  `srcPos_hubUpEdge`
+  computes the up arm's source exactly; `dstPos_hubUpEdge` gives its
+  destination `φ v`.  These are not both identified with `φ v`.
+* `hubUpEdge_eq_rootEdge` identifies the root up arm with the atlas root edge.
+  `hubUpEdge_eq_parentDown` identifies a non-root up arm with the down arm of
+  `parentIPos`.  The position map need not be injective for either identity.
+* `hubFar` records the two child positions and the up-arm source;
+  `hubThreePoint` is one configuration connecting all three to `φ v`.
+  `hubStarJoint_subset_threePoint` drops disjoint occurrence but retains this
+  actual physical three-point event.
+* `edgeMeasure_hubStarJoint_le_jointP_mul_tau` merges the up arm and one down
+  arm into one joint-pair witness and applies two-fold BK with the other down
+  arm.  The result is a genuine joint three-point factor times one two-point
+  factor.  It does not replace the three-point value by `hubStarProd`, and it
+  does not assert a converse joint-event inclusion.
+
+These are shape-indexed, per-hub slot statements.  They do not sum all labels
+or hubs and do not prove general `k`, a new mixed moment, or an atlas event
+cover.  The full mixed-`k` evaluation remains open.  The parent and root cases
+keep arbitrary coincident positions; only the separately named
+`hubUpSrc_eq_hubPos_iff` characterization uses `Function.Injective φ`.
