@@ -29,11 +29,10 @@ choices of split legs and four summed attachment vertices `z1, …, z4`.
 
 This file only *names* the objects the evaluation works with; every proof is elsewhere.
 
-* `q5Legs` — the ten legs of one branch, written as the four-fold nested `splitAt` of production's
-  `I417FreshFour.Refined.splitAt`/`baseLegs` on the explicit nested index type
-  `((((Fin 2 ⊕ Bool) ⊕ Bool) ⊕ Bool) ⊕ Bool)` of `2 · (4 + 1) = 10` slots.  It is definitionally the
-  `Hist.legs` of the concrete attachment history `histFive` (see `q5Legs_eq_hist`), so no new
-  diagram notion is introduced: it is production's iterated first-hit attachment, instantiated.
+* `q5Legs` — the ten legs of one branch, written as the fourfold nested `splitAt` of production's
+  `I417FreshFour.Refined.splitAt`/`baseLegs` on the explicit index type of `10` slots.
+  No definitional bridge to `Hist.legs` is asserted or used: the cover is proved directly using
+  the same first-hit attachment API.
 * `histFive` — the canonical `Hist V 4` with split legs `k1, …, k4`, hit vertices `z1, …, z4` and
   attached arms `gb, gc, gd, ge`.
 * `armEquiv5` — for five distinct labels, the reindexing `(Fin 5 → V) ≃ V × V × V × V × V` which
@@ -91,13 +90,10 @@ instance instDecidableEqIdx (n : ℕ) : DecidableEq (I417GenIter.Idx n) := by
     letI := ih
     exact inferInstanceAs (DecidableEq (I417GenIter.Idx n ⊕ Bool))
 
-/-- **The ten legs of one `q = 5` branch.**  Start from the two halves `y → w`, `w → ga` of the
-selected arm's path (production's `baseLegs`) and attach the four remaining arms `gb, gc, gd, ge` one
-at a time, each at the first-hit vertex `z1, z2, z3, z4` inside the diagram built so far; `k1, …,
-k4` record which leg each attachment splits.  It is production's `I417GenIter.Hist.legs` of the
-canonical history `histFive`, cast to the explicit nested index type of `2 · (4 + 1) = 10` slots;
-no new diagram notion is introduced.  The index type grows `2 → 4 → 6 → 8 → 10`, so the
-result has exactly `2q = 10` legs — ten two-point factors at `q = 5`. -/
+/-- **The ten legs of one `q = 5` branch.** Start from the two halves of the selected arm's path
+and attach the four remaining arms by nested `splitAt`s. This is the direct family because the
+cover keeps explicit first-hit choices and genuine path witnesses. The index type grows
+`2 → 4 → 6 → 8 → 10`, so the result has exactly ten two-point factors at `q = 5`. -/
 noncomputable def q5Legs (k1 : Fin 2) (k2 : Fin 2 ⊕ Bool) (k3 : (Fin 2 ⊕ Bool) ⊕ Bool)
     (k4 : ((Fin 2 ⊕ Bool) ⊕ Bool) ⊕ Bool) (z1 z2 z3 z4 y w ga gb gc gd ge : V) :
     (((Fin 2 ⊕ Bool) ⊕ Bool) ⊕ Bool) ⊕ Bool → V × V :=

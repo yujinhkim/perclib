@@ -24,8 +24,10 @@ five-point event bound `hpoint`: the candidate deterministic cover by `105`
 two-hub shapes, together with the ninefold BK step. This premise is not
 supplied. `Counterexample.Line6.hpoint_false` proves that it fails on the
 non-transitive six-vertex line; that does not refute the paper's transitive
-Lemma I.4.16. Neither conditional assembly below completes that source case
-without a repaired event cover.
+Lemma I.4.16. `Counterexample.Cycle6.hpoint_false` additionally shows the
+failure for a fully translation-invariant six-cycle profile satisfying
+`hq_stepProfile`. Neither conditional assembly below completes that source
+case without a repaired event cover.
 -/
 
 open Set MeasureTheory

@@ -220,6 +220,12 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.Branch
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.CoverFive
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.Summed
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.Check
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.Moment
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Five.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Spine.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Spine.Main
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Spine.Profile
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Spine.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
@@ -304,6 +310,11 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Re
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Arith
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Main
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Cycle6.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Cycle6.Arcs
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Cycle6.Reach
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Cycle6.Main
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Counterexample.Cycle6.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Cases
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Chain
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Norm

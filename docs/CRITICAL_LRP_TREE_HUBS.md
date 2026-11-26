@@ -218,5 +218,17 @@ edges open independently with probability `1/64`, the five-leaf event costs
 axioms. The bound `ε⁷` is attained, while the profile is on non-transitive
 `Fin 6`, not an admissible translation-invariant model. Thus this refutes the
 raw candidate two-hub premise, **not** the paper's Lemma I.4.16 and not a
-repaired admissible-class event cover. No transport to `ZMod 6` is asserted
-by this package.
+repaired admissible-class event cover. No transport from the line to
+`ZMod 6` is needed by that package.
+
+`Counterexample.Cycle6`, independently rebuilt from `smwxcafk7/m3`, proves
+the stronger admissible-class obstruction. Its `stepProfile` opens the six
+edges of a six-cycle independently with probability `1/64`. The proof gives
+full translation invariance `hq_stepProfile`, the two arc dichotomy and an
+`ε³` lower bound from one three-edge arc. Every two-hub term has exponent
+at least `6`; allowing the five two-point bounds costs
+`105 * 1152 * ε⁶ < ε³`. Hence `Cycle6.hpoint_false` refutes the raw premise
+at `(0,3,3,3,3)` for every fixed 105-pattern family. This is **not** a
+counterexample to the paper's Lemma I.4.16 or its finite moment bounds. It
+shows that a different, source-faithful branch-point/hub realization and
+event-cover registration are required.

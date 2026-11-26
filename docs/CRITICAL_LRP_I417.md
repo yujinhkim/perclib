@@ -608,8 +608,34 @@ inside the attachment-vertex sum before peeling off-path vertices; each
 remaining path contributes `T^ℓ` for `ℓ ∈ {1,2,3,4,5}`. A separate
 increasing-tree check independently confirms the coefficient row
 `105,105,90,60,24` by depth. Every branch lemma is explicitly applied in the
-aggregation. This is the **finite fresh-side evaluation**, not yet its
-marked-side moment composition or the general weighted `GenFreshEval`.
+aggregation. `Fresh/Five/Moment` now gives the normalized positive-`p`
+bound `moment_gap_five_le_eval`, with total factor count `2p+11` and path
+powers in `[3,p+6]`, plus the transitive and canonical-law specializations
+`moment_gap_five_le_eval_transitive` and
+`latticeLongRange_moment_gap_five_le_eval`. The coefficient is kept as the
+sum of the five fibre contributions `5 * nonplaneMarkedCount p ℓ` times
+`(24,60,90,105,105)`, rather than reindexed into one closed-form per-depth
+constant. This closes the normalized `q = 5` specialization, not
+`GenFreshEval` in general.
+
+## Analytic spine evaluation, and the remaining geometric bridge
+
+`Fresh/Spine`, independently rebuilt from `smwxcafk7/m1`, provides the
+order-free analytic core. `Hang.val_eq_pow` proves that a rooted hanging
+forest with `m` vertices contributes `χ^m` for every base vertex.
+`spineVal_eq_normal` evaluates a chain with hanging-forest total size
+`2q-ℓ` as `χ^(2q-ℓ) T^ℓ`; `spineVal_eq_kernel` gives the symmetric-kernel
+normalization, and `spine_aggregate_genFreshProfile` applies the accepted
+`genCoeff` coefficients. `genFreshProfile_four` and `genFreshProfile_five`
+identify the generic profile with the accepted finite fresh profiles.
+
+This is **not** an identification of `I417GenIter.Hist.legs` with these spine
+diagrams. An explicit transport of actual `Hist.legs` and its attachment and
+arm sums to `spineVal` is still required. A fixed attachment-time ordering
+is not a legal peel order in every case, and `subW` alone does not describe
+all split-below-`w` histories. This generic infrastructure does not solve the
+general weighted `GenFreshEval` but reduces the missing work to honest
+combinatorial reindexing and a geometric bridge.
 
 ## The general-`q` iterated first-hit cover
 
