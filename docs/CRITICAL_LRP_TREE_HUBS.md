@@ -232,3 +232,14 @@ at `(0,3,3,3,3)` for every fixed 105-pattern family. This is **not** a
 counterexample to the paper's Lemma I.4.16 or its finite moment bounds. It
 shows that a different, source-faithful branch-point/hub realization and
 event-cover registration are required.
+
+`SixPoint.TwoJointThree`, independently rebuilt from `smwxdrsgz/m3`, gives one
+such genuine event-level construction for the middle split `j = 2`. The first
+joint group uses `p0 ++ s1` and `p1 ++ s1` for `conn b0 v ∩ conn b1 v`; the
+second uses `p3`, `p4` and the reversed second spine for `conn b3 v ∩ conn b4 v`.
+Together with the three split-arm witness sets these form finite, pairwise
+edge-disjoint certificates. `combSystem_twoJointThree_le` applies the actual
+fivefold finite BK theorem without using the refuted pointwise premise.
+Both joint functions are nevertheless parametrized by `v`; their eventual
+slot evaluation requires a separate argument. The other six split cases,
+normalization and `Fin 15 × Fin 7` assembly are not proved by this helper.

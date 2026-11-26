@@ -637,6 +637,15 @@ all split-below-`w` histories. This generic infrastructure does not solve the
 general weighted `GenFreshEval` but reduces the missing work to honest
 combinatorial reindexing and a geometric bridge.
 
+`Fresh/HistSpine`, independently rebuilt from `smwxdrsgz/m1`, supplies the
+next one-stage input: `splitAt_eq_of_decidableEq` proves independence from the
+index equality instance, while `tsum_splitAt_prod` and `histW_snoc_tsum` sum
+the newly attached arm before collapsing the chain on an actual production
+`Hist.legs`. The corresponding elementary chain identities are also proved.
+The closed form of the *iterated* split weight and the packaging from
+split-choice fibres into the free-arm total and coefficient profile are still
+missing. This module is not another proof of `GenFreshEval`.
+
 ## The general-`q` iterated first-hit cover
 
 `I417GenIter`, from the accepted `smwx9itnu/m2` development, constructs the
