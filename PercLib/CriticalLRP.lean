@@ -59,6 +59,8 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPol
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.ModelAssembly
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Tails
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.NearWindow
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectEventually
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectSource
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Audit
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Audit
 public import PercLib.CriticalLRP.Analysis.Route3.Defs

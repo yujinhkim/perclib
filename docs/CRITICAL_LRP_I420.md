@@ -196,6 +196,15 @@ Thus the tail/cardinality construction is no longer an unimplemented analytic
 promise; deriving its base tail and model-moment premises remains the
 model-specific work.
 
+`SplitPolygon.DirectEventually` extends the same correction to the direct
+endpoint/middle-index assembly. Its `case3_hAmid_of_i421_eventually` and
+`case3_hAend_hAmid_split_eventually` accept finite-window and moment inputs
+only at time infinity. `case3_hAend_hAmid_cutPoly_source` instantiates these
+on the actual source windows and proves both direct ratio limits. The direct
+source theorem derives its denominator comparison using constant one and keeps
+moment homogeneity and moment finiteness explicit at every needed order; it does
+not claim these model inputs or second-induction inputs as automatic.
+
 The interface repair, polynomial bridge and conditional canonical-cutoff error
 assembly are therefore complete. Their tail/cardinality and moment hypotheses
 remain genuine analytic obligations rather than conclusions about the source

@@ -9,6 +9,8 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPol
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.ModelAssembly
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Tails
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.NearWindow
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectEventually
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectSource
 
 /-! # Axiom audit for the split Case-3 interface -/
 
@@ -34,3 +36,6 @@ set_option linter.hashCommand false
 #print axioms PercLib.CriticalLRP.I420Case3.source_ball_card_pos
 #print axioms PercLib.CriticalLRP.I420Case3.exists_source_near_far_ratio
 #print axioms PercLib.CriticalLRP.I420Case3.exists_case3_i421_cutPoly_source
+#print axioms PercLib.CriticalLRP.I420Case3.case3_hAmid_of_i421_eventually
+#print axioms PercLib.CriticalLRP.I420Case3.case3_hAend_hAmid_split_eventually
+#print axioms PercLib.CriticalLRP.I420Case3.case3_hAend_hAmid_cutPoly_source
