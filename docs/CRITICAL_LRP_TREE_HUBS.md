@@ -73,13 +73,28 @@ groups the product into `3k` versus `2p - 1 - 3k` factors, and applies BK to
 finite shape sums. It distinguishes the joint three-point event from its product
 bound.
 
-The remaining coefficient issue is now sharper: `RTree` enumerates plane trees.
-The source's isomorphism classes are overcounted by `2^(p-1)` in the finite plane
-probabilistic consequence. `Orbit` records child-swap invariance of weights, but a
-realization transport between all representatives is still missing. The existing
-`Count.card_LT_fin_le` is an upper bound, not an exact atlas-cardinality count.
-The current full source moment bound isn't claimed until that representative/orbit
-transport and a canonical countable-law counting step are supplied.
+## Child-swap transport and finite ordinary moments
+
+`AtlasRealization/Transport` constructs a bijection between internal positions and
+atlas edges for any two plane representatives of a child-swap class. It preserves
+both ends of every atlas edge, carries the same finite witness sets, and therefore
+proves equality of the unions of diagram events over all internal positions.
+The position sums of diagram-event probabilities are equal as well.
+
+`AtlasRealization/OrbitCount` supplies finite orbit partitions, a chosen transversal,
+and exact transversal sums of invariant weights. `AtlasRealization/Closure` joins
+these results and proves `treeGraphBound_of_atlasRealization` and
+`moment_bound_of_atlasRealization`. The latter is the ordinary tree-moment bound
+with coefficient `(2q-3)!!`, under BK and explicit translation invariance on a
+finite additive commutative group. The residual `SwapTransport` premise is
+eliminated by the checked realization transport.
+
+These results still have finite edge configurations and finite vertex sets.
+They do not prove a canonical countable-model moment formula, the general mixed
+hub/star evaluation of Lemma I.4.16, or any model sharpness input. Nor do they
+show exact non-plane shape enumeration: `Count.card_LT_fin_le`, hence
+`RTree.card_swapOrbits_fin_le_dfactorial`, is still an upper bound, not an
+asserted exact double-factorial cardinality.
 
 ## Case 3 decorrelation wrapper
 
