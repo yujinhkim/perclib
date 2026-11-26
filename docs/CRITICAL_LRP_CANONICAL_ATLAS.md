@@ -109,11 +109,26 @@ ENNReal bridge `Real.posSumWtE_eq_wtE`. Hence
 `I417Base.wtE` tree weights, without a new weight definition or finiteness
 assumption.
 
+## Ordinary canonical moments
+
+`Canonical/LeafSum` proves the exact, shape-independent leaf evaluation
+`RTree.tsum_wtE_eq`: with every row sum equal to `S`, the weight of a tree with
+`p` leaves, summed over its leaf positions, is `S^(2p-1)`. It still evaluates
+each transversal representative separately. Combining this with the exact
+transversal cardinality gives `lintegral_cardFun_pow_le_dfactorial`:
+`E|K_x|^q ≤ M(q-1) * S^(2q-1)` for every `q ≥ 1`.
+
+`Canonical/Ordinary` discharges the row-sum requirement for profile-preserving
+vertex-transitive models, and `latticeLongRange_cardFun_pow_le_dfactorial`
+specializes the result to the canonical power-law law. This finishes the ordinary
+`k = 0` case of Lemma I.4.16 in those models, not the mixed-`k` hub theorem.
+
 ## Remaining work
 
-This does not prove a mixed-`k` hub-star evaluation, a general-p cluster-volume
-moment, or I.4.17. The orbit-representative weighted non-plane bound and the
-double-factorial coefficient are not inferred from the shape multiplicity alone.
+The general mixed-`k` hub-star evaluation and cluster-moment assembly, and the
+general upper diagram bound of I.4.17, remain open. They are not consequences of
+the ordinary row-sum evaluation alone. The exact non-plane enumeration supports,
+but does not itself prove, that ordinary moment bound.
 
 `TreeExpansion/AtlasRealization/ExactCount` independently closes the exact
 non-plane shape enumeration for `p ≥ 1`. The hub-star evaluation,

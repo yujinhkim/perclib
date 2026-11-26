@@ -144,6 +144,10 @@ actual finite family cardinalities `markedCount p ℓ`, not an assumed `(2p-1)!!
 `Marked/Numerics` additionally proves the depth coefficients partition the family,
 with vanishing coefficients outside the legal depth range. `markedCount_one_two =
 2`, `markedCount_one`, and `markedCount_zero` are computed explicitly.
+`MarkedJoint/Relabel/Total` uses the new finite label equivalence and exact enumeration to
+prove `sum_markedCount_eq_two_pow_mul_dfactorial`: the total is `2^p * (2p-1)!!`,
+including its `p = 0` convention. This is a count of the actual labelled plane shapes,
+not a coefficient guessed from the finished bound.
 `markedPolygonBound_zero` and `labelledMarkedDiagram_zero` are both
 `I417Base.iterPow k 1 x w`, with no constant row-sum hypothesis. At `p = 1`,
 `labelledMarkedDiagram_one = 2 * (χ ^ 1 * iterPow k 2 x w)`. The small shapes in
@@ -219,6 +223,8 @@ momentProd π x y p 1 - rawDiff π x y p 1 ≤
 The proof supplies the new polygon bound as the `hjoint` input to the existing
 `I417Base.q_one_polygon`. After writing `ℓ+1` as the polygon path length, this is the
 source's `q = 1` range `3 ≤ pathLength ≤ p+2`, with actual diagram-count coefficients.
+These are the canonical plane-labelled counts, not the sharper one-arm branch coefficient:
+at `p = 1` this route gives `2 χ² T³`, while `moment_gap_one_one_le` still gives `χ² T³`.
 `moment_gap_q_one_le_of_transitive_pos` instead supplies vertex-transitivity through
 profile-preserving permutations. `latticeLongRange_moment_gap_q_one_le_of_pos` specializes
 it to the canonical power-law law on `ℤ^d`, with no subcriticality or finite-moment premise.
