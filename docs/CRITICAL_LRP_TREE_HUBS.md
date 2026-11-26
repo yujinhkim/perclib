@@ -262,6 +262,16 @@ There are exactly three independent internal star pairs at each, with three
 source-bipartition choices at the middle position and two at the others.
 `fiveGroup_of_two_stars` retains each star's shared spine within its joint
 certificate. The structurally new cases `j = 0`, `j = 5` and `j = 6` now have
-exact finite two-joint/three-single certificates. The cases `j = 1,3,4` and
-all remaining slot evaluations are still open, so this is combinatorial
-coverage, not a completion of the generalized moment inequality.
+exact finite two-joint/three-single certificates.
+
+`SixPoint.SplitEvents`, independently rebuilt from `smwxfstjy/m3`, now closes
+the remaining cases `j = 1,3,4` as well. `combSystem_certified` provides the
+genuine finite certificate through its two star groups and three singleton
+groups for **every** `j : Fin 7`; `law_combSystem_le` applies the actual
+fivefold BK product bound at that position. `usedStars_mem` selects a genuine
+admissible independent internal pair at each split, and
+`residual_eq_usedSingles` verifies that the singleton factors are exactly its
+residual macro-edges. No independence hypothesis, moment hypothesis or refuted
+`hpoint` premise is used. The remaining step is the **evaluation** of these
+groups, followed by the final terminal/moment assembly, not the finite
+certificate layer.

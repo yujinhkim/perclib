@@ -330,6 +330,9 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointThree.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Regroup
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvents.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvents.Certificates
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvents.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Bridge
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Eval
