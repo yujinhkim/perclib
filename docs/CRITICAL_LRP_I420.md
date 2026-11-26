@@ -76,28 +76,91 @@ an unconditional second-induction or sharpness result.
 
 ## Case 3 (triangle condition), conditional decorrelation chain
 
-`HigherMoments/I420Case3` builds the desired normalized decorrelation interface
-from canonical pair factors and excluded moments. `HasTreeExpansion` and
-`HasPolygonBound` retain the actual general I.4.17 and I.4.18 inputs.
-The proof sums over ball vertices then path lengths to obtain the polygon bound,
-turns it into the averaged discrepancy in the real numbers, and proves this is
-little-o of the induction target.
+`HigherMoments/I420Case3` builds the normalized decorrelation interface from
+canonical pair factors and excluded moments. `HasTreeExpansion` and
+`HasPolygonBound` retain explicit general I.4.17 and I.4.18 inputs. The proof
+sums over ball vertices then path lengths, turns the resulting polygon bound
+into a real averaged discrepancy, and makes it little-o of the induction target
+when the uniform polygon factor tends to zero. This is a conditional chain, not
+completion of Case 3, I.4.20, or the source's triangle-bound verification.
 
-`case3_hAend_hAmid` and `case3_hAend_hAmid_of_hIH` formulate exactly the two
-limits consumed by the second induction. For middle indices, the comparison is
-derived from smaller-moment asymptotics, not assumed; at the zero index the
-comparison against the estimated moment is a separate explicit hypothesis.
-Non-degeneracy of balls, homogeneity and finite moments are retained, while
-positivity is deduced from root inclusion in the cluster. This is a genuine Case
-3 conditional chain, not completion of I.4.20 or of the source's triangle-bound
-verification.
+### Tree expansion from I.4.17
+
+`I420Case3/TreeInterface` proves the moment identities between `clusterVol` and
+`Percolation.cardFun`, and hence between `pairFactor`/`I417A.momentProd` and
+`pairExcl`/`I417A.rawDiff`. `AuditM1.hasTreeExpansion_of_i417` constructs
+`HasTreeExpansion` for arbitrary finite windows and exponents $a,b\ge1$, with
+$p=a+b-1$, the connection-kernel powers from `I417Base.iterPow`, and the integer
+`I417SummedClose.composedCoeff` coefficients. Its hypotheses are strict edge
+probabilities and constancy of the first-moment row sums. It does not assume
+finiteness of higher moments, subcriticality, or homogeneity of later moments.
+
+`AuditM1.hasTreeExpansion_family` puts this on the induction-index surface. It
+covers exactly `ℓ + 1 ≤ p`, where the second exponent `p - ℓ` is positive. It
+does **not** cover `ℓ = p` (`b = 0`), while the existing
+`case3_hAend_hAmid` wrappers quantify their tree input over all `ℓ ≤ p`.
+No zero-exponent extension is asserted: `pairExcl` contains a non-connection
+indicator and is not generally equal to `pairFactor`. Refining that consumer
+range, or supplying the genuinely needed endpoint argument, remains open.
+The tree polynomial here also must not be silently identified with the cutoff
+matrix polynomial in the next subsection; their shared-model bridge is separate
+unfinished work.
+
+### Genuine cutoff polygon powers and the threefold corner
+
+`I420Case3/CutPoly` defines `cutPoly` from the real cutoff matrix powers
+`I418C.polyK`, identifies it with the extended-real `Kpow` under finite cutoff
+susceptibility, and proves `powMomentAt_cutProb_one`. Under the explicit
+first-moment asymptotic `hP` and finite-triangle hypothesis `hTri`,
+`CutPoly.cutPoly_le_rate` gives the source polygon estimate for $j\ge4$.
+`exists_hasPolygonBound_cutPoly` combines it with the proved pointwise $j=3$
+bound to give a genuine `HasPolygonBound` with factor
+`max M.triSelf (C * ((M.nablaTail (r^c)).toReal + r^(-c)))`.
+
+This factor is deliberately not described as vanishing.
+`one_le_polyK_three_of_chi_ne_top` proves that the diagonal threefold power is
+at least one. Consequently `one_le_Bpoly_of_hasPolygonBound`, and the eventual
+forms `no_vanishing_uniform_polygon_factor` and
+`not_exists_vanishing_hasPolygonBound`, show that no uniform polygon factor can
+tend to zero when the window contains the origin and the cutoff first moment is
+finite. Under triangle-tail decay, `tendsto_polygonFactor` instead has limit
+`M.triSelf`. Thus the old single-factor `Bpoly → 0` interface cannot consume
+these genuine cutoff powers at its $j=3$ corner.
+
+A sound repair must retain the $j=3$ contribution separately and use an
+appropriate averaged or split estimate, while applying the vanishing tail rate
+only for $j\ge4$. `prodFactor_le_mixedExcl_add_cutPoly` is only the resulting
+pointwise discrepancy bound: it does not prove the normalized little-o limit,
+triangle-tail convergence, or the averaged threefold replacement. None of
+those is claimed here.
+
+### Denominator comparison by log-convexity
+
+`I420Case3/MomentLogConvex/Defs` proves the one-step Hölder inequality
+`(E|K|^(j+1))^2 ≤ E|K|^j E|K|^(j+2)` in `ℝ≥0∞`, with finite-real conversions
+under explicit moment-finiteness hypotheses. Its iterated Lyapunov consequence
+`MomentLogConvex.biasTarget_le_mul_momR` proves
+`biasTarget m₁ m₂ p ≤ m_a m_b` for $a,b\ge1$ and $a+b=p+1$.
+`biasTarget_le_mul_momOf` transports this to a radius-indexed family of laws.
+
+`case3_hAend_hAmid_of_hIH'` removes the separate zero-index comparison premise
+from the induction-hypothesis wrapper, and `case3_hAend_hAmid'` removes the
+explicit denominator comparison entirely, using constant one. These wrappers
+still retain their original vanishing-uniform-polygon, tree, finite-moment,
+homogeneity, edge, window, and lower-comparison hypotheses. Log-convexity does
+not repair the threefold polygon obstruction or discharge any model asymptotic.
 
 ## What is not closed
 
-- Case 3 requires the triangle-condition decorrelation route.
+- Case 3 remains incomplete: the consumer's positive-exponent tree range, the
+  identification of the tree and cutoff polynomials, the averaged/split $j=3$
+  estimate, triangle-tail convergence, and the source-model moment inputs all
+  have to be assembled without assuming the refuted vanishing uniform factor.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
-  must be derived from the source model.
+  must be derived from the source model. The first-moment and ODE obligations
+  are separate from the completed I.4.17 diagram bound and the log-convexity
+  comparison.
 - The second induction remains a correctly conditional consequence of the
   paper's decorrelation estimates, not a substitute for their three probabilistic cases.
 

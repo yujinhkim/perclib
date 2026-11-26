@@ -43,6 +43,13 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Polygon
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Bound
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Main
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Compare
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.TreeInterface
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CutPoly.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CutPoly.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CutPoly.Audit
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Audit
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Audit
 public import PercLib.CriticalLRP.Analysis.Route3.Defs
 public import PercLib.CriticalLRP.Analysis.Route3.Sums
