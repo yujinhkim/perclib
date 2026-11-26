@@ -201,9 +201,16 @@ endpoint/middle-index assembly. Its `case3_hAmid_of_i421_eventually` and
 `case3_hAend_hAmid_split_eventually` accept finite-window and moment inputs
 only at time infinity. `case3_hAend_hAmid_cutPoly_source` instantiates these
 on the actual source windows and proves both direct ratio limits. The direct
-source theorem derives its denominator comparison using constant one and keeps
-moment homogeneity and moment finiteness explicit at every needed order; it does
-not claim these model inputs or second-induction inputs as automatic.
+source theorem derives its denominator comparison using constant one.
+`SplitPolygon.MomentHom` additionally proves `powMomentAt_cutProb_perm` and
+`powMomentAt_cutProb_apply_eq_zero`: every cluster moment is invariant under a
+profile-preserving permutation, including all cutoff translations. Consequently
+`case3_hAend_hAmid_cutPoly_source_of_finite` discharges both window homogeneity
+and window finiteness. Only the root moment-finiteness range, base tail limit and
+source two-moment inputs remain separate. The wrapper
+`isLogErrorFunction_nablaTail_of_HD_case2_or_case3` supplies that tail limit from
+the HD(2)-or-HD(3) disjunction through its second projection; it is not inferred
+from triangle finiteness alone.
 
 The interface repair, polynomial bridge and conditional canonical-cutoff error
 assembly are therefore complete. Their tail/cardinality and moment hypotheses
@@ -234,7 +241,8 @@ not repair the threefold polygon obstruction or discharge any model asymptotic.
   conditional canonical-cutoff error assemblies are proved. The base
   triangle-tail limit, first-moment asymptotic and model moment/second-moment
   inputs still need to be derived. The direct endpoint/middle-index asymptotics
-  also retain their separate homogeneity and finite-moment requirements.
+  now have translation homogeneity and window finiteness discharged, but retain
+  their root finite-moment requirements.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
   must be derived from the source model. The first-moment and ODE obligations
