@@ -244,6 +244,11 @@ public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Compose
 public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Coefficients
 public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Check
+public import PercLib.CriticalLRP.Correlation.I417.Composition.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Composition.Pair
+public import PercLib.CriticalLRP.Correlation.I417.Composition.Gap
+public import PercLib.CriticalLRP.Correlation.I417.Composition.Models
+public import PercLib.CriticalLRP.Correlation.I417.Composition.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Chain
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Check

@@ -1,8 +1,11 @@
 # Lemma I.4.17: nonnegativity, marked expansion and the `p = 2, q = 1` display
 
-The modules under `Correlation/I417` and `Correlation/I417Example` formalize three
-parts of Lemma I.4.17 (supplied PDF p. 45). The upper diagram bound for general
-`p, q` remains open; no coverage beyond the statements below is implied.
+The modules under `Correlation/I417` and `Correlation/I417Example` prove Lemma
+I.4.17 in its canonical long-range-lattice form at all positive `p,q`: the
+nonnegativity half and the upper diagram bound at general `p,q`, with the
+existing profile/transitivity hypotheses. The countable, vertex-transitive
+model and same-basepoint normalization are stated explicitly below; no
+completion of the downstream model inputs, I.4.18, or the full paper is implied.
 
 ## General nonnegativity
 
@@ -810,13 +813,16 @@ transitivity hypothesis is introduced. `moment_gap_le_pairPoly` composes this
 with the non-plane marked-depth bound and the polygon identity, with factor
 `q` for the selected arm and total factor count `2p+2q+1`.
 
-The remaining interface is to regroup those `(ℓ,m)` terms by `L = ℓ+m` into
-the printed single-depth sum with explicit integer coefficients, and then to
-specialize to the paper's common-basepoint and canonical-law forms. Those are
-finite bookkeeping/model assembly steps, not an unfinished fresh-profile
-estimate. The two-sided statement also retains the previously proved
-nonnegativity half; this result alone does not change reporting conventions
-for moment subtraction or finite-real conversions.
+`I417Composition` completes the finite regrouping by `L = ℓ+m` and the
+common-basepoint/canonical-law wrappers. The composed coefficients are explicit
+natural integers (`q` times the base-depth/fresh-depth convolution), as allowed
+by the paper's existence statement. General vertex-transitivity supplies the
+constant row sum, and the new canonical theorem
+`latticeLongRange_moment_gap_le_markedGapPoly` supplies the source's upper
+diagram bound. The companion `latticeLongRange_momentDiff_nonneg_basepoint`
+imports the previously proved same-basepoint nonnegativity. These are native
+`ℝ≥0∞` statements; any real-valued subtraction involving infinite moments
+requires its separately documented finiteness hypotheses.
 
 ## Audits and remaining work
 
@@ -827,6 +833,8 @@ with the strict warning settings and all exported declarations passed the global
 axiom audit.
 
 `I417/MarkedJoint` supplies the arbitrary-`p` canonical marked atlas/BK bound.
-Still open are the fresh tree expansion for `q ≥ 3` and the evaluation as a finite sum of
-`C_{p,q,ℓ} T^ℓ(x,y)(E|K|)^(2p+2q+1−ℓ)` with universal integer constants. The full
-upper diagram bound in Lemma I.4.17 is not proved.
+The later `I417SummedFresh` and `I417Composition` sections above now prove the
+summed general-`q` fresh profile, the printed upper diagram bound, and the
+common-basepoint nonnegative half. The remaining work descends from this lemma,
+rather than from lack of fresh-event estimates. In particular, downstream model
+instantiation and the rest of the paper are separate obligations.
