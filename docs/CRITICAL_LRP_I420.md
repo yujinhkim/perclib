@@ -155,11 +155,23 @@ comparison premise. `case3_hAend_hAmid_split_of_i417` goes further and
 constructs all those tree records from `AuditM1.hasTreeExpansion_family`, using
 strict edge probabilities and first-moment row constancy.
 
-These theorems complete the interface repair, not the model assembly. The
-vanishing averaged threefold estimate and higher-depth tail estimate are still
-explicit hypotheses. Instantiating them for a common tree/cutoff polynomial and
-supplying the source-model moment inputs remain open; no constant is set to
-zero artificially, and no convergence is inferred from the nonvanishing uniform
+`SplitPolygon/Model` also instantiates the genuine `cutPoly` near/far estimate.
+For a nonempty finite window `B` and near set `s`, with the complement in `B`
+beyond norm `R`, `sum_polyK_three_le_near_far` proves
+$$\sum_{y\in B}T^3_{\beta_c,r}(0,y)\le |B|\nabla_R+|s|\nabla_{\beta_c}.$$
+`cutPoly_three_sum_le_near_far` puts this in ENNReal averaged form, and
+`exists_hasSplitPolygonBound_cutPoly_near_far` combines it with the genuine
+higher-depth cutoff rate. Here the threefold factor is
+$\nabla_R+(|s|/|B|)\nabla_{\beta_c}$. `tendsto_near_far_factor` proves that
+this factor tends to zero if the triangle tail and the cardinality ratio both
+do so. The ball/radius choices establishing those analytic limits are not
+constructed here.
+
+These theorems complete the interface repair and the finite-window model
+bound, not the model assembly. The averaged-tail and near-ball cardinality
+limits, the higher-depth triangle-tail limit, a common tree/cutoff polynomial,
+and source-model moment inputs remain open. No constant is set to zero
+artificially, and no convergence is inferred from the nonvanishing uniform
 cutoff factor.
 
 ### Denominator comparison by log-convexity
