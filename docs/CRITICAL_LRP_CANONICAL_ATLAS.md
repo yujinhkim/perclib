@@ -83,11 +83,13 @@ standard-axiom checks for the components.
 ## Remaining work
 
 This does not by itself prove a mixed-`k` hub-star evaluation, a general-p
-cluster volume moment, or I.4.17. The aggregate still runs over plane labelled
-shapes and needs the appropriate child-swap/orbit treatment before a non-plane
-coefficient is inferred. It also does not supply the general non-plane shape
-cardinality, the hub position-sum evaluation, translation-invariant first/second
-moments, regularity inputs, or model sharpness. Those are separate obligations.
+cluster-volume moment, or I.4.17. `TreeExpansion/AtlasRealization/ExactCount`
+independently closes the exact non-plane shape enumeration for `p ≥ 1`, but the
+current canonical cover still runs over plane labelled shapes. Combining that
+count with the canonical events needs the actual event/orbit treatment and
+position-sum evaluation, not merely a shape-cardinality assertion. The hub-star
+evaluation, translation-invariant first/second moments, regularity inputs, and
+model sharpness remain separate obligations.
 
 The small `q = 1` realization and explicit `q = 0` boundary check are evidence of
 non-vacuity, not substitutes for the general moment induction.

@@ -52,6 +52,10 @@ public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.OrbitCount.Asse
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.OrbitCount.Endpoint
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.OrbitCount.Audit
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Closure
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.ExactCount.Defs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.ExactCount.Peel
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.ExactCount.Exact
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.ExactCount.Audit
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.Defs
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.Bound
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.ExampleDefs

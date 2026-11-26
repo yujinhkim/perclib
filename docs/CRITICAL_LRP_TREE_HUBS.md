@@ -90,11 +90,10 @@ finite additive commutative group. The residual `SwapTransport` premise is
 eliminated by the checked realization transport.
 
 These results still have finite edge configurations and finite vertex sets.
-They do not prove a canonical countable-model moment formula, the general mixed
-hub/star evaluation of Lemma I.4.16, or any model sharpness input. Nor do they
-show exact non-plane shape enumeration: `Count.card_LT_fin_le`, hence
-`RTree.card_swapOrbits_fin_le_dfactorial`, is still an upper bound, not an
-asserted exact double-factorial cardinality.
+These finite-ambient results do not by themselves prove a canonical countable-model
+moment formula, the general mixed hub/star evaluation of Lemma I.4.16, or model
+sharpness. Independently, `AtlasRealization/ExactCount` now proves the exact
+non-plane enumeration.
 
 ## Case 3 decorrelation wrapper
 
@@ -114,7 +113,14 @@ proof commentary, not an altered hypothesis in these files.
 
 The existing `TreeExpansion/Basic.lean` docstring mentions `RTree.card_labelled`
 as an intended tree-count interface; there is no Lean declaration of that name
-in the current implementation. The available `Count.card_LT_fin_le` is instead
-an **upper bound** for plane trees. No exact atlas-cardinality theorem is
-claimed by the realization work either: the shape set is a genuine labelled
-binary family, but its exact unlabelled cardinality remains a separate issue.
+in the current implementation. `Count.card_LT_fin_le` is the older plane upper
+bound, not an exact cardinal count.
+
+`AtlasRealization/ExactCount` supplies the missing inverse direction:
+`RTree.insertMap_injective`, `RTree.card_LT_sum_eq`, and
+`RTree.card_LT_fin_eq`. The canonical `peel` recovers the original tree, the
+position chain and the side of insertion. Consequently
+`RTree.card_swapOrbits_fin_eq_dfactorial` proves exactly `(2p-3)!!`
+child-swap classes for `p ≥ 1`. The separate statements
+`card_swapOrbits_fin_zero` and `card_swapOrbits_fin_zero_ne_M` show why `p = 0`
+must be excluded rather than interpreted as one labelled tree.
