@@ -362,6 +362,13 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Eve
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Slot
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Shape
 public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation3.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation3.Main
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation3.Assemble
+public import PercLib.CriticalLRP.Correlation.SixPoint.SocketMirror.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.SocketMirror.Main
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation3.Final
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation3.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Bridge
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Eval

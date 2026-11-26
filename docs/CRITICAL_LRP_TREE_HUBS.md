@@ -305,8 +305,8 @@ hypothesis is used for these equalities. Consequently `rootClass_collapse`
 discharges the former collapse premise, and
 `fifth_moment_k2_le_of_rootSlot_bounds` asks for the twelve off-middle
 root-class mass bounds; the collapse does not supply those bounds itself.
-The complete `p = 5, k = 2` fifth-moment inequality remains open, and Lemma
-I.4.16 stays partial.
+The subsequent event and socket work below discharges them for this finite
+case. Lemma I.4.16 stays partial at general `p`.
 
 `SplitEval2.RootSocket`, independently rebuilt and accepted from
 `smwxii2d9/m1`, supplies fifteen genuine slot-product evaluations: both
@@ -326,7 +326,18 @@ both canonical root classes there, and hence all fifteen labelled shapes.
 `fifth_moment_k2_le_of_rootSlot_bounds_away` therefore leaves exactly the
 ten root-class bounds at `j = 0,1,4,5,6`.
 
-That wrapper is still conditional. The remaining work is the analogous
-union/measure and summation bridge at `j = 4` and assembly with the earlier
-certificates at `j = 0,1,5,6`; this is **not yet** the unconditional
-`p = 5, k = 2` fifth-moment inequality of Lemma I.4.16.
+`SixPoint.SplitEvaluation3`, independently rebuilt from `smwxk27m7/m2`,
+closes the same measured event/summation bridge at `j = 0,1,5,6`, for both
+canonical root classes. The reviewed mirror core from `smwxk27m7/m3` in
+`SixPoint.SocketMirror` proves `shapeTotal_three_eq_four` for all fifteen
+patterns by swapping leaves `b₃,b₄`; it does not move the root, reverse any
+path, or assume profile invariance.
+
+Thus all twelve off-middle root-class bounds are discharged and
+`SixPoint.SplitEval3.fifth_moment_mixed_k2_le` proves the **unconditional**
+`p = 5, k = 2` fifth-moment inequality for a countable abelian group with full
+profile invariance. The canonical specialization
+`latticeLongRange_fifth_moment_mixed_k2_le` uses the proved translation
+invariance of the long-range kernel. Neither uses moment finiteness,
+subcriticality, or an extra event-cover hypothesis. This completes `p = 5`
+in those stated models, not the remaining general-`p` portion of Lemma I.4.16.
