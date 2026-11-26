@@ -233,8 +233,41 @@ It is a fully assembled positive-`p`, `q = 1` case, not a proof for `q ≥ 2`.
 The general mixed-`k` evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform
 general-`p,q` upper diagram bound remain open.
 
-## The one-arm marked factor, completed
+## Marked depth on a child-swap transversal
 
+`I417/MarkedJoint/Transversal` strengthens the canonical marked bound to one plane
+representative per child-swap orbit. `jointPow_le_markedTransversalBound` derives the
+inequality directly from the canonical transversal cover, for every `p`, not by dividing
+the earlier `ENNReal` bound by a multiplicity. The pin is still the physical value of the
+actual terminal `Fin.last p`, and every physical collision and empty diagonal witness is
+preserved. The old shape sum is compared exactly by
+`markedAtlasBound_eq_two_pow_mul_markedTransversalBound`:
+`markedAtlasBound = 2^p * markedTransversalBound`.
+
+`Depth.lean` then proves that every transversal element is fully labelled and reindexes its
+terminal labels by the genuine leaf-position bijection. `posSum_pin_eq_leafPos` carries
+the *same* marked label to its leaf; `transversal_term_eq` evaluates each diagram by the
+marked depth. Therefore `markedTransversalBound_eq_sum_depth` produces finite coefficients
+`nonplaneMarkedCount p ℓ`, counted directly on the filtered transversal with no choice of a
+child or arbitrary relabelling. At positive `p`, depth one is excluded. At `p = 1`, the
+coefficient at depth two is `nonplaneMarkedCount_one_two = 1`, not its plane analogue `2`.
+
+The resulting `jointPow_le_nonplane_markedDepth`, `moment_gap_q_one_le_nonplane`,
+`moment_gap_q_one_le_nonplane_of_transitive`, and
+`latticeLongRange_moment_gap_q_one_le_nonplane` assemble the positive-`p`, `q = 1` bound
+with these non-plane coefficients. They use the same hypotheses as the earlier positive-`p`
+assembly, and the power-law specialization has no extra subcriticality or moment-finiteness
+premise.
+
+Count normalization is proved at the **total** level:
+`sum_nonplaneMarkedCount = M p`, and
+`sum_markedCount = 2^p * sum_nonplaneMarkedCount`.
+The per-depth identification `markedCount p ℓ = 2^p * nonplaneMarkedCount p ℓ` is **not**
+proved: its remaining work is transport of marked positions/depths under the label
+equivalence and subdivision of the filtered orbits. It must not be inferred from these
+total identities. The full fresh-side general-`q` bound also remains open.
+
+## The one-arm marked factor, completed
 `I417/Base/MarkedOne` proves `branch_three`, a deterministic decomposition of
 any two connections `x ↔ u` and `x ↔ w` at a common branch point into pairwise
 edge-disjoint open witnesses. Geodesic splitting and maximally overlapping
