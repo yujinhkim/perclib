@@ -27,12 +27,21 @@ module
 
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Hub.Main
 
-@[expose] public section
+/-! # Coordinates of hub-star edges and of the hub itself
+
+The internal address map `pathOf` and its inverse `iposOfPath` identify hub slots with
+realized atlas edges. `upEdge_dstPos` proves that the parent edge always ends at the hub position.
+Its source need not be that position: `src_upEdge` distinguishes the root-leaf coordinate from
+an internal parent vertex. This is the root-versus-parent distinction needed for joint-hub
+diagram evaluation.
+-/
 
 set_option autoImplicit false
 set_option linter.unusedSectionVars false
 set_option linter.unusedFintypeInType false
 set_option linter.unusedDecidableInType false
+
+@[expose] public section
 
 namespace PercLib.CriticalLRP.TreeExpansion.Real
 
@@ -159,5 +168,23 @@ theorem rootEdge_mem_hubStarAEdges (t : RTree α) (v : t.IPos)
     simp [RTree.upEdge, hv]
   rw [hubStarAEdges_eq, h, atlasEdgeEquiv_root]
   simp
+
+/--
+The up edge's source is the root-leaf coordinate for a root edge, or the parent internal
+vertex.
+Its source need not be the hub `φ v`, even though its destination is always `φ v`.
+This is the positional distinction needed by the parent/pair slot evaluation. -/
+theorem src_upEdge (t : RTree α) (s : List Bool) (hs : s ∈ RTree.ipaths t)
+    (φ : t.IPos → V) (c : V) :
+    srcPos t φ c (atlasEdgeEquiv t (RTree.upEdge t s hs)) =
+      if h : s = [] then c else
+        φ (RTree.iposOfPath t s.dropLast (RTree.dropLast_mem_ipaths hs h)) := by
+  rw [RTree.upEdge]
+  split_ifs with h
+  · cases h
+    rw [atlasEdgeEquiv_root]
+    rfl
+  · rw [atlasEdgeEquiv_inl]
+    rfl
 
 end PercLib.CriticalLRP.TreeExpansion.Real

@@ -44,6 +44,7 @@ set_option linter.hashCommand false
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.childPos_iposOfPath_app
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.atlasEdgeEquiv_inl
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.upEdge_dstPos
+#print axioms PercLib.CriticalLRP.TreeExpansion.Real.src_upEdge
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.hubStarAEdges_eq
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.hubStarAEdges_incident
 #print axioms PercLib.CriticalLRP.TreeExpansion.Real.rootEdge_mem_hubStarAEdges

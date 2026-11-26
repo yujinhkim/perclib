@@ -176,8 +176,9 @@ explains why joint probabilities and raw product majorants are not interchangeab
 
 The `p = 3` proof uses production's walk-based `triple_cover`, not a completed
 `RTree`-indexed hub cover. Parent/up-arm transport across all of `hubStarJoint`, including
-the parity/root split, is still missing. No generalisation to `k ≥ 2`, `p = 5`, or `q ≥ 3`
-is asserted.
+the parity/root split, is still missing. The coordinate lemma `src_upEdge` makes that slot
+explicit: its source is the root-leaf coordinate or the actual internal parent, not forced to
+be the hub position. No generalisation to `k ≥ 2`, `p = 5`, or `q ≥ 3` is asserted.
 
 ## Remaining work
 
