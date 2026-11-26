@@ -55,6 +55,32 @@ The dominance maps use `r ≥ 1`. They should not be silently generalized to all
 positive radii when quoting the paper's bounds for very small cutoffs: that
 range requires an appropriate source profile convention or a separate argument.
 
+## Boundary conditions and expanded audit
+
+The independently rebuilt and accepted `smwxuymqb/m2` review found that the core
+31-declaration chain was already integrated, so it is not claimed as new work.
+Its focused build is repaired with only lexical changes; the separate audit is
+now checked for all 43 declarations. The additional
+`CutoffDominated.AuditExtras` lemmas establish:
+
+* The edge comparison needs only `0 ≤ K 0` at a loop, although the Bernoulli-law
+  construction still uses `K 0 = 0` for nonnegativity and for agreement with the
+  radial kernel. A negative diagonal gives an explicit counterexample to the loop
+  comparison as well as to nonnegativity of the uncut kernel.
+* `K 1 > 0` is essential for strict domination. With `K 1 = 0`, the division
+  convention makes `1 − K r / K 1 = 1`. With `K 1 > 0`, strict domination holds
+  exactly when `K r > 0`; if the profile is normalized to `K 1 = 1`, the
+  coefficient is simply `K r`.
+* On the raw sup-norm lattice, the cutoff kernel is zero for `r ≤ 1`. Hence there
+  is a radius-dependent positive coefficient for every real `r`, obtained by the
+  reduction at `r ≥ 1` and by a trivial comparison at `r ≤ 1`. This is only an
+  edge/domination result for the raw sup-norm, **not** a claim for every normalized
+  source norm, and it supplies no moment finiteness or critical asymptotic.
+
+The finite upstream reduced-parameter mean (`hfin`) remains **unproved**. The
+threshold control `β(1−ε) < β`, `cutoffPiFamily`, and monomial-splitting were not
+introduced or revived by this auxiliary extension.
+
 ## General source norms versus the raw sup-norm coefficient
 
 The formula `ε(r) = K r / K 1` above is for the **raw sup-norm lattice**, where

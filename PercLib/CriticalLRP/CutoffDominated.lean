@@ -71,7 +71,7 @@ module
 public import PercLib.CriticalLRP.CutoffLimit
 public import PercLib.CriticalLRP.CountableProduct.MonotoneMoments
 
-set_option autoImplicit true
+/-! # Cutoff domination and transfer of cluster moments -/
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedVariables false
@@ -98,7 +98,7 @@ theorem uncutKernel_shift (K : ℝ → ℝ) (a : Fin d → ℤ) (e : Sym2 (Fin d
   induction e using Sym2.ind with
   | _ x y =>
     rw [Sym2.map_mk]
-    show K ((linfNorm ((y + a) - (x + a)) : ℕ) : ℝ) = K ((linfNorm (y - x) : ℕ) : ℝ)
+    change K ((linfNorm ((y + a) - (x + a)) : ℕ) : ℝ) = K ((linfNorm (y - x) : ℕ) : ℝ)
     rw [show (y + a) - (x + a) = y - x by abel]
 
 /-! ## The coefficient `1 − K r / K 1` -/
@@ -152,7 +152,7 @@ theorem cutoffSymKernel_le_scaled (hK : AntitoneOn K (Set.Ioi 0))
           (profile_even K) e := by
   induction e using Sym2.ind with
   | _ x y =>
-    show cutoffSymKernel K d r s(x, y)
+    change cutoffSymKernel K d r s(x, y)
       ≤ (1 - K r / K 1) * K ((linfNorm (y - x) : ℕ) : ℝ)
     rw [show ((linfNorm (y - x) : ℕ) : ℝ) = latticeDist x y from by
       unfold latticeDist
@@ -192,7 +192,8 @@ theorem bernoulliEdgeProb_cutoff_le_scaled (hK : AntitoneOn K (Set.Ioi 0))
   refine bernoulliEdgeProb_le_of_mul_le (cutoffSymKernel_nonneg' hK d r)
     (uncutKernel_nonneg hKnn hK0 d) ?_
   have hdom := cutoffSymKernel_le_scaled hK hKnn hK0 hr hKr hK1 e
-  have hcoef : ((β * NNReal.mk (1 - K r / K 1) (cutoffCoefficient_nonneg hK hr hKr hK1) : NNReal) : ℝ)
+  have hcoef : ((β * NNReal.mk (1 - K r / K 1)
+      (cutoffCoefficient_nonneg hK hr hKr hK1) : NNReal) : ℝ)
       = (β : ℝ) * (1 - K r / K 1) := by
     simp only [NNReal.coe_mul, NNReal.coe_mk]
   rw [hcoef]
@@ -466,7 +467,7 @@ theorem cutoffSymKernel_eq_cutoffKernel (K : ℝ → ℝ) (r : ℝ) (x y : Fin d
 theorem kernelJ_eq_radialKernel (K : ℝ → ℝ) (x y : Fin d → ℤ) (hxy : x ≠ y) :
     kernelJ (fun y : Fin d → ℤ => K ((linfNorm y : ℕ) : ℝ)) (profile_even K) s(x, y)
       = radialKernel K (latticeDist (d := d)) x y := by
-  show K ((linfNorm (y - x) : ℕ) : ℝ) = radialKernel K (latticeDist (d := d)) x y
+  change K ((linfNorm (y - x) : ℕ) : ℝ) = radialKernel K (latticeDist (d := d)) x y
   rw [radialKernel_eq_of_ne K _ hxy,
     show latticeDist x y = ((linfNorm (y - x) : ℕ) : ℝ) from by
       unfold latticeDist
@@ -482,7 +483,7 @@ theorem cutoffSymKernel_loop (K : ℝ → ℝ) (r : ℝ) (x : Fin d → ℤ) :
 only through the factor `1 − K r / K 1` of Definition I.1.5. -/
 theorem kernelJ_loop {K : ℝ → ℝ} (hK0 : K 0 = 0) (x : Fin d → ℤ) :
     kernelJ (fun y : Fin d → ℤ => K ((linfNorm y : ℕ) : ℝ)) (profile_even K) s(x, x) = 0 := by
-  show K ((linfNorm (x - x) : ℕ) : ℝ) = 0
+  change K ((linfNorm (x - x) : ℕ) : ℝ) = 0
   rw [sub_self, show linfNorm (0 : Fin d → ℤ) = 0 from linfNorm_eq_zero_iff.mpr rfl]
   simp [hK0]
 
@@ -588,37 +589,3 @@ theorem modelProfile_longRangeMeasure_cutoff_dominated {d : ℕ} {α : ℝ} (hα
   nlinarith [hdom, hβ]
 
 end PercLib.CriticalLRP.CutoffDominated
-
-/-! ## Axiom audit -/
-
-#print axioms PercLib.CriticalLRP.CutoffDominated.uncutKernel_shift
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoffCoefficient_mem
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoffSymKernel_le_scaled
-#print axioms PercLib.CriticalLRP.CutoffDominated.bernoulliEdgeProb_le_of_mul_le
-#print axioms PercLib.CriticalLRP.CutoffDominated.bernoulliEdgeProb_cutoff_le_scaled
-#print axioms PercLib.CriticalLRP.CutoffDominated.longRangeMeasure_cutoff_dominated
-#print axioms PercLib.CriticalLRP.CutoffDominated.infiniteClusterProb_cutoff_le
-#print axioms PercLib.CriticalLRP.CutoffDominated.infiniteClusterProb_cutoff_eq_zero
-#print axioms PercLib.CriticalLRP.CutoffDominated.lintegral_clusterVol_cutoff_le
-#print axioms PercLib.CriticalLRP.CutoffDominated.lintegral_clusterVol_cutoff_ne_top
-#print axioms PercLib.CriticalLRP.CutoffDominated.uncutKernel_rootIndependent
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoff_clusterVol_sq_ne_top
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoff_joint_windowMoment_ne_top
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoffSymKernel_eq_cutoffKernel
-#print axioms PercLib.CriticalLRP.CutoffDominated.kernelJ_eq_radialKernel
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoffSymKernel_loop
-#print axioms PercLib.CriticalLRP.CutoffDominated.kernelJ_loop
-#print axioms PercLib.CriticalLRP.CutoffDominated.lintegral_clusterVol_cutoff_ne_top_of_subcritical
-#print axioms PercLib.CriticalLRP.CutoffDominated.modelProfile_coefficient
-#print axioms PercLib.CriticalLRP.CutoffDominated.modelProfile_coefficient_lt_one
-#print axioms PercLib.CriticalLRP.CutoffDominated.modelProfile_coefficient_nonneg
-#print axioms PercLib.CriticalLRP.CutoffDominated.modelProfile_cutoffSymKernel_le_scaled
-#print axioms PercLib.CriticalLRP.CutoffDominated.modelProfile_longRangeMeasure_cutoff_dominated
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoff_parameter_lt
-
-#print axioms PercLib.CriticalLRP.CutoffDominated.cutoff_edgeComparison
-#print axioms PercLib.CriticalLRP.CutoffDominated.uncutKernel_rootComparison
-#print axioms PercLib.CriticalLRP.CutoffDominated.uncutKernel_rootComparison_any
-#print axioms PercLib.CriticalLRP.CutoffDominated.lintegral_clusterVol_sq_le_of_pointwise
-#print axioms PercLib.CriticalLRP.CutoffDominated.lintegral_clusterVol_sq_ne_top_of_pointwise
-#print axioms PercLib.CriticalLRP.CutoffDominated.joint_windowMoment_ne_top_of_pointwise

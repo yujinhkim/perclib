@@ -90,6 +90,8 @@ public import PercLib.CriticalLRP.CountableProduct.MassTransport
 public import PercLib.CriticalLRP.CutoffCorner
 public import PercLib.CriticalLRP.CutoffLimit
 public import PercLib.CriticalLRP.CutoffDominated
+public import PercLib.CriticalLRP.CutoffDominated.AuditExtras
+public import PercLib.CriticalLRP.CutoffDominated.Check
 public import PercLib.CriticalLRP.MomentMonotonicity
 public import PercLib.CriticalLRP.TreeExpansion
 public import PercLib.CriticalLRP.MomentDeterminacy
