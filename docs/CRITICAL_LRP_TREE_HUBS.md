@@ -308,8 +308,13 @@ root-class mass bounds. Those bounds are **not** proved: the complete
 `p = 5, k = 2` fifth-moment inequality remains open, and Lemma I.4.16 stays
 partial.
 
-`SplitEval2`, independently rebuilt from `smwxh86dl/m1`, additionally gives
-both `j = 0` root-slot evaluations by a different summation order:
-`slotU2_zero_tsum` (root `b₀`) and `slotV2_zero_tsum` (root `b₂`). Other
-root-slot evaluations, their shape-event and summation-order bridges, and the
-final assembly remain open independently of this progress.
+`SplitEval2.RootSocket`, independently rebuilt and accepted from
+`smwxii2d9/m1`, supplies fifteen genuine slot-product evaluations: both
+pattern root sockets at every split, plus the third admissible socket at
+`j = 0`. These equalities use only full profile invariance. Each statement
+sums seven variables--five nonroot comb terminals and two interior vertices--in
+its explicitly stated peel order. The pin uses `tsum_jointP_centre` for an
+arbitrary held vertex, not an independence or moment-finiteness premise.
+These are socket-level identities, not shape-mass bounds: the event-level
+bridges at `j = 3,4`, the permutation from each peel order to the assembly's
+pattern order, and the final fifth-moment assembly remain open.
