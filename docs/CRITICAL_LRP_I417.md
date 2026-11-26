@@ -326,6 +326,45 @@ Only the base marked moment remains unevaluated there. For `q ≥ 3`, a
 `q+1`-terminal tree-graph decomposition is needed; the three-terminal expansion
 does not extend merely by repetition. No general-`q` proof is claimed.
 
+## The two-arm fresh polynomial and its exponent gap
+
+`I417FreshTwo.tsum_leafShape_eq_poly` in `Fresh/Two/Poly` evaluates the summed
+fresh labelled diagrams exactly as
+`χ³ T²(w,y) + 2 χ² T³(w,y)`.
+The first term comes from the branch point carrying the y-leg at its first internal
+vertex; the second comes from the two swapped placements of the third diagram point.
+This is an equality of **diagram sums**, not an assertion that the fresh probability
+itself has this exact value. By BK and the existing event bounds,
+`tsum_freshMark_le_poly` gives the corresponding inequality for the actual fresh
+factor, using only `π e < 1` and a constant two-point row sum.
+
+`moment_gap_two_le_poly` composes the non-plane marked coefficients with that
+fresh polynomial, and `moment_gap_two_le_poly_transitive` supplies the transitivity
+input through profile-preserving vertex permutations. The resulting bound has the
+two families
+`2 C(p,ℓ) χ^(2p+4-ℓ) T^(ℓ+2)(x,y)` and
+`4 C(p,ℓ) χ^(2p+3-ℓ) T^(ℓ+3)(x,y)`
+under `2 ≤ ℓ ≤ p+1`. Its T-powers therefore run from `4` to `p+4`, and every
+monomial has `2p+6` factors. This is a genuine unconditional polygon/mean bound
+at arbitrary positive `p`, not the paper's exact exponent.
+
+The remaining normalization gap is explicit. The source exponent after q = 2 is
+`2p+5-ℓ`, whereas the proved first-family exponent is one larger. Moreover, the
+available second family gains one additional path edge. No reduction of the exponent
+by cancelling large powers against zero-incidence terms is valid here.
+
+`moment_gap_two_le_poly_fourArm` does give the right source exponent,
+`2p+5-(ℓm+2)`, with `2 ≤ ℓm ≤ p+1`. It gives the corresponding range
+`4 ≤ ℓm+2 ≤ p+3`, inside the paper's `3 ≤ ℓ ≤ p+3`. **However**, its consistency
+check requires the additional fresh hypothesis `hfresh`: the fresh factor must be
+bounded by the four-factor single-hub quantity
+`fourArmFresh π y w = ∑_a τ(w,a)τ(a,y)χ(a)²`.
+This fresh inequality has not been proved. The filename does not
+itself complete the source-shaped bound. `fourArmFresh_eq` merely evaluates its
+hub quantity, and no event-cover argument for it is implied by the proved five-factor
+bound. The `q = 2` source exponent therefore remains an open part of I.4.17,
+despite the complete unconditional alternative majorant above.
+
 ## The fresh hub star is a canonical marked terminal event
 
 `I417/Fresh/HubStar.hubStar_eq_labelEvent_markedExtend` proves the exact set identity

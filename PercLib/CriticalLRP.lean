@@ -171,6 +171,8 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.HubStar
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Audit
