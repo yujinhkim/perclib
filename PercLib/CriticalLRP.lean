@@ -239,6 +239,11 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Profile.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Profile.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Profile.Profile
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Profile.Check
+public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Defs
+public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Main
+public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Compose
+public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Coefficients
+public import PercLib.CriticalLRP.Correlation.I417.SummedFresh.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Chain
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Check

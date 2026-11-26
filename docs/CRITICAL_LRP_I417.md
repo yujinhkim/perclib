@@ -795,6 +795,29 @@ summation over mark positions and family members. The finite diagram
 identities above supply the evaluation only after those inputs; they must not
 be read as a proof of Lemma I.4.17 at general `q` or of mixed-moment bounds.
 
+## The genuinely summed fresh profile at general `q`
+
+`I417SummedFresh`, independently rebuilt and accepted from `smwxtabcx/m2`,
+closes the summed input of the two-copy marked expansion, not merely the
+per-tuple `GenFreshEval`. `armFibreEquiv` proves that the arm tuples pinning a
+fixed attachment history are indexed by the selected arm target alone. Hence
+`tsum_pinned_swap` is an equality exchanging the arm/history sums, after
+which `tsum_histFibre_markDepth_symm` evaluates the selected target. The
+coefficient sum is grouped by finite pin--mark depth branches and gives
+`genCoeff q ℓ * χ^(2q-ℓ) T^ℓ(w,y)` with `ℓ ∈ [1,q]`: exactly `2q` edges.
+The `q = 1` case is proved by BK. No moment-finiteness, subcriticality or
+transitivity hypothesis is introduced. `moment_gap_le_pairPoly` composes this
+with the non-plane marked-depth bound and the polygon identity, with factor
+`q` for the selected arm and total factor count `2p+2q+1`.
+
+The remaining interface is to regroup those `(ℓ,m)` terms by `L = ℓ+m` into
+the printed single-depth sum with explicit integer coefficients, and then to
+specialize to the paper's common-basepoint and canonical-law forms. Those are
+finite bookkeeping/model assembly steps, not an unfinished fresh-profile
+estimate. The two-sided statement also retains the previously proved
+nonnegativity half; this result alone does not change reporting conventions
+for moment subtraction or finite-real conversions.
+
 ## Audits and remaining work
 
 `I417/Nonnegative/Audit.lean`, `I417/Audit.lean`, and `I417Example/Audit.lean`
