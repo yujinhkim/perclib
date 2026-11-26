@@ -152,6 +152,33 @@ positions may coincide, so the naive `(jointP, τ)` weight identification cannot
 uncorrected. No literal `slotChainRoot` pointwise premise is discharged, and the existing
 `RootPairObstruction` shows why one cannot simply relabel fan/chain diagrams to recover it.
 
+## Joint three-point evaluation
+
+`Canonical/Hub/Evaluation` supplies the joint evaluation that `hubStarProd` does not
+provide. `edgeMeasure_hubStarJoint_le_jointP` takes the two down atlas arms and bounds the
+joint hub event by `jointP` with the hub as centre. It is one-way only: dropping the
+disjointness requirement does not give the converse. The separate BK product bound is
+retained rather than identified with that joint quantity.
+
+At the source's `p = 3, k = 1` slots, `hubDiagJoint_eq_starPairEvent` identifies the
+hub-indexed diagram with production's `StarPairEvent`. Its joint pair slot is then bounded
+by `jointP` and its two leaf slots by the two-point functions, yielding `jointP * τ * τ`.
+`hubPairSum_eq_secondMoment` uses full profile translation invariance to evaluate the hub
+sum as the native second moment. The remaining row sums give first moments, and
+`hubSplitSum_eq` evaluates the whole block as `secondMoment * firstMoment²`. Consequently
+`third_moment_hub_le` and its primitive form `third_moment_hub_le'` recover
+`E|K|³ ≤ 3 (E|K|)² E|K|²`, with no finiteness of mean required in `ℝ≥0∞`.
+
+`hubPairJoint_not_subset_hubArmJoint` is a checked `Fin 2` obstruction: the three-point
+event can hold with no three pairwise edge-disjoint witnesses. This does not refute the
+source inequality; it records that only the one-way event comparison is available. It also
+explains why joint probabilities and raw product majorants are not interchangeable.
+
+The `p = 3` proof uses production's walk-based `triple_cover`, not a completed
+`RTree`-indexed hub cover. Parent/up-arm transport across all of `hubStarJoint`, including
+the parity/root split, is still missing. No generalisation to `k ≥ 2`, `p = 5`, or `q ≥ 3`
+is asserted.
+
 ## Remaining work
 
 The general mixed-`k` hub-star evaluation and cluster-moment assembly, and the

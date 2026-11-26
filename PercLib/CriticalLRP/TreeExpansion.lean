@@ -78,6 +78,13 @@ public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.D
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Main
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Marked
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Audit
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Defs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Bridge
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.SourceDiag
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Summation
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Assembly
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Obstruction
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Evaluation.Audit
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.ThirdMoment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Alignment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Expectation.Basic
