@@ -656,9 +656,21 @@ depth. The last is proved using propagated finite slot sets, their disjointness
 and cardinalities and the actual `pathLegsK` recursion, not by enumerating a
 few cases. `tsum_histFibre_markDepth` gives one complete branch profile.
 The additional kernel-orientation proof `tsum_histFibre_kernel_markDepth`
-rewrites this to `T^ℓ(w,y)` using the real percolation-kernel symmetry. What
-remains is assembly of split choices with `genCoeff`, comparison with the
-pinned labelled arms in `genShape`, and full `GenFreshEval`/marked composition.
+rewrites this to `T^ℓ(w,y)` using the real percolation-kernel symmetry.
+`Fresh/Profile` now closes that profile assembly **and the actual
+`I417GenIter.GenFreshEval`** for every `q ≥ 1`:
+`genFreshEval_genCoeff` has only the standard BK hypothesis and the constant
+row sum. `tsum_pinned_le_tsum` compares the genuinely pinned history sum
+with the unrestricted one, `tsum_histW_eq_tsum_histFibre` decomposes it into
+split-choice fibres, and `sum_markDepthK_mul` groups by the actual depth. A
+fixed selected arm is one summand of the unrestricted arm's sum, so no false
+independence or kernel-comparability assumption is introduced. The
+`freshMark_measure_le_genFreshProfile` and `freshMark_measure_le_freshPoly_genCoeff`
+statements put this in the accepted marked-cover form.
+
+This is the complete weighted fresh side, not the marked-side moment
+composition. That composition with `nonplaneMarkedCount` remains the next
+step, not something inferred from this profile alone.
 
 ## The general-`q` iterated first-hit cover
 

@@ -288,3 +288,16 @@ identities for every root placement or every pattern. Missing root slots at
 `j = 1,5`, both comb-root roles at `j = 0,6`, and evaluations of `j = 3,4`
 remain open. In particular this does not close the `105`-pattern k = 2 moment
 assembly.
+
+`SixPoint.K2Mass`, independently rebuilt from `smwxh86dl/m3`, makes the
+residual precise without inventing an event-cover premise.
+`fifth_moment_le_sum_shapeTotal` proves that the fifth moment is at most the
+sum over all true six-terminal shape masses. `shapeTotal_mid_le` discharges
+all fifteen of those masses at the middle split. The final moment bound still
+requires the other shape masses, or root-class bounds plus the still-open
+reindexing from patterns to root classes. The middle result and the arithmetic
+therefore establish neither the off-middle bounds nor the complete fifth
+moment. `SplitEval2`, independently rebuilt from `smwxh86dl/m1`, additionally
+gives both `j = 0` root-slot evaluations by a different summation order:
+`slotU2_zero_tsum` (root `b₀`) and `slotV2_zero_tsum` (root `b₂`). Other
+root slots and the final assembly remain open independently of this progress.
