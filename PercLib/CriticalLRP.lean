@@ -229,6 +229,9 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Spine.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.HistSpine.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.HistSpine.Bridge
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.HistSpine.Check
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Chain
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.SplitClosedForm.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
@@ -324,6 +327,15 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointThree.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointThree.Regroup
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointThree.Bound
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointThree.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Regroup
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitPattern.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Bridge
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Eval
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Five
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Assembly
+public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Norm
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.TwoCentre.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.TwoCentre.Audit

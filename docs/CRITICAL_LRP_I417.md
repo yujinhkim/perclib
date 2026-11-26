@@ -642,9 +642,15 @@ next one-stage input: `splitAt_eq_of_decidableEq` proves independence from the
 index equality instance, while `tsum_splitAt_prod` and `histW_snoc_tsum` sum
 the newly attached arm before collapsing the chain on an actual production
 `Hist.legs`. The corresponding elementary chain identities are also proved.
-The closed form of the *iterated* split weight and the packaging from
-split-choice fibres into the free-arm total and coefficient profile are still
-missing. This module is not another proof of `GenFreshEval`.
+`Fresh/SplitClosedForm` now proves the closed form of the *iterated* split
+weight: `slotW_step` is the exact identity
+`splitWt (slotW (t+1)) (k t) = slotW t`, and `slotW_top` gives the terminal
+kernel. `chainM_pos` excludes empty hanging chains and
+`sum_chainE_add_chainM` proves that exponents plus chain lengths stay
+`2(n+1)`. This module is not another proof of `GenFreshEval`. What remains is
+formal iteration through history fibres, the stage-zero evaluation, and the
+identification of the first slot's chain length with `markDepthK`, before the
+split-choice fibres can be assembled into the free-arm coefficient profile.
 
 ## The general-`q` iterated first-hit cover
 

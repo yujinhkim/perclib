@@ -240,6 +240,28 @@ second uses `p3`, `p4` and the reversed second spine for `conn b3 v ∩ conn b4 
 Together with the three split-arm witness sets these form finite, pairwise
 edge-disjoint certificates. `combSystem_twoJointThree_le` applies the actual
 fivefold finite BK theorem without using the refuted pointwise premise.
-Both joint functions are nevertheless parametrized by `v`; their eventual
-slot evaluation requires a separate argument. The other six split cases,
-normalization and `Fin 15 × Fin 7` assembly are not proved by this helper.
+Both joint functions are nevertheless parametrized by `v`, so their slot
+evaluation needs a separate argument. The other six split cases, normalization
+and `Fin 15 × Fin 7` assembly are not proved by that helper alone.
+
+`SixPoint.TwoJointEval`, reconstructed from the completed work in
+`smwxenel0/m1`, carries that middle-split evaluation to completion for all
+fifteen labelled patterns. `combSystem_union_le` absorbs the internal
+spine/meeting witnesses *inside the event before taking union bounds*;
+`midSlotK2_tsum_root_joint` and `midSlotK2_tsum_root_chain` give exactly
+`(E|K|²)²(E|K|)³`, each under full profile translation invariance. The free
+pairs use `secondMoment_eq` and root independence, while the anchored pair
+uses `tsum_jointP_centre`; the residual order `t`, `b2`, `c` gives
+`(E|K|)³` by two-point column sums. No independence of percolation events or
+moment-finiteness assumption is introduced. This remains the middle split,
+not the other six splits or the complete moment assembly.
+
+`SixPoint.SplitPattern`, independently rebuilt from `smwxenel0/m2`, supplies
+the explicit finite classification of all seven macro-edge split positions.
+There are exactly three independent internal star pairs at each, with three
+source-bipartition choices at the middle position and two at the others.
+`fiveGroup_of_two_stars` retains each star's shared spine within its joint
+certificate. The structurally new cases `j = 0`, `j = 5` and `j = 6` now have
+exact finite two-joint/three-single certificates. The cases `j = 1,3,4` and
+all remaining slot evaluations are still open, so this is combinatorial
+coverage, not a completion of the generalized moment inequality.
