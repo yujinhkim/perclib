@@ -550,6 +550,36 @@ canonical power-law law on `ℤ^d`. These are the same `ℝ≥0∞` subtractive
 moment-gap bounds as the rest of the development; a separate real-valued
 conversion is not restated, and **general `q ≥ 4` is still open**.
 
+## The four-arm first-hit cover and BK bound
+
+`I417FreshFour.Refined` proves the next **event-level** step, not yet the full
+`q = 4` moment inequality. Its bounded `Diag` structure records any finite
+index family of legs with open path witnesses that are pairwise edge-disjoint.
+
+The reusable `Diag`/`step` attachment theorem splits a leg at a point of its
+support, keeps both path halves, and attaches the new first-hit arm. It shows
+that all pairwise disjointness constraints are preserved and takes indices
+from `ι` to `ι ⊕ Bool`, hence from `2q` to `2q+2` legs. `splitAt_left` retains
+the pin `y`, allowing the next first hit.
+
+`freshMark_subset_q4Shape` starts from the actual disjoint halves of the
+selected fresh path and applies this step three times. It gives
+`freshMark ⊆ q4Shape` for every selected arm `j : Fin 4` and every ordering of
+the other three labels. There are no distinctness assumptions, and every
+coinciding attachment or arm is retained. The 48 choices of splits and the
+three summed attachment positions yield eight legs on each diagram.
+`freshMark_measure_le_q4` combines that cover with finite-type BK, reindexed by
+`Fintype.equivFin`, to bound every fresh probability by the sum of the eight
+two-point factors over those 48 diagram families.
+
+The remaining `FreshFourEval` proposition is the weighted evaluation: sum the
+arms and attachment positions to the source Fresh polynomial with eight
+factors, then compose it with the marked depth bound. The independent family
+checker predicts `6χ⁴T⁴+12χ⁵T³+15χ⁶T²+15χ⁷T`, with total count 2q=8 and
+upper endpoint `T⁴`; this separates the verified event cover from the still
+missing sum. In particular the factor-count computation alone does **not**
+close the `q = 4` moment gap or the `2p+9` normalisation.
+
 ## Subdivided-edge diagram values at general `q`
 
 `I417/Fresh/Subdivision` (the independently rebuilt accepted `smwx6p0op/m2`

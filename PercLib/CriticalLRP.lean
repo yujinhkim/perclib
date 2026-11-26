@@ -195,6 +195,11 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Summed
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Compose
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Lattice
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Attach
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Cover
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Bound
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
