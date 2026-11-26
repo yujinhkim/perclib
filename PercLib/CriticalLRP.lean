@@ -141,6 +141,10 @@ public import PercLib.CriticalLRP.Correlation.I417.Base.MarkedOne
 public import PercLib.CriticalLRP.Correlation.I417.Base.MarkedOneAudit
 public import PercLib.CriticalLRP.Correlation.I417.Base.One
 public import PercLib.CriticalLRP.Correlation.I417.Base.OneAudit
+public import PercLib.CriticalLRP.Correlation.I417.Marked.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Marked.Diagram
+public import PercLib.CriticalLRP.Correlation.I417.Marked.Finite
+public import PercLib.CriticalLRP.Correlation.I417.Marked.FiniteAudit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit

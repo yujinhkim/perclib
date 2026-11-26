@@ -125,6 +125,34 @@ from the ordinary full tree expansion. In particular, plain rooted trees can
 also produce depth-one marks; this module does not silently prove away that
 structural issue.
 
+## Finite-ambient arbitrary-`p` marked atlas and diagram evaluation
+
+`TreeExpansion/AtlasRealization/MarkedAtlas` instantiates the actual atlas realization
+and BK union bound with ordinary arms `Fin p` and one distinguished mark. The labels
+are distinct, but terminal vertices may coincide. The marked leaf position comes from
+that label, not from an arbitrary child. `prob_markedBase_le_shapeSum` bounds the finite
+Bernoulli event by labelled shapes and internal-position diagrams, and the finite
+coefficient `markCoeff` groups the diagrams by marked depth. `Example` and `TwoLeaf`
+classify the small shapes: `prob_markedBase_p0` is an exact two-point identity, and the
+`p = 1` evaluations handle the two orderings and their common depth `2`.
+
+Independently, `Correlation/I417/Marked` supplies the label/leaf-position bijection and
+`labelledMarkedDiagram_eq_polygon`. This sums ordinary terminal values, pins the marked
+terminal at `w`, and evaluates the result by the marked depth. Its coefficients are the
+actual finite family cardinalities `markedCount p ℓ`, not an assumed `(2p-1)!!` claim.
+
+`FiniteMarkedJoin` joins these two presentations for finite edge and vertex types.
+`finite_marked_moment_le_polygon_toReal` is its generic finite-kernel formulation;
+`finite_marked_moment_le_polygon_of_real` specializes it to finite Bernoulli connection
+probabilities cast into `ℝ≥0∞`. It uses bounded weights, `BKIncreasing`, and the explicit
+constant row-sum hypothesis expected from transitivity. The proof does not replace
+`ENNReal.toReal` of an infinite quantity with a finite moment, nor introduce a finite-box
+moment as the canonical cluster moment.
+
+The countable canonical instantiation of `I417Gen.jointPow`, the general mixed-`k`
+evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform general-`p,q` upper diagram
+bound remain open. The finite package is not a replacement for those steps.
+
 ## The one-arm marked factor, completed
 
 `I417/Base/MarkedOne` proves `branch_three`, a deterministic decomposition of
