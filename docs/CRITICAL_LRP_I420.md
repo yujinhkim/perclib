@@ -234,6 +234,32 @@ still retain their original vanishing-uniform-polygon, tree, finite-moment,
 homogeneity, edge, window, and lower-comparison hypotheses. Log-convexity does
 not repair the threefold polygon obstruction or discharge any model asymptotic.
 
+### HD(3)-scoped source instantiation
+
+`I420Case3.Scope` supplies the first-moment/HD-tail instantiations without asserting
+new probabilistic inputs. `case3_hAend_hAmid_cutPoly_source_of_HD_case3` gives
+the direct source-ball conclusion with `hP` instantiated by
+`I42C.first_moment_asymptotic_of_rpow_lower` and `hTail` by the second projection
+of `isLogErrorFunction_nablaTail_of_HD_case2_or_case3` at the third HD disjunct.
+`case3_i421_cutPoly_source_of_HD_case3` gives the corresponding normalized
+error version with window finiteness transported to the root by translation.
+
+`case3_hAend_hAmid_cutPoly_source_of_HD_case3_flux` additionally identifies the
+multiplicative ODE error with
+$1-(1-{\cal E}_0)(1-{\cal E}_1)$ using `PivotFlux.cutMass_ODE_of_flux`. It derives
+finiteness, positivity and the uniform error bound from its other premises, but
+retains the derivative/flux handoff, second-moment finiteness, the lower
+two-point bound and cut-error measurability. `tendsto_cutError_of_tendsto_cutE1`
+reduces the vanishing error to the shipped standardization limit plus $E_1\to0$.
+`openTriangleSelf_lt_top_of_source_sqrt` is only a conditional $\ell^2$
+factorization wrapper: it does not derive finite triangle mass from HD(3).
+
+The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
+bounds, cut-error measurability, higher-moment finiteness, second-moment lower
+comparison and finite triangle condition all remain separate model inputs. The
+first-moment and tail-scope wiring is proved; the underlying ODE and moment
+propositions are not thereby completed.
+
 ## What is not closed
 
 - Case 3 remains incomplete: the corrected tree range, polynomial bridge,
