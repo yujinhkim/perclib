@@ -167,7 +167,7 @@ The finite package is unconditionally a finite-model result. The next section re
 its genuinely countable canonical counterpart; polygon evaluation and the other open
 steps are not inferred from finite-volume results.
 
-## Canonical arbitrary-`p` marked atlas bound
+## Canonical arbitrary-`p` marked atlas and polygon bounds
 
 `I417/MarkedJoint` now bounds `I417Gen.jointPow π x p w` for **arbitrary countable** `V`,
 every `p`, and every opening profile with `π e < 1`. The bound is the sum over fully
@@ -182,8 +182,44 @@ The label map is `markedExtend w f = Fin.snoc f w`. Its image equivalence
 an arbitrary terminal. `jointPow_le_markedAtlasBound` applies the canonical covering and
 finite-index BK bound, then reindexes the shape, position, and terminal sums.
 `jointPow_le_tsum_marked_atlas` gives that same bound in its literal nested-`tsum` form;
-`jointPow_zero_eq` checks the no-arm boundary exactly. This is a new canonical atlas
-component of I.4.17, not yet the marked-depth polygon evaluation.
+`jointPow_zero_eq` checks the no-arm boundary exactly.
+
+`I417/MarkedJoint/Relabel` then identifies the atlas sum exactly with
+`labelledMarkedDiagram`. It uses the explicit label equivalence between `Fin (p+1)`
+and `Label p = Fin p ⊕ PUnit`, transports internal positions and atlas products along
+`RTree.mapLabel`, and reindexes the fully labelled shape family. The last label is sent
+to the mark, so the physical pin is unchanged. No `Fintype V` instance or finiteness
+of a sum is needed.
+
+Under a constant two-point row sum `χ`, `jointPow_le_markedPolygonBound` consequently
+bounds `jointPow π x p w` by `markedPolygonBound χ`, namely the finite depth sum
+`markedCount p ℓ · χ^(2p+1-ℓ) · T^ℓ(x,w)`. The exported
+`jointPow_le_markedPolygonBound_via_pending` gives the corresponding assembly directly
+from `jointPow_le_markedAtlasBound`. Relabelling was recovered from the unsubmitted
+`smwwxbtza` candidate and independently rebuilt after reusing the integrated carrier.
+This closes the countable marked polygon evaluation, not the full general-`p,q` upper
+bound of Lemma I.4.17.
+
+## The positive-`p`, `q = 1` moment-gap bound
+
+`MarkedJoint/Relabel/QOne` proves that a leaf of any tree with at least two leaves has
+depth at least two. Consequently `markedCount p 1 = 0` for `1 ≤ p`, and the polygon sum
+at positive `p` has the reduced range `Icc 2 (p+1)`. This does not discard the `p = 0`
+case: there `markedCount 0 1 = 1`, and no zero-arm extension is inferred here.
+
+For countable `V`, `π e < 1`, and `∀ v, meanVol π v = meanVol π x`,
+`moment_gap_q_one_le_of_pos` proves for every `1 ≤ p` that
+
+```text
+momentProd π x y p 1 - rawDiff π x y p 1 ≤
+  ∑ ℓ ∈ Icc 2 (p+1),
+    markedCount p ℓ · (meanVol π x)^(2p+2-ℓ) · T^(ℓ+1)(x,y).
+```
+
+The proof supplies the new polygon bound as the `hjoint` input to the existing
+`I417Base.q_one_polygon`. After writing `ℓ+1` as the polygon path length, this is the
+source's `q = 1` range `3 ≤ pathLength ≤ p+2`, with actual diagram-count coefficients.
+It is a fully assembled positive-`p`, `q = 1` case, not a proof for `q ≥ 2`.
 
 The general mixed-`k` evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform
 general-`p,q` upper diagram bound remain open.
@@ -201,7 +237,8 @@ two-point factor.
 `I417/Base/One.moment_gap_one_one_le` inserts it into the general polygon
 composition and proves, with the same constant mean assumption and BK alone,
 `momentProd − rawDiff ≤ χ² · T³(x,y)`. The one-by-one case of Lemma I.4.17 is
-therefore closed in the canonical model; the general-`p` `hjoint` remains open.
+therefore closed in the canonical model. The general positive-`p` case is discharged
+separately by `MarkedJoint/Relabel/QOne` above.
 The unused draft `twoLeafMarked` index family was deliberately not integrated:
 the underlying `RTree.depth` increment convention gives a two-leaf marked path
 depth `2`, matching the above bound.
@@ -270,7 +307,6 @@ with the strict warning settings and all exported declarations passed the global
 axiom audit.
 
 `I417/MarkedJoint` supplies the arbitrary-`p` canonical marked atlas/BK bound.
-Still open are its marked-depth polygon evaluation, the fresh tree expansion for `q ≥ 3`,
-and the evaluation as a finite sum of
+Still open are the fresh tree expansion for `q ≥ 3` and the evaluation as a finite sum of
 `C_{p,q,ℓ} T^ℓ(x,y)(E|K|)^(2p+2q+1−ℓ)` with universal integer constants. The full
 upper diagram bound in Lemma I.4.17 is not proved.

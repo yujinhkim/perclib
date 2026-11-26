@@ -80,16 +80,45 @@ The sum uses the genuine `edgeMeasure` law and countable subadditivity. The
 `Example` and `CanonAtlas.Audit` modules supply small realization checks and
 standard-axiom checks for the components.
 
+## Canonical child-swap transport and the transversal bound
+
+`Canonical/Transversal` transports `IsCanonRealization` across a child swap using
+the existing `SwapIso`. The physical leaf labelling and root are unchanged, and
+the same finite ambient witness sets are reindexed by `aedgeEquiv`. Consequently
+both the event and the ENNReal `tsum` over internal positions are invariant on a
+swap orbit. The same transport reindexes `atlasProduct`, without a finiteness
+assumption on `V` or on any `tsum`.
+
+`canonCover_subset_transversal_iUnion` replaces the full plane-shape cover by one
+representative from `RTree.transversal`. The exported
+`measure_labelEvent_le_sum_transversal_bk` therefore bounds the probability of a
+nonempty finite labelled connection event by a finite sum over orbit
+representatives, with an unrestricted ENNReal position sum for each one. This
+removes the plane multiplicity rather than merely counting the shapes.
+`tsum_shapes_eq_two_pow_mul_sum_transversal` establishes the exact multiplicative
+relationship with the earlier plane-shape sum, and
+`measure_labelEvent_le_tsum_shapes_bk'` rederives that earlier bound from the
+stronger transversal statement.
+
 ## Remaining work
 
-This does not by itself prove a mixed-`k` hub-star evaluation, a general-p
-cluster-volume moment, or I.4.17. `TreeExpansion/AtlasRealization/ExactCount`
-independently closes the exact non-plane shape enumeration for `p ≥ 1`, but the
-current canonical cover still runs over plane labelled shapes. Combining that
-count with the canonical events needs the actual event/orbit treatment and
-position-sum evaluation, not merely a shape-cardinality assertion. The hub-star
-evaluation, translation-invariant first/second moments, regularity inputs, and
-model sharpness remain separate obligations.
+The transversal position sum is definitionally `Real.posSumWtE`, and
+`tsum_atlasProduct_eq_wtE` evaluates it by the already existing countable
+ENNReal bridge `Real.posSumWtE_eq_wtE`. Hence
+`measure_labelEvent_le_wtE_transversal_bk` gives the same bound as a sum of
+`I417Base.wtE` tree weights, without a new weight definition or finiteness
+assumption.
+
+## Remaining work
+
+This does not prove a mixed-`k` hub-star evaluation, a general-p cluster-volume
+moment, or I.4.17. The orbit-representative weighted non-plane bound and the
+double-factorial coefficient are not inferred from the shape multiplicity alone.
+
+`TreeExpansion/AtlasRealization/ExactCount` independently closes the exact
+non-plane shape enumeration for `p ≥ 1`. The hub-star evaluation,
+translation-invariant first/second moments, regularity inputs, and model
+sharpness remain separate obligations.
 
 The small `q = 1` realization and explicit `q = 0` boundary check are evidence of
 non-vacuity, not substitutes for the general moment induction.

@@ -152,6 +152,10 @@ public import PercLib.CriticalLRP.Correlation.I417.Marked.Audit
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Defs
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Label
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Main
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Defs
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Main
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Audit
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.QOne
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit

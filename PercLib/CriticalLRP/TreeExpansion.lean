@@ -71,6 +71,7 @@ public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Prob
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Example
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Audit
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Join
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Transversal
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.ThirdMoment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Alignment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Expectation.Basic
