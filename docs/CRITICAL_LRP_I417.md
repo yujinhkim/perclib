@@ -512,6 +512,40 @@ A bounded Python experiment accompanying the submission explored this class of
 finite trees; it is not a Lean coverage proof and has not been incorporated into
 any theorem or assumed in a production declaration.
 
+## Subdivided-edge diagram values at general `q`
+
+`I417/Fresh/Subdivision` (the independently rebuilt accepted `smwx6p0op/m2`
+package) supplies the general-`q` diagram and depth machinery that an actual
+fresh-tree cover must feed. It is not a fresh-event cover theorem.
+
+* `subW k t q ℓ v w` is the weight after subdividing the edge above the chosen
+  arm leaf `q` and pinning its subdivision point at `w`. The mark is therefore
+  a vertex on the fresh selected-arm path rather than a new labelled leaf.
+  `subW_eq` proves the shape-independent value
+  `χ^(2*numLeaves t - ℓ) * iterPow k ℓ v w` for every admissible depth, using
+  only a constant row sum.
+* `fresh_family_by_depth` groups a finite family exactly into
+  `C_ℓ χ^(2q-ℓ) T^ℓ`, with `C_ℓ` a cardinality and `1 ≤ ℓ ≤ q`.
+  `comb_subW_max` attains `χ^q T^q` for every positive arm count, so this upper
+  depth endpoint is present. Two- and three-leaf instances are checked,
+  including the same two monomials as the accepted `q = 2` path cover.
+* `base_marked_depth_range` uses the proved non-plane coefficient vanishings
+  to derive nonzero marked depths in `[2,p+1]`. `source_path_range` and
+  `source_edge_count` derive the composed bounds `3 ≤ ℓ ≤ p+q+1` and total
+  `2p+2q+1` edges. `composed_family_le` groups the corresponding finite
+  composed diagram family with explicit cardinal coefficients.
+* `tsum_marked_fresh_eq` sums a marked base diagram and a subdivided fresh
+  diagram over the mark **using the polygon identity**. It is an equality
+  yielding exactly `χ^(2p+2q+1-ℓ) T^ℓ(x,y)`, not a per-position upper bound
+  that cannot be summed. `tsum_marked_fresh_eq_two` reproduces the two
+  accepted `q = 2` monomials after the same mark summation.
+
+What remains is the configuration-level cover of `freshMark` by a finite
+family of such diagrams, followed by its union/BK estimate and interchange of
+summation over mark positions and family members. The finite diagram
+identities above supply the evaluation only after those inputs; they must not
+be read as a proof of Lemma I.4.17 at general `q` or of mixed-moment bounds.
+
 ## Audits and remaining work
 
 `I417/Nonnegative/Audit.lean`, `I417/Audit.lean`, and `I417Example/Audit.lean`
