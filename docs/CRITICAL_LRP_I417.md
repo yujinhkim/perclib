@@ -436,6 +436,38 @@ fresh bound to the remaining hub-moment inequality. That hub-moment inequality
 is still an explicit, unproved hypothesis. No counterexample to the source's
 full upper bound is asserted from the fixed-chain obstruction.
 
+## The fork obstruction and the spine–hub event
+
+`I417/Fresh/Q3Cover` adds the independently rebuilt `smwx5p94b/m3` component.
+It does not settle the proposed chain-plus-fork cover or the `q = 3` fresh
+bound.
+
+* The five-edge **fan** has mark `0`, hub `1`, fresh arms `2,3,4`, and marked
+  arm `5`, with edges `0–1`, `0–5`, `1–2`, `1–3`, and `1–4`.
+  `fan_hubEvent` proves its `hubStar` condition; this is the hub-star
+  qualification, not a separately checked `freshMark` statement.
+  `fan_not_forkEvent` proves that for every pair of hubs the production fork
+  event with fixed ordering `![2,3]` and `![4,5]` has no pairwise-disjoint
+  witnesses there. The proof uses five cuts: at most one requirement can use
+  each cut under disjointness, while `fanSep_ge_six` computes total separation
+  at least six. This is the precise fixed-order obstruction, not a theorem
+  about every possible permutation of the four terminals.
+* `spineHubEvent` is a new five-requirement disjoint-occurrence event for
+  `w ↔ a`, `w ↔ y`, and `a ↔ g i` for all three fresh arms.
+  `spineHubEvent_measure_le` is its five-fold BK bound and
+  `fresh_spineHub_le` sums the three arms to
+  `τ(w,a) τ(w,y) χ(a)³`. `fresh_spineHub_le_bound` absorbs this into the
+  hub-summed diagram. These bounds concern the newly defined event; no general
+  inclusion of `freshMark` or `hubStar` in a spine–hub event is asserted.
+* `fan_spineHubEvent` gives explicit five-edge witnesses on the fan and
+  `fan_spineHub_vs_fork` packages that concrete comparison. Fork and spine–hub
+  therefore add genuinely different finite examples, but neither supplies the
+  missing general fresh cover or its evaluation.
+
+A bounded Python experiment accompanying the submission explored this class of
+finite trees; it is not a Lean coverage proof and has not been incorporated into
+any theorem or assumed in a production declaration.
+
 ## Audits and remaining work
 
 `I417/Nonnegative/Audit.lean`, `I417/Audit.lean`, and `I417Example/Audit.lean`

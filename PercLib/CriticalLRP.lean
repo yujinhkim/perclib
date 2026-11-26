@@ -181,6 +181,9 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Fork.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Fork.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Fork.Slack
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Fork.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Q3Cover.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Q3Cover.Main
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Q3Cover.Audit
 public import PercLib.CriticalLRP.Correlation.I417Example.Defs
 public import PercLib.CriticalLRP.Correlation.I417Example.BK
 public import PercLib.CriticalLRP.Correlation.I417Example.Branch
