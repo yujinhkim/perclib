@@ -367,9 +367,53 @@ side to `E|K_0|² = 57/25`, whereas the four-arm quantity is
 are integrated and audited. This is an **inhomogeneous** counterexample to the extra general
 hypothesis, not a counterexample to the theorem on transitive weighted graphs, nor a refutation
 of I.4.17. The conditional interface remains correct where a source of the additional input
-exists, but that interface cannot be discharged generically. A source-faithful fresh expansion
-must avoid this exact auxiliary single-hub form. The proved five-factor alternative majorant is
-unaffected, and the `q = 2` source exponent remains an open part of I.4.17. `fourArmFresh_eq` merely evaluates that quantity; it does not provide a fresh event bound.
+exists, but that interface cannot be discharged generically. The proved five-factor alternative
+majorant remains valid, but is not the source-normalized refinement. `fourArmFresh_eq` merely
+evaluates that quantity; it does not provide a fresh event bound. The following independently
+rebuilt refinement now supplies the missing source argument instead.
+
+## The refined two-arm mark-on-path expansion
+
+`I417FreshTwo.Refined` closes the `q = 2` normalization gap in the transitive setting.
+Unlike the hub-star proxy, it uses the actual disjoint occurrence inside `freshMark` of
+`y ↔ w` and `w ↔ g j`.
+
+`exists_refined_branch` reduces the path witnesses to paths and first-hits the walk
+from the other labelled arm against the union of the two disjoint halves. If the
+first hit is in the `y → w` half, splitting there gives `ShapeA`
+
+  `{y↔p} ∘ {p↔w} ∘ {w↔g j} ∘ {p↔g j'}`.
+
+If it is in the `w → g j` half, splitting there gives `ShapeB`
+
+  `{y↔w} ∘ {w↔p} ∘ {p↔g j} ∘ {p↔g j'}`.
+
+Every witness is retained and all four pairs of witnesses are proved
+edge-disjoint. The proof handles both values of `j : Fin 2` and does not require
+distinct physical positions.
+
+The fourfold BK bound and the two arm sums yield
+`χ² T²(w,y)` from shape A and `χ³ T(w,y)` from shape B, with four two-point
+factors in each term. In particular the `w = y` diagonal is not hidden by the
+refuted single-hub shortcut. `tsum_freshMark_le_refined` needs only BK and a
+constant mean-volume row sum; no finite moment or subcriticality is assumed.
+
+`moment_gap_two_le_refined` composes this with the non-plane marked-depth bound.
+For every `p ≥ 1`, the two coefficient families have
+`2 * nonplaneMarkedCount(p,ℓ)`, `2 ≤ ℓ ≤ p+1`, and respective monomials
+`χ^(2p+3-ℓ) T^(ℓ+2)(x,y)` and `χ^(2p+4-ℓ) T^(ℓ+1)(x,y)`.
+Every monomial has `2p+5` two-point factors and its path power lies in
+`[3,p+3]`, as required by Lemma I.4.17 at `q = 2`. The result is the usual
+`ℝ≥0∞` subtractive moment-gap form. `moment_gap_two_le_refined_transitive`
+discharges the row-sum hypothesis for a vertex-transitive profile, and
+`latticeLongRange_moment_gap_two_le_refined` specializes it to the canonical
+power-law law on `ℤ^d`.
+
+This closes the abstract transitive and canonical-law `q = 2` form. It does not
+solve fresh factors for `q ≥ 3`, general mixed-`k` moments, or a further
+real-valued conversion not stated by this module. The older two-copy upper
+majorants and the inhomogeneous counterexample are retained for provenance and
+must not be confused with these proved normalized bounds.
 
 ## The fresh hub star is a canonical marked terminal event
 

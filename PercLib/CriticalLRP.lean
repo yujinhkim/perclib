@@ -173,6 +173,12 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Main
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Cover
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Bound
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Compose
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Lattice
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Refined.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
