@@ -163,9 +163,30 @@ constant row-sum hypothesis expected from transitivity. The proof does not repla
 `ENNReal.toReal` of an infinite quantity with a finite moment, nor introduce a finite-box
 moment as the canonical cluster moment.
 
-The countable canonical instantiation of `I417Gen.jointPow`, the general mixed-`k`
-evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform general-`p,q` upper diagram
-bound remain open. The finite package is not a replacement for those steps.
+The finite package is unconditionally a finite-model result. The next section records
+its genuinely countable canonical counterpart; polygon evaluation and the other open
+steps are not inferred from finite-volume results.
+
+## Canonical arbitrary-`p` marked atlas bound
+
+`I417/MarkedJoint` now bounds `I417Gen.jointPow π x p w` for **arbitrary countable** `V`,
+every `p`, and every opening profile with `π e < 1`. The bound is the sum over fully
+labelled `(p+1)`-leaf shapes, internal positions, and terminal tuples whose last physical
+value is the mark `w`, of the product of connection probabilities along the atlas edges.
+There is no finite vertex or edge assumption, no extra BK premise, and no finite-cluster
+or finite-moment substitution.
+
+The label map is `markedExtend w f = Fin.snoc f w`. Its image equivalence
+`markedSubtypeEquiv` is exactly the terminal tuples with last value `w`, and
+`labelEvent_markedExtend` identifies the arm-plus-mark event without replacing the mark by
+an arbitrary terminal. `jointPow_le_markedAtlasBound` applies the canonical covering and
+finite-index BK bound, then reindexes the shape, position, and terminal sums.
+`jointPow_le_tsum_marked_atlas` gives that same bound in its literal nested-`tsum` form;
+`jointPow_zero_eq` checks the no-arm boundary exactly. This is a new canonical atlas
+component of I.4.17, not yet the marked-depth polygon evaluation.
+
+The general mixed-`k` evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform
+general-`p,q` upper diagram bound remain open.
 
 ## The one-arm marked factor, completed
 
@@ -248,7 +269,8 @@ theorem is included in the last audit. The new general modules were also rebuilt
 with the strict warning settings and all exported declarations passed the global
 axiom audit.
 
-Still open are the rooted-tree bound on `I417Gen.jointPow`, the fresh tree
-expansion for `q ≥ 3`, and the evaluation as a finite sum of
+`I417/MarkedJoint` supplies the arbitrary-`p` canonical marked atlas/BK bound.
+Still open are its marked-depth polygon evaluation, the fresh tree expansion for `q ≥ 3`,
+and the evaluation as a finite sum of
 `C_{p,q,ℓ} T^ℓ(x,y)(E|K|)^(2p+2q+1−ℓ)` with universal integer constants. The full
 upper diagram bound in Lemma I.4.17 is not proved.
