@@ -307,6 +307,33 @@ justify a chain monomial directly by BK. It does **not** prove or refute
 of Lemma I.4.17. The finite case analysis uses ordinary `decide`, not
 `native_decide`; `ds_no_chainSpider` has only the standard axioms.
 
+## Fork witnesses and the chain slack
+
+`I417/Fresh/Fork` supplies a genuine two-hub alternative to the failed
+configurationwise chain cover. `Q3.forkEvent` asks for six pairwise
+edge-disjoint connection witnesses: one spine from the mark `w` to each of two
+hubs, and two arms from each hub. `forkEvent_measure_le` bounds its probability
+by the corresponding six two-point factors. `fresh_fork_three_le` sums the three
+arm labels explicitly and retains the fourth connection to `y`; it gives
+`τ(w,a) χ(a)² τ(w,b) χ(b) τ(b,y)`. `fresh_fork_le_forkBound` absorbs this term in
+the explicit sum over both hub positions.
+
+This family is non-vacuous exactly where the proposed chain cover fails:
+`ds_forkEvent` constructs six distinct single-edge witnesses on the production
+double-star configuration. `q3_doubleStar_fork_not_chain` combines this with
+`ds_hubEvent` and `ds_no_chainSpider`. This does **not** show that fork events,
+or fork plus chain events, cover all fresh configurations. It does not complete
+the `q = 3` theorem.
+
+`Fork/Slack` also proves the constant-spine evaluation
+`chainTerm_const`, hence
+`tau π w a * (hubArmSum π a + tau π a y)^(q+1)`, and embeds its average over
+`a` into `freshChainBound` by injectivity of the constant-spine map. Thus
+`freshCombBound_of_hubMoment` and its `q = 3` specialization reduce the full
+fresh bound to the remaining hub-moment inequality. That hub-moment inequality
+is still an explicit, unproved hypothesis. No counterexample to the source's
+full upper bound is asserted from the fixed-chain obstruction.
+
 ## Audits and remaining work
 
 `I417/Nonnegative/Audit.lean`, `I417/Audit.lean`, and `I417Example/Audit.lean`
