@@ -59,10 +59,25 @@ public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.Exa
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.TwoLeaf
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.MarkedAtlas.Audit
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Basic
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Defs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Transport
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Cover
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Cases
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Prob
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Example
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Audit
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Join
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.ThirdMoment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Alignment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Expectation.Basic
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Expectation.ErrorBounds
+
+/-!
+# Tree expansions and atlas diagrams
+
+Finite graph, child-swap/orbit, marked-leaf and canonical finite-witness
+components of the labelled tree-graph arguments.
+-/
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedSimpArgs false

@@ -23,6 +23,17 @@ public import PercLib.CriticalLRP.BK.CanonicalCardinal
 public import PercLib.CriticalLRP.BK.BorelReduction
 public import PercLib.CriticalLRP.BK.BKGeneral
 public import PercLib.CriticalLRP.BK.BoolMeasure
+public import PercLib.CriticalLRP.BK.FiniteIndex.Defs
+public import PercLib.CriticalLRP.BK.FiniteIndex.BK
+public import PercLib.CriticalLRP.BK.FiniteIndex.Canonical
+public import PercLib.CriticalLRP.BK.FiniteIndex.Audit
+
+/-!
+# BK inequalities and canonical connection events
+
+This barrel exports finite-graph, finite-index and countable canonical forms of
+disjoint occurrence and BK, including the atlas edge instance.
+-/
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedSimpArgs false
