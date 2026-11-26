@@ -32,6 +32,28 @@ finite-vertex test graph.
 The equality case at zero opening probabilities checks the exact exclusion and
 window normalizations. It is not a lattice sharpness computation.
 
+## Endpoint mass transport
+
+`HigherMoments/I420Endpoint` supplies the equality of the two endpoint mixed
+moments without invoking scalar symmetry or requiring any window symmetry.
+For each `y`, `z ↦ x + y − z` transports `x` to `y` and `y` to `x` while
+preserving the disconnection complement (up to `connects_symm`). The per-site
+and finite-window theorem proves
+
+```text
+E[|K_x|^a 1{y ∉ K_x} |K_y|^b]
+  = E[|K_x|^b 1{y ∉ K_x} |K_y|^a].
+```
+
+`mixedExcl_swap_window` states this for arbitrary `a,b` and arbitrary finite
+`B`, and `mixedExcl_toReal_swap_window` supplies its real-valued version, which
+matches the endpoint `hmass` condition of the analytic second induction.
+`radial_reflect_norm` and `cutKernel_reflect_norm` prove that the normalized
+radial lattice cutoff kernel is preserved by these midpoint reflections, so
+`mixedExcl_cutKernel_swap` instantiates the result at the actual source model.
+The proof uses only profile-preserving permutations, not root-independence of
+the mixed joint moment, finiteness assumptions, or a finite-box replacement.
+
 ## Case 2 (`d = 3α`, hydrodynamic condition)
 
 `VolumeMoments/HigherMoments/I420Case2` proves the cutoff-model
