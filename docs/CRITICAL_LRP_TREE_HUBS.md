@@ -303,10 +303,10 @@ The root and sixth terminal are held fixed, while the four internal witnesses
 remain inside the measured shape event. No invariance or moment-finiteness
 hypothesis is used for these equalities. Consequently `rootClass_collapse`
 discharges the former collapse premise, and
-`fifth_moment_k2_le_of_rootSlot_bounds` leaves only the twelve off-middle
-root-class mass bounds. Those bounds are **not** proved: the complete
-`p = 5, k = 2` fifth-moment inequality remains open, and Lemma I.4.16 stays
-partial.
+`fifth_moment_k2_le_of_rootSlot_bounds` asks for the twelve off-middle
+root-class mass bounds; the collapse does not supply those bounds itself.
+The complete `p = 5, k = 2` fifth-moment inequality remains open, and Lemma
+I.4.16 stays partial.
 
 `SplitEval2.RootSocket`, independently rebuilt and accepted from
 `smwxii2d9/m1`, supplies fifteen genuine slot-product evaluations: both
@@ -315,6 +315,18 @@ pattern root sockets at every split, plus the third admissible socket at
 sums seven variables--five nonroot comb terminals and two interior vertices--in
 its explicitly stated peel order. The pin uses `tsum_jointP_centre` for an
 arbitrary held vertex, not an independence or moment-finiteness premise.
-These are socket-level identities, not shape-mass bounds: the event-level
-bridges at `j = 3,4`, the permutation from each peel order to the assembly's
-pattern order, and the final fifth-moment assembly remain open.
+These are socket-level identities, not shape-mass bounds by themselves.
+
+`SplitEval2.J3`, independently rebuilt and accepted from `smwxk27m7/m1`,
+reconstructs the disjoint-walk certificate at split `j = 3`, takes the
+union measure bound over only the two surviving vertices, and proves the
+sevenfold sum permutation from shape-mass order to socket-peel order.
+`shapeTotal_rootSlot0_three_le` and `shapeTotal_rootSlot2_three_le` close
+both canonical root classes there, and hence all fifteen labelled shapes.
+`fifth_moment_k2_le_of_rootSlot_bounds_away` therefore leaves exactly the
+ten root-class bounds at `j = 0,1,4,5,6`.
+
+That wrapper is still conditional. The remaining work is the analogous
+union/measure and summation bridge at `j = 4` and assembly with the earlier
+certificates at `j = 0,1,5,6`; this is **not yet** the unconditional
+`p = 5, k = 2` fifth-moment inequality of Lemma I.4.16.

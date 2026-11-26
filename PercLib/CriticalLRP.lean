@@ -357,6 +357,11 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.K2Mass.Main
 public import PercLib.CriticalLRP.Correlation.SixPoint.K2Mass.RootCollapse.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.K2Mass.RootCollapse.Main
 public import PercLib.CriticalLRP.Correlation.SixPoint.K2Mass.RootCollapse.Check
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Event
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Slot
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.J3Shape
+public import PercLib.CriticalLRP.Correlation.SixPoint.SplitEvaluation2.J3.Check
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Bridge
 public import PercLib.CriticalLRP.Correlation.SixPoint.TwoJointEval.Eval
