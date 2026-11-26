@@ -103,9 +103,11 @@ No zero-exponent extension is asserted: `pairExcl` contains a non-connection
 indicator and is not generally equal to `pairFactor`. The original broad-range
 wrappers retain that input; `SplitPolygon` below supplies a corrected wrapper
 whose tree range is exactly `ℓ + 1 ≤ p`.
-The tree polynomial here also must not be silently identified with the cutoff
-matrix polynomial in the next subsection; their shared-model bridge is separate
-unfinished work.
+For the cutoff model, `CutPoly.Bridge` now answers the semantic bridge question.
+`AuditM2.iterPow_eq_Kpow` proves the two iterates equal for every `ℝ≥0∞` kernel,
+`cutPoly_eq_iterPow_cutProb` identifies their canonical cutoff specializations
+under finite cutoff susceptibility, and `hasTreeExpansion_cutPoly` transports
+the positive-exponent tree record to `cutPoly` itself.
 
 ### Genuine cutoff polygon powers and the threefold corner
 
@@ -167,12 +169,24 @@ this factor tends to zero if the triangle tail and the cardinality ratio both
 do so. The ball/radius choices establishing those analytic limits are not
 constructed here.
 
-These theorems complete the interface repair and the finite-window model
-bound, not the model assembly. The averaged-tail and near-ball cardinality
-limits, the higher-depth triangle-tail limit, a common tree/cutoff polynomial,
-and source-model moment inputs remain open. No constant is set to zero
-artificially, and no convergence is inferred from the nonvanishing uniform
-cutoff factor.
+`CutPoly.Bridge` closes the common-polynomial obligation. In particular,
+`iterPow_eq_Kpow` is unconditional in the `ℝ≥0∞` setting, and the full cutoff
+specialization uses exactly the finite first-moment hypothesis already needed
+to identify `cutPoly` with `Kpow`; depths zero and one are checked separately
+without that finiteness input. `SplitPolygon.Eventually` gives the split error
+assembly with finite-window and moment inputs at time infinity only.
+`case3_i421_cutPoly_near_far` now combines all of these results and proves the
+normalized I.4.21 error limit for the canonical cutoff family. Its explicit
+inputs are the first-moment asymptotic, finite triangle, decay of the chosen
+near/far tail and near/window cardinality ratio, decay of the power-rescaled
+triangle tails, moment finiteness and non-degeneracy, and the usual
+second-moment lower comparison.
+
+The interface repair, polynomial bridge and conditional canonical-cutoff error
+assembly are therefore complete. Their tail/cardinality and moment hypotheses
+remain genuine analytic obligations rather than conclusions about the source
+model. No constant is set to zero artificially, and no convergence is inferred
+from the nonvanishing uniform cutoff factor.
 
 ### Denominator comparison by log-convexity
 
@@ -192,11 +206,12 @@ not repair the threefold polygon obstruction or discharge any model asymptotic.
 
 ## What is not closed
 
-- Case 3 remains incomplete: the split wrapper now has the correct positive
-  tree range, but the identification of the tree and cutoff polynomials, the
-  genuine averaged/split $j=3$ estimate, triangle-tail convergence, and the
-  source-model moment inputs still have to be assembled without assuming the
-  refuted vanishing uniform factor.
+- Case 3 remains incomplete: the corrected tree range, polynomial bridge,
+  finite-window near/far estimate and conditional canonical-cutoff error
+  assembly are proved. The actual tail/cardinality convergence inputs and
+  source-model moment inputs still need to be derived; the assembly does not
+  discharge them or prove the direct endpoint/middle-index asymptotics without
+  their separate hypotheses.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
   must be derived from the source model. The first-moment and ODE obligations

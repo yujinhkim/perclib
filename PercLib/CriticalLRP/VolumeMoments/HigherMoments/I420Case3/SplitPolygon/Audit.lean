@@ -4,7 +4,9 @@
 module
 
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Assembly
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Eventually
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Model
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.ModelAssembly
 
 /-! # Axiom audit for the split Case-3 interface -/
 
@@ -23,3 +25,5 @@ set_option linter.hashCommand false
 #print axioms PercLib.CriticalLRP.I420Case3.cutPoly_three_sum_le_near_far
 #print axioms PercLib.CriticalLRP.I420Case3.exists_hasSplitPolygonBound_cutPoly_near_far
 #print axioms PercLib.CriticalLRP.I420Case3.tendsto_near_far_factor
+#print axioms PercLib.CriticalLRP.I420Case3.case3_i421_family_split_eventually
+#print axioms PercLib.CriticalLRP.I420Case3.case3_i421_cutPoly_near_far
