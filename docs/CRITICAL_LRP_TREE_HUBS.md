@@ -293,11 +293,23 @@ assembly.
 residual precise without inventing an event-cover premise.
 `fifth_moment_le_sum_shapeTotal` proves that the fifth moment is at most the
 sum over all true six-terminal shape masses. `shapeTotal_mid_le` discharges
-all fifteen of those masses at the middle split. The final moment bound still
-requires the other shape masses, or root-class bounds plus the still-open
-reindexing from patterns to root classes. The middle result and the arithmetic
-therefore establish neither the off-middle bounds nor the complete fifth
-moment. `SplitEval2`, independently rebuilt from `smwxh86dl/m1`, additionally
-gives both `j = 0` root-slot evaluations by a different summation order:
+all fifteen of those masses at the middle split.
+
+`SixPoint.K2Mass.RootCollapse`, independently rebuilt and accepted from
+`smwxii2d9/m3` at production head `f3bb3eb`, now proves the previously open
+reindexing. `shapeTotal5_rootSlot0/2` identifies each labelled pattern with
+one of two canonical patterns by an explicit `Fin 5` coordinate permutation.
+The root and sixth terminal are held fixed, while the four internal witnesses
+remain inside the measured shape event. No invariance or moment-finiteness
+hypothesis is used for these equalities. Consequently `rootClass_collapse`
+discharges the former collapse premise, and
+`fifth_moment_k2_le_of_rootSlot_bounds` leaves only the twelve off-middle
+root-class mass bounds. Those bounds are **not** proved: the complete
+`p = 5, k = 2` fifth-moment inequality remains open, and Lemma I.4.16 stays
+partial.
+
+`SplitEval2`, independently rebuilt from `smwxh86dl/m1`, additionally gives
+both `j = 0` root-slot evaluations by a different summation order:
 `slotU2_zero_tsum` (root `b₀`) and `slotV2_zero_tsum` (root `b₂`). Other
-root slots and the final assembly remain open independently of this progress.
+root-slot evaluations, their shape-event and summation-order bridges, and the
+final assembly remain open independently of this progress.
