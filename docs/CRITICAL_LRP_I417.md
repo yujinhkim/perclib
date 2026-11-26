@@ -259,13 +259,18 @@ with these non-plane coefficients. They use the same hypotheses as the earlier p
 assembly, and the power-law specialization has no extra subcriticality or moment-finiteness
 premise.
 
-Count normalization is proved at the **total** level:
+Count normalization is proved directly at **each** depth:
+`PerDepth.markedCount_eq_two_pow_mul_nonplaneMarkedCount p ℓ` holds for every `p, ℓ`.
+`leafPosMapLabel`, `markPos_mapLabel`, and `depth_markPos_mapLabel` transport the actual
+marking leaf and depth under the label equivalence. `exists_leafPosSwap` supplies the same
+depth invariance across child swaps, so the native-ℕ decomposition of the depth-filtered
+plane family yields exactly `2^p` representatives per filtered orbit. `nonplaneMarkedCount_zero_one`
+and the two off-range vanishing lemmas cover the zero-arm and depth boundaries. This is not
+inferred from the total identities quoted below.:
 `sum_nonplaneMarkedCount = M p`, and
 `sum_markedCount = 2^p * sum_nonplaneMarkedCount`.
-The per-depth identification `markedCount p ℓ = 2^p * nonplaneMarkedCount p ℓ` is **not**
-proved: its remaining work is transport of marked positions/depths under the label
-equivalence and subdivision of the filtered orbits. It must not be inferred from these
-total identities. The full fresh-side general-`q` bound also remains open.
+The older total identities are compatible consequences of this sharper equality.
+The full fresh-side general-`q` bound remains open.
 
 ## The one-arm marked factor, completed
 `I417/Base/MarkedOne` proves `branch_three`, a deterministic decomposition of

@@ -162,6 +162,8 @@ public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.Defs
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.Main
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.Depth
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.Lattice
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.PerDepth.Defs
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Transversal.PerDepth.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit
