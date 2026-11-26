@@ -89,6 +89,10 @@ public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.U
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.UpArm.UpArm
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.UpArm.ParentIncl
 public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.UpArm.Audit
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Block.Defs
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Block.Assembly
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Block.Summed
+public import PercLib.CriticalLRP.TreeExpansion.AtlasRealization.Canonical.Hub.Block.Audit
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.ThirdMoment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Alignment
 public import PercLib.CriticalLRP.TreeExpansion.SymmetricGroup.Expectation.Basic

@@ -154,3 +154,36 @@ or hubs and do not prove general `k`, a new mixed moment, or an atlas event
 cover.  The full mixed-`k` evaluation remains open.  The parent and root cases
 keep arbitrary coincident positions; only the separately named
 `hubUpSrc_eq_hubPos_iff` characterization uses `Function.Injective φ`.
+
+## The concrete three-leaf hub block
+
+`Canonical/Hub/Block`, from the independently rebuilt partial `smwx6p0op/m3`
+artifact, evaluates one genuine shape without discarding any of its five atlas
+edges. The shape is `node (node (leaf 0) (leaf 1)) (leaf 2)`, with root internal
+hub `hubI` and the other internal vertex `innerI`.
+
+* `canonAtlasEvent_subset_hubSlots` merges the root up arm and the hub's
+  `false` down arm into one joint pair, but retains the `true` down arm and the
+  two off-hub arms as three pairwise-disjoint raw slots. This repairs the
+  omitted-arm defect of the earlier candidate per-position assembly. Every
+  coincidence of physical positions remains allowed.
+* `edgeMeasure_canonAtlasEvent_le_hubBlock` applies BK to the four slots.
+  `hubBlockValue_eq` expands it as
+  `jointP π c (φ innerI) (φ hubI)` times the three raw two-point factors.
+  `tsum_hubBlockValue` evaluates the sum over the three labelled leaf positions
+  exactly as that joint factor times the three free arm sums;
+  `tsum_atlasValue_le_const` supplies the constant row-sum form.
+* `pinnedHubPairSum_eq` identifies a separate pinned joint-pair sum with the
+  second cluster moment, and `tsum_tau_mul_pinnedHubPairSum` evaluates its
+  sum against an incoming two-point factor under translation invariance.
+  The concrete shape's pair has root leaf `c` as one point and `φ innerI` as the
+  other, so this separate slot is **not** an evaluation of the concrete sum.
+  The divergence of the unweighted pinned sum does not by itself supply the
+  paper's total moment or explain away the remaining coupled positions.
+
+This is a finite-shape BK and summation evaluation, not a general mixed-`k`
+realization, a completed event cover, or a new high-order moment bound. Its
+purpose is to retain every arm while exposing, rather than hiding, the missing
+summation over the coupled hub and internal positions. All 48 declarations
+introduced by the package are included in its local axiom audit and the global
+production axiom audit.
