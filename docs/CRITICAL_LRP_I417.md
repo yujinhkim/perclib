@@ -219,6 +219,9 @@ momentProd π x y p 1 - rawDiff π x y p 1 ≤
 The proof supplies the new polygon bound as the `hjoint` input to the existing
 `I417Base.q_one_polygon`. After writing `ℓ+1` as the polygon path length, this is the
 source's `q = 1` range `3 ≤ pathLength ≤ p+2`, with actual diagram-count coefficients.
+`moment_gap_q_one_le_of_transitive_pos` instead supplies vertex-transitivity through
+profile-preserving permutations. `latticeLongRange_moment_gap_q_one_le_of_pos` specializes
+it to the canonical power-law law on `ℤ^d`, with no subcriticality or finite-moment premise.
 It is a fully assembled positive-`p`, `q = 1` case, not a proof for `q ≥ 2`.
 
 The general mixed-`k` evaluation of I.4.16, fresh factors for `q ≥ 3`, and a uniform

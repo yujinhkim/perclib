@@ -156,6 +156,7 @@ public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Defs
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Main
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Audit
 public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.QOne
+public import PercLib.CriticalLRP.Correlation.I417.MarkedJoint.Relabel.Lattice
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit
