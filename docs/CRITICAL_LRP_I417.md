@@ -636,7 +636,55 @@ The separate generalized subdivision package supplies finite diagram consumers,
 but the general-`q` mark-on-path moment theorem still needs this evaluation
 and its outer marked-$p$ composition.
 
-## Subdivided-edge diagram values at general `q`
+## Verified branch cardinalities at arbitrary `q`
+
+`I417FreshDepth` defines `splitChoices`, `pathLegsK`, and `markDepthK` for the
+actual first-hit histories. The depth successor adds one precisely when a path
+leg is split. At `q-1` attachments this yields the source monomial range
+`χ^(2q-ℓ) T^ℓ` with `1 ≤ ℓ ≤ q` and total count `2q`.
+
+`genCoeff q ℓ` is an explicit finite cardinality of split branches of depth
+`ℓ`, not an abstract coefficient without a family. Ordinary `decide`
+computations give `(1)`, `(1,1)`, `(3,3,2)`, `(15,15,12,6)`, and
+`(105,105,90,60,24)` at `q = 1, ..., 5`, with totals `1, 2, 8, 48, 384`.
+The `q = 4` row matches `I417FreshFour.Eval`, and
+`genFreshProfile_eq_freshPoly` is the exact `Subdivision.freshPoly` definition
+with these coefficients.
+
+This is only combinatorial support for weighted evaluation. Finer endpoint
+statements (`legs_wSlot` and the path geometry) are not supplied by these
+modules. Hanging subtrees must also be summed before the constant row sum can
+collapse to powers of `χ`, including splits below `w`, so the plain `subW`
+family cannot simply replace the whole leg-history family. `GenFreshEval` and
+its full moment composition remain open despite the verified coefficient
+counts.
+
+
+`I417FreshDepth` adds the finite combinatorial counterpart of `I417GenIter`'s
+attachment histories. `splitChoices` forgets attachment vertices and arms but
+keeps the actual leg indices, and `pathLegsK`/`markDepthK` propagate the
+pin--mark path count. `markDepthK_succ` proves that it increases by exactly one
+when a path leg is split, and bounds its value by the attachment count plus
+one. At `q-1` attachments this yields the monomial range
+`χ^(2q-ℓ) T^ℓ` with `1 ≤ ℓ ≤ q` and exponents summing to `2q`.
+
+`genCoeff q ℓ = depthCount (q-1) ℓ` is an explicit `Fintype.card` of the split
+branches of length `ℓ`, not a raw global coefficient chosen in the abstract.
+The ordinary-kernel-`decide` computations give rows `(1)`, `(1,1)`,
+`(3,3,2)`, `(15,15,12,6)`, `(105,105,90,60,24)` at `q = 1, ..., 5`, with
+coefficient totals `1, 2, 8, 48, 384`. The `q = 4` row is the verified
+coefficient profile of `I417FreshFour.Eval`, and the `q = 5` row matches the
+branch-evaluation program. `genFreshProfile_eq_freshPoly` identifies this
+definition exactly with `Subdivision.freshPoly` using those coefficients.
+
+This is still **not** a proof of `GenFreshEval`. The artifact's narrative gaps
+remain: finer endpoint/linking statements (`legs_wSlot` and related path
+geometry) must be proved, and pendent subtrees must be summed before the
+constant row sum reduces them to powers of `χ`. Splits below `w` mean the plain
+`subW` family cannot be applied directly to the unrestricted leg histories.
+Both are prerequisites for a general weighted branch evaluation, which is an
+independent remaining obligation, not inferred from coefficient counts alone.
+
 
 `I417/Fresh/Subdivision` (the independently rebuilt accepted `smwx6p0op/m2`
 package) supplies the general-`q` diagram and depth machinery that an actual

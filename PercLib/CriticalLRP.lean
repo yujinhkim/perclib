@@ -205,6 +205,9 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Attach
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Cover
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Bound
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Check
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Depth.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Depth.Main
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Depth.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Engine
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Branch
