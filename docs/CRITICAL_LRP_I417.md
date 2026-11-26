@@ -577,8 +577,64 @@ arms and attachment positions to the source Fresh polynomial with eight
 factors, then compose it with the marked depth bound. The independent family
 checker predicts `6χ⁴T⁴+12χ⁵T³+15χ⁶T²+15χ⁷T`, with total count 2q=8 and
 upper endpoint `T⁴`; this separates the verified event cover from the still
-missing sum. In particular the factor-count computation alone does **not**
-close the `q = 4` moment gap or the `2p+9` normalisation.
+missing sum. The factor-count computation alone did not prove the required sum, but the
+subsequent 48 branch evaluations complete it. Each `ev_i` proves the exact
+weighted value of one branch. The completed aggregation uses every `ev_i`
+fully instantiated by `π`, `y`, `w`, `χ`, and the constant-row-sum hypothesis
+`hχ`, so no unification shortcut changes the data. The resulting
+`tsum_q4_le_profile` and `tsum_freshMark_le_profile` prove
+`6χ⁴T⁴+12χ⁵T³+15χ⁶T²+15χ⁷T` for the actual four-arm fresh factor.
+`freshFourEval_holds` closes the old named `FreshFourEval` premise.
+
+`moment_gap_four_le_eval` then composes this with the non-plane marked-depth
+bound. Every positive `p` has total factor count `2p+9`, with the expected
+$T$-powers in `[3,p+5]`. `moment_gap_four_le_eval_transitive` supplies the
+vertex-transitive case, and `latticeLongRange_moment_gap_four_le_eval`
+specializes the result to the canonical power-law law. The local audit
+prints every `ev_i` as well as these moment bounds, all with the standard three
+axioms. This closes the normalized `q = 4` cases; the general-`q` weighted
+expansion and the remaining cases `q ≥ 5` are still open.
+
+## The general-`q` iterated first-hit cover
+
+`I417GenIter`, from the accepted `smwx9itnu/m2` development, constructs the
+fresh diagram family for arbitrary `q ≥ 2`, reusing the $q=4$ `Diag`/`splitAt`
+interface rather than defining a second incompatible model.
+
+* `Idx 0 = Fin 2` (the two actual selected-path halves), and each attachment
+  changes `Idx n` to `Idx n ⊕ Bool`. `card_Idx` gives cardinality $2(n+1)$;
+  consequently `card_genLegs` at `q-1` attachments gives exactly $2q$ legs.
+* `Hist V n` stores a split index, a first-hit vertex and an attached arm for
+  each attachment, so no label/order data is made up. `Hist.legs` evaluates the
+  history to a diagram and `Hist.arm` records the attached arms explicitly;
+  `genShape` unions those diagrams subject to a chosen enumeration `e` of the
+  non-selected labels. `exists_armEnum` supplies this enumeration by a cardinal
+  argument.
+* `exists_iter_diag` is the induction. From the actual disjoint halves, it does
+  one first hit against the *whole current diagram* at each stage, splits the
+  contained path, attaches precisely the next non-selected arm, and preserves
+  all pairwise edge-disjoint path witnesses. `Hist.first_leg_start` keeps the
+  pin `y` available for each later first hit, including all degenerate choices.
+* `freshMark_subset_genShape` consequently proves the genuine arbitrary-$q$
+  cover at the actual `freshMark` event. `shapeOfI_measure_le` provides
+  finite-type BK after `Fintype.equivFin`, and `freshMark_measure_le_genShape`
+  bounds the actual fresh probability by the sum of the `2q`-leg products.
+  `tsum_freshMark_le_genShape` sums over all arm tuples under a fixed honest
+  enumeration, instead of inventing a permutation factor.
+* `card_histChoices` gives the finite product of split-index cardinalities,
+  with checks $48$ at $q=4$ and $384$ at $q=5$.
+  `card_histChoices` corresponds to $2^n n!$ for $n=q-1$ attachments, not to a
+  hidden empty coefficient assignment. The independent family script confirms
+  every member through $q=5$ has $2q$ legs, tree structure and all arm leaves.
+
+The remaining `GenFreshEval` is the attachment/arm-sum substitution: evaluating
+these products as finite coefficient-weighted
+$C_\ell \chi^{2q-\ell} T^\ell$ with $1\leq\ell\leq q$.
+`freshMark_measure_le_poly` and `freshMark_measure_le_freshPoly` are explicitly
+conditional on that named input; they do not prove general weighted moments.
+The separate generalized subdivision package supplies finite diagram consumers,
+but the general-`q` mark-on-path moment theorem still needs this evaluation
+and its outer marked-$p$ composition.
 
 ## Subdivided-edge diagram values at general `q`
 

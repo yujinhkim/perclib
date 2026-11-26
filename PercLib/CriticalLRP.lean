@@ -200,6 +200,17 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Attach
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Cover
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Bound
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Four.Refined.Check
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Attach
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Cover
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Bound
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Iter.Check
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Engine
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Branch
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Summed
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Moment
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Eval.Check
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
