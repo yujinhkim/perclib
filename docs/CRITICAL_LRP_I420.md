@@ -166,8 +166,16 @@ $$\sum_{y\in B}T^3_{\beta_c,r}(0,y)\le |B|\nabla_R+|s|\nabla_{\beta_c}.$$
 higher-depth cutoff rate. Here the threefold factor is
 $\nabla_R+(|s|/|B|)\nabla_{\beta_c}$. `tendsto_near_far_factor` proves that
 this factor tends to zero if the triangle tail and the cardinality ratio both
-do so. The ball/radius choices establishing those analytic limits are not
-constructed here.
+do so. `SplitPolygon.NearWindow` now supplies those choices for the actual
+source model. For fixed $0<\theta<1$, `exists_source_near_far_ratio` returns
+the finite source balls, near sets at scale $r^\theta$, the required far-region
+nonempty source windows for each nonnegative radius, the far-region condition
+for every $r\ge1$, and a proof that $|s_r|/|B_r|\to0$ using the normalized
+ball-count asymptotic.
+`SplitPolygon.Tails` proves `tendsto_nablaTail_rpow` and
+`power_nablaTail_limits`, so one base hypothesis $\nabla_r\to0$ gives every
+positive power-rescaled tail limit. Finiteness of the triangle alone is not used
+to prove this decay.
 
 `CutPoly.Bridge` closes the common-polynomial obligation. In particular,
 `iterPow_eq_Kpow` is unconditional in the `ℝ≥0∞` setting, and the full cutoff
@@ -180,7 +188,13 @@ normalized I.4.21 error limit for the canonical cutoff family. Its explicit
 inputs are the first-moment asymptotic, finite triangle, decay of the chosen
 near/far tail and near/window cardinality ratio, decay of the power-rescaled
 triangle tails, moment finiteness and non-degeneracy, and the usual
-second-moment lower comparison.
+second-moment lower comparison. Its specialization
+`exists_case3_i421_cutPoly_source` chooses the source balls and $r^\theta$
+near sets directly and takes only the base tail limit in addition to the
+first-moment, finite-triangle, moment-finiteness and lower-comparison inputs.
+Thus the tail/cardinality construction is no longer an unimplemented analytic
+promise; deriving its base tail and model-moment premises remains the
+model-specific work.
 
 The interface repair, polynomial bridge and conditional canonical-cutoff error
 assembly are therefore complete. Their tail/cardinality and moment hypotheses
@@ -207,11 +221,11 @@ not repair the threefold polygon obstruction or discharge any model asymptotic.
 ## What is not closed
 
 - Case 3 remains incomplete: the corrected tree range, polynomial bridge,
-  finite-window near/far estimate and conditional canonical-cutoff error
-  assembly are proved. The actual tail/cardinality convergence inputs and
-  source-model moment inputs still need to be derived; the assembly does not
-  discharge them or prove the direct endpoint/middle-index asymptotics without
-  their separate hypotheses.
+  finite-window near/far estimate, source-ball cardinality construction and
+  conditional canonical-cutoff error assemblies are proved. The base
+  triangle-tail limit, first-moment asymptotic and model moment/second-moment
+  inputs still need to be derived. The direct endpoint/middle-index asymptotics
+  also retain their separate homogeneity and finite-moment requirements.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
   must be derived from the source model. The first-moment and ODE obligations
