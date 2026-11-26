@@ -36,11 +36,13 @@ number of two-point factors.
 * `fourArmFresh π y w` — the **single-hub four-arm** fresh bound `∑_a τ(w,a)τ(a,y)χ(a)²`, which has
   exactly four two-point factors and a `y`-leg of length `2`.  It is the fresh-side input that lands
   exactly on the paper's normalisation `C_{p,2,ℓ} T^ℓ(x,y)(E|K|)^{2p+5-ℓ}` with `3 ≤ ℓ ≤ p+3`
-  (the total factor count `(2p+1) + 4 = 2p+5`).  It is *not* proved here and *not* assumed: the
-  companion file `QTwoMain.lean` proves the exact conditional reduction
-  `fourArmFresh ⇒ the required polygon bound`, and records precisely why the available BK/tree-graph
-  reductions give the five-factor family instead (a vertex `a` carrying four legs `w,y,g 0,g 1`
-  at once, which the two-arm branch decomposition cannot serve).
+  (the total factor count `(2p+1) + 4 = 2p+5`).  This is an auxiliary four-factor candidate,
+  not an axiom or an available general theorem. `Poly/Counterexample.not_fourArmFresh_bound`
+  proves that the corresponding universal hypothesis is false on the inhomogeneous two-edge
+  star at `Fin 3`. The counterexample does not assert a failure of Lemma I.4.17 in the paper's
+  transitive setting. `QTwoMain.lean` gives only the conditional reduction when this extra
+  hypothesis is supplied; it cannot make it available at arbitrary countable vertex types.
+  The proved, unaffected majorant is `freshTwoPoly`.
 
 Definitions only in this file.
 -/

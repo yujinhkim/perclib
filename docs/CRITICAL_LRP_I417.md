@@ -359,11 +359,17 @@ by cancelling large powers against zero-incidence terms is valid here.
 check requires the additional fresh hypothesis `hfresh`: the fresh factor must be
 bounded by the four-factor single-hub quantity
 `fourArmFresh π y w = ∑_a τ(w,a)τ(a,y)χ(a)²`.
-This fresh inequality has not been proved. The filename does not
-itself complete the source-shaped bound. `fourArmFresh_eq` merely evaluates its
-hub quantity, and no event-cover argument for it is implied by the proved five-factor
-bound. The `q = 2` source exponent therefore remains an open part of I.4.17,
-despite the complete unconditional alternative majorant above.
+This additional hypothesis is not merely unproved:
+`Poly/Counterexample.not_fourArmFresh_bound` refutes it on `Fin 3` with two positive
+star edges of weight `1/5`. At `y = w = 0`, `freshMark_self_eq_labelEvent` reduces the left
+side to `E|K_0|² = 57/25`, whereas the four-arm quantity is
+`32547/15625`, strictly smaller. The exact rational calculations and cylinder-measure proofs
+are integrated and audited. This is an **inhomogeneous** counterexample to the extra general
+hypothesis, not a counterexample to the theorem on transitive weighted graphs, nor a refutation
+of I.4.17. The conditional interface remains correct where a source of the additional input
+exists, but that interface cannot be discharged generically. A source-faithful fresh expansion
+must avoid this exact auxiliary single-hub form. The proved five-factor alternative majorant is
+unaffected, and the `q = 2` source exponent remains an open part of I.4.17. `fourArmFresh_eq` merely evaluates that quantity; it does not provide a fresh event bound.
 
 ## The fresh hub star is a canonical marked terminal event
 
