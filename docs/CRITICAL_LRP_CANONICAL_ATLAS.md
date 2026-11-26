@@ -123,6 +123,35 @@ vertex-transitive models, and `latticeLongRange_cardFun_pow_le_dfactorial`
 specializes the result to the canonical power-law law. This finishes the ordinary
 `k = 0` case of Lemma I.4.16 in those models, not the mixed-`k` hub theorem.
 
+## Canonical hub events and regrouping
+
+`Canonical/Hub` carries the valid joint-hub construction to `Config V = Set (Sym2 V)`
+with finite ambient witnesses and no finiteness assumption on the vertex type.
+`hubStarJoint` retains simultaneous edge-disjoint witnesses for a hub's three atlas arms,
+while `hubAllJoint` takes them simultaneously over every selected hub (one configuration
+and one witness family), and `offHubJoint` retains the remaining arms.
+`isCanonRealization_restrictFam` proves these realizations hold with the very same
+witnesses, not newly chosen ones. Only inclusion from the full atlas event is claimed; the
+cross-part intersection need not reconstruct the original joint witness family.
+
+For `π e < 1`, finite-index BK gives inequalities such as
+`edgeMeasure_hubStarJoint_le` against the product of the three raw two-point probabilities,
+and its all-hub counterpart against the `3k` raw factors. `atlasEdgeProd_eq_hubSplit`
+regroups the full raw atlas product into `k` blocks of three and the other
+`2p-1-3k` factors. `exists_canonHub_bound` applies `RTree.exists_hub_structure` with the
+source's parity condition. `exists_hubSelection` chooses these hubs by shape alone, and
+consumers include `edgeMeasure_labelEvent_le_tsum_hubSplit` and
+`jointPow_le_markedHubBound`. The `k = 0` boundary is handled by `hubSplitProd_empty`.
+
+These are canonical witness and BK results, not the mixed-moment evaluations. A product
+`hubStarProd` is not identified with the measure of the joint `hubStarJoint`, and a raw
+single-copy two-point probability is not an in-cluster two- or three-point function. To
+reach the source's mixed-moment inequality one must keep the joint events and evaluate
+their position sums, retaining degeneracies and repeated physical vertices. Arbitrary hub
+positions may coincide, so the naive `(jointP, τ)` weight identification cannot be used
+uncorrected. No literal `slotChainRoot` pointwise premise is discharged, and the existing
+`RootPairObstruction` shows why one cannot simply relabel fan/chain diagrams to recover it.
+
 ## Remaining work
 
 The general mixed-`k` hub-star evaluation and cluster-moment assembly, and the
