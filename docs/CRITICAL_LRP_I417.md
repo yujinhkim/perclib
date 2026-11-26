@@ -647,10 +647,18 @@ weight: `slotW_step` is the exact identity
 `splitWt (slotW (t+1)) (k t) = slotW t`, and `slotW_top` gives the terminal
 kernel. `chainM_pos` excludes empty hanging chains and
 `sum_chainE_add_chainM` proves that exponents plus chain lengths stay
-`2(n+1)`. This module is not another proof of `GenFreshEval`. What remains is
-formal iteration through history fibres, the stage-zero evaluation, and the
-identification of the first slot's chain length with `markDepthK`, before the
-split-choice fibres can be assembled into the free-arm coefficient profile.
+`2(n+1)`. This module is not another proof of `GenFreshEval`. `Fresh/HistFibre` now carries out precisely those next steps:
+`fibreSnocEquiv` transports the true split-choice fibres;
+`histFibre_snoc_splitWt` applies the actual history one-step recursion;
+`histFibre_eq_twoChains` evaluates the singleton stage zero; and
+`markDepthK_eq_chainM` identifies the first slot's chain with the pin–mark
+depth. The last is proved using propagated finite slot sets, their disjointness
+and cardinalities and the actual `pathLegsK` recursion, not by enumerating a
+few cases. `tsum_histFibre_markDepth` gives one complete branch profile.
+The additional kernel-orientation proof `tsum_histFibre_kernel_markDepth`
+rewrites this to `T^ℓ(w,y)` using the real percolation-kernel symmetry. What
+remains is assembly of split choices with `genCoeff`, comparison with the
+pinned labelled arms in `genShape`, and full `GenFreshEval`/marked composition.
 
 ## The general-`q` iterated first-hit cover
 

@@ -275,3 +275,16 @@ residual macro-edges. No independence hypothesis, moment hypothesis or refuted
 `hpoint` premise is used. The remaining step is the **evaluation** of these
 groups, followed by the final terminal/moment assembly, not the finite
 certificate layer.
+
+`SixPoint.SplitEvaluation`, independently rebuilt from `smwxfstjy/m2`, provides
+the analytic evaluations of the three additional configurations. Their values
+at the displayed root placements are exactly `(E|K|²)²(E|K|)³`, obtained by
+peeling two-point row/column sums, then the free and anchored three-point
+functions. Arbitrary terminal-order slot identities and event-union bounds are
+also proved. The final anchored ear is fixed: `b₁` at `j = 0`, `b₂` at `j = 5`,
+and terminal `t` at `j = 6`. `combSystem_swap01` and `one_tsum_le` give the
+arm-symmetry transport to one further root slot at `j = 1`. These are not
+identities for every root placement or every pattern. Missing root slots at
+`j = 1,5`, both comb-root roles at `j = 0,6`, and evaluations of `j = 3,4`
+remain open. In particular this does not close the `105`-pattern k = 2 moment
+assembly.
