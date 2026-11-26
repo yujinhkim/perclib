@@ -187,3 +187,28 @@ purpose is to retain every arm while exposing, rather than hiding, the missing
 summation over the coupled hub and internal positions. All 48 declarations
 introduced by the package are included in its local axiom audit and the global
 production axiom audit.
+
+## Candidate two-centre evaluations at `p = 5`, `k = 2`
+
+`Correlation/SixPoint/MixedK2/TwoCentre` records the verified algebraic part of
+`smwx8o5tv/m3`. These are candidate diagram slots, not a new event cover or an
+unconditional two-hub moment theorem.
+
+* `hubChainA_leaf` sums the two joint pairs at fixed centres to two second
+  cluster moments. `hubChainA_tsum_root_single`, `..._root_single2`,
+  `..._root_joint`, and `..._root_joint'` evaluate four root placements under
+  full translation invariance, yielding `(E|K|²)² χ³` after the three remaining
+  two-point sums. The ears of the other joint pair are not covered by these
+  declarations.
+* `hubTwoCentre_leaf` and its root-in-arm evaluation give the same target
+  normalization for a second candidate shape with one joint pair at each
+  centre. `jointP_le_tau_left/right` supplies the marginal bounds and
+  `firstMoment_le_secondMoment` keeps the first/second-moment comparison
+  explicit.
+
+What remains is the actual `SixPoint.CombSystem`-certificate realization of
+these slots, all seven arm positions, arbitrary root placements, and the event
+cover and final moment assembly. No `hpoint` premise is discharged, and the
+proposed numerical obstruction in the artifact's unchecked notes is **not**
+included as a Lean counterexample or claimed refutation of that premise. The
+complete local audit covers all 15 declarations introduced by this package.

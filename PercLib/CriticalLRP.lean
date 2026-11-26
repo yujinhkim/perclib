@@ -281,6 +281,8 @@ public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Assembly
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Cases
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Chain
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.Norm
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.TwoCentre.Defs
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.TwoCentre.Audit
 public import PercLib.CriticalLRP.Correlation.SixPoint.RootPair.Defs
 public import PercLib.CriticalLRP.Correlation.SixPoint.RootPair.Main
 public import PercLib.CriticalLRP.Correlation.SixPoint.RootPair.Obstruction
