@@ -18,11 +18,14 @@ evaluation of every two-hub slot diagram to `(E|K|^2)^2 (E|K|)^3` give
 
   `E|K|^5 ≤ 105 (E|K|^2)^2 (E|K|)^3`,
 
-which is Lemma I.4.16 at `p = 5`, `k = 2` (the largest admissible `k`, since
-`⌈(p-1)/2⌉ = 2`).  The single remaining premise is the per-shape pointwise five-point event
-bound `hpoint`: the deterministic cover of the five-point connection event by `105` two-hub
-shapes together with the nine-fold BK step.  No diagram evaluation, no normaliser and no
-summation is left open.
+which is the intended Lemma I.4.16 bound at `p = 5`, `k = 2` (the largest admissible
+`k`, since `⌈(p-1)/2⌉ = 2`). The remaining premise is the per-shape pointwise
+five-point event bound `hpoint`: the candidate deterministic cover by `105`
+two-hub shapes, together with the ninefold BK step. This premise is not
+supplied. `Counterexample.Line6.hpoint_false` proves that it fails on the
+non-transitive six-vertex line; that does not refute the paper's transitive
+Lemma I.4.16. Neither conditional assembly below completes that source case
+without a repaired event cover.
 -/
 
 open Set MeasureTheory

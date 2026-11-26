@@ -593,7 +593,23 @@ vertex-transitive case, and `latticeLongRange_moment_gap_four_le_eval`
 specializes the result to the canonical power-law law. The local audit
 prints every `ev_i` as well as these moment bounds, all with the standard three
 axioms. This closes the normalized `q = 4` cases; the general-`q` weighted
-expansion and the remaining cases `q ≥ 5` are still open.
+expansion and the remaining cases `q ≥ 5` were still open at that stage.
+
+## The finite `q = 5` fresh evaluation
+
+`Fresh/Five`, from independently rebuilt `smwxb4a1l/m1`, now proves four
+first-hit attachment rounds directly: `round_q5` retains the selected-arm
+path halves and `exists_diag_q5` gives a genuine ten-leg witnessed diagram.
+It gives the resulting 384-branch cover and finite BK bound, together with
+`tsum_freshMark_le_profile_five` and `freshFiveEval_holds` for
+`24χ⁵T⁵ + 60χ⁶T⁴ + 90χ⁷T³ + 105χ⁸T² + 105χ⁹T`.
+All five labelled arms are retained. The summation sends the arm endpoints
+inside the attachment-vertex sum before peeling off-path vertices; each
+remaining path contributes `T^ℓ` for `ℓ ∈ {1,2,3,4,5}`. A separate
+increasing-tree check independently confirms the coefficient row
+`105,105,90,60,24` by depth. Every branch lemma is explicitly applied in the
+aggregation. This is the **finite fresh-side evaluation**, not yet its
+marked-side moment composition or the general weighted `GenFreshEval`.
 
 ## The general-`q` iterated first-hit cover
 

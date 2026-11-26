@@ -208,7 +208,15 @@ unconditional two-hub moment theorem.
 
 What remains is the actual `SixPoint.CombSystem`-certificate realization of
 these slots, all seven arm positions, arbitrary root placements, and the event
-cover and final moment assembly. No `hpoint` premise is discharged, and the
-proposed numerical obstruction in the artifact's unchecked notes is **not**
-included as a Lean counterexample or claimed refutation of that premise. The
-complete local audit covers all 15 declarations introduced by this package.
+cover and final moment assembly. No `hpoint` premise is discharged.
+`MixedK2/Counterexample`, independently rebuilt from `smwxb4a1l/m3`, now
+proves `Line6.hpoint_false`: on the six-vertex line with each of its five
+edges open independently with probability `1/64`, the five-leaf event costs
+`ε⁵`, while **every** family of 105 slot labellings is bounded by
+`105 * 36 * ε⁷ < ε⁵`. The reachability formulas, cylinder probabilities,
+`τ` formula and finite exponent check are Lean proofs with only the standard
+axioms. The bound `ε⁷` is attained, while the profile is on non-transitive
+`Fin 6`, not an admissible translation-invariant model. Thus this refutes the
+raw candidate two-hub premise, **not** the paper's Lemma I.4.16 and not a
+repaired admissible-class event cover. No transport to `ZMod 6` is asserted
+by this package.
