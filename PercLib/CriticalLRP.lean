@@ -50,6 +50,10 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CutPoly.
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Defs
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Main
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.MomentLogConvex.Audit
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Assembly
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Audit
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Audit
 public import PercLib.CriticalLRP.Analysis.Route3.Defs
 public import PercLib.CriticalLRP.Analysis.Route3.Sums

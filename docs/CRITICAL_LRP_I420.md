@@ -100,8 +100,9 @@ covers exactly `ℓ + 1 ≤ p`, where the second exponent `p - ℓ` is positive.
 does **not** cover `ℓ = p` (`b = 0`), while the existing
 `case3_hAend_hAmid` wrappers quantify their tree input over all `ℓ ≤ p`.
 No zero-exponent extension is asserted: `pairExcl` contains a non-connection
-indicator and is not generally equal to `pairFactor`. Refining that consumer
-range, or supplying the genuinely needed endpoint argument, remains open.
+indicator and is not generally equal to `pairFactor`. The original broad-range
+wrappers retain that input; `SplitPolygon` below supplies a corrected wrapper
+whose tree range is exactly `ℓ + 1 ≤ p`.
 The tree polynomial here also must not be silently identified with the cutoff
 matrix polynomial in the next subsection; their shared-model bridge is separate
 unfinished work.
@@ -127,12 +128,39 @@ finite. Under triangle-tail decay, `tendsto_polygonFactor` instead has limit
 `M.triSelf`. Thus the old single-factor `Bpoly → 0` interface cannot consume
 these genuine cutoff powers at its $j=3$ corner.
 
-A sound repair must retain the $j=3$ contribution separately and use an
-appropriate averaged or split estimate, while applying the vanishing tail rate
-only for $j\ge4$. `prodFactor_le_mixedExcl_add_cutPoly` is only the resulting
-pointwise discrepancy bound: it does not prove the normalized little-o limit,
+`prodFactor_le_mixedExcl_add_cutPoly` is only the resulting pointwise
+discrepancy bound: it does not prove the normalized little-o limit,
 triangle-tail convergence, or the averaged threefold replacement. None of
 those is claimed here.
+
+### Split polygon interface and the corrected tree range
+
+`I420Case3/SplitPolygon` adds the replacement interface rather than weakening
+`HasPolygonBound`. `HasSplitPolygonBound` bounds
+$\sum_{y\in B}\mathrm{poly}\;y\;3$ by $|B|\,B_{\mathrm{three}}$, and separately
+bounds the pointwise entries for $4\le j\le p+2$ using $B_{\mathrm{tail}}$.
+This is the averaged $j=3$ shape used by the normalized discrepancy; it never
+requires the diagonal threefold power itself to tend to zero. For $p\ge1$,
+`HasPolygonBound.hasSplitPolygonBound` gives the conservative conversion with
+the same factor in both slots.
+
+`polygon_sum_le_split`, `prodFactor_le_mixedExcl_add_splitPolygon`, and
+`discR_le_splitPolygon` carry the two factors through the canonical ENNReal and
+finite-real calculations. `case3_i421_family_split` proves the normalized error
+limit when both factors tend to zero.
+`case3_hAend_hAmid_split` proves the endpoint and middle-index ratio limits
+from that split input, moment log-convexity, and tree records only for
+`ℓ + 1 ≤ p`; it has no unused `ℓ = p` tree premise and no separate denominator
+comparison premise. `case3_hAend_hAmid_split_of_i417` goes further and
+constructs all those tree records from `AuditM1.hasTreeExpansion_family`, using
+strict edge probabilities and first-moment row constancy.
+
+These theorems complete the interface repair, not the model assembly. The
+vanishing averaged threefold estimate and higher-depth tail estimate are still
+explicit hypotheses. Instantiating them for a common tree/cutoff polynomial and
+supplying the source-model moment inputs remain open; no constant is set to
+zero artificially, and no convergence is inferred from the nonvanishing uniform
+cutoff factor.
 
 ### Denominator comparison by log-convexity
 
@@ -152,10 +180,11 @@ not repair the threefold polygon obstruction or discharge any model asymptotic.
 
 ## What is not closed
 
-- Case 3 remains incomplete: the consumer's positive-exponent tree range, the
-  identification of the tree and cutoff polynomials, the averaged/split $j=3$
-  estimate, triangle-tail convergence, and the source-model moment inputs all
-  have to be assembled without assuming the refuted vanishing uniform factor.
+- Case 3 remains incomplete: the split wrapper now has the correct positive
+  tree range, but the identification of the tree and cutoff polynomials, the
+  genuine averaged/split $j=3$ estimate, triangle-tail convergence, and the
+  source-model moment inputs still have to be assembled without assuming the
+  refuted vanishing uniform factor.
 - The ordinary general-index tree-graph bound must still be transported to
   the canonical law at the desired order, and first/second moment asymptotics
   must be derived from the source model. The first-moment and ODE obligations
