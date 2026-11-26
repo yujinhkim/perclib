@@ -512,6 +512,44 @@ A bounded Python experiment accompanying the submission explored this class of
 finite trees; it is not a Lean coverage proof and has not been incorporated into
 any theorem or assumed in a production declaration.
 
+## The three-arm mark-on-path expansion
+
+`I417FreshThree.Refined`, from the independently reviewed completed
+`smwx6p0op/m1` artifact, closes the **normalized `q = 3` case**. Its cover does
+not use the incomplete fixed chain-spider, fork, or single-hub families.
+
+`freshMark_subset_shapeQ3` retains the two edge-disjoint halves of the selected
+`y → w → g j` path. It first-hits one other arm against their union, splits the
+hit segment, then first-hits the third arm against the augmented union and
+splits whichever of the four resulting segments it meets. The generic
+`shapeOf_split` lemma preserves every edge-disjointness premise. This gives
+exactly eight six-leg subdivided binary-tree families, including hits on the
+auxiliary arm and all coincident positions and label choices. No branch point
+or arm is discarded by a non-degeneracy assumption.
+
+With `j` the selected arm and the other two labels summed independently,
+sixfold BK and the three-arm row-sum evaluation give
+
+  `∑_g P(freshMark y g j w) ≤
+    2 χ³ T³(w,y) + 3 χ⁴ T²(w,y) + 3 χ⁵ T(w,y)`.
+
+Two depth-three shapes, three depth-two shapes and three depth-one shapes
+explain the coefficients; all three arms are retained and every monomial has
+six fresh two-point factors. `moment_gap_three_le_refined` composes this with
+the non-plane marked-depth bound and the three selected-arm labels. For every
+`p ≥ 1`, its three coefficient families (inside the outer factor `3`) have
+factors `2, 3, 3` times `nonplaneMarkedCount(p,ℓ)` and respective monomials
+`χ^(2p+4-ℓ) T^(ℓ+3)`, `χ^(2p+5-ℓ) T^(ℓ+2)`, and
+`χ^(2p+6-ℓ) T^(ℓ+1)`. Their factor count is exactly `2p+7` and their path
+powers lie inside the printed range `[3,p+4]`.
+
+Only BK and a constant mean-volume row sum are required, not moment finiteness.
+`moment_gap_three_le_refined_transitive` supplies the usual vertex-transitivity
+input, and `latticeLongRange_moment_gap_three_le_refined` instantiates the
+canonical power-law law on `ℤ^d`. These are the same `ℝ≥0∞` subtractive
+moment-gap bounds as the rest of the development; a separate real-valued
+conversion is not restated, and **general `q ≥ 4` is still open**.
+
 ## Subdivided-edge diagram values at general `q`
 
 `I417/Fresh/Subdivision` (the independently rebuilt accepted `smwx6p0op/m2`

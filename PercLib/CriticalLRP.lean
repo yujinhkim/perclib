@@ -188,6 +188,13 @@ public import PercLib.CriticalLRP.Correlation.I417.Fresh.Subdivision.Instances
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Subdivision.Family
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Subdivision.MarkSum
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Subdivision.Audit
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Defs
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Cover
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Bound
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Summed
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Compose
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Lattice
+public import PercLib.CriticalLRP.Correlation.I417.Fresh.Three.Refined.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Two.Poly.Counterexample
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Obstruction.Main
