@@ -145,6 +145,10 @@ public import PercLib.CriticalLRP.Correlation.I417.Marked.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Marked.Diagram
 public import PercLib.CriticalLRP.Correlation.I417.Marked.Finite
 public import PercLib.CriticalLRP.Correlation.I417.Marked.FiniteAudit
+public import PercLib.CriticalLRP.Correlation.I417.Marked.ExampleDefs
+public import PercLib.CriticalLRP.Correlation.I417.Marked.Numerics
+public import PercLib.CriticalLRP.Correlation.I417.Marked.FiniteSum
+public import PercLib.CriticalLRP.Correlation.I417.Marked.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Main
 public import PercLib.CriticalLRP.Correlation.I417.Fresh.Audit

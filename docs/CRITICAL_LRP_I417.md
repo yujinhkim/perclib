@@ -141,6 +141,20 @@ Independently, `Correlation/I417/Marked` supplies the label/leaf-position biject
 terminal at `w`, and evaluates the result by the marked depth. Its coefficients are the
 actual finite family cardinalities `markedCount p ℓ`, not an assumed `(2p-1)!!` claim.
 
+`Marked/Numerics` additionally proves the depth coefficients partition the family,
+with vanishing coefficients outside the legal depth range. `markedCount_one_two =
+2`, `markedCount_one`, and `markedCount_zero` are computed explicitly.
+`markedPolygonBound_zero` and `labelledMarkedDiagram_zero` are both
+`I417Base.iterPow k 1 x w`, with no constant row-sum hypothesis. At `p = 1`,
+`labelledMarkedDiagram_one = 2 * (χ ^ 1 * iterPow k 2 x w)`. The small shapes in
+`ExampleDefs` reuse the independently checked `MarkedAtlas` orderings and their
+distinctness proof rather than introducing another shape-classification shortcut.
+
+`Marked/FiniteSum` supplies the corresponding literal finite sum over shapes,
+label assignments with the mark pinned, and internal positions. It does not
+assert an `ℝ → ℝ≥0∞` transfer without its valuation, nor a canonical countable
+moment bound.
+
 `FiniteMarkedJoin` joins these two presentations for finite edge and vertex types.
 `finite_marked_moment_le_polygon_toReal` is its generic finite-kernel formulation;
 `finite_marked_moment_le_polygon_of_real` specializes it to finite Bernoulli connection
