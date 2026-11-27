@@ -254,6 +254,18 @@ triangle-tail decay, and the explicitly stated root-moment range. Theorems
 `hTail` (the open-triangle-tail decay) and `hVolTail` (the uncut volume-tail
 bound) remain deliberately separate hypotheses.
 
+### Scaled-ℓ∞ low-order cutoff moments
+
+`SplitPolygon.LowMoments` proves `powMomentAt_ne_top_of_le_four` when the
+normalized norm is a positive multiple of `FiniteVolume.linfNorm`: the actual
+first, second, third and fourth cutoff moments are finite from a finite first
+cutoff moment. This uses native third- and fourth-moment proofs, not a limit or
+a high-temperature substitution.
+`exists_case3_i421_cutPoly_source_of_tail_three` then proves the normalized
+Case-3 error at `p=3` with the required root-moment range supplied by that
+single finite first moment and the other independent source inputs. It does not
+supply order $5$, arbitrary order, or general-$p$ Case 3.
+
 ### HD(3)-scoped source instantiation
 
 `I420Case3.Scope` supplies the first-moment/HD-tail instantiations without asserting
