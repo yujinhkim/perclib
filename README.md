@@ -91,7 +91,10 @@ regularity, hP, error measurability and p2H log-integrability retained.
 `SecondMomentMeasurability` uses strict dyadic right-approximants to prove
 the derivative weight and both error functions measurable from tail second-moment
 finiteness; it also removes those measurability premises from the wrappers.
-Absolute continuity and the a.e. radial identity remain open.
+`SecondMomentTail` proves equivalence between interval-FTC data and
+second-moment AC/a.e. differentiation. Producing that identity on arbitrary
+windows, including corner-containing windows, is the next analytic obligation.
+These do not supply all remaining model data.
 These do not supply all remaining model data.
 
 

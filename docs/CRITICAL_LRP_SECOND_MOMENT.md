@@ -575,3 +575,25 @@ definitions then give global measurability of p2ExclError and p2Ebar. These
 facts discharge hmR and the error-measurability premises in the new case
 consumers without adding hypotheses. They do not establish absolute continuity
 or the a.e. radial derivative itself; those remain separate inputs.
+
+## From the integrated identity to AC and a.e. differentiation
+
+`Analysis.SecondMomentTail` applies the primitive theory for interval-integrable
+functions. If M.rhsScalarTwo is interval integrable and its integrals give the
+second moment's radius increments, then the moment is absolutely continuous on
+the window and has derivative M.rhsScalarTwo almost everywhere. This uses no
+derivative at an attained radius and no continuity of the flux. Conversely,
+AC plus the a.e. derivative recovers the integrated FTC identity, so these are
+equivalent analytic inputs rather than two independent strengthenings.
+
+The off-corner/majorant instantiations retain their window geometry and fixed
+radius convergence. Case 1 gives fourth-moment finiteness from second-moment
+finiteness, while the coefficient bound is derived on a positive tail from the
+model's exists_error field rather than treating differentiability as imply C1.
+The corner-window construction is nonempty at every positive radius interval,
+so the off-corner windows needed by this interface genuinely exist.
+
+The consumer-shaped all-window statements still take as an explicit input the
+integrated identity on every [r0,R]. Producing that identity where windows
+contain corner radii is not solved by the equivalence alone and should not be
+confused with a general second-moment theorem.

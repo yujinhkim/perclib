@@ -20,6 +20,7 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentTail
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Case3Consumers
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
@@ -142,3 +143,6 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.measurable_p2Ebar_of_tail
 #print axioms PercLib.CriticalLRP.CaseOne.tendsto_div_two_of_caseOne_no_meas
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.tendsto_div_two_of_case3_no_meas
+#print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.absolutelyContinuousOnInterval_of_eq_add_integral
+#print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.ac_and_ae_hasDerivAt_cutMomentReal_two_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.ae_hasDerivAt_toReal_two_of_forall_identity
