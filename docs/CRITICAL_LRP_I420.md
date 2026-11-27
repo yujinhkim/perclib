@@ -234,6 +234,18 @@ still retain their original vanishing-uniform-polygon, tree, finite-moment,
 homogeneity, edge, window, and lower-comparison hypotheses. Log-convexity does
 not repair the threefold polygon obstruction or discharge any model asymptotic.
 
+### Lower second moment from the critical volume tail
+
+`SplitPolygon.TailLower` proves `momOf_cutProb_eq_toReal_cutMoment`, matching
+every canonical cutoff real moment with the source `cutMoment`. Its
+`case3_hgm_of_tail` theorem combines the already-proved layer-cake optimization
+in `Analysis.Route3` with cutoff-to-uncut stochastic domination: from an uncut
+critical volume-tail bound $C/\sqrt n$ and finiteness of the cutoff second moment,
+the actual `hgm` inequality holds with $c_3=(4C+1)^{-3}$. This proves the lower
+comparison rather than assuming it. The uncut volume-tail bound and second-moment
+finiteness remain explicit model inputs; they are not inferred from the first
+moment, the upper moment inequalities, or the finite triangle alone.
+
 ### HD(3)-scoped source instantiation
 
 `I420Case3.Scope` supplies the first-moment/HD-tail instantiations without asserting

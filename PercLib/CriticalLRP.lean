@@ -62,6 +62,7 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPol
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectEventually
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectSource
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.MomentHom
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.TailLower
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Defs
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Main
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Audit

@@ -12,6 +12,7 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPol
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectEventually
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectSource
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.MomentHom
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.TailLower
 
 /-! # Axiom audit for the split Case-3 interface -/
 
@@ -43,3 +44,5 @@ set_option linter.hashCommand false
 #print axioms PercLib.CriticalLRP.I420Case3.powMomentAt_cutProb_perm
 #print axioms PercLib.CriticalLRP.I420Case3.powMomentAt_cutProb_apply_eq_zero
 #print axioms PercLib.CriticalLRP.I420Case3.case3_hAend_hAmid_cutPoly_source_of_finite
+#print axioms PercLib.CriticalLRP.I420Case3.momOf_cutProb_eq_toReal_cutMoment
+#print axioms PercLib.CriticalLRP.I420Case3.case3_hgm_of_tail
