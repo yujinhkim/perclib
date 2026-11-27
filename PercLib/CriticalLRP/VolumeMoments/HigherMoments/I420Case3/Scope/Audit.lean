@@ -21,6 +21,7 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentTail
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.OffCornerIdentity
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Case3Consumers
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
@@ -146,3 +147,6 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.absolutelyContinuousOnInterval_of_eq_add_integral
 #print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.ac_and_ae_hasDerivAt_cutMomentReal_two_tail
 #print axioms PercLib.CriticalLRP.Orchestration.Smwyvlg99M1.ae_hasDerivAt_toReal_two_of_forall_identity
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.integral_rhsScalarTwo_eq_sub_of_offCornerWindow
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ac_and_ae_hasDerivAt_cutMomentReal_two_offCorner_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Witness.hasDerivAt_cutMomentReal_two_sourceModelWitness_three_and_seven_of_cutMoment_two

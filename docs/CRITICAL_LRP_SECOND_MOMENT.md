@@ -597,3 +597,27 @@ The consumer-shaped all-window statements still take as an explicit input the
 integrated identity on every [r0,R]. Producing that identity where windows
 contain corner radii is not solved by the equivalence alone and should not be
 confused with a general second-moment theorem.
+
+## Off-corner identity from second-moment finiteness
+
+`Cutoff.SecondMoment.OffCornerIdentity` closes the flux hypotheses of the
+localized p = 2 integrated identity. Finiteness of the second cutoff moment at
+the right endpoint gives fourth-moment finiteness there, by the mixed bound;
+cutoff moments are monotone in radius, so fourth moments are finite on the
+whole window. The landed `tendsto_windowFlux_of_cutMoment_four` then supplies
+the real local convergence, with no hypothesis to rename. The existing uniform
+window majorant and its interval integrability complete the LocalFTC identity.
+Positive-tail coefficient decay and the landed pointwise off-sphere versions
+are also instantiated.
+
+The measurable/integrability requirements use the window-restricted forms,
+not an invented global Lipschitz or continuity assumption. The full five-part
+radius picture (AC, a.e.-derivative, deriv equality, integrated identity and
+interval integrability) follows from the primitive theory. Source-witness
+versions cover general off-corner windows, exact power-law coefficients,
+an unconditional small-radius example and a nontrivial [7/2,39/10] example
+with only second-moment finiteness at 39/10 retained.
+
+Corner-containing window identities remain the separate gluing problem: this
+file deliberately uses `M.IsOffCornerWindow a b`. It does not claim differentiability
+at an attained radius or infer finite second moments from hTri or HD3.

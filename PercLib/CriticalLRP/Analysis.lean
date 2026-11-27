@@ -23,6 +23,7 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentTail
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.OffCornerIdentity
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Errors

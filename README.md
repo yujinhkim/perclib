@@ -92,8 +92,10 @@ regularity, hP, error measurability and p2H log-integrability retained.
 the derivative weight and both error functions measurable from tail second-moment
 finiteness; it also removes those measurability premises from the wrappers.
 `SecondMomentTail` proves equivalence between interval-FTC data and
-second-moment AC/a.e. differentiation. Producing that identity on arbitrary
-windows, including corner-containing windows, is the next analytic obligation.
+second-moment AC/a.e. differentiation. `OffCornerIdentity` now produces that
+identity on off-corner windows from second-moment finiteness at the endpoint,
+using the actual fixed-radius convergence theorem. Corner-containing windows
+remain the next analytic obligation.
 These do not supply all remaining model data.
 These do not supply all remaining model data.
 
