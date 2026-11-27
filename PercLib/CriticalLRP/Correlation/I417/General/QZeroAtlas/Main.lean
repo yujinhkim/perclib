@@ -139,6 +139,576 @@ theorem starMoment_le_three_term (π : Sym2 V → unitInterval) (D : KernelData 
       + 6 * (D.χ * (D.χ * (D.χ * kpow D.k 4 v y))) :=
   hatlas.trans (atlas_le D v y h2 h3A h3B h4)
 
+/-- Summing out three labels, each carrying one kernel factor, in right-nested form. -/
+theorem peel_labels' (D : KernelData V) (a1 a2 a3 : V) (C : ℝ≥0∞) :
+    (∑' x1, ∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      ≤ D.χ * (D.χ * (D.χ * C)) := by
+  have h3 : ∀ x1 x2, (∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      ≤ D.k a1 x1 * (D.k a2 x2 * (D.χ * C)) := by
+    intro x1 x2
+    rw [ENNReal.tsum_mul_left, ENNReal.tsum_mul_left, ENNReal.tsum_mul_right]
+    exact mul_le_mul_right (mul_le_mul_right (mul_le_mul_left (D.row a3) C) (D.k a2 x2))
+      (D.k a1 x1)
+  have h2 : ∀ x1, (∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      ≤ D.k a1 x1 * (D.χ * (D.χ * C)) := by
+    intro x1
+    refine le_trans (ENNReal.tsum_le_tsum (h3 x1)) ?_
+    rw [ENNReal.tsum_mul_left, ENNReal.tsum_mul_right]
+    exact mul_le_mul_right (mul_le_mul_left (D.row a2) (D.χ * C)) (D.k a1 x1)
+  refine le_trans (ENNReal.tsum_le_tsum h2) ?_
+  rw [ENNReal.tsum_mul_right]
+  exact mul_le_mul_left (D.row a1) (D.χ * (D.χ * C))
+
+/-- One off-path vertex attached to `a`, with a constant factor on the left. -/
+theorem tsum_mul_k_le (D : KernelData V) (a : V) (g : ℝ≥0∞) :
+    (∑' x, g * D.k a x) ≤ g * D.χ := by
+  rw [ENNReal.tsum_mul_left]
+  exact mul_le_mul_right (D.row a) g
+
+/-- One off-path vertex attached to `a`, in a middle position. -/
+theorem tsum_mul_k_mul_le (D : KernelData V) (a : V) (g h : ℝ≥0∞) :
+    (∑' x, (g * D.k a x) * h) ≤ (g * D.χ) * h := by
+  rw [ENNReal.tsum_mul_right]
+  exact mul_le_mul_left (tsum_mul_k_le D a g) h
+
+/-- A two-step chain with a leading constant is the twofold kernel power. -/
+theorem tsum_mul_chain_two (D : KernelData V) (a b : V) (g : ℝ≥0∞) :
+    (∑' x, g * (D.k a x * D.k x b)) = g * kpow D.k 2 a b := by
+  rw [ENNReal.tsum_mul_left, kpow_two]
+
+/-- A three-step chain with a leading constant is the threefold kernel power. -/
+theorem tsum_mul_chain_three (D : KernelData V) (a b : V) (g : ℝ≥0∞) :
+    (∑' x, g * (D.k a x * kpow D.k 2 x b)) = g * kpow D.k 3 a b := by
+  rw [ENNReal.tsum_mul_left, kpow_three]
+
+/-! ## Sharpness: the shape evaluations are equalities for a regular kernel
+
+In the source, `T` is the two-point function of a transitive weighted graph, so the row mass
+`∑_z T(x,z)` is the *same* number `E|K| = χ` for every `x`: the hypothesis `hreg` below.  Under it
+every peel of the proofs above is an equality, so the four shape evaluations and the whole
+three-term atlas are **identities**: `atlas D v y = 3χ⁵T² + 6χ⁴T³ + 6χ³T⁴` exactly.  In
+particular the `ℓ = 2` term `3χ⁵ T²` is genuinely present in the atlas with coefficient `3` and is
+not an artefact of an inequality; this is what makes the two-term range `3 ≤ ℓ` of the printed
+lemma a *separate* input (the absorption `χ k² ≤ c k³`), as m1 recorded. -/
+
+/-- Exact row peel. -/
+theorem tsum_mul_k_eq (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ) (a : V) (g : ℝ≥0∞) :
+    (∑' x, g * D.k a x) = g * D.χ := by
+  rw [ENNReal.tsum_mul_left, hreg a]
+
+/-- Exact row peel in a middle position. -/
+theorem tsum_mul_k_mul_eq (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ) (a : V)
+    (g h : ℝ≥0∞) : (∑' x, (g * D.k a x) * h) = (g * D.χ) * h := by
+  rw [ENNReal.tsum_mul_right, tsum_mul_k_eq D hreg a g]
+
+/-- Exact label summation. -/
+theorem peel_labels_eq (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ)
+    (a1 a2 a3 : V) (C : ℝ≥0∞) :
+    (∑' x1, ∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      = D.χ * (D.χ * (D.χ * C)) := by
+  have h3 : ∀ x1 x2, (∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      = D.k a1 x1 * (D.k a2 x2 * (D.χ * C)) := by
+    intro x1 x2
+    rw [ENNReal.tsum_mul_left, ENNReal.tsum_mul_left, ENNReal.tsum_mul_right, hreg a3]
+  have h2 : ∀ x1, (∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      = D.k a1 x1 * (D.χ * (D.χ * C)) := by
+    intro x1
+    rw [show (∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+        = (∑' x2, D.k a1 x1 * (D.k a2 x2 * (D.χ * C))) from tsum_congr (h3 x1)]
+    rw [ENNReal.tsum_mul_left, ENNReal.tsum_mul_right, hreg a2]
+  rw [show (∑' x1, ∑' x2, ∑' x3, D.k a1 x1 * (D.k a2 x2 * (D.k a3 x3 * C)))
+      = (∑' x1, D.k a1 x1 * (D.χ * (D.χ * C))) from tsum_congr h2]
+  rw [ENNReal.tsum_mul_right, hreg a1]
+
+/-- **Sharpness of the `ℓ = 2` evaluation**: for a kernel whose row sums all equal `χ` (the
+transitive-graph situation of the source, where `T(x, ·)` has constant mass `E|K|`), the three
+off-path row sums of `shapeTwo` are exact, so `shapeTwo = χ⁵ k²` with no loss. -/
+theorem shapeTwo_eq_of_regular (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ) (v y : V) :
+    shapeTwo D v y = D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))) := by
+  have hlabel : shapeTwo D v y =
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := by
+    unfold shapeTwo
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    refine Eq.trans ?_ (peel_labels_eq D hreg w2 w3 w3
+        (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3)
+        = D.χ * (D.χ * kpow D.k 2 v y) := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 y * D.k w1 w2) * D.k w2 w3) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.k w1 y * D.k w1 w2) * D.χ) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => ?_
+          exact tsum_mul_k_eq D hreg w2 (D.k v w1 * D.k w1 y * D.k w1 w2)
+      _ = (∑' w1, ∑' w2, ((D.k v w1 * D.k w1 y) * D.k w1 w2) * D.χ) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => ?_
+          ring
+      _ = (∑' w1, ((D.k v w1 * D.k w1 y) * D.χ) * D.χ) := by
+          refine tsum_congr fun w1 => ?_
+          exact tsum_mul_k_mul_eq D hreg w1 (D.k v w1 * D.k w1 y) D.χ
+      _ = (∑' w1, (D.χ * D.χ) * (D.k v w1 * D.k w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = (D.χ * D.χ) * kpow D.k 2 v y := tsum_mul_chain_two D v y (D.χ * D.χ)
+      _ = D.χ * (D.χ * kpow D.k 2 v y) := by ring
+  calc shapeTwo D v y
+      = ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := hpull
+    _ = D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))) := by
+        rw [hR]
+
+/-- **Sharpness of the `ℓ = 3` balanced evaluation.** -/
+theorem shapeThreeA_eq_of_regular (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ)
+    (v y : V) :
+    shapeThreeA D v y = D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+  have hlabel : shapeThreeA D v y =
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := by
+    unfold shapeThreeA
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    refine Eq.trans ?_ (peel_labels_eq D hreg w2 w2 w3
+        (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y)
+        = D.χ * kpow D.k 3 v y := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 w2) * (D.k w1 w3 * D.k w3 y)) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.k w1 w2) * kpow D.k 2 w1 y) :=
+          tsum_congr fun w1 => tsum_congr fun w2 =>
+            tsum_mul_chain_two D w1 y (D.k v w1 * D.k w1 w2)
+      _ = (∑' w1, (D.k v w1 * D.χ) * kpow D.k 2 w1 y) :=
+          tsum_congr fun w1 => tsum_mul_k_mul_eq D hreg w1 (D.k v w1) (kpow D.k 2 w1 y)
+      _ = (∑' w1, D.χ * (D.k v w1 * kpow D.k 2 w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = D.χ * kpow D.k 3 v y := by
+          rw [ENNReal.tsum_mul_left, kpow_three]
+  calc shapeThreeA D v y
+      = ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := hpull
+    _ = D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+        rw [hR]
+
+/-- **Sharpness of the `ℓ = 3` chain evaluation.** -/
+theorem shapeThreeB_eq_of_regular (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ)
+    (v y : V) :
+    shapeThreeB D v y = D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+  have hlabel : shapeThreeB D v y =
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := by
+    unfold shapeThreeB
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    refine Eq.trans ?_ (peel_labels_eq D hreg w1 w3 w3
+        (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y)
+        = D.χ * kpow D.k 3 v y := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 w2 * D.k w2 y) * D.k w2 w3) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.k w1 w2 * D.k w2 y) * D.χ) :=
+          tsum_congr fun w1 => tsum_congr fun w2 =>
+            tsum_mul_k_eq D hreg w2 (D.k v w1 * D.k w1 w2 * D.k w2 y)
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.χ) * (D.k w1 w2 * D.k w2 y)) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => ?_
+          ring
+      _ = (∑' w1, (D.k v w1 * D.χ) * kpow D.k 2 w1 y) :=
+          tsum_congr fun w1 => tsum_mul_chain_two D w1 y (D.k v w1 * D.χ)
+      _ = (∑' w1, D.χ * (D.k v w1 * kpow D.k 2 w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = D.χ * kpow D.k 3 v y := by
+          rw [ENNReal.tsum_mul_left, kpow_three]
+  calc shapeThreeB D v y
+      = ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := hpull
+    _ = D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+        rw [hR]
+
+/-- **Sharpness of the `ℓ = 4` evaluation.** -/
+theorem shapeFour_eq_of_regular (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ)
+    (v y : V) : shapeFour D v y = D.χ * (D.χ * (D.χ * kpow D.k 4 v y)) := by
+  have hlabel : shapeFour D v y =
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := by
+    unfold shapeFour
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    refine Eq.trans ?_ (peel_labels_eq D hreg w1 w2 w3
+        (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y)
+        = kpow D.k 4 v y := by
+    rw [← chain_four D v y]
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    ring
+  calc shapeFour D v y
+      = ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := hpull
+    _ = D.χ * (D.χ * (D.χ * kpow D.k 4 v y)) := by rw [hR]
+
+/-- **The atlas is exact for a regular kernel**: for the source's transitive-graph situation
+(constant row mass `E|K| = χ`) the honest three-term atlas equals `3χ⁵T² + 6χ⁴T³ + 6χ³T⁴`
+identically, so the `ℓ = 2` coefficient `3χ⁵k²` is genuinely present, not an artefact of the
+inequality. -/
+theorem atlas_eq_of_regular (D : KernelData V) (hreg : ∀ a, (∑' z, D.k a z) = D.χ) (v y : V) :
+    atlas D v y = 3 * (D.χ ^ 5 * PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y)
+      + 6 * (D.χ ^ 4 * PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y)
+      + 6 * (D.χ ^ 3 * PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y) := by
+  unfold atlas
+  rw [shapeTwo_eq_of_regular D hreg v y, shapeThreeA_eq_of_regular D hreg v y,
+    shapeThreeB_eq_of_regular D hreg v y, shapeFour_eq_of_regular D hreg v y]
+  simp only [kpow_eq_Kpow]
+  ring
+
+-- ---------------------------------------------------------------------------
+-- BLOCK 2  (the four shape evaluations)
+-- ---------------------------------------------------------------------------
+/-- **Shape `ℓ = 2`**: `shapeTwo ≤ χ⁵ k²`. -/
+theorem shapeTwo_le (D : KernelData V) (v y : V) :
+    shapeTwo D v y ≤ D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))) := by
+  have hlabel : shapeTwo D v y ≤
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := by
+    unfold shapeTwo
+    refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 =>
+      ENNReal.tsum_le_tsum fun w3 => ?_
+    refine le_trans (le_of_eq ?_) (peel_labels' D w2 w3 w3
+      (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3)
+        ≤ D.χ * (D.χ * kpow D.k 2 v y) := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 y * D.k w1 w2) * D.k w2 w3) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ ≤ (∑' w1, ∑' w2, (D.k v w1 * D.k w1 y * D.k w1 w2) * D.χ) := by
+          refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 => ?_
+          exact tsum_mul_k_le D w2 (D.k v w1 * D.k w1 y * D.k w1 w2)
+      _ = (∑' w1, ∑' w2, ((D.k v w1 * D.k w1 y) * D.k w1 w2) * D.χ) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => ?_
+          ring
+      _ ≤ (∑' w1, ((D.k v w1 * D.k w1 y) * D.χ) * D.χ) := by
+          refine ENNReal.tsum_le_tsum fun w1 => ?_
+          exact tsum_mul_k_mul_le D w1 (D.k v w1 * D.k w1 y) D.χ
+      _ = (∑' w1, (D.χ * D.χ) * (D.k v w1 * D.k w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = (D.χ * D.χ) * kpow D.k 2 v y := tsum_mul_chain_two D v y (D.χ * D.χ)
+      _ = D.χ * (D.χ * kpow D.k 2 v y) := by ring
+  calc shapeTwo D v y
+      ≤ ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 y * D.k w2 w3))) := hpull
+    _ ≤ D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))) := by
+        refine mul_le_mul_right (mul_le_mul_right (mul_le_mul_right ?_ D.χ) D.χ) D.χ
+        exact hR
+
+/-- **Shape `ℓ = 3`, balanced**: `shapeThreeA ≤ χ⁴ k³`. -/
+theorem shapeThreeA_le (D : KernelData V) (v y : V) :
+    shapeThreeA D v y ≤ D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+  have hlabel : shapeThreeA D v y ≤
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := by
+    unfold shapeThreeA
+    refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 =>
+      ENNReal.tsum_le_tsum fun w3 => ?_
+    refine le_trans (le_of_eq ?_) (peel_labels' D w2 w2 w3
+      (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y)
+        ≤ D.χ * kpow D.k 3 v y := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 w2) * (D.k w1 w3 * D.k w3 y)) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.k w1 w2) * kpow D.k 2 w1 y) :=
+          tsum_congr fun w1 => tsum_congr fun w2 =>
+            tsum_mul_chain_two D w1 y (D.k v w1 * D.k w1 w2)
+      _ ≤ (∑' w1, (D.k v w1 * D.χ) * kpow D.k 2 w1 y) := by
+          refine ENNReal.tsum_le_tsum fun w1 => ?_
+          exact tsum_mul_k_mul_le D w1 (D.k v w1) (kpow D.k 2 w1 y)
+      _ = (∑' w1, D.χ * (D.k v w1 * kpow D.k 2 w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = D.χ * kpow D.k 3 v y := by
+          rw [ENNReal.tsum_mul_left, kpow_three]
+  calc shapeThreeA D v y
+      ≤ ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w1 w3 * D.k w3 y))) := hpull
+    _ ≤ D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+        refine mul_le_mul_right (mul_le_mul_right (mul_le_mul_right ?_ D.χ) D.χ) D.χ
+        exact hR
+
+/-- **Shape `ℓ = 3`, chain**: `shapeThreeB ≤ χ⁴ k³`. -/
+theorem shapeThreeB_le (D : KernelData V) (v y : V) :
+    shapeThreeB D v y ≤ D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+  have hlabel : shapeThreeB D v y ≤
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := by
+    unfold shapeThreeB
+    refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 =>
+      ENNReal.tsum_le_tsum fun w3 => ?_
+    refine le_trans (le_of_eq ?_) (peel_labels' D w1 w3 w3
+      (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y)
+        ≤ D.χ * kpow D.k 3 v y := by
+    calc (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y)
+        = (∑' w1, ∑' w2, ∑' w3,
+            (D.k v w1 * D.k w1 w2 * D.k w2 y) * D.k w2 w3) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+          ring
+      _ ≤ (∑' w1, ∑' w2, (D.k v w1 * D.k w1 w2 * D.k w2 y) * D.χ) := by
+          refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 => ?_
+          exact tsum_mul_k_le D w2 (D.k v w1 * D.k w1 w2 * D.k w2 y)
+      _ = (∑' w1, ∑' w2, (D.k v w1 * D.χ) * (D.k w1 w2 * D.k w2 y)) := by
+          refine tsum_congr fun w1 => tsum_congr fun w2 => ?_
+          ring
+      _ = (∑' w1, (D.k v w1 * D.χ) * kpow D.k 2 w1 y) :=
+          tsum_congr fun w1 => tsum_mul_chain_two D w1 y (D.k v w1 * D.χ)
+      _ = (∑' w1, D.χ * (D.k v w1 * kpow D.k 2 w1 y)) := by
+          refine tsum_congr fun w1 => ?_
+          ring
+      _ = D.χ * kpow D.k 3 v y := by
+          rw [ENNReal.tsum_mul_left, kpow_three]
+  calc shapeThreeB D v y
+      ≤ ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w2 y))) := hpull
+    _ ≤ D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))) := by
+        refine mul_le_mul_right (mul_le_mul_right (mul_le_mul_right ?_ D.χ) D.χ) D.χ
+        exact hR
+
+/-- **Shape `ℓ = 4`, chain**: `shapeFour ≤ χ³ k⁴`. -/
+theorem shapeFour_le (D : KernelData V) (v y : V) :
+    shapeFour D v y ≤ D.χ * (D.χ * (D.χ * kpow D.k 4 v y)) := by
+  have hlabel : shapeFour D v y ≤
+      ∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := by
+    unfold shapeFour
+    refine ENNReal.tsum_le_tsum fun w1 => ENNReal.tsum_le_tsum fun w2 =>
+      ENNReal.tsum_le_tsum fun w3 => ?_
+    refine le_trans (le_of_eq ?_) (peel_labels' D w1 w2 w3
+      (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))
+    exact tsum_congr fun x1 => tsum_congr fun x2 => tsum_congr fun x3 => by ring
+  have hpull :
+      (∑' w1, ∑' w2, ∑' w3,
+        D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))))
+      = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := by
+    simp only [ENNReal.tsum_mul_left]
+  have hR :
+      (∑' w1, ∑' w2, ∑' w3, D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y)
+        = kpow D.k 4 v y := by
+    rw [← chain_four D v y]
+    refine tsum_congr fun w1 => tsum_congr fun w2 => tsum_congr fun w3 => ?_
+    ring
+  calc shapeFour D v y
+      ≤ ∑' w1, ∑' w2, ∑' w3,
+          D.χ * (D.χ * (D.χ * (D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := hlabel
+    _ = D.χ * (D.χ * (D.χ * (∑' w1, ∑' w2, ∑' w3,
+          D.k v w1 * D.k w1 w2 * D.k w2 w3 * D.k w3 y))) := hpull
+    _ = D.χ * (D.χ * (D.χ * kpow D.k 4 v y)) := by rw [hR]
+
+-- ---------------------------------------------------------------------------
+-- BLOCK 3  (production-`Kpow` forms, discharged assembly, collected forms)
+-- ---------------------------------------------------------------------------
+/-! ## The star bound with the four shape evaluations discharged
+
+`starMoment_le_three_term_nohyp` is m1's `starMoment_le_three_term` with `h2, h3A, h3B, h4`
+discharged by the theorems above, so its only hypothesis is the four-label tree-graph input
+`hatlas`.  `starMoment_le_three_term_Kpow` restates the bound in the production power
+`KernelPower.Kpow = T^ℓ` of Lemma I.4.17 (via `kpow_eq_Kpow` of `Defs.lean`). -/
+
+/-- **Shape `ℓ = 2` in production form**: `shapeTwo ≤ χ⁵ · T²`. -/
+theorem shapeTwo_le_Kpow (D : KernelData V) (v y : V) :
+    shapeTwo D v y
+      ≤ D.χ * (D.χ * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y)))) := by
+  rw [← kpow_eq_Kpow (k := D.k) 2 v y]
+  exact shapeTwo_le D v y
+
+/-- **Shape `ℓ = 3` balanced in production form**: `shapeThreeA ≤ χ⁴ · T³`. -/
+theorem shapeThreeA_le_Kpow (D : KernelData V) (v y : V) :
+    shapeThreeA D v y
+      ≤ D.χ * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y))) := by
+  rw [← kpow_eq_Kpow (k := D.k) 3 v y]
+  exact shapeThreeA_le D v y
+
+/-- **Shape `ℓ = 3` chain in production form**: `shapeThreeB ≤ χ⁴ · T³`. -/
+theorem shapeThreeB_le_Kpow (D : KernelData V) (v y : V) :
+    shapeThreeB D v y
+      ≤ D.χ * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y))) := by
+  rw [← kpow_eq_Kpow (k := D.k) 3 v y]
+  exact shapeThreeB_le D v y
+
+/-- **Shape `ℓ = 4` in production form**: `shapeFour ≤ χ³ · T⁴`. -/
+theorem shapeFour_le_Kpow (D : KernelData V) (v y : V) :
+    shapeFour D v y
+      ≤ D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y)) := by
+  rw [← kpow_eq_Kpow (k := D.k) 4 v y]
+  exact shapeFour_le D v y
+
+/-- **m1's `atlas_le` with the four shape evaluations discharged.** -/
+theorem atlas_le_nohyp (D : KernelData V) (v y : V) :
+    atlas D v y ≤ 3 * (D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))))
+      + 6 * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))))
+      + 6 * (D.χ * (D.χ * (D.χ * kpow D.k 4 v y))) :=
+  atlas_le D v y (shapeTwo_le D v y) (shapeThreeA_le D v y) (shapeThreeB_le D v y)
+    (shapeFour_le D v y)
+
+/-- **m1's `starMoment_le_three_term` with the four shape evaluations discharged.**
+
+The only remaining input is `hatlas` : the `q = 0`, `p = 3` four-label instance of the tree-graph
+inequality (I.2.2), i.e. the realization of the star event by the fifteen diagrams.  That is a tree
+realization problem, not an algebraic one, and it is *not* proved here. -/
+theorem starMoment_le_three_term_nohyp (π : Sym2 V → unitInterval) (D : KernelData V) (v y : V)
+    (hatlas : I417Gen.starMoment π v y 3 ≤ atlas D v y) :
+    I417Gen.starMoment π v y 3 ≤
+      3 * (D.χ * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 2 v y)))))
+      + 6 * (D.χ * (D.χ * (D.χ * (D.χ * kpow D.k 3 v y))))
+      + 6 * (D.χ * (D.χ * (D.χ * kpow D.k 4 v y))) :=
+  hatlas.trans (atlas_le_nohyp D v y)
+
+/-- **The `q = 0`, `p = 3` star bound in production form**
+`3χ⁵T² + 6χ⁴T³ + 6χ³T⁴`, with only the tree-graph input `hatlas` as hypothesis. -/
+theorem starMoment_le_three_term_Kpow (π : Sym2 V → unitInterval) (D : KernelData V) (v y : V)
+    (hatlas : I417Gen.starMoment π v y 3 ≤ atlas D v y) :
+    I417Gen.starMoment π v y 3 ≤
+      3 * (D.χ * (D.χ * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y)))))
+      + 6 * (D.χ * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y))))
+      + 6 * (D.χ * (D.χ * (D.χ *
+          PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y))) := by
+  simpa only [kpow_eq_Kpow] using starMoment_le_three_term_nohyp π D v y hatlas
+
+/-! ## Collected forms: the shape bounds with the power of `χ` collected
+
+These are the same four inequalities, and the assembled star bound, written with `D.χ ^ 5`,
+`D.χ ^ 4`, `D.χ ^ 3` and the production power `KernelPower.Kpow = T^ℓ`.  They are the form a
+Case-3 consumer wants: `E[|K_x|³ 1(x ↔ y)] ≤ 3χ⁵T²(x,y) + 6χ⁴T³(x,y) + 6χ³T⁴(x,y)`. -/
+
+/-- **Shape `ℓ = 2`, collected**: `shapeTwo ≤ χ⁵ T²`. -/
+theorem shapeTwo_le_pow (D : KernelData V) (v y : V) :
+    shapeTwo D v y ≤ D.χ ^ 5 * PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y := by
+  refine (shapeTwo_le_Kpow D v y).trans (le_of_eq ?_)
+  ring
+
+/-- **Shape `ℓ = 3` balanced, collected**: `shapeThreeA ≤ χ⁴ T³`. -/
+theorem shapeThreeA_le_pow (D : KernelData V) (v y : V) :
+    shapeThreeA D v y ≤ D.χ ^ 4 * PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y := by
+  refine (shapeThreeA_le_Kpow D v y).trans (le_of_eq ?_)
+  ring
+
+/-- **Shape `ℓ = 3` chain, collected**: `shapeThreeB ≤ χ⁴ T³`. -/
+theorem shapeThreeB_le_pow (D : KernelData V) (v y : V) :
+    shapeThreeB D v y ≤ D.χ ^ 4 * PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y := by
+  refine (shapeThreeB_le_Kpow D v y).trans (le_of_eq ?_)
+  ring
+
+/-- **Shape `ℓ = 4`, collected**: `shapeFour ≤ χ³ T⁴`. -/
+theorem shapeFour_le_pow (D : KernelData V) (v y : V) :
+    shapeFour D v y ≤ D.χ ^ 3 * PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y := by
+  refine (shapeFour_le_Kpow D v y).trans (le_of_eq ?_)
+  ring
+
+/-- **The atlas, collected**: `atlas ≤ 3χ⁵T² + 6χ⁴T³ + 6χ³T⁴`. -/
+theorem atlas_le_pow (D : KernelData V) (v y : V) :
+    atlas D v y ≤ 3 * (D.χ ^ 5 * PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y)
+      + 6 * (D.χ ^ 4 * PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y)
+      + 6 * (D.χ ^ 3 * PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y) := by
+  refine (atlas_le_nohyp D v y).trans (le_of_eq ?_)
+  simp only [kpow_eq_Kpow]
+  ring
+
+/-- **The `q = 0`, `p = 3` star bound, collected**:
+`E[|K_x|³ 1(x ↔ y)] ≤ 3χ⁵T² + 6χ⁴T³ + 6χ³T⁴`. -/
+theorem starMoment_le_collected (π : Sym2 V → unitInterval) (D : KernelData V) (v y : V)
+    (hatlas : I417Gen.starMoment π v y 3 ≤ atlas D v y) :
+    I417Gen.starMoment π v y 3 ≤
+      3 * (D.χ ^ 5 * PercLib.CriticalLRP.KernelPower.Kpow D.k 2 v y)
+      + 6 * (D.χ ^ 4 * PercLib.CriticalLRP.KernelPower.Kpow D.k 3 v y)
+      + 6 * (D.χ ^ 3 * PercLib.CriticalLRP.KernelPower.Kpow D.k 4 v y) := by
+  refine (starMoment_le_three_term_nohyp π D v y hatlas).trans (le_of_eq ?_)
+  simp only [kpow_eq_Kpow]
+  ring
+
+
 /-! ## Machine-checked combinatorics of the fifteen diagrams -/
 
 /-- The atlas has fifteen members. -/

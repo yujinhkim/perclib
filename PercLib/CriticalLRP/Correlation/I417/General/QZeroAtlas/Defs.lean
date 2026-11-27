@@ -48,6 +48,7 @@ three-term bound and derives the printed two-term form from an explicit extra in
 module
 
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
+public import PercLib.CriticalLRP.Analysis.KernelPower.Defs
 public import Mathlib
 
 /-! # The `q = 0` four-label tree-diagram atlas -/
@@ -110,6 +111,85 @@ theorem kpow_three (k : V → V → ℝ≥0∞) (u v : V) :
 /-- The four-step power. -/
 theorem kpow_four (k : V → V → ℝ≥0∞) (u v : V) :
     kpow k 4 u v = ∑' z, k u z * kpow k 3 z v := kpow_succ _ _ _ _
+
+/-- The kernel commutes with its own `n`-th `kpow`: the two orderings of the `(n+1)`-fold sum
+agree.  No symmetry hypothesis is needed. -/
+theorem kpow_comm_k {k : V → V → ℝ≥0∞} (n : ℕ) (x y : V) :
+    (∑' u, kpow k n x u * k u y) = ∑' u, k x u * kpow k n u y := by
+  induction n generalizing x y with
+  | zero =>
+      have h1 : (∑' u, kpow k 0 x u * k u y) = k x y := by
+        rw [tsum_eq_single x]
+        · simp
+        · intro b hb
+          simp [kpow_zero, Ne.symm hb]
+      have h2 : (∑' u, k x u * kpow k 0 u y) = k x y := by
+        rw [tsum_eq_single y]
+        · simp
+        · intro b hb
+          simp [kpow_zero, hb]
+      rw [h1, h2]
+  | succ n ih =>
+      simp only [kpow_succ]
+      calc (∑' u, (∑' z, k x z * kpow k n z u) * k u y)
+          = ∑' u, ∑' z, (k x z * kpow k n z u) * k u y := by
+            refine tsum_congr fun u => ?_
+            exact ENNReal.tsum_mul_right.symm
+        _ = ∑' z, ∑' u, (k x z * kpow k n z u) * k u y := ENNReal.tsum_comm
+        _ = ∑' z, ∑' u, k x z * (kpow k n z u * k u y) := by
+            refine tsum_congr fun z => tsum_congr fun u => ?_
+            ring
+        _ = ∑' z, k x z * (∑' u, kpow k n z u * k u y) := by
+            refine tsum_congr fun z => ?_
+            exact ENNReal.tsum_mul_left
+        _ = ∑' z, k x z * (∑' u, k z u * kpow k n u y) := by
+            refine tsum_congr fun z => ?_
+            rw [ih z y]
+        _ = ∑' z, ∑' u, k x z * (k z u * kpow k n u y) := by
+            refine tsum_congr fun z => ?_
+            exact (ENNReal.tsum_mul_left).symm
+        _ = ∑' z, ∑' u, (k x z * k z u) * kpow k n u y := by
+            refine tsum_congr fun z => tsum_congr fun u => ?_
+            ring
+        _ = ∑' u, ∑' z, (k x u * k u z) * kpow k n z y := rfl
+        _ = ∑' u, ∑' z, k x u * (k u z * kpow k n z y) := by
+            refine tsum_congr fun u => tsum_congr fun z => ?_
+            ring
+        _ = ∑' u, k x u * (∑' z, k u z * kpow k n z y) := by
+            refine tsum_congr fun u => ?_
+            exact ENNReal.tsum_mul_left
+
+/-- **`kpow` is the production matrix power** `KernelPower.Kpow` (the paper's `T^ℓ`), for every
+`n`.  In particular `kpow D.k ℓ v y = T^ℓ(v,y)` for `ℓ = 2, 3, 4`, the powers appearing in
+Lemma I.4.17. -/
+theorem kpow_eq_Kpow {k : V → V → ℝ≥0∞} (n : ℕ) (x y : V) :
+    kpow k n x y = PercLib.CriticalLRP.KernelPower.Kpow k n x y := by
+  induction n generalizing x y with
+  | zero =>
+      simp only [kpow_zero, PercLib.CriticalLRP.KernelPower.Kpow_zero,
+        PercLib.CriticalLRP.KernelPower.deltaE]
+  | succ n ih =>
+      have hcomm : ∀ a b : V,
+          (∑' z, PercLib.CriticalLRP.KernelPower.Kpow k n a z * k z b)
+            = ∑' z, k a z * PercLib.CriticalLRP.KernelPower.Kpow k n z b := by
+        intro a b
+        have e1 : (∑' z, PercLib.CriticalLRP.KernelPower.Kpow k n a z * k z b)
+            = ∑' z, kpow k n a z * k z b := by
+          refine tsum_congr fun z => ?_
+          rw [show PercLib.CriticalLRP.KernelPower.Kpow k n a z = kpow k n a z
+            from (ih a z).symm]
+        rw [e1, kpow_comm_k n a b]
+        refine tsum_congr fun z => ?_
+        rw [show kpow k n z b = PercLib.CriticalLRP.KernelPower.Kpow k n z b from ih z b]
+      calc kpow k (n + 1) x y = ∑' z, k x z * kpow k n z y := kpow_succ k n x y
+        _ = ∑' z, k x z * PercLib.CriticalLRP.KernelPower.Kpow k n z y := by
+            refine tsum_congr fun z => ?_
+            rw [ih]
+        _ = ∑' z, PercLib.CriticalLRP.KernelPower.Kpow k n x z * k z y :=
+            (hcomm x y).symm
+        _ = PercLib.CriticalLRP.KernelPower.Kpow k (n + 1) x y :=
+            (PercLib.CriticalLRP.KernelPower.Kpow_succ k n x y).symm
+
 
 /-- Data of a symmetric sub-probability kernel with unit diagonal and total mass `χ`.  For the
 two-point function `T` of a transitive weighted graph one takes `k = T` and

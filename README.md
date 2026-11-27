@@ -118,6 +118,12 @@ bound and its near-vertex obstruction; `QZeroMarked`/`QZeroAtlas` preserve
 conditional residuals; `QZeroConsumer` handles exact sums and conversions.
 None proves the old hgap, and the candidate target needs a small-two-point or
 additive restriction. See [the restoration/diagram note](docs/CRITICAL_LRP_QZERO_DIAGRAMS.md).
+`QZeroAtlas` proves the four shape evaluations and identifies `kpow=Kpow`;
+`QZeroCount` derives the fifteen-representative recursion and its $(3,6,6)$
+path classes; `QZeroStarAtlas4` realizes the canonical four-label event;
+`QZeroRepairAudit` proves the exact covariance/additive reduction. The second
+star's two-term estimate, its covariance bound, the remaining model inputs,
+and I.4.20 stay open. See [the supporting-lemma note](docs/CRITICAL_LRP_ATLAS_SUPPORT.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.

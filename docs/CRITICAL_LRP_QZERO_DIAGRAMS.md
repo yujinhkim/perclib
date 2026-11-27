@@ -1,5 +1,18 @@
 # Conditional restoration, diagram and consumer packets
 
+## Integration update
+
+The atlas's four shape bounds are now proved, rather than hypothesized as in
+the initial m1 discussion below. `QZeroCount` derives the explicit branch-and-
+root count and $(3,6,6)$ path distribution; `QZeroStarAtlas4` proves the canonical
+four-label event realization and each pinned shape value. There is **no** derived
+bounding bridge from the star to the old all-vertex two-term hgap. The direct
+Case-3 consumer is separately complete without hgap.
+
+See [the supporting-lemma note](CRITICAL_LRP_ATLAS_SUPPORT.md) for the exact separation
+between explicit representative counts, `nonplaneMarkedCount`, canonical event
+realization and the optional additive/covariance repair.
+
 These independently rebuilt packets were accepted in `smwzg77c3` with explicit
 scope limits. Their full capstone is **not** the old all-vertex $(3,0)$
 estimate, and none of them completes Proposition I.4.15 or I.4.20.
