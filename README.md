@@ -55,7 +55,11 @@ Case-3 and tail-measurability consequences. Sharpness and the remaining ODE,
 triangle, and tail inputs are still hypotheses; see
 [the Case-3 ledger](docs/CRITICAL_LRP_I420.md), which also records the route
 from averaged critical two-point bounds to critical-mean divergence and the
-resulting weaker Case-3 interface.
+resulting weaker Case-3 interface. `RadiusMeasurability.Statistics` proves
+unconditional global defect measurability, while
+`OffCorner.AeDerivativeHandoff` supplies the off-corner derivative, interval
+absolute continuity, and AE flux/ODE transport with the scalar-regularity and
+probabilistic hypotheses left explicit.
 
 
 No claim is made here that continuation-branch CI or every open source lemma

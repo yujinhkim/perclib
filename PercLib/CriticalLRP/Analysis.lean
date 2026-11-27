@@ -69,6 +69,7 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.WindowRemainder
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusEnvelope
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusPivotalWeight
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusTailDeriv
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusSummedFlux
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusOneSided
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.KernelFactor.Main
@@ -88,6 +89,7 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffFourthMo
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffAllMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SubcriticalAllMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.StatisticsMeasurability
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusMeasurability.Statistics
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.PowerLawContinuity
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.LargeRadiusMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SharpnessThresholdEscape

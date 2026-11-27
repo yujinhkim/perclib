@@ -303,9 +303,17 @@ finite. `aemeasurable_cutE1_of_secondMoment` and
 `Scope.AllMoments.aemeasurable_cutError_of_secondMoment` therefore give
 **a.e. measurability on $(1,\infty)$** of the two defect functions. With a
 finite first cutoff moment, the all-order ordinary moment bound supplies the
-second moments needed here. These are tail results, not a proof of global
-Borel measurability at attained radii: the global `Measurable` premise in the
-existing ODE scope wrapper remains explicit.
+second moments needed here. The accepted `OffCorner.RadiusMeasurability.Statistics` package subsequently
+proves the stronger unconditional global results
+`E1Sign.measurable_pairMassReal`, `E1Sign.measurable_connMassReal`,
+`CutoffDefect.measurable_cutE1` and `I420Case3.measurable_cutError`. The real
+`toReal` shadow need not be monotone: measurable logarithmic proxies are used
+above radius zero, empty-ball values below zero, and separate treatment at
+radius zero. It does not claim global measurability of `cutMassAt.toReal` below
+zero. Its unconditional logarithmic-tail wrappers delete the separate
+measurability input while retaining finite-triangle, finite-moment and
+radial-decay hypotheses, and its Case-3 flux wrapper deletes `hmeas` while
+retaining all other premises.
 `CutoffDefect.SecondMomentIntegrability` composes this result with the existing
 logarithmic-tail theorem: under that theorem's finite triangle and radial-decay
 inputs, finite second cutoff moments now supply its a.e.-measurability premise.
@@ -346,15 +354,28 @@ that the old stronger premise implies it. The critical divergence itself
 remains an explicit source-asserted input, not a theorem supplied here.
 
 The HD(3) hypothesis, first-moment ODE, second-moment finiteness and critical-mean
-divergence remain independent inputs. `Scope.Measurability` proves `measurable_cutE0` and composes the defect as
-`measurable_cutError_of_measurables`. The remaining exact input is now isolated:
-`measurable_cutError_of_stats` takes only `hmass`, `hpair`, and `hconn` for the
-three real cutoff statistics. `cutE0` itself is not a remaining measurability
-obligation. `pairMass` and `connMass` still have no general radius-regularity
-proof, and `hmass` stays explicit where `ENNReal.toReal ⊤ = 0` would obstruct
-monotonicity.
+divergence remain independent inputs. `Scope.Measurability` records the older
+compositional reduction through `hmass`, `hpair` and `hconn`; the separate
+`RadiusMeasurability.Statistics` theorem now supplies the real statistics and
+the ODE defect globally with no such hypothesis.
+
+`OffCorner.AeDerivativeHandoff` gives a different reduction for the analytic
+handoff. It proves unboundedness and nullness of the attained-radius set, and
+at every off-corner tail radius obtains the exact cutoff-mass derivative
+$\beta_c|K'(t)|\,E^*(t)$ from second-moment finiteness, per-vertex flux
+continuity, continuity of `deriv M.K`, and continuity of excluded mass. These
+are almost-everywhere statements; they are not asserted at attained radii.
+The package then derives interval absolute continuity, interval-integral
+flux/ODE transport and the corner-safe first-moment asymptotic, and provides
+`case3_hAend_hAmid_cutPoly_source_of_HD_case3_ae` and its normalized companion.
+The named scalar-regularity hypotheses remain visible.
+`first_moment_asymptotic_ae_of_critical_divergence` additionally feeds the
+uncut critical-mean divergence directly into that AE analysis, with the global
+measurability theorem discharging `hmeas`. The source lower-bound,
+Triangle, root-moment and lower-comparison inputs are untouched.
 
 `case3_hAend_hAmid_cutPoly_source_of_tail` supplies the direct-ratio companion:
+
 the same volume-tail and second-moment inputs discharge `hgm`, leaving only the
 root finite-moment range and base source-tail requirements. Window homogeneity
 and window finiteness remain discharged by translation invariance.
@@ -363,10 +384,10 @@ The HD(3) hypothesis, derivative/flux handoff, uncut critical-mean divergence,
 finite triangle condition and uncut volume tail remain separate model inputs. The new
 all-order ordinary bound supplies finite higher moments and hence second
 moments from a finite first cutoff moment, but that first moment itself is
-still required. The global radius measurability of the defect used by `_flux`
-is not replaced by the new a.e.-on-$(1,\infty)$ measurability theorem. The
-first-moment and tail-scope wiring is proved; the underlying ODE and moment
-propositions are not thereby completed.
+still required. The independent global measurability and AE derivative
+packages remove their respective interface inputs, but do not supply the
+finite-triangle, sharpness, scalar-regularity or vanishing-error data. The
+underlying ODE and moment propositions are not thereby completed.
 
 ## What is not closed
 
