@@ -48,9 +48,14 @@ record their local build and axiom checks. Newer additions cover the analytic
 reduction in I.4.8, windowed and finite-translation model components for I.4.9,
 and the exact gap-event/diagram components of I.4.11; see
 [the I.4.8 note](docs/CRITICAL_LRP_I48.md) and
-[the I.4.11 note](docs/CRITICAL_LRP_I411.md).
+[the I.4.11 note](docs/CRITICAL_LRP_I411.md). At arbitrary normalized norms,
+`OffCorner.SourceCutoffAllMoments` proves the all-order ordinary cutoff moment
+bound from the first moment, and `Scope.AllMoments` records the resulting
+Case-3 and tail-measurability consequences. Sharpness and the remaining ODE,
+triangle, and tail inputs are still hypotheses; see
+[the Case-3 ledger](docs/CRITICAL_LRP_I420.md).
 
 No claim is made here that continuation-branch CI or every open source lemma
-has passed. The current ledger records 16 FULL, 42 PARTIAL, and 17 NOT FORMALIZED numbered
+has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired
 `disjSet` theorem is not the source `apartSet` statement.

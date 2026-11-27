@@ -84,6 +84,8 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.TwoPoint.TwoPoint
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.TwoPoint.Capstone
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffFourthMoments
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffAllMoments
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.StatisticsMeasurability
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.PowerLawContinuity
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.LargeRadiusMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SharpnessThresholdEscape

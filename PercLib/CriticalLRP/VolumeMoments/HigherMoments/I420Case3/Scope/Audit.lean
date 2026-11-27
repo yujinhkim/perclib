@@ -4,6 +4,7 @@ module
 
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Main
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Measurability
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.AllMoments
 public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.Divergence
 public import PercLib.CriticalLRP.Analysis.OpenTriangle.Case23
 public import PercLib.CriticalLRP.Analysis.Cutoff.FluxODE
@@ -40,3 +41,10 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.I420Case3.measurable_cutE0
 #print axioms PercLib.CriticalLRP.I420Case3.measurable_cutError_of_measurables
 #print axioms PercLib.CriticalLRP.I420Case3.measurable_cutError_of_stats
+#print axioms PercLib.CriticalLRP.CutoffDefect.monotoneOn_pairMassReal
+#print axioms PercLib.CriticalLRP.CutoffDefect.monotoneOn_connMassReal
+#print axioms PercLib.CriticalLRP.CutoffDefect.aemeasurable_pairMassReal
+#print axioms PercLib.CriticalLRP.CutoffDefect.aemeasurable_connMassReal
+#print axioms PercLib.CriticalLRP.CutoffDefect.aemeasurable_cutE1_of_secondMoment
+#print axioms PercLib.CriticalLRP.I420Case3.aemeasurable_cutError_of_secondMoment
+#print axioms PercLib.CriticalLRP.I420Case3.aemeasurable_cutError_of_firstMoment

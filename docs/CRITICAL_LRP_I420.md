@@ -266,6 +266,42 @@ Case-3 error at `p=3` with the required root-moment range supplied by that
 single finite first moment and the other independent source inputs. It does not
 supply order $5$, arbitrary order, or general-$p$ Case 3.
 
+### Arbitrary-order ordinary cutoff moments
+
+`Analysis.Cutoff.OffCorner.SourceCutoffAllMoments` applies the already proved
+ordinary atlas bound directly to the source cutoff profile. For every
+normalized norm, every radius and every $q\ge1$, `cutMoment_le_dfactorial`
+proves
+$$M_q(r)\le (2q-3)!!\,M_1(r)^{2q-1}.$$
+The only prerequisites are strictness and translation invariance of the cutoff
+edge probabilities, together with the equality of the first cutoff moment and
+the two-point row sum. No sup-norm rescaling or positivity premise is needed.
+Consequently `cutMoment_ne_top_of_one` supplies **every** higher cutoff moment
+from a finite first moment at the same radius. This is the ordinary ($k=0$)
+moment bound, not arbitrary mixed-moment I.4.16, and it does not prove the
+first-moment/sharpness input or a uniform-in-$r$ bound.
+
+`SplitPolygon.AllMoments` discharges the root finite-moment range in the
+Case-3 direct-decorrelation and normalized-error assemblies at every allowed
+order from a finite first cutoff moment on $r\ge1$. Its
+`case3_hAend_hAmid_cutPoly_source_of_tail_of_first` and
+`exists_case3_i421_cutPoly_source_of_tail_of_first` retain the actual
+first-moment asymptotic, finite-triangle, open-triangle-tail and uncut
+volume-tail hypotheses. The volume-tail hypothesis still gives $hgm$, rather
+than being replaced by those higher-moment bounds.
+
+### Radius measurability of the defect statistics
+
+`OffCorner.StatisticsMeasurability` proves that the real `pairMass` and
+`connMass` are monotone on $(1,\infty)$ where the second cutoff moment is
+finite. `aemeasurable_cutE1_of_secondMoment` and
+`Scope.AllMoments.aemeasurable_cutError_of_secondMoment` therefore give
+**a.e. measurability on $(1,\infty)$** of the two defect functions. With a
+finite first cutoff moment, the all-order ordinary moment bound supplies the
+second moments needed here. These are tail results, not a proof of global
+Borel measurability at attained radii: the global `Measurable` premise in the
+existing ODE scope wrapper remains explicit.
+
 ### HD(3)-scoped source instantiation
 
 `I420Case3.Scope` supplies the first-moment/HD-tail instantiations without asserting
@@ -300,10 +336,12 @@ the same volume-tail and second-moment inputs discharge `hgm`, leaving only the
 root finite-moment range and base source-tail requirements. Window homogeneity
 and window finiteness remain discharged by translation invariance.
 
-The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
-bounds, cut-error measurability of the two cluster-dependent statistics,
-higher-moment finiteness, second-moment lower comparison and finite triangle
-condition all remain separate model inputs. The
+The HD(3) hypothesis, derivative/flux handoff, lower two-point bound, finite
+triangle condition and uncut volume tail remain separate model inputs. The new
+all-order ordinary bound supplies finite higher moments and hence second
+moments from a finite first cutoff moment, but that first moment itself is
+still required. The global radius measurability of the defect used by `_flux`
+is not replaced by the new a.e.-on-$(1,\infty)$ measurability theorem. The
 first-moment and tail-scope wiring is proved; the underlying ODE and moment
 propositions are not thereby completed.
 
@@ -312,15 +350,14 @@ propositions are not thereby completed.
 - Case 3 remains incomplete: the corrected tree range, polynomial bridge,
   finite-window near/far estimate, source-ball cardinality construction and
   conditional canonical-cutoff error assemblies are proved. The base
-  triangle-tail limit, first-moment asymptotic and model moment/second-moment
-  inputs still need to be derived. The direct endpoint/middle-index asymptotics
-  now have translation homogeneity and window finiteness discharged, but retain
-  their root finite-moment requirements.
-- The ordinary general-index tree-graph bound must still be transported to
-  the canonical law at the desired order, and first/second moment asymptotics
-  must be derived from the source model. The first-moment and ODE obligations
-  are separate from the completed I.4.17 diagram bound and the log-convexity
-  comparison.
+  triangle-tail limit, first-moment asymptotic, finite first cutoff moment
+  (sharpness input), finite triangle and uncut critical volume tail still need
+  to be supplied. Finite higher root moments at every order now follow from
+  that first moment at arbitrary normalized norms; this uses the ordinary
+  ($k=0$) tree bound and does not close arbitrary mixed-moment I.4.16.
+- The remaining first/second-moment asymptotics, derivative/flux handoff,
+  lower two-point bound and analytical ODE obligations are separate from the
+  completed I.4.17 diagram bound and the log-convexity comparison.
 - The second induction remains a correctly conditional consequence of the
   paper's decorrelation estimates, not a substitute for their three probabilistic cases.
 
