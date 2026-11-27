@@ -40,6 +40,8 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.Limit
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.LogIntegrable
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.SecondMomentIntegrability
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SubcriticalAllMoments
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerComposition
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerIdentity
 
 /-! # Axiom audit of the Case-3 scope dependencies -/
 
@@ -150,3 +152,9 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.integral_rhsScalarTwo_eq_sub_of_offCornerWindow
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ac_and_ae_hasDerivAt_cutMomentReal_two_offCorner_tail
 #print axioms PercLib.CriticalLRP.Orchestration.Witness.hasDerivAt_cutMomentReal_two_sourceModelWitness_three_and_seven_of_cutMoment_two
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SmwywszgoM8.ae_hasDerivAt_toReal_two_tail_noFlux_uniform
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SmwywszgoM5.integral_rhsScalarTwo_eq_sub_of_cornerRadii
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SmwywszgoM5.ac_and_ae_hasDerivAt_toReal_two_of_cornerRadii_tail_no_meas

@@ -24,6 +24,13 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentTail
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.OffCornerIdentity
+public import PercLib.CriticalLRP.Analysis.SecondMomentAllWindowAe
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerComposition
+public import PercLib.CriticalLRP.Analysis.SecondMomentPrimitiveConsistency
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerIdentity
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerSharpness.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerSharpness.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCornerSharpness.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentMeasurability.Errors

@@ -683,7 +683,12 @@ theorem ae_hasDerivAt_toReal_two_of_forall_identity {r₀ : ℝ}
 
 end PercLib.CriticalLRP.Orchestration.Smwyvlg99M1
 
-/-! ## 9. The exact downstream shape, and the two bridges that are still open
+/-! ## 9. The exact downstream shape and the corner-transfer interface
+
+At the time this module was written two bridges were left for successor files; both are now
+addressed by `SecondMomentAllWindowAe` and the `SecondMomentPrimitiveConsistency`/
+`SecondMomentCornerIdentity` pair. The description below records that interface, not an assertion
+that those later results remain missing.
 
 The consumers in this repository (`SourceModelData.regularlyVarying_two`,
 `SourceModelData.regularlyVarying_two_of_caseOne` in
@@ -704,13 +709,13 @@ fixed-radius convergence, `AbsolutelyContinuousOnInterval` on `[a,b]` and the a.
 
 For a window that *contains* corner radii, nothing is missing on the AC/differentiation side:
 §10 delivers the consumer's `hac` and `hae` verbatim from the integrated identity on every window
-`[r₀,R]`.  What remains is to *produce* that identity on windows containing corner radii from the
-corner-free ones.  Two pure real-analysis bridges suffice for that, with no probabilistic content:
+`[r₀,R]`.  To *produce* that identity on windows containing corner radii from the corner-free ones,
+two pure real-analysis routes suffice, with no probabilistic content:
 
 1. **Gluing across finitely many corner radii.**  `M.cutMomentReal 2` is monotone
    (`SourceModelData.cutMoment_monotone`) and continuous
    (`SourceModelData.continuousOn_cutMomentReal`), and `M.cornerRadii ∩ [a,b]` is finite
-   (`SourceModelData.finite_cornerRadii_inter_Ioo`).  The missing lemma is:
+   (`SourceModelData.finite_cornerRadii_inter_Ioo`).  The suggested analytic gluing lemma was:
 
    `f monotone on [a,b] → ContinuousOn f (Icc a b) → (∀ u v, a ≤ u → u < v → v ≤ b →
       (Icc u v ∩ C = ∅) → AbsolutelyContinuousOnInterval f u v) → (C.Finite) →
@@ -725,9 +730,12 @@ corner-free ones.  Two pure real-analysis bridges suffice for that, with no prob
    many off-corner windows with rational endpoints and taking a countable union of the a.e.
    statements gives the consumer's `hae`.
 
-So the only remaining *input* is the fixed-radius convergence `hfluxConv` (equivalently, the
-integrated identity on every window `[r₀,R]`); obtaining it is flux combinatorics and was
-deliberately not redone here.
+`SecondMomentAllWindowAe` proves the second bridge directly.  The
+`SecondMomentPrimitiveConsistency`/`SecondMomentCornerIdentity` package takes a slightly stronger
+but simpler route: it transfers the primitive identity itself across the finite corner set, using
+continuity of the moment minus its interval primitive, and then derives AC from the identity.  This
+avoids needing a separate AC-gluing lemma.  `OffCornerIdentity` supplies the corner-free inputs from
+second-moment finiteness.  No derivative at attained radii is claimed by either route.
 -/
 
 /-! ## Axiom audit -/

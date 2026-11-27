@@ -593,10 +593,10 @@ model's exists_error field rather than treating differentiability as imply C1.
 The corner-window construction is nonempty at every positive radius interval,
 so the off-corner windows needed by this interface genuinely exist.
 
-The consumer-shaped all-window statements still take as an explicit input the
-integrated identity on every [r0,R]. Producing that identity where windows
-contain corner radii is not solved by the equivalence alone and should not be
-confused with a general second-moment theorem.
+At this stage, the consumer-shaped all-window statements took as an explicit
+input the integrated identity on every [r0,R]. The equivalence alone did not
+produce that identity through corners; the successor results below close this
+particular analytic gap, not the general second-moment theorem.
 
 ## Off-corner identity from second-moment finiteness
 
@@ -618,6 +618,71 @@ versions cover general off-corner windows, exact power-law coefficients,
 an unconditional small-radius example and a nontrivial [7/2,39/10] example
 with only second-moment finiteness at 39/10 retained.
 
-Corner-containing window identities remain the separate gluing problem: this
-file deliberately uses `M.IsOffCornerWindow a b`. It does not claim differentiability
-at an attained radius or infer finite second moments from hTri or HD3.
+`OffCornerIdentity` deliberately uses `M.IsOffCornerWindow a b`; it does not
+claim differentiability at an attained radius or infer finite second moments
+from hTri or HD3. The two successor results below address the corner transfer.
+
+## Almost-everywhere corner elimination
+
+`Analysis.SecondMomentAllWindowAe` proves that a derivative formula holding
+almost everywhere on every closed subwindow avoiding a locally separated null
+set also holds almost everywhere on the whole window. The proof uses
+rational-endpoint subwindows and `ae_all_iff`; no enumeration of the null set
+is needed. Off-corner radii have off-corner neighbourhoods, so this applies to
+the attained-radius set `cornerRadii`.
+
+This removes `IsOffCornerWindow` from the **a.e. derivative alone**. Both
+window-local and tail forms are proved. `SecondMomentCornerComposition`
+composes this transfer with `OffCornerIdentity`, yielding the a.e. derivative
+from second-moment tail finiteness and a monotone edge-exhausting family,
+without a separate global flux-convergence or majorant premise. A far-tail
+version derives the coefficient bound from `M.exists_error`.
+
+The direct a.e. theorem does not assert AC, an integral identity across a
+corner, or a derivative at an attained radius. Those are supplied separately
+by the integrated-identity transfer below, not by discarding corner points.
+
+## Integrated identity and AC through corners
+
+`Analysis.SecondMomentPrimitiveConsistency` contains the general analytic
+transfer. Let `f` be continuous on `[a,b]`, let `g` be interval integrable,
+and suppose the primitive identity holds on every closed subwindow avoiding a
+finite set `C`. Put
+
+$$H(x) = f(x) - \int_a^x g(t)\,dt.$$
+
+Then `H` is continuous on `[a,b]` and locally constant at every point of
+$(a,b) \setminus C$. Chasles' relation gives the local constancy; induction on the
+largest exceptional point, together with preconnectedness and endpoint
+continuity, therefore makes `H` constant. This gives the single-basepoint
+identity throughout `[a,b]`.
+
+`Analysis.SecondMomentCornerIdentity` applies this to
+`cutMomentReal 2`. Finiteness at the strictly larger radius `R+1` supplies
+closed-window continuity; the locally finite corner set and interval
+integrability are handled without any equality of left/right RHS values at a
+corner. Hence the integrated identity holds through all attained radii, and
+the primitive FTC supplies both interval AC and the a.e. derivative. The
+`_no_meas` far-tail wrapper also derives `Measurable rhsScalarTwo` from tail
+second-moment finiteness.
+
+This closes the corner-dependent analytic obligation for the second-moment
+radius identity. It does **not** prove differentiability at attained radii,
+tail second-moment finiteness, sharpness, the Case-3 numerator or ell=3
+inputs, Case-2 hydrodynamic inputs, or general I.4.15/I.4.20.
+
+## Why the continuity and a.e. restrictions remain necessary
+
+`Analysis.SecondMomentCornerSharpness`, accepted from `smwywszgo/m4`, supplies
+machine-checked counterexamples:
+
+* the right half-line indicator is monotone, zero-a.e.-differentiable and AC
+  on every closed subwindow avoiding its jump, but not AC across it;
+* the same indicator satisfies the off-corner primitive identity with zero
+  integrand but violates it on a window containing the jump;
+* `x + |x|` is monotone, continuous and 2-Lipschitz, hence AC on every
+  interval, yet has no derivative at zero.
+
+Thus an integrable a.e. derivative does not replace AC, continuity is not a
+redundant corner-transfer premise, and the proved a.e. statement must not be
+strengthened to pointwise differentiation at all attained radii.

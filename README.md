@@ -94,10 +94,16 @@ finiteness; it also removes those measurability premises from the wrappers.
 `SecondMomentTail` proves equivalence between interval-FTC data and
 second-moment AC/a.e. differentiation. `OffCornerIdentity` now produces that
 identity on off-corner windows from second-moment finiteness at the endpoint,
-using the actual fixed-radius convergence theorem. Corner-containing windows
-remain the next analytic obligation.
-These do not supply all remaining model data.
-These do not supply all remaining model data.
+using the actual fixed-radius convergence theorem. `SecondMomentAllWindowAe`
+removes the off-corner restriction from the a.e. derivative by a countable
+rational-window cover. `SecondMomentPrimitiveConsistency` and
+`SecondMomentCornerIdentity` further extend the integrated identity across
+finitely many corners: the moment minus its interval primitive is continuous
+and locally constant off the corner set. This supplies interval AC and the
+consumer's a.e. derivative without asserting differentiability at attained radii.
+`SecondMomentCornerSharpness` records why continuity and a.e. quantification
+are essential. Tail second-moment finiteness and the edge-exhausting family
+remain explicit; general I.4.15 and I.4.20 are not completed by these results.
 
 
 No claim is made here that continuation-branch CI or every open source lemma
