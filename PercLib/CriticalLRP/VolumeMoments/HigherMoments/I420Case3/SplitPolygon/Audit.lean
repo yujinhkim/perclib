@@ -13,6 +13,7 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPol
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectSource
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.MomentHom
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.TailLower
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.DirectTail
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.LowMoments
 
 /-! # Axiom audit for the split Case-3 interface -/

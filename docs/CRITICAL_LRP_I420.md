@@ -295,6 +295,11 @@ obligation. `pairMass` and `connMass` still have no general radius-regularity
 proof, and `hmass` stays explicit where `ENNReal.toReal ⊤ = 0` would obstruct
 monotonicity.
 
+`case3_hAend_hAmid_cutPoly_source_of_tail` supplies the direct-ratio companion:
+the same volume-tail and second-moment inputs discharge `hgm`, leaving only the
+root finite-moment range and base source-tail requirements. Window homogeneity
+and window finiteness remain discharged by translation invariance.
+
 The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
 bounds, cut-error measurability of the two cluster-dependent statistics,
 higher-moment finiteness, second-moment lower comparison and finite triangle
