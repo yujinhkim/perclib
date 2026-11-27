@@ -28,6 +28,28 @@ The global `hderivId` required by the old higher-moment interface remains a
 material input. The subsequent off-corner/AE package is a separate reduction;
 it does not by itself prove that higher-moment identity.
 
+## Almost-everywhere higher-moment induction
+
+`Analysis.AEHigherMoments` defines the corner-safe analytic interface:
+absolute continuity on every compact interval of a radius tail, a derivative
+almost everywhere on that tail, and a.e. one-sided differential comparisons.
+The integration core uses absolute continuity and an a.e. fundamental theorem;
+it never invents derivatives on the null set of attained radii. The normalized
+increment and defect forms of Lemma I.4.22 permit a sign-changing measurable
+defect tending to zero.
+
+`moment_upper_bound_of_percolation_ae` and its ratio form carry the same interface
+through the general higher-moment induction step. The cubic wrappers and
+`I420Case3.case3_moment_three_bound_of_HD_case3_ae` use the accepted off-corner
+first-moment package instead of a global pointwise first-moment ODE.
+
+The third-moment absolute continuity, its a.e. Lemma-I.4.1 identity, and
+measurability of that moment and derivative expression remain explicit
+hypotheses. The available first-moment absolute continuity is not silently
+promoted to order three, and second-moment regular variation is still a
+separate input. These are corner-safe conditional induction results, not a
+proof of general Proposition I.4.15 or I.4.20.
+
 ## Finite triangles from an explicit autocorrelation profile
 
 `Analysis.TriTailNormalization` defines
@@ -58,10 +80,28 @@ from that disjunct. The $\ell^1$-row estimate is not the critical model's
 claimed $\ell^2$ operator bound; it cannot be inferred from the critical
 power-law decay.
 
-## Remaining tail work
+## Triple convolution and tail decay
 
-`conv_comm` and `conv_assoc` are proved for extended-nonnegative lattice
-convolution. They do **not** establish the triple-convolution/autocorrelation
-identity or its finite-real conversion needed to derive tail vanishing under
-the Gram profile. Those steps remain open. The delta computation is a
-non-vacuity example only, not a model identifier for critical percolation.
+`Analysis.TriTailConvolution` now supplies the exact identity
+$$\nabla_{\Gamma_f}(0,x)
+ =\sum_y(f*f*f)(y)(f*f*f)(y-x)$$
+after the required `ℝ≥0∞`-to-real conversion. For nonnegative summable $f$,
+it proves that $f*f*f$ is summable with mass $(\sum f)^3$, belongs to $\ell^2$,
+and therefore has vanishing far-translation autocorrelation. This gives
+`openTriangleTail_tendsto_of_gramProfile` and its domination version.
+`SourceModelData.nablaTail_le_openTriangleTail` explicitly carries the radius
+normalization $r/\mathrm{srcUpperConst}(M.S)$, and the model tail also tends
+to zero.
+
+`Analysis.TriTailRadial` supplies an independent route that does not need the
+convolution identity. Two row-mass bounds and Tonelli give
+$$\sum_x\nabla_{\Gamma_f}(0,x)\le(\sum_z f(z))^6,$$
+and a general finite-mass lemma makes the radial supremum tend to zero for any
+real-valued radius function, including the actual normalized source norm. The
+strict and closed tails are both covered. The delta profile attains the mass
+bound; the constant-one example proves that finite total mass is indispensable.
+
+These results remain conditional on the Gram-profile identification or
+domination hypothesis. Such a summable profile has finite $\ell^1$ row mass and
+is not a derivation of the critical long-range two-point profile from HD(3).
+No general Case-3 or Proposition I.4.20 conclusion is claimed.

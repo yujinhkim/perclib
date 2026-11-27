@@ -389,6 +389,16 @@ packages remove their respective interface inputs, but do not supply the
 finite-triangle, sharpness, scalar-regularity or vanishing-error data. The
 underlying ODE and moment propositions are not thereby completed.
 
+`Analysis.AEHigherMoments` supplies the corresponding almost-everywhere
+higher-moment induction interface. It replaces a global pointwise derivative by
+compact-window absolute continuity plus an a.e. derivative and proves the
+integration, normalized-increment and Lemma-I.4.22 comparison steps in that
+setting. The general and ratio-based moment wrappers and the cubic model
+packet are compiled with these hypotheses. The third-moment absolute
+continuity, off-corner third-moment derivative identity and required
+measurability are **not** derived, and second-moment regular variation remains
+independent. No attained-radius derivative or full I.4.20 claim is made.
+
 ### Cubic ratios and explicit triangle normalization
 
 `I420Case3.RatioInduction` replaces pointwise `hA0`/`hAmid` decorrelation
@@ -407,10 +417,20 @@ $(\sum f)^2$ row bounds give $\nabla(0,0)\le(\sum f)^6<\infty$, under pointwise
 identification or domination of the critical two-point kernel. This is a
 conditional result, not the critical model identification or `HD(3)` itself.
 
+`Analysis.TriTailConvolution` proves the exact triple-convolution/
+autocorrelation identity and derives the corresponding tail limit, with the
+model-norm normalization bridge stated explicitly. Independently,
+`Analysis.TriTailRadial` proves $\sum_x\nabla(0,x)\le(\sum f)^6$ and derives
+strict, closed and normalized-model tail vanishing through a general
+finite-mass radial-tail theorem. The delta profile gives a non-vacuity and
+sharpness witness, while constant weight one shows that finite total mass is
+essential. These are two proofs for the same explicit structural profile
+class, not two unconditional critical-model theorems.
+
 The delta profile yields a non-vacuity example. The constant-one kernel proves
 that unit diagonal, symmetry and translation invariance alone cannot force
-finite triangle mass. Only the convolution identities needed for the eventual
-triple-factor tail computation are proved; that tail computation remains open.
+finite triangle mass. The residual open issue is deriving that structural profile hypothesis
+for an intended model, not the tail computation within the profile class.
 
 The cutoff asymptotic now also supplies first-moment regular variation and
 `RVPosData` via `momOf_packet` and `drivingTerm_RVPosData_of_hP`; see

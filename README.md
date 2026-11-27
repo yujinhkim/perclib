@@ -59,10 +59,15 @@ resulting weaker Case-3 interface. `RadiusMeasurability.Statistics` proves
 unconditional global defect measurability, while
 `OffCorner.AeDerivativeHandoff` supplies the off-corner derivative, interval
 absolute continuity, and AE flux/ODE transport with the scalar-regularity and
-probabilistic hypotheses left explicit. The
+probabilistic hypotheses left explicit. `Analysis.AEHigherMoments` extends the
+a.e. integration and moment-induction interfaces to higher moments, while
+retaining the unproved third-moment AC/derivative and second-moment RV inputs.
+The
 [cubic/triangle continuation note](docs/CRITICAL_LRP_CUBIC_TRIANGLE_CONTINUATION.md)
-records ratio-based moment induction and finite triangles under explicit Gram
-profiles. [Regular variation](docs/CRITICAL_LRP_MOMENT_REGULAR_VARIATION.md)
+records ratio-based moment induction, finite triangles and two conditional
+tail-convergence routes under explicit Gram profiles. These routes retain the
+profile hypothesis rather than deriving it from HD(3).
+[Regular variation](docs/CRITICAL_LRP_MOMENT_REGULAR_VARIATION.md)
 adds first-moment asymptotic, measurability and driving-data interfaces, while
 keeping the second-moment RV input independent. These do not supply all
 remaining model data.

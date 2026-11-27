@@ -36,6 +36,9 @@ public import PercLib.CriticalLRP.Analysis.TriTailSqrt
 public import PercLib.CriticalLRP.Analysis.TriTailGram
 public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Defs
 public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Main
+public import PercLib.CriticalLRP.Analysis.TriTailConvolution.Defs
+public import PercLib.CriticalLRP.Analysis.TriTailConvolution.Main
+public import PercLib.CriticalLRP.Analysis.TriTailRadial
 public import PercLib.CriticalLRP.Analysis.TriTailLogTail
 public import PercLib.CriticalLRP.Analysis.TailLogIntegration
 public import PercLib.CriticalLRP.Analysis.LogTailLocal.Assembly
@@ -236,6 +239,16 @@ public import PercLib.CriticalLRP.Analysis.LogPrimitive
 public import PercLib.CriticalLRP.Analysis.QuadraticBall
 public import PercLib.CriticalLRP.Analysis.KaramataPrimitive
 public import PercLib.CriticalLRP.Analysis.AENormalizedIncrement
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.Defs
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.Increment
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.LemmaI422
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.LemmaI422Final
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.MomentBound
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.MomentPercolation
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.MomentRatio
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.ThreeRatio
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.CubicModel
+public import PercLib.CriticalLRP.Analysis.AEHigherMoments.Audit
 public import PercLib.CriticalLRP.Analysis.KaramataDivergence
 public import PercLib.CriticalLRP.Analysis.Lemma_I_5_26
 public import PercLib.CriticalLRP.Analysis.GyrationReduction
