@@ -88,6 +88,10 @@ ell=3 input, radial regularity and critical volume-tail still explicit.
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.
+`SecondMomentMeasurability` uses strict dyadic right-approximants to prove
+the derivative weight and both error functions measurable from tail second-moment
+finiteness; it also removes those measurability premises from the wrappers.
+Absolute continuity and the a.e. radial identity remain open.
 These do not supply all remaining model data.
 
 

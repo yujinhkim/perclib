@@ -551,3 +551,27 @@ finite tail moments, error measurability and logarithmic integrability of p2H
 remain source obligations. The mixed fourth-moment proof is reused rather than
 replaced by the weaker ordinary M1^7 estimate, and no whole-window product
 bound is asserted.
+
+## Measurability from right limits, not absolute continuity
+
+`Analysis.SecondMomentMeasurability` proves the generic dyadic-right-limit
+lemma: a function right continuous on a Borel set, with known values off it,
+is Borel measurable. Strictly greater dyadic points converge from the right,
+so the landed `𝓝[>]` radius statements are used verbatim. The remaining
+window jumps need not be removed or equated with closed-window values.
+
+The second-moment derivative weight is the product of the measurable kernel
+coefficient and the right-continuous real p2RHS. Explicit nonpositive-radius
+calculations reduce the other side to zero, and fourth-moment finiteness at a
+larger radius invokes the proved right-limit theorem. The mixed inequality in
+Case 1 makes that fourth-moment input follow from a finite second moment;
+tail second-moment finiteness promotes globally by monotonicity. Consequently
+`measurable_rhsScalarTwo_of_tail` needs no coeffRHS-continuity, hac, hae,
+monotonicity of the weight, or two-sided limit at an attained radius.
+
+The real excluded mass is likewise a right-limit combination of quadPairMass
+and connCubeMass, with careful finite toReal conversions. The algebraic error
+definitions then give global measurability of p2ExclError and p2Ebar. These
+facts discharge hmR and the error-measurability premises in the new case
+consumers without adding hypotheses. They do not establish absolute continuity
+or the a.e. radial derivative itself; those remain separate inputs.
