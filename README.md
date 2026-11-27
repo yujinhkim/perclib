@@ -104,6 +104,11 @@ and a root-split repaired window sum. The off-diagonal estimate remains the
 genuine target, still under its other hypotheses. See
 [the Case-3 numerator note](docs/CRITICAL_LRP_CASE3_NUMERATOR.md) and
 [the root-obstruction note](docs/CRITICAL_LRP_QZERO_DIAGONAL.md).
+`QZeroReduction` adds conditional conversion/absorption and translation
+invariance; `QZeroTransfer` proves exact finite-label and finite-cluster
+restriction suprema for the star. Neither supplies the missing tree bound;
+small-two-point/additive repairs remain open. See
+[the transfer note](docs/CRITICAL_LRP_QZERO_TRANSFER.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.
