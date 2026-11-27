@@ -528,3 +528,26 @@ log-integrability of $\bar E$ uses $\bar E=E_2\Psi-(\Psi-1)$, with
 $\Psi=(1+H)(1-E_0)$ bounded on a tail. None of this supplies missing AC, a.e.
 derivative, numerator, hT3, measurability or volume-tail data for the canonical
 model.
+
+## Conditional Case-1 assembly
+
+`Analysis.SecondMomentCase1` applies the proved mixed fourth-moment inequality
+at the actual cutoff law: M4 ≤ 15 M2 M1^4. In particular, finite second moments
+give finite fourth and connected third moments. With the existing covariance
+denominator this proves the Case-1 error bound
+E2 ≤ 15 M1^3 / |B_r|, with M2 cancelled exactly. The first-moment asymptotic
+hP gives M1 ≤ 2(α/β_c)r^α eventually, and the lower ball sandwich gives
+r^d/|B_r| ≤ 2^d. Thus the explicit rate is
+15·8·(α/β_c)³·2^d·r^(3α-d).
+When d > 3α, this rate tends to zero and is logarithmically integrable.
+
+The packet also derives logarithmic integrability of E0 from M.exists_error
+and the two-sided lattice-ball estimate, not from an additional arbitrary kernel
+profile. The normalized Ebar logarithmic integral then uses E2, H and E0 with
+their explicit convergence and measurability data. These feed conditional
+regular variation, connected-ratio reduction and power-law asymptotics.
+Absolute continuity, the a.e. second-moment derivative, rhs-measurability, hP,
+finite tail moments, error measurability and logarithmic integrability of p2H
+remain source obligations. The mixed fourth-moment proof is reused rather than
+replaced by the weaker ordinary M1^7 estimate, and no whole-window product
+bound is asserted.

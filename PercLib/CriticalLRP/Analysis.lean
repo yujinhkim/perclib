@@ -20,6 +20,8 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentError.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.SourceKernelBounds
 public import PercLib.CriticalLRP.Analysis.SourceKernelVariation

@@ -85,6 +85,9 @@ premise to the appropriate connected-mass ratio and radial regularity.
 `SecondMomentCase3` also gives the conditional Case-3 numerator/ratio
 assembly and second-moment asymptotic, with the p=3,q=0 numerator gap,
 ell=3 input, radial regularity and critical volume-tail still explicit.
+`SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
+including E2 log-integrability and derived E0 log-integrability, with radial
+regularity, hP, error measurability and p2H log-integrability retained.
 These do not supply all remaining model data.
 
 
