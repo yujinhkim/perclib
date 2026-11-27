@@ -487,7 +487,7 @@ essential model obligation.
 ## The normalized excluded error and the ODE identity
 
 `Analysis.SecondMomentError` defines the source objects directly:
-`p2ExclError` is $E_{2,r}$, `p2Ebar` is $ar E_{2,r}$, `p2H` is the
+`p2ExclError` is $E_{2,r}$, `p2Ebar` is $\barar E_{2,r}$, `p2H` is the
 normalized first-moment deviation $H_r$, and `p2Flux` is the real second-moment
 derivative weight. `Bounds` proves the two parts of (I.4.16) from the accepted
 covariance bounds with explicit finite second-moment, connected-moment and
@@ -501,3 +501,30 @@ The reduced RV theorem still requires second-moment AC, the a.e. radial
 identity, measurability of `rhsScalarTwo`, finite tail moments and the vanishing
 of the normalized connected-mass ratio. Logarithmic integrability for the
 power-law refinement is also explicit, not inferred from pointwise decay.
+
+## Conditional Case-3 assembly
+
+`Analysis.SecondMomentCase3` introduces `case3Driver c r` as the genuine
+$(\nabla_{r^c}+r^{-c})$ driver and `connCubeVertexMass` for the per-window-vertex
+third moment. `connCubeMass_eq_sum_vertex` decomposes the actual numerator over
+the finite window without any `toReal ⊤ = 0` step. The eventual-ratio theorem
+proves $C/(|B_r|M_1M_2)\le (K/c_3)(\nabla_{r^c}+r^{-c})$ from
+$C\le K|B_r|drv\,M_1^4$ and $c_3M_1^3\le M_2$ — precisely the cancellation that
+requires the lower second-moment comparison, not a bounded comparison alone.
+The latter is derived separately from the uncut critical volume-tail envelope.
+
+The numerator theorem keeps both the per-vertex `p = 3, q = 0` gap `hgap` and
+the distinct $\ell=3$ input `hT3` explicit. The $\ell=4$ polygon majorant is
+instantiated from the proved all-radius theorem. The printed $\ell=3$ display
+is not silently substituted by the naive column-sum bound, whose remaining
+$\chi^3/|B_r|$ term is not general Case-3 decay. These are source hypotheses,
+not facts claimed from hTri alone.
+
+Under the additional radial regularity, measurability and volume-tail
+hypotheses the file proves $E_{2,r}\to0$ from the driver squeeze, logarithmic
+integrability of $E_{2,r}$ and $\bar E_{2,r}$, regular variation of index
+$3\alpha$, and a conditional power-law asymptotic for the second moment. The
+log-integrability of $\bar E$ uses $\bar E=E_2\Psi-(\Psi-1)$, with
+$\Psi=(1+H)(1-E_0)$ bounded on a tail. None of this supplies missing AC, a.e.
+derivative, numerator, hT3, measurability or volume-tail data for the canonical
+model.

@@ -81,8 +81,11 @@ These prove the covariance estimate, not the vanishing of its normalized error
 or regular variation.
 `SecondMomentError` also defines and analyzes the normalized source error,
 proves its covariance bounds and exact ODE identities, and reduces the RV
-premise to the appropriate connected-mass ratio and radial regularity. These
-do not supply all remaining model data.
+premise to the appropriate connected-mass ratio and radial regularity.
+`SecondMomentCase3` also gives the conditional Case-3 numerator/ratio
+assembly and second-moment asymptotic, with the p=3,q=0 numerator gap,
+ell=3 input, radial regularity and critical volume-tail still explicit.
+These do not supply all remaining model data.
 
 
 No claim is made here that continuation-branch CI or every open source lemma

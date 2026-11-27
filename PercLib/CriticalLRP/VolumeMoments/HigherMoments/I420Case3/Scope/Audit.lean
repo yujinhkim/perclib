@@ -16,6 +16,8 @@ public import PercLib.CriticalLRP.Analysis.ModelSecondMomentRV
 public import PercLib.CriticalLRP.Analysis.SecondMomentObstruction.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentError.Normalized
 public import PercLib.CriticalLRP.Analysis.SecondMomentError.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.AEHigherMoments.CubicModel
@@ -126,3 +128,6 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuadShell_le
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ncard_mul_le_quadPairMass
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.quadPairMass_sub_le_connCubeMass
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.ratio_le_of_moment_gap
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeMass_le_of_windowGap
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3
