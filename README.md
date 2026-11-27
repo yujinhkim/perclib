@@ -62,7 +62,10 @@ absolute continuity, and AE flux/ODE transport with the scalar-regularity and
 probabilistic hypotheses left explicit. The
 [cubic/triangle continuation note](docs/CRITICAL_LRP_CUBIC_TRIANGLE_CONTINUATION.md)
 records ratio-based moment induction and finite triangles under explicit Gram
-profiles, without claiming the remaining model data.
+profiles. [Regular variation](docs/CRITICAL_LRP_MOMENT_REGULAR_VARIATION.md)
+adds first-moment asymptotic, measurability and driving-data interfaces, while
+keeping the second-moment RV input independent. These do not supply all
+remaining model data.
 
 
 No claim is made here that continuation-branch CI or every open source lemma

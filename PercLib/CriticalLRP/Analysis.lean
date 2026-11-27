@@ -8,6 +8,8 @@ External provenance and modifications are recorded in the file-specific notices 
 module
 
 public import PercLib.CriticalLRP.Analysis.RegularVariation
+public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
+public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.SourceKernelBounds
 public import PercLib.CriticalLRP.Analysis.SourceKernelVariation
 public import PercLib.CriticalLRP.Analysis.KernelOperator.Model

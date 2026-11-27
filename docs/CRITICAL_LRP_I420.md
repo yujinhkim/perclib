@@ -412,6 +412,12 @@ that unit diagonal, symmetry and translation invariance alone cannot force
 finite triangle mass. Only the convolution identities needed for the eventual
 triple-factor tail computation are proved; that tail computation remains open.
 
+The cutoff asymptotic now also supplies first-moment regular variation and
+`RVPosData` via `momOf_packet` and `drivingTerm_RVPosData_of_hP`; see
+[regular variation](CRITICAL_LRP_MOMENT_REGULAR_VARIATION.md). The remaining
+second-moment RV input is unchanged and cannot be inferred merely from the
+available bounded comparison.
+
 ## What is not closed
 
 - Case 3 remains incomplete: the corrected tree range, polynomial bridge,

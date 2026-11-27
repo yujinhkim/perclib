@@ -8,6 +8,8 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Al
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CriticalDivergence
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.RatioInduction.Asymptotic
 public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Main
+public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
+public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusMeasurability.Statistics
 
@@ -65,3 +67,10 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.TriTail.openTriangleSelf_lt_top_of_gramProfile
 #print axioms PercLib.CriticalLRP.TriTail.diagonal_one_translationInvariant_not_sufficient
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.first_moment_asymptotic_ae_of_critical_divergence
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_one_regularlyVarying
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_measurable_one_two
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_packet
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.drivingTerm_RVPosData_of_hP
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momTwo_regularlyVarying_iff_slowly
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_one_regularlyVarying_of_critical_divergence
+#print axioms PercLib.CriticalLRP.Analysis.exists_squeezed_not_regularlyVarying
