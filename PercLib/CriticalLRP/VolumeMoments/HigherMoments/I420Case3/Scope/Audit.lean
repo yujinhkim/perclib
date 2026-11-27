@@ -13,6 +13,9 @@ public import PercLib.CriticalLRP.Analysis.TriTailRadial
 public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
 public import PercLib.CriticalLRP.Analysis.SecondMomentRV
 public import PercLib.CriticalLRP.Analysis.ModelSecondMomentRV
+public import PercLib.CriticalLRP.Analysis.SecondMomentObstruction.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Normalized
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Audit
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.AEHigherMoments.CubicModel
@@ -110,6 +113,11 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_regularlyVarying_of_ae_linear_ode
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_tendsto_div_normalized_of_ae_linear_ode
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_packet_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.ACSharpness.secondMoment_regularlyVarying_needs_ac
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.p2ExclError_le_connCubeMass_div
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.p2Flux_eq_fifteen
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.regularlyVarying_two_reduced
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.tendsto_div_two
 #print axioms PercLib.CriticalLRP.SecondMomentCov.twoCluster_cardFun_pow_le
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuad_le_ball_mul_moments
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ball_mul_moments_le_exclMassQuad_add_connCubeMass

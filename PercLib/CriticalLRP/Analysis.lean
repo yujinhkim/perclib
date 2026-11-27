@@ -11,6 +11,12 @@ public import PercLib.CriticalLRP.Analysis.RegularVariation
 public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
 public import PercLib.CriticalLRP.Analysis.SecondMomentRV
 public import PercLib.CriticalLRP.Analysis.ModelSecondMomentRV
+public import PercLib.CriticalLRP.Analysis.SecondMomentObstruction.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentObstruction.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Bounds
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Normalized
+public import PercLib.CriticalLRP.Analysis.SecondMomentError.Audit
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.SourceKernelBounds
 public import PercLib.CriticalLRP.Analysis.SourceKernelVariation

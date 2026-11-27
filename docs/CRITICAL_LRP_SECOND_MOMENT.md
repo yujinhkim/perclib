@@ -467,3 +467,37 @@ This is the covariance input of (I.4.16). Vanishing and logarithmic
 integrability of the normalized error still depend on the case-specific
 connected-moment bounds; no regular-variation conclusion follows from these
 inequalities alone.
+
+## Why absolute continuity is indispensable
+
+`SecondMomentObstruction` supplies the explicit witness
+$f(r)=r^a2^{\lfloor r\rfloor}$. It is measurable, positive on the positive
+ray, monotone there, and satisfies $f'=af/r$ away from the integers.
+Nevertheless its doubling ratio is unbounded along the integers, so it is not
+regularly varying of index $a$ and cannot have a finite power-normalized
+limit. The integers form a null set, so even positivity, monotonicity and a
+zero-error a.e. ODE do not suffice.
+
+Thus deleting the interval absolute-continuity premise from the linear
+ODE-to-RV theorem is not a legitimate relaxation. The witness is discontinuous
+at the integers; it does not address continuous singular examples, and it says
+nothing about the actual cutoff second moment beyond keeping `hac` as an
+essential model obligation.
+
+## The normalized excluded error and the ODE identity
+
+`Analysis.SecondMomentError` defines the source objects directly:
+`p2ExclError` is $E_{2,r}$, `p2Ebar` is $ar E_{2,r}$, `p2H` is the
+normalized first-moment deviation $H_r$, and `p2Flux` is the real second-moment
+derivative weight. `Bounds` proves the two parts of (I.4.16) from the accepted
+covariance bounds with explicit finite second-moment, connected-moment and
+positive-window denominators. `p2ExclError_eq_second_form` verifies the
+paper's equivalent numerator using `quadPairMass`.
+
+`Normalized` identifies `p2Flux` with `rhsScalarTwo`, proves the exact
+(I.4.14)/(I.4.15) identities through the established scalar normalization, and
+discharges $H_r	o0$ from $h_P$ and $E_{0,r}	o0$ from `PivotFlux.tendsto_cutE0`.
+The reduced RV theorem still requires second-moment AC, the a.e. radial
+identity, measurability of `rhsScalarTwo`, finite tail moments and the vanishing
+of the normalized connected-mass ratio. Logarithmic integrability for the
+power-law refinement is also explicit, not inferred from pointwise decay.
