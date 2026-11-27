@@ -96,6 +96,27 @@ Case-3 third-moment/growth inputs it rules out even a claimed solution of the
 two-term bound via a source-wide arithmetic comparison. It therefore changes
 the mathematical target rather than being only a choice of proof technology.
 
+## Subsequent near-vertex correction
+
+`QZeroRepair.harris_starMoment` gives the unconditional lower comparison
+$T(x,y)E|K_x|^p\le E[|K_x|^p\mathbf1(x\leftrightarrow y)]$, and the cutoff
+third-moment instance requires only finiteness of the third moment for its
+real conversion. Under the same third-moment growth and triangle inputs, any
+vertex satisfying the old estimate forces
+$K T(0,y)\chi\le(C_3+C_4)\nabla$. A bounded-below two-point value therefore
+contradicts unbounded $\chi$ at near nonzero vertices as well as at $y=0$.
+
+Consequently, merely deleting the root is **not** a sufficiently general
+repair. The remaining q-zero target must restrict to a small-two-point region
+or include an additive correction. The `StarTwoTermBoundFar` and
+`StarTwoTermBoundAdd` interfaces and their window-cost lemmas are definitional
+or conditional results, not proofs of a far or additive estimate. The earlier
+paragraphs above retain the original root-split theorem; they must not be
+read as a claim that `HasRepairedPerVertexHgap` holds or that its $y\ne0$
+restriction alone resolves the general source discrepancy.
+
+See [the restoration and conditional-diagram note](CRITICAL_LRP_QZERO_DIAGRAMS.md).
+
 ## Verification
 
 The definitions, negative proof and repaired window inequality were

@@ -108,7 +108,12 @@ genuine target, still under its other hypotheses. See
 invariance; `QZeroTransfer` proves exact finite-label and finite-cluster
 restriction suprema for the star. Neither supplies the missing tree bound;
 small-two-point/additive repairs remain open. See
-[the transfer note](docs/CRITICAL_LRP_QZERO_TRANSFER.md).
+[the transfer note](docs/CRITICAL_LRP_QZERO_TRANSFER.md). `QZeroRestoration`
+adds exact restored/joint identities; `QZeroRepair` proves a vertexwise Harris
+bound and its near-vertex obstruction; `QZeroMarked`/`QZeroAtlas` preserve
+conditional residuals; `QZeroConsumer` handles exact sums and conversions.
+None proves the old hgap, and the candidate target needs a small-two-point or
+additive restriction. See [the restoration/diagram note](docs/CRITICAL_LRP_QZERO_DIAGRAMS.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.
