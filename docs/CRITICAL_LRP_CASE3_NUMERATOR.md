@@ -201,6 +201,32 @@ log-error inputs. The mathematical theorem therefore remains conditional on
 those genuine obligations—notably the exact two-term tree estimate above—but
 no false pointwise `hT3` remains in its formulation.
 
+## 6.1 Independent two-scale and constant-accounting wrappers
+
+`Analysis.SecondMomentCase3.Case3Bundle` independently proves a direct two-scale
+form of the windowed estimate. Its
+`sum_polyK_three_ballF_le_two_scale` controls the window sum by the triangle at
+the smaller ball plus the far triangle tail, and
+`exists_repaired_case3_bundle` supplies a vanishing split driver while the
+landed `ell = 4` maker supplies the other polygon clause. This is another
+independently checked route to the correct polygon form, not an inference
+from the impossible pointwise `hT3`.
+
+`Case3Bundle/Audit.lean` adds `exists_case3_error_rate` and
+`exists_case3_error_logIntegrable`, which put `C₃`, `C₄`, `c₃`, `Cp`, and `c`
+as existential data outside the error statements rather than hiding constants
+inside a caller-supplied hypothesis. These wrappers still carry the two-term
+`hgap` and model tail/triangle conditions.
+
+For normalization, `tendsto_div_two_of_case3_windowed` applies the existing
+production `tendsto_div_two` after deriving the repaired errors' vanishing and
+logarithmic-integrability hypotheses. Its radial, moment, measurability and
+first-moment inputs are inherited explicitly: this is an assembly wrapper,
+not a new source-faithfulness argument or a proof of `hgap`. The declaration
+whose pointwise obstruction duplicates a theorem of `SummedThree.Obstruction`
+uses a statement-preserving `_of_tendsto` suffix during integration. No
+statement was weakened in that packaging.
+
 ## 7. First-moment inputs: `FirstMomentLogError`
 
 `isLogErrorFunction_cutE0` packages the standardized error. The new

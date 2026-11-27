@@ -8,6 +8,8 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MarkedPolygon
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ConsumerGap
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FirstMomentLogError
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3Bundle
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3Bundle.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.NoGo
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Repaired
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Case3Windowed
@@ -71,3 +73,9 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
   PercLib.CriticalLRP.Orchestration.SourceModelData.exists_repaired_case3_polygon_bundle
 #print axioms
   PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_of_source
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.exists_case3_error_rate
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.exists_case3_error_logIntegrable
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.tendsto_div_two_of_case3_windowed
