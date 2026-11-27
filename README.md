@@ -86,7 +86,12 @@ premise to the appropriate connected-mass ratio and radial regularity.
 the established `(2,1)` product gap, removing the old `hgap` and restoring
 no star. Its regular-variation and asymptotic wrappers retain the actual ODE,
 triangle, moment, first-moment and measurability/log-integrability inputs;
-see [the product-gap note](docs/CRITICAL_LRP_PRODUCT_GAP.md). The older
+see [the product-gap note](docs/CRITICAL_LRP_PRODUCT_GAP.md).
+`RadialRegularity` subsequently derives the window family and the
+first-moment/radial hypotheses (`hP`, `hlogH`, `hlogE0`, AC/AE and error
+measurability), retaining the second-moment tail, uncut critical mean, moment
+gap, triangle/tail and continuity inputs. See
+[the radial-regularity note](docs/CRITICAL_LRP_RADIAL_REGULARITY.md). The older
 conditional Case-3 numerator/ratio assembly and second-moment asymptotic
 remain available for the optional q-zero star route.
 `Correlation.I417.General.QZeroStar` identifies that per-vertex numerator

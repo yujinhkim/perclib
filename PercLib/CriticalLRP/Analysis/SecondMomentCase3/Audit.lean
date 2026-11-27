@@ -1,6 +1,7 @@
 module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.SourceConsumer
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Audit
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroReduction.Main
@@ -125,6 +126,11 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_p21
 #print axioms
   PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_of_source_p21
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.ac_and_ae_toReal_two_farTail
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.case3_firstMoment_inputs_of_source
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_p21_of_model
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.regularlyVarying_two_p21_of_model
+
 #print axioms PercLib.CriticalLRP.QZeroAtlas.shapeTwo_le
 #print axioms PercLib.CriticalLRP.QZeroAtlas.kpow_eq_Kpow
 #print axioms PercLib.CriticalLRP.QZeroAtlas.shapeTwo_le_pow

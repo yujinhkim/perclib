@@ -222,6 +222,11 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.SourceConsumer
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.ACAE
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.FirstMomentSource
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Case3Composite
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Base.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Base.Marked
 public import PercLib.CriticalLRP.Correlation.I417.Base.Poly

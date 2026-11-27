@@ -9,6 +9,11 @@ windowed polygon inputs. The source-style
 `secondMoment_asymptotic_case3_of_source_p21` retains the actual ODE,
 triangle, moment, measurable and logarithmic-integrability inputs, but needs
 no q-zero star estimate. See [the product-gap note](CRITICAL_LRP_PRODUCT_GAP.md).
+`RadialRegularity` additionally removes the radial-regularity and
+first-moment hypotheses from the resulting package, retaining only the actual
+moment/triangle/continuity/critical-mean inputs. This is not an instantiation
+of those remaining inputs; see
+[the radial-regularity note](CRITICAL_LRP_RADIAL_REGULARITY.md).
 
 The paragraphs below describe the earlier, optional star route. They remain
 useful for its root/Harris obstructions and conditional atlas work, but their
