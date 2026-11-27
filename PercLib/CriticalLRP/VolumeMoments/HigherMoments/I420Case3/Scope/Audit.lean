@@ -5,6 +5,7 @@ module
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Main
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Measurability
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.AllMoments
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CriticalDivergence
 public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.Divergence
 public import PercLib.CriticalLRP.Analysis.OpenTriangle.Case23
 public import PercLib.CriticalLRP.Analysis.Cutoff.FluxODE
@@ -12,6 +13,8 @@ public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.CornerSafe
 public import PercLib.CriticalLRP.Analysis.TriTailSqrt
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.Limit
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.LogIntegrable
+public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.SecondMomentIntegrability
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SubcriticalAllMoments
 
 /-! # Axiom audit of the Case-3 scope dependencies -/
 
@@ -48,3 +51,5 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.CutoffDefect.aemeasurable_cutE1_of_secondMoment
 #print axioms PercLib.CriticalLRP.I420Case3.aemeasurable_cutError_of_secondMoment
 #print axioms PercLib.CriticalLRP.I420Case3.aemeasurable_cutError_of_firstMoment
+#print axioms PercLib.CriticalLRP.Orchestration.cutMoment_ne_top_of_subcritical_first
+#print axioms PercLib.CriticalLRP.CutoffDefect.exists_integrableOn_cutE1_abs_div_of_secondMoment

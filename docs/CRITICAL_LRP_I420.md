@@ -280,6 +280,11 @@ Consequently `cutMoment_ne_top_of_one` supplies **every** higher cutoff moment
 from a finite first moment at the same radius. This is the ordinary ($k=0$)
 moment bound, not arbitrary mixed-moment I.4.16, and it does not prove the
 first-moment/sharpness input or a uniform-in-$r$ bound.
+`OffCorner.SubcriticalAllMoments` sharpens the consequence for positive cutoff
+radii: if every strictly subcritical uncut law has finite first cluster moment,
+then every critical cutoff moment of every finite order is finite. This still
+assumes first-moment sharpness; it does not obtain it from zero infinite-cluster
+probability or from the ordinary tree bounds.
 
 `SplitPolygon.AllMoments` discharges the root finite-moment range in the
 Case-3 direct-decorrelation and normalized-error assemblies at every allowed
@@ -301,6 +306,11 @@ finite first cutoff moment, the all-order ordinary moment bound supplies the
 second moments needed here. These are tail results, not a proof of global
 Borel measurability at attained radii: the global `Measurable` premise in the
 existing ODE scope wrapper remains explicit.
+`CutoffDefect.SecondMomentIntegrability` composes this result with the existing
+logarithmic-tail theorem: under that theorem's finite triangle and radial-decay
+inputs, finite second cutoff moments now supply its a.e.-measurability premise.
+It does not create the triangle/decay inputs or the eventual first-moment
+finiteness premise.
 
 ### HD(3)-scoped source instantiation
 
@@ -322,8 +332,21 @@ reduces the vanishing error to the shipped standardization limit plus $E_1\to0$.
 `openTriangleSelf_lt_top_of_source_sqrt` is only a conditional $\ell^2$
 factorization wrapper: it does not derive finite triangle mass from HD(3).
 
-The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
-`Scope.Measurability` proves `measurable_cutE0` and composes the defect as
+`I420Case3.CriticalDivergence` corrects a separate interface issue. The older
+`first_moment_asymptotic_of_rpow_lower` path uses a pointwise critical two-point
+lower bound `hlow`; its quoted source, Theorem I.2.14, requires $\alpha<1$ and
+therefore cannot supply that bound in the $d=6,\alpha=2$ Case-3 regime.
+Theorem I.2.14 is not thereby false or bypassed: the source proof actually uses
+divergence of the uncut critical mean, $E_{\beta_c}|K|=\infty$.
+`LowerTwoPoint.first_moment_asymptotic_of_critical_divergence` consumes exactly
+that weaker input, and the three replacement Case-3 scope wrappers remove
+`hlow` from this path. A spatially averaged version is proved in
+`criticalDivergence_of_ballLower`, with `ballLower_of_pointwise_lower` showing
+that the old stronger premise implies it. The critical divergence itself
+remains an explicit source-asserted input, not a theorem supplied here.
+
+The HD(3) hypothesis, first-moment ODE, second-moment finiteness and critical-mean
+divergence remain independent inputs. `Scope.Measurability` proves `measurable_cutE0` and composes the defect as
 `measurable_cutError_of_measurables`. The remaining exact input is now isolated:
 `measurable_cutError_of_stats` takes only `hmass`, `hpair`, and `hconn` for the
 three real cutoff statistics. `cutE0` itself is not a remaining measurability
@@ -336,8 +359,8 @@ the same volume-tail and second-moment inputs discharge `hgm`, leaving only the
 root finite-moment range and base source-tail requirements. Window homogeneity
 and window finiteness remain discharged by translation invariance.
 
-The HD(3) hypothesis, derivative/flux handoff, lower two-point bound, finite
-triangle condition and uncut volume tail remain separate model inputs. The new
+The HD(3) hypothesis, derivative/flux handoff, uncut critical-mean divergence,
+finite triangle condition and uncut volume tail remain separate model inputs. The new
 all-order ordinary bound supplies finite higher moments and hence second
 moments from a finite first cutoff moment, but that first moment itself is
 still required. The global radius measurability of the defect used by `_flux`
@@ -356,7 +379,8 @@ propositions are not thereby completed.
   that first moment at arbitrary normalized norms; this uses the ordinary
   ($k=0$) tree bound and does not close arbitrary mixed-moment I.4.16.
 - The remaining first/second-moment asymptotics, derivative/flux handoff,
-  lower two-point bound and analytical ODE obligations are separate from the
+  uncut critical-mean divergence and analytical ODE obligations are separate
+  from the
   completed I.4.17 diagram bound and the log-convexity comparison.
 - The second induction remains a correctly conditional consequence of the
   paper's decorrelation estimates, not a substitute for their three probabilistic cases.

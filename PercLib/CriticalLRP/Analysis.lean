@@ -43,6 +43,7 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.Defect
 public import PercLib.CriticalLRP.Analysis.Cutoff.Defect.Triangle
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.Limit
 public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.LogIntegrable
+public import PercLib.CriticalLRP.Analysis.Cutoff.CutoffDefect.SecondMomentIntegrability
 public import PercLib.CriticalLRP.Analysis.Cutoff.FluxODE
 public import PercLib.CriticalLRP.Analysis.Cutoff.IntervalAC
 public import PercLib.CriticalLRP.Analysis.Cutoff.Continuity
@@ -85,6 +86,7 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.TwoPoint.Capstone
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffFourthMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SourceCutoffAllMoments
+public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.SubcriticalAllMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.StatisticsMeasurability
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.PowerLawContinuity
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.LargeRadiusMoments

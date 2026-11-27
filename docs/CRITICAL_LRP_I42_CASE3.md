@@ -71,10 +71,26 @@ matching `E₀` from `M.exists_error` and the normalized ball count. The separat
 `bounded_defect_insufficient` example is useful here: if one drops the error-sign hypothesis, a
 bounded defect alone need not produce the lower comparison.
 
+## The critical two-point lower-bound premise
+
+The older path through `first_moment_asymptotic_of_rpow_lower` uses a pointwise
+lower bound `hlow`. Its cited source, Theorem I.2.14 (`paper.txt:1426`),
+requires $\alpha<1$, while Case 3 uses $d=6,\alpha=2$. That pointwise bound is
+therefore not supplied by the source's Case-3 hypotheses. The integrated
+`I420Case3.CriticalDivergence` module instead uses $E_{\beta_c}|K|=\infty$,
+which is what the proof asserts at `paper.txt:1924`, and packages both abstract
+and flux forms of the Case-3 chain with that weaker input. Its
+`criticalDivergence_of_ballLower` also derives the divergence directly from an
+eventual averaged two-point lower bound of order $r^\alpha$.
+
+This changes an unnecessarily strong Lean premise, not the source theorem. The
+critical divergence itself is not proved by these wrappers and remains an
+independent source-asserted input.
+
 ## Still open for the full Case 3
 
-1. **Theorem I.2.14 itself.** In particular, the lower off-diagonal critical two-point bound
-   used above. The current coverage ledger marks it as not formalized.
+1. **Critical-mean divergence.** The new path uses the actual input rather than
+   an inapplicable pointwise lower bound, but does not prove $E_{\beta_c}|K|=\infty$.
 2. **The model-level ODE.** `first_moment_asymptotic_of_rpow_lower` takes the real derivative
    and its defect `h` as hypotheses. Corner-free/one-sided cutoff differentiation cannot be
    silently upgraded to differentiability at every corner.
