@@ -1,5 +1,17 @@
 # The `q = 0` star moment and the remaining Case-3 numerator gap
 
+## Updated status: the optional star route
+
+`Analysis/SecondMomentCase3/ProductGap` now supplies the Case-3 numerator from
+the proved `(2,1)` product-minus-excluded gap at the swapped pair. The star
+bound discussed below remains unproved and has root/near-vertex obstructions,
+but it is an **optional stronger route**, not the outstanding requirement for
+the current Case-3 consumer. The old two-term `hgap` therefore must not be listed
+as a remaining requirement of the present source-like wrapper. The retained
+analytic and model inputs and the lack of an I.4.20 conclusion are unchanged;
+see [the product-gap note](CRITICAL_LRP_PRODUCT_GAP.md). The rest of this note
+retains the star route's exact identities and their consequences.
+
 ## What the new modules prove
 
 `Correlation/I417/General/QZeroStar/Defs.lean` defines

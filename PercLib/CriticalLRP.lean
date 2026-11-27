@@ -202,6 +202,10 @@ public import PercLib.CriticalLRP.Correlation.I417.General.QZeroConsumer.Sharp
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroConsumer.Diagonal
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroConsumer.OffDiag
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroConsumer.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.SourceConsumer
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Base.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Base.Marked
 public import PercLib.CriticalLRP.Correlation.I417.Base.Poly

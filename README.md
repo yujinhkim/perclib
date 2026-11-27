@@ -82,9 +82,13 @@ or regular variation.
 `SecondMomentError` also defines and analyzes the normalized source error,
 proves its covariance bounds and exact ODE identities, and reduces the RV
 premise to the appropriate connected-mass ratio and radial regularity.
-`SecondMomentCase3` also gives the conditional Case-3 numerator/ratio
-assembly and second-moment asymptotic, with the p=3,q=0 numerator gap,
-ell=3 input, radial regularity and critical volume-tail still explicit.
+`SecondMomentCase3.ProductGap` proves the Case-3 numerator consumer from
+the established `(2,1)` product gap, removing the old `hgap` and restoring
+no star. Its regular-variation and asymptotic wrappers retain the actual ODE,
+triangle, moment, first-moment and measurability/log-integrability inputs;
+see [the product-gap note](docs/CRITICAL_LRP_PRODUCT_GAP.md). The older
+conditional Case-3 numerator/ratio assembly and second-moment asymptotic
+remain available for the optional q-zero star route.
 `Correlation.I417.General.QZeroStar` identifies that per-vertex numerator
 with the connected one-copy star moment and its labelled `(p+1)`-point
 expansion. It proves the exact q=0 moment-gap split and shows that the

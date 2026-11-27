@@ -1,6 +1,6 @@
 module
 
-public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.SourceConsumer
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroReduction.Main
@@ -116,3 +116,8 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
 #print axioms PercLib.CriticalLRP.I417QZeroConsumer.tsum_starRHS
 #print axioms PercLib.CriticalLRP.I417QZeroConsumer.connCubeVertexMass_zero_le
 #print axioms PercLib.CriticalLRP.I417QZeroConsumer.connCubeMass_toReal_le_of_twoTermStarGap_offDiag_three
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.case3Numerator_le_polygonWindow
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.p2ExclError_le_case3Driver_of_polygonWindow
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_p21
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_of_source_p21

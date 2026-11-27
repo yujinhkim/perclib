@@ -1,5 +1,20 @@
 # Case-3 numerator: the false pointwise `hT3` and the proved repairs
 
+## Current primary route: the product-minus-excluded numerator
+
+`Analysis/SecondMomentCase3/ProductGap` now proves the Case-3 numerator
+consumer without `hgap`. It uses the proved `(2,1)` product-gap theorem
+`I417Example.printed_le` at the swapped pair and combines it with the proved
+windowed polygon inputs. The source-style
+`secondMoment_asymptotic_case3_of_source_p21` retains the actual ODE,
+triangle, moment, measurable and logarithmic-integrability inputs, but needs
+no q-zero star estimate. See [the product-gap note](CRITICAL_LRP_PRODUCT_GAP.md).
+
+The paragraphs below describe the earlier, optional star route. They remain
+useful for its root/Harris obstructions and conditional atlas work, but their
+off-diagonal `hgap` is **no longer** the missing Case-3 numerator condition.
+This is not an unconditional completion of Proposition I.4.15/I.4.20 or of
+their other cases.
 ## Status at a glance
 
 The old case-three interface is not merely missing a proof of `hT3`; its
