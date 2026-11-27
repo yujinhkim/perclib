@@ -439,3 +439,31 @@ includes the `momOf_packet` wrapper. These results retain $h_P$ and the model's
 AC, derivative, measurability and error hypotheses. They neither construct the
 model error nor supply regular variation from the bounded two-sided moment
 comparison alone.
+
+## Two-cluster covariance and the connected window remainder
+
+`SecondMoment.Covariance` proves a general extended-cardinality BK instance:
+for natural powers $a,b$,
+$$\mathbb E[|K_x|^a|K_y|^b \mathbf1(x\nleftrightarrow y)]
+  \le \mathbb E|K_x|^a\cdot\mathbb E|K_y|^b.$$
+This is the established general `ℝ≥0∞` two-cluster theorem specialized to
+`cardFun` powers; infinite clusters are not converted to zero. At the actual
+radial cutoff law, translation-invariance of all cluster moments and finite
+Tonelli give
+$$M.exclMassQuad(r)\le |B_r|\,M_1(r)M_2(r).$$
+The bound is unconditional on moment finiteness.
+
+`SecondMoment.CovarianceWindows` also proves this for an arbitrary finite
+window, its strict and shell variants, and the reflected linear excluded
+mass. It provides real forms under finite first and second moments. The lower
+Harris–FKG side is kept separate:
+$$|B_r|\,M_1M_2\le M.exclMassQuad+M.connCubeMass.$$
+`connCubeMass` is identified with the actual
+$E[|K_0|^3\#(K_0\cap B_r)]$. Therefore the full joint window mass obeys a
+sandwich with that connected term, not the incorrect whole-`quadPairMass`
+product bound claimed by the rejected shortcut.
+
+This is the covariance input of (I.4.16). Vanishing and logarithmic
+integrability of the normalized error still depend on the case-specific
+connected-moment bounds; no regular-variation conclusion follows from these
+inequalities alone.

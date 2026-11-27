@@ -127,6 +127,8 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.RadiusMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Main
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Defs
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Main
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Covariance
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.CovarianceWindows
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Left.Defs
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Left.Main
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Transport.Defs

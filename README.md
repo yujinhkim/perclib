@@ -73,8 +73,12 @@ keeping the second-moment RV input independent of $h_P$ alone.
 `Analysis.ModelSecondMomentRV` derives it only from explicit second-moment AC,
 an a.e. linear ODE and error asymptotics; that model data is still open.
 `SecondMoment.ExclusionSwap` additionally proves the exact identity
-`p2RHS = 3 * exclMassQuad` by reflecting the actual radial cutoff law; this
-does not discharge the second-moment error estimate or regular variation.
+`p2RHS = 3 * exclMassQuad` by reflecting the actual radial cutoff law.
+`SecondMoment.Covariance` and `CovarianceWindows` now also prove the two-cluster
+covariance bounds: the disconnected excluded mass is at most |B_r|M1M2, with
+`connCubeMass` retained separately in the lower and joint-window bounds.
+These prove the covariance estimate, not the vanishing of its normalized error
+or regular variation.
 These do not supply all remaining model data.
 
 

@@ -17,6 +17,8 @@ public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.AEHigherMoments.CubicModel
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Main
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Covariance
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.CovarianceWindows
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusMeasurability.Statistics
 
 public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.Divergence
@@ -108,3 +110,11 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_regularlyVarying_of_ae_linear_ode
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_tendsto_div_normalized_of_ae_linear_ode
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_packet_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.SecondMomentCov.twoCluster_cardFun_pow_le
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuad_le_ball_mul_moments
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ball_mul_moments_le_exclMassQuad_add_connCubeMass
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclWindow_le_card_mul
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuad_le_ncard_mul
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuadShell_le
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.ncard_mul_le_quadPairMass
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.quadPairMass_sub_le_connCubeMass
