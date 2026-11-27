@@ -165,7 +165,43 @@ first-moment asymptotic and `ball_count`. This is a no-go theorem for the
 column-sum substitute, not for the repaired near/far route or Proposition
 I.4.15.
 
-## 6. First-moment inputs: `FirstMomentLogError`
+## 6. Complete source-shaped windowed polygon bundle: `WindowedEllThree`
+
+`Analysis.SecondMomentCase3.WindowedEllThree.Defs` makes the needed weaker
+polygon condition explicit:
+`WindowedEllThreeGap c Cp` says
+`∑_{y∈B_r} T³(0,y) ≤ Cp |B_r| (∇_{r^c}+r^{-c})` for every `r ≥ 1`.
+This definition exposes the actual input demanded by window summation rather
+than multiplying an impossible bound per vertex. The old pointwise hypothesis
+implies this one but cannot itself hold with a vanishing driver.
+
+`windowPolyKThree_le_case3Driver_eventually` proves the eventual estimate
+`(1 + 5 triSelf) |B_r| (∇_{r^c}+r^{-c})` for `0 < c ≤ 1/2`. Near values use
+the landed honest constant bound `source_ell_three_le`; far values use the
+triangle tail. At the split `R = √r`, `M.nablaTail_antitone` bounds the far
+one by the same driver. A near-set count crushes `|B_{√r}| ≈ r^{d/2}` by
+`|B_r| r^{-c} ≈ r^{d-c}`, with no `χ³/|B_r|` or other residual.
+`exists_windowedEllThreeGap` then handles the bounded initial radii by
+an explicit finite constant, supplying all `r ≥ 1`.
+
+`connCubeMass_toReal_le_of_windowedGap` combines that condition and `hpoly4`
+with the exact two-term `hgap`, reaching the original numerator form. In
+`Repaired`, the common choice `c = min(α/(2d), 1/2)` is compatible with both
+the windowed proof and the landed all-radius `ell = 4` manufacturer. The two
+constants are combined into a positive `Cp`. Consequently
+`exists_repaired_case3_polygon_bundle` is an inhabited replacement for the
+vacuous original `hcase3`.
+
+`Case3Windowed.secondMoment_asymptotic_case3_windowed` has the desired
+asymptotic conclusion given a windowed bundle, retaining its analytic and
+measurement assumptions. Its manufacturer-backed form
+`secondMoment_asymptotic_case3_of_source` retains `hgap`, `hgm`, the radial
+identities, `h1`, `h2`, `hc`, tail/measurability and the first-moment
+log-error inputs. The mathematical theorem therefore remains conditional on
+those genuine obligations—notably the exact two-term tree estimate above—but
+no false pointwise `hT3` remains in its formulation.
+
+## 7. First-moment inputs: `FirstMomentLogError`
 
 `isLogErrorFunction_cutE0` packages the standardized error. The new
 `isLogErrorFunction_one_sub_mul_of_eventually` makes the needed correction

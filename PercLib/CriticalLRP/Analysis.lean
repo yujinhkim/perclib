@@ -29,6 +29,13 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ConsumerGap
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FirstMomentLogError
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.NoGo
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Windowed
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Consumer
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Repaired
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Case3Windowed
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentTail

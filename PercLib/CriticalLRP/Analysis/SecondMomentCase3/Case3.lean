@@ -75,8 +75,9 @@ unsatisfiable: the diagonal threefold two-point power is at least one.  Conseque
 `hcase3` hypothesis bundle below is uninhabited under its usual finite-moment hypotheses; the
 conditional wrapper below is not a non-vacuous Case-3 proof.  `SummedThree` replaces it by a
 derived near/far window sum with a logarithmically integrable driver, and `ConsumerGap`
-independently derives the near-count residual and repaired analytic conclusions.  Each retains
-`hgap` and its other explicit model hypotheses.  `MarkedPolygon` and `EllThreeObstruction` record
+independently derives the near-count residual and repaired analytic conclusions, and
+`WindowedEllThree` constructs a source-shaped all-radius windowed driver and asymptotic wrapper.
+Each retains `hgap` and its other explicit model hypotheses.  `MarkedPolygon` and `EllThreeObstruction` record
 alternative bounds and their residuals; none supplies the source's exact two-term tree-gap.
 -/
 module

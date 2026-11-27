@@ -8,6 +8,9 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MarkedPolygon
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ConsumerGap
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FirstMomentLogError
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.NoGo
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Repaired
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.WindowedEllThree.Case3Windowed
 
 /-! # Axiom audit of the Case-3 second-moment assembly -/
 
@@ -56,3 +59,15 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
   PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.logIntegrable_p2ExclError_of_case3_repaired
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.isLogErrorFunction_p2H
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.case3_firstMoment_inputs
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.not_exists_case3_polygon_bundle
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.windowPolyKThree_le_case3Driver_eventually
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.exists_windowedEllThreeGap
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeMass_toReal_le_of_windowedGap
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.exists_repaired_case3_polygon_bundle
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_of_source

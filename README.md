@@ -95,8 +95,11 @@ The old Case-3 `hcase3` is now proved uninhabited: its pointwise `ℓ = 3`
 bound is incompatible with the vanishing driver. `SummedThree` and
 `ConsumerGap` replace it by derived near/far window bounds, with the actual
 `hgap` still open; `MarkedPolygon` and `EllThreeObstruction` record the
-separate alternative residuals and Case-1-only column route. These are
-conditional replacements, not a completed Proposition I.4.15. See
+separate alternative residuals and Case-1-only column route. The complete
+`WindowedEllThree` bundle additionally derives an all-radius windowed driver
+and a source-style asymptotic wrapper, retaining the exact two-term `hgap`
+and its explicit model assumptions. These are conditional replacements, not
+a completed Proposition I.4.15. See
 [the Case-3 numerator note](docs/CRITICAL_LRP_CASE3_NUMERATOR.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
