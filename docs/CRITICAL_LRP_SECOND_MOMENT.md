@@ -529,6 +529,32 @@ $\Psi=(1+H)(1-E_0)$ bounded on a tail. None of this supplies missing AC, a.e.
 derivative, numerator, hT3, measurability or volume-tail data for the canonical
 model.
 
+## The `q = 0` identification, and the remaining tree-count obligation
+
+`Correlation.I417.General.QZeroStar` proves the actual algebraic form of the
+per-vertex Case-3 numerator. At the cutoff law,
+`connCubeVertexMass r y = starMoment (M.cutProb r) 0 y 3`, and the latter
+expands as a one-copy four-point star
+$\sum_{x_1,x_2,x_3}P(x_1,x_2,x_3,y\in K_0)$.
+With a finite third cutoff moment this is exactly the `momentProd − rawDiff`
+form of the `p = 3, q = 0` moment gap. The window sum is the connected third
+window moment, without changing the existing sampling/measure conventions.
+
+The general marked family is indexed by `Fin q × V` and is zero when `q = 0`,
+whereas the star moment is positive whenever the two-point probability is
+positive. This proves that the existing marked-family representation cannot
+just be specialized from `q ≥ 1`; a genuine one-copy argument is needed. It
+does not assert that the source lemma itself is false at `p = 3, q = 0`.
+
+The missing estimate is still
+`starMoment ≤ C₃ T³(0,y) χ⁴ + C₄ T⁴(0,y) χ³`.
+The packet supplies no tree-count bound for this inequality and no uniform
+`hT3` driver bound. It therefore clarifies, but does not itself discharge,
+the two named Case-3 numerator hypotheses. The `p = q = 0` evaluation also
+shows why the printed display needs a nondegenerate scope condition; that
+separate degenerate case does not affect the `ℓ ∈ {3,4}` terms here. See
+[the q=0 note](CRITICAL_LRP_I417_QZERO.md).
+
 ## Conditional Case-1 assembly
 
 `Analysis.SecondMomentCase1` applies the proved mixed fourth-moment inequality

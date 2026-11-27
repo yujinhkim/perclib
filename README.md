@@ -85,6 +85,12 @@ premise to the appropriate connected-mass ratio and radial regularity.
 `SecondMomentCase3` also gives the conditional Case-3 numerator/ratio
 assembly and second-moment asymptotic, with the p=3,q=0 numerator gap,
 ell=3 input, radial regularity and critical volume-tail still explicit.
+`Correlation.I417.General.QZeroStar` identifies that per-vertex numerator
+with the connected one-copy star moment and its labelled `(p+1)`-point
+expansion. It proves the exact q=0 moment-gap split and shows that the
+existing marked family vanishes at q=0; it does not supply the remaining
+ell=3/ell=4 tree-count bound. See
+[the q=0 note](docs/CRITICAL_LRP_I417_QZERO.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.

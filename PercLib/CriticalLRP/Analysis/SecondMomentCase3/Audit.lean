@@ -1,6 +1,7 @@
 module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
 
 /-! # Axiom audit of the Case-3 second-moment assembly -/
 
@@ -25,3 +26,11 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
 #print axioms SourceModelData.case3Driver_isLogErrorFunction
 #print axioms SecondMomentCase3.sum_perVertex_le
 #print axioms SecondMomentCase3.ratio_le_of_moment_gap
+#print axioms PercLib.CriticalLRP.I417Gen.rawDiff_add_starMoment
+#print axioms PercLib.CriticalLRP.I417Gen.starMoment_eq_tsum_labelEvent
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeVertexMass_eq_starMoment
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeVertexMass_eq_momentGap_of_cutMoment
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeMass_eq_sum_starMoment
