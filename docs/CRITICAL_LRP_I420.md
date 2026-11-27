@@ -246,6 +246,14 @@ comparison rather than assuming it. The uncut volume-tail bound and second-momen
 finiteness remain explicit model inputs; they are not inferred from the first
 moment, the upper moment inequalities, or the finite triangle alone.
 
+`exists_case3_i421_cutPoly_source_of_tail` applies this comparison to the actual
+source-ball normalized cutoff error theorem. The uncut volume tail and
+second-moment finiteness are inputs, but no independent `hgm` premise is needed.
+The remaining inputs are the first-moment asymptotic, finite triangle, base
+triangle-tail decay, and the explicitly stated root-moment range. Theorems
+`hTail` (the open-triangle-tail decay) and `hVolTail` (the uncut volume-tail
+bound) remain deliberately separate hypotheses.
+
 ### HD(3)-scoped source instantiation
 
 `I420Case3.Scope` supplies the first-moment/HD-tail instantiations without asserting

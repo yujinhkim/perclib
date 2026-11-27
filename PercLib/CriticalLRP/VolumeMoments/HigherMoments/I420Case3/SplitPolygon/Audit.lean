@@ -46,3 +46,4 @@ set_option linter.hashCommand false
 #print axioms PercLib.CriticalLRP.I420Case3.case3_hAend_hAmid_cutPoly_source_of_finite
 #print axioms PercLib.CriticalLRP.I420Case3.momOf_cutProb_eq_toReal_cutMoment
 #print axioms PercLib.CriticalLRP.I420Case3.case3_hgm_of_tail
+#print axioms PercLib.CriticalLRP.I420Case3.exists_case3_i421_cutPoly_source_of_tail
