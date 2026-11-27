@@ -9,6 +9,8 @@ module
 
 public import PercLib.CriticalLRP.Analysis.RegularVariation
 public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
+public import PercLib.CriticalLRP.Analysis.SecondMomentRV
+public import PercLib.CriticalLRP.Analysis.ModelSecondMomentRV
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.SourceKernelBounds
 public import PercLib.CriticalLRP.Analysis.SourceKernelVariation
@@ -123,6 +125,8 @@ public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Corner
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ShellPos
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.RadiusMoments
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Main
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Defs
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Main
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Left.Defs
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Regularity.Left.Main
 public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.Transport.Defs

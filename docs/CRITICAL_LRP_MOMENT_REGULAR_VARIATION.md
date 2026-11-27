@@ -45,7 +45,33 @@ limit for index $1$ does not exist. This is a counterexample to the inference
 from bounded comparison to regular variation, not to the paper's actual
 second-moment theorem.
 
+The source's second-moment excluded quadratic mass is supplied independently of
+regular variation: `SecondMoment.ExclusionSwap` uses midpoint reflection of the
+actual radial cutoff law to prove `exclMassQuad = exclMassSqLin`, hence
+`p2RHS = 3 * exclMassQuad`. This closes the exact coefficient-three identity of
+(I.4.14), not the derivative handoff or the vanishing of the second-moment
+error. See [the second-moment note](CRITICAL_LRP_SECOND_MOMENT.md).
+
+## Corner-safe linear-ODE route
+
+`Analysis.SecondMomentRV` supplies the other analytic input separately: for a
+positive function $f$, interval absolute continuity and an almost-everywhere
+identity $f'=3\alpha(1-E)f/r$, with measurable $E\to0$, imply
+`RegularlyVaryingAtTop f (3 * α)`. If $E$ is logarithmically integrable, it
+also gives a positive limit of $f(r)/r^{3\alpha}$. The proof uses the exact
+integrating factor and the existing a.e. normalized-increment theorem, with no
+driving term and no assertion of differentiability at attained radii.
+
+`ModelSecondMomentRV` specializes this to the actual cutoff second moment and
+to the `rhsScalarTwo` error ratio. Its hypotheses include $h_P$, second-moment
+absolute continuity, the a.e. ODE, measurability and the error limit; the
+logarithmic-integrability refinement is a separate input.
+`momOf_packet_of_ae_linear_ode` composes this with `momOf_packet`, so $h_2$ is
+derived only once those extra model data are supplied. It does not construct
+them and does not prove general Proposition I.4.15 or I.4.20.
+
 `momOf_packet` and `drivingTerm_RVPosData_of_hP` expose the first-moment,
 positivity, measurability and RV data to the higher-moment machinery while
-keeping $h2$ explicit. They do not claim the Lemma I.4.1 derivative, critical
-second-moment asymptotic, general I.4.15, or general I.4.20.
+keeping $h2$ explicit in the absence of those additional data. They do not
+claim the Lemma I.4.1 derivative, critical second-moment asymptotic, general
+I.4.15, or general I.4.20.

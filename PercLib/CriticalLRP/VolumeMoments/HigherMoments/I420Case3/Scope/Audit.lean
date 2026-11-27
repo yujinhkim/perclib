@@ -11,9 +11,12 @@ public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Main
 public import PercLib.CriticalLRP.Analysis.TriTailConvolution.Main
 public import PercLib.CriticalLRP.Analysis.TriTailRadial
 public import PercLib.CriticalLRP.Analysis.MomentRegularVariation
+public import PercLib.CriticalLRP.Analysis.SecondMomentRV
+public import PercLib.CriticalLRP.Analysis.ModelSecondMomentRV
 public import PercLib.CriticalLRP.Analysis.RegularVariationCounterexample
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.AeDerivativeHandoff
 public import PercLib.CriticalLRP.Analysis.AEHigherMoments.CubicModel
+public import PercLib.CriticalLRP.Analysis.Cutoff.SecondMoment.ExclusionSwap.Main
 public import PercLib.CriticalLRP.Analysis.Cutoff.OffCorner.RadiusMeasurability.Statistics
 
 public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.Divergence
@@ -95,3 +98,13 @@ set_option linter.style.longLine false
 #print axioms
   PercLib.CriticalLRP.VolumeMoments.HigherMoments.moment_upper_bound_of_percolation_ratio_ae
 #print axioms PercLib.CriticalLRP.I420Case3.case3_moment_three_bound_of_HD_case3_ae
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.cutLaw_map_reflEquiv
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.exclMassQuad_eq_exclMassSqLin
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.p2RHS_eq_three_mul_exclMassQuad
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.p2RHS_toReal_eq_three_mul
+#print axioms PercLib.CriticalLRP.SecondMomentRV.regularlyVarying_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.SecondMomentRV.tendsto_div_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.SecondMomentRV.secondMoment_regularlyVarying_of_rhs
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_regularlyVarying_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_two_tendsto_div_normalized_of_ae_linear_ode
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.momOf_packet_of_ae_linear_ode

@@ -402,3 +402,40 @@ not an alternative proof of the off-corner derivative.
 Strict-window left limits and off-sphere continuity of the derivative weight are proved; positive
 shells retain the genuine one-sided distinction. No attained-radius two-sided formula or general-$p$
 derivative is obtained from these identities.
+
+## The excluded quadratic mass and the source's coefficient three
+
+`SecondMoment.ExclusionSwap` proves the second equality in the source's
+(I.4.14), rather than merely bounding the two excluded terms. The midpoint
+reflection $x\mapsto y-x$ preserves the radial cutoff kernel and the cutoff
+product law, swaps the rooted clusters $K_0$ and $K_y$, and preserves the
+indicator that $y$ is outside $K_0$. Each finite-window summand therefore has
+the same expectation after this substitution, even without moment-finiteness.
+
+The resulting theorems are
+`exclMassQuad_eq_exclMassSqLin` and
+`p2RHS_eq_three_mul_exclMassQuad`, with an unconditional real-valued form:
+$$M.p2RHS(r)=3\,M.exclMassQuad(r).$$
+The two excluded terms are thus identified with the single excluded quadratic
+window mass $U$ in (I.4.14), with coefficient exactly $3$ and no use of the
+first-moment defect. This identity holds for every `SourceModelData` and every
+radius.
+
+This does **not** by itself supply the second-moment regular-variation theorem.
+The derivative/absolute-continuity handoff must still be instantiated; the
+source's second-moment error decomposition and vanishing or logarithmic
+integrability remain separate. In particular, the available Cauchy–Schwarz
+bound for `quadPairMass` is not promoted to the required mean-field
+second-moment estimate.
+
+## Conditional corner-safe regular variation
+
+`Analysis.SecondMomentRV` proves the linear-ODE-to-RV passage with interval
+absolute continuity and an a.e. derivative. For measurable $E\to0$,
+$f'=3\alpha(1-E)f/r$ gives index $3\alpha$ regular variation; logarithmic
+integrability of $E$ gives a positive power-law limit.
+`ModelSecondMomentRV` applies the engine to the real `momOf` second moment and
+includes the `momOf_packet` wrapper. These results retain $h_P$ and the model's
+AC, derivative, measurability and error hypotheses. They neither construct the
+model error nor supply regular variation from the bounded two-sided moment
+comparison alone.

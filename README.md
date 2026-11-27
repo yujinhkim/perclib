@@ -69,8 +69,13 @@ tail-convergence routes under explicit Gram profiles. These routes retain the
 profile hypothesis rather than deriving it from HD(3).
 [Regular variation](docs/CRITICAL_LRP_MOMENT_REGULAR_VARIATION.md)
 adds first-moment asymptotic, measurability and driving-data interfaces, while
-keeping the second-moment RV input independent. These do not supply all
-remaining model data.
+keeping the second-moment RV input independent of $h_P$ alone.
+`Analysis.ModelSecondMomentRV` derives it only from explicit second-moment AC,
+an a.e. linear ODE and error asymptotics; that model data is still open.
+`SecondMoment.ExclusionSwap` additionally proves the exact identity
+`p2RHS = 3 * exclMassQuad` by reflecting the actual radial cutoff law; this
+does not discharge the second-moment error estimate or regular variation.
+These do not supply all remaining model data.
 
 
 No claim is made here that continuation-branch CI or every open source lemma
