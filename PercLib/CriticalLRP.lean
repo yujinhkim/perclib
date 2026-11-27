@@ -170,6 +170,9 @@ public import PercLib.CriticalLRP.Correlation.I417.General.SourceForm
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Defs
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Audit
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Defs
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Main
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Audit
 public import PercLib.CriticalLRP.Correlation.I417.Base.Defs
 public import PercLib.CriticalLRP.Correlation.I417.Base.Marked
 public import PercLib.CriticalLRP.Correlation.I417.Base.Poly

@@ -79,6 +79,14 @@ independently derives the near-count residual and repaired analytic conclusions,
 `WindowedEllThree` constructs a source-shaped all-radius windowed driver and asymptotic wrapper.
 Each retains `hgap` and its other explicit model hypotheses.  `MarkedPolygon` and `EllThreeObstruction` record
 alternative bounds and their residuals; none supplies the source's exact two-term tree-gap.
+
+`QZeroDiagonal` subsequently proves that even the full all-vertex `hgap` is uninhabited under the
+explicit `QZeroDiagInputs` growth package: the root is the third cut-off moment, larger than the
+allowed diagonal bound by one power of χ. Its `HasRepairedPerVertexHgap` quantifies only over `y ≠ 0`,
+and `windowSum_le_of_repaired` isolates the root term exactly. The conditional second-moment wrappers
+below retain their original statements as historical conditional interfaces, not as non-vacuous
+source claims. The remaining off-diagonal bound has not been supplied, and the non-vacuity of the
+full `QZeroDiagInputs` package has not been established here.
 -/
 module
 

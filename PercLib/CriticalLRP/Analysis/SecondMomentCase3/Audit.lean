@@ -2,6 +2,7 @@ module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Obstruction
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MarkedPolygon
@@ -79,3 +80,8 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
   PercLib.CriticalLRP.Orchestration.SourceModelData.exists_case3_error_logIntegrable
 #print axioms
   PercLib.CriticalLRP.Orchestration.SourceModelData.tendsto_div_two_of_case3_windowed
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.diag_contradiction
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.not_hasPerVertexTwoTermHgap
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.not_windowGap
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.windowSum_le_of_repaired

@@ -21,6 +21,18 @@ Several of the remaining probabilistic inputs—triangle/tail conditions,
 moment gaps, finitude and radius measurability—are still explicit hypotheses
 of the relevant theorems. No general Proposition I.4.15 or I.4.20 is claimed.
 
+**Subsequent root-scope correction.** `QZeroDiagonal` now shows that the old
+full-vertex `hgap` is itself uninhabited under the explicitly packaged
+Case-3 growth inputs `QZeroDiagInputs`: at `y = 0` its left side is the
+third moment (at least `cχ⁵`), while its right side is at most
+`(C₃+C₄)∇χ⁴`. Thus an earlier statement that the full bound "remains open"
+must not be read as a still-valid proof target. The valid replacement is
+`HasRepairedPerVertexHgap` for `y ≠ 0` plus the exact isolated root moment in
+`windowSum_le_of_repaired`. The off-diagonal bound is still unproved. This
+conditional defect does not refute the actual propositions and does not
+provide non-vacuity of all `QZeroDiagInputs`; see
+[the root-obstruction note](CRITICAL_LRP_QZERO_DIAGONAL.md).
+
 ## 1. Why the old bundle is uninhabited
 
 For finite cutoff first moments, the threefold cutoff two-point power obeys

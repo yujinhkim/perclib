@@ -97,10 +97,13 @@ bound is incompatible with the vanishing driver. `SummedThree` and
 `hgap` still open; `MarkedPolygon` and `EllThreeObstruction` record the
 separate alternative residuals and Case-1-only column route. The complete
 `WindowedEllThree` bundle additionally derives an all-radius windowed driver
-and a source-style asymptotic wrapper, retaining the exact two-term `hgap`
-and its explicit model assumptions. These are conditional replacements, not
-a completed Proposition I.4.15. See
-[the Case-3 numerator note](docs/CRITICAL_LRP_CASE3_NUMERATOR.md).
+and a source-style asymptotic wrapper, retaining its explicit model inputs.
+The all-vertex two-term `hgap` was subsequently refuted under the stated
+Case-3 growth inputs: `QZeroDiagonal` instead proves an exact root-obstruction
+and a root-split repaired window sum. The off-diagonal estimate remains the
+genuine target, still under its other hypotheses. See
+[the Case-3 numerator note](docs/CRITICAL_LRP_CASE3_NUMERATOR.md) and
+[the root-obstruction note](docs/CRITICAL_LRP_QZERO_DIAGONAL.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.
