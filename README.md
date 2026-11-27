@@ -59,7 +59,10 @@ resulting weaker Case-3 interface. `RadiusMeasurability.Statistics` proves
 unconditional global defect measurability, while
 `OffCorner.AeDerivativeHandoff` supplies the off-corner derivative, interval
 absolute continuity, and AE flux/ODE transport with the scalar-regularity and
-probabilistic hypotheses left explicit.
+probabilistic hypotheses left explicit. The
+[cubic/triangle continuation note](docs/CRITICAL_LRP_CUBIC_TRIANGLE_CONTINUATION.md)
+records ratio-based moment induction and finite triangles under explicit Gram
+profiles, without claiming the remaining model data.
 
 
 No claim is made here that continuation-branch CI or every open source lemma

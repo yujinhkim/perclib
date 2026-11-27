@@ -71,6 +71,10 @@ public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Ma
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Measurability
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.AllMoments
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.CriticalDivergence
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.RatioInduction.Defs
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.RatioInduction.RatioBound
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.RatioInduction.Handoff
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.RatioInduction.Asymptotic
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Audit
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.SplitPolygon.Audit
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Audit

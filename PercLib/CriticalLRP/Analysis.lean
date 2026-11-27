@@ -32,6 +32,8 @@ public import PercLib.CriticalLRP.Analysis.TriTail.Defs
 public import PercLib.CriticalLRP.Analysis.TriTail
 public import PercLib.CriticalLRP.Analysis.TriTailSqrt
 public import PercLib.CriticalLRP.Analysis.TriTailGram
+public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Defs
+public import PercLib.CriticalLRP.Analysis.TriTailNormalization.Main
 public import PercLib.CriticalLRP.Analysis.TriTailLogTail
 public import PercLib.CriticalLRP.Analysis.TailLogIntegration
 public import PercLib.CriticalLRP.Analysis.LogTailLocal.Assembly

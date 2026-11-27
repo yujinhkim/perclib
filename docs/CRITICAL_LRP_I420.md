@@ -389,6 +389,29 @@ packages remove their respective interface inputs, but do not supply the
 finite-triangle, sharpness, scalar-regularity or vanishing-error data. The
 underlying ODE and moment propositions are not thereby completed.
 
+### Cubic ratios and explicit triangle normalization
+
+`I420Case3.RatioInduction` replaces pointwise `hA0`/`hAmid` decorrelation
+bounds by the actual Case-3 ratio limits, with any slack absorbed into the
+usual $1+o(1)$ estimate. At $p=3$, the lower-order induction is empty, and
+`padMom` reduces positivity to orders $1,2,3$. `mixedExclR_cutProb_swap`,
+`ballCard_pos` and `momOf_cutProb_pos_three` supply the corresponding model
+facts, with **all** higher-moment derivative, regular-variation and
+normalization inputs retained explicitly. See
+[the continuation note](CRITICAL_LRP_CUBIC_TRIANGLE_CONTINUATION.md)
+for the precise boundary.
+
+`Analysis.TriTailNormalization` provides a separate structural route to
+finite triangle mass: for a nonnegative summable autocorrelation profile,
+$(\sum f)^2$ row bounds give $\nabla(0,0)\le(\sum f)^6<\infty$, under pointwise
+identification or domination of the critical two-point kernel. This is a
+conditional result, not the critical model identification or `HD(3)` itself.
+
+The delta profile yields a non-vacuity example. The constant-one kernel proves
+that unit diagonal, symmetry and translation invariance alone cannot force
+finite triangle mass. Only the convolution identities needed for the eventual
+triple-factor tail computation are proved; that tail computation remains open.
+
 ## What is not closed
 
 - Case 3 remains incomplete: the corrected tree range, polynomial bridge,
