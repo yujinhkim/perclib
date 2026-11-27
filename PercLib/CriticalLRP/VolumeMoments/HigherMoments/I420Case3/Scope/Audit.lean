@@ -3,6 +3,7 @@ at production base `6eb8b0b660d7d9049a9fc25c7424bf10dbd723f6`. -/
 module
 
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Main
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.Scope.Measurability
 public import PercLib.CriticalLRP.VolumeMoments.FirstMoment.Divergence
 public import PercLib.CriticalLRP.Analysis.OpenTriangle.Case23
 public import PercLib.CriticalLRP.Analysis.Cutoff.FluxODE
@@ -36,3 +37,6 @@ set_option linter.style.longLine false
 #print axioms PercLib.CriticalLRP.CutoffDefect.cutE1_tendsto_zero_of_triangleCondition
 #print axioms PercLib.CriticalLRP.CutoffDefect.measurable_cutE1_of_measurable_stats
 #print axioms PercLib.CriticalLRP.CutoffDefect.measurable_ball_ncard
+#print axioms PercLib.CriticalLRP.I420Case3.measurable_cutE0
+#print axioms PercLib.CriticalLRP.I420Case3.measurable_cutError_of_measurables
+#print axioms PercLib.CriticalLRP.I420Case3.measurable_cutError_of_stats

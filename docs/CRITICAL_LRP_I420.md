@@ -267,8 +267,18 @@ reduces the vanishing error to the shipped standardization limit plus $E_1\to0$.
 factorization wrapper: it does not derive finite triangle mass from HD(3).
 
 The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
-bounds, cut-error measurability, higher-moment finiteness, second-moment lower
-comparison and finite triangle condition all remain separate model inputs. The
+`Scope.Measurability` proves `measurable_cutE0` and composes the defect as
+`measurable_cutError_of_measurables`. The remaining exact input is now isolated:
+`measurable_cutError_of_stats` takes only `hmass`, `hpair`, and `hconn` for the
+three real cutoff statistics. `cutE0` itself is not a remaining measurability
+obligation. `pairMass` and `connMass` still have no general radius-regularity
+proof, and `hmass` stays explicit where `ENNReal.toReal ⊤ = 0` would obstruct
+monotonicity.
+
+The HD(3) hypothesis, derivative/flux handoff, second-moment and lower two-point
+bounds, cut-error measurability of the two cluster-dependent statistics,
+higher-moment finiteness, second-moment lower comparison and finite triangle
+condition all remain separate model inputs. The
 first-moment and tail-scope wiring is proved; the underlying ODE and moment
 propositions are not thereby completed.
 
