@@ -91,12 +91,23 @@ expansion. It proves the exact q=0 moment-gap split and shows that the
 existing marked family vanishes at q=0; it does not supply the remaining
 ell=3/ell=4 tree-count bound. See
 [the q=0 note](docs/CRITICAL_LRP_I417_QZERO.md).
+The old Case-3 `hcase3` is now proved uninhabited: its pointwise `ℓ = 3`
+bound is incompatible with the vanishing driver. `SummedThree` and
+`ConsumerGap` replace it by derived near/far window bounds, with the actual
+`hgap` still open; `MarkedPolygon` and `EllThreeObstruction` record the
+separate alternative residuals and Case-1-only column route. These are
+conditional replacements, not a completed Proposition I.4.15. See
+[the Case-3 numerator note](docs/CRITICAL_LRP_CASE3_NUMERATOR.md).
 `SecondMomentCase1` gives the mixed fourth-moment/case-specific rate assembly,
 including E2 log-integrability and derived E0 log-integrability, with radial
 regularity, hP, error measurability and p2H log-integrability retained.
 `SecondMomentMeasurability` uses strict dyadic right-approximants to prove
 the derivative weight and both error functions measurable from tail second-moment
 finiteness; it also removes those measurability premises from the wrappers.
+`FirstMomentLogError` derives the normalized first-moment log-error and the
+`hP`, `hlogH`, `hlogE0` inputs from the landed corner-safe ODE machinery,
+retaining its explicit kernel-tail, divergence, finiteness and continuity
+inputs; its payoff wrapper still requires the refuted `hcase3`.
 `SecondMomentTail` proves equivalence between interval-FTC data and
 second-moment AC/a.e. differentiation. `OffCornerIdentity` now produces that
 identity on off-corner windows from second-moment finiteness at the endpoint,

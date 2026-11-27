@@ -2,6 +2,12 @@ module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Obstruction
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MarkedPolygon
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ConsumerGap
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FirstMomentLogError
 
 /-! # Axiom audit of the Case-3 second-moment assembly -/
 
@@ -34,3 +40,19 @@ open PercLib.CriticalLRP PercLib.CriticalLRP.Orchestration PercLib.CriticalLRP.O
   PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeVertexMass_eq_momentGap_of_cutMoment
 #print axioms
   PercLib.CriticalLRP.Orchestration.SourceModelData.connCubeMass_eq_sum_starMoment
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.not_forall_polyK_three_le_case3Driver
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.logIntegrable_p2ExclError_of_source_split
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.exists_connCubeMass_toReal_le_markedPolygon
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.not_exists_case3_hypothesis_bundle
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.hcase3_unsatisfiable
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.p2ExclError_le_case3_of_tri
+#print axioms
+  PercLib.CriticalLRP.Orchestration.SourceModelData.SecondMomentCase3.logIntegrable_p2ExclError_of_case3_repaired
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.isLogErrorFunction_p2H
+#print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.case3_firstMoment_inputs

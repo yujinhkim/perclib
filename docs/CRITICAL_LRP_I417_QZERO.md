@@ -56,9 +56,16 @@ and `ℓ = 4` diagram counts. It is separate from the additional uniform
 remains conditional on these genuine inputs.
 
 The naive diagonal column-sum alternative is not a substitute: it produces a
-residual that has only yielded Case-1 decay in the current assembly. The
-correct off-diagonal estimate, an origin correction, or a repaired
-consumer-side cancellation is still required.
+residual that does not tend to zero in the `3α ≥ d` regime under the
+first-moment asymptotic, and only yields Case-1 decay in the other regime.
+
+The later `SummedThree` and `ConsumerGap` modules have now proved near/far
+repairs with vanishing, logarithmically integrable residuals. Thus the false
+pointwise `hT3` is no longer the appropriate target: the old Case-3 bundle is
+uninhabited, while the repaired consumers carry remaining hypotheses such as
+`hgap`, `hpoly4`, `hgm`, triangle/tail conditions and finiteness explicitly.
+The exact one-copy tree estimate above is still the open source-faithful
+object. See [the Case-3 numerator note](CRITICAL_LRP_CASE3_NUMERATOR.md).
 
 ## Degenerate printed source scope
 

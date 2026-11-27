@@ -20,6 +20,15 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentError.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Case3
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Obstruction
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.SummedThree.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MarkedPolygon
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.EllThreeObstruction.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ConsumerGap
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FirstMomentLogError
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase1Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentTail

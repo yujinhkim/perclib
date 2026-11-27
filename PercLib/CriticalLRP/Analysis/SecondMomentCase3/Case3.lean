@@ -69,6 +69,15 @@ Two further points about that dependency, both checkable at this base:
   only when `3α < d` — i.e. exactly Case 1.  `sum_perVertex_le` therefore keeps `hT3` visible
   rather than pretending it follows from `hTri`; supplying `hT3` is part of the same missing
   `p = 3`, `q = 0` moment-gap input.
+
+Follow-up modules prove the stronger fact that this pointwise `hT3`, with a vanishing driver, is
+unsatisfiable: the diagonal threefold two-point power is at least one.  Consequently the
+`hcase3` hypothesis bundle below is uninhabited under its usual finite-moment hypotheses; the
+conditional wrapper below is not a non-vacuous Case-3 proof.  `SummedThree` replaces it by a
+derived near/far window sum with a logarithmically integrable driver, and `ConsumerGap`
+independently derives the near-count residual and repaired analytic conclusions.  Each retains
+`hgap` and its other explicit model hypotheses.  `MarkedPolygon` and `EllThreeObstruction` record
+alternative bounds and their residuals; none supplies the source's exact two-term tree-gap.
 -/
 module
 

@@ -548,9 +548,13 @@ does not assert that the source lemma itself is false at `p = 3, q = 0`.
 
 The missing estimate is still
 `starMoment ≤ C₃ T³(0,y) χ⁴ + C₄ T⁴(0,y) χ³`.
-The packet supplies no tree-count bound for this inequality and no uniform
-`hT3` driver bound. It therefore clarifies, but does not itself discharge,
-the two named Case-3 numerator hypotheses. The `p = q = 0` evaluation also
+The packet supplies no tree-count bound for this inequality. It identifies and does not discharge
+`hgap`. The separate pointwise `hT3` was subsequently proved incompatible with a vanishing driver;
+the old `hcase3` is therefore uninhabited rather than a usable conditional Case-3 interface.
+`SummedThree`, `ConsumerGap`, `MarkedPolygon` and `EllThreeObstruction` give the independently
+checked near/far, marked-polynomial and lossy-column repairs, retaining their respective residual
+hypotheses. These do not supply the source's exact tree-count inequality. See
+[the Case-3 numerator note](CRITICAL_LRP_CASE3_NUMERATOR.md). The `p = q = 0` evaluation also
 shows why the printed display needs a nondegenerate scope condition; that
 separate degenerate case does not affect the `ℓ ∈ {3,4}` terms here. See
 [the q=0 note](CRITICAL_LRP_I417_QZERO.md).
@@ -712,3 +716,15 @@ machine-checked counterexamples:
 Thus an integrable a.e. derivative does not replace AC, continuity is not a
 redundant corner-transfer premise, and the proved a.e. statement must not be
 strengthened to pointwise differentiation at all attained radii.
+
+## First-moment log-error data
+
+`FirstMomentLogError` derives `IsLogErrorFunction M.p2H`, and hence the
+normalized first-moment error's logarithmic integrability and vanishing, from
+the landed corner-safe ODE analysis. It also supplies `hP`, `hlogH`, and
+`hlogE0`, including an eventual-bound correction in the composed error
+`1-(1-E0)(1-E1)` and a triangle-condition form for `E1`. Its explicit kernel
+regularity, positivity, divergence and finiteness inputs remain. Its payoff
+wrapper continues to require the separately refuted `hcase3`, so this is an
+input reduction, not a completed Case-3 asymptotic. See the full
+[Case-3 numerator note](CRITICAL_LRP_CASE3_NUMERATOR.md).
