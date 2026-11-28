@@ -36,3 +36,13 @@ tail and the Case-1 first-moment upper bound. No critical $n^{-1/2}$ tail,
 critical second-moment bound, or triangle condition is inserted in their place.
 All nine exported theorems were elaborated with the project's strict flags and
 have only `propext`, `Classical.choice`, and `Quot.sound` as axioms.
+
+## Partial scale calculations for the missing tail
+
+The companion [scale-analysis note](CRITICAL_LRP_CASE1_TAIL_SCALE.md) records
+`Analysis/SecondMomentCase1/TailScale`: order-two and order-five scale bounds
+on the windows $u\in[1,6]$ and $u\in[6,16]$, plus factorial and logarithm
+estimates. These are proved intermediate calculations only. The $u\le1$ and
+$u\ge16$ regions, the coefficient bridge to the tree-moment theorem, and the
+cutoff Markov assembly remain open, so `SingleClusterTail` is still an input
+to the hydrodynamic result above.

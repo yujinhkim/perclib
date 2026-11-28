@@ -35,3 +35,11 @@ The integrated module passes the project's strict elaboration and its five
 audited main theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
 This establishes proof status for the fixed-set packet, not source coverage of
 I.2.7.
+
+## Countable self-determined random revealed sets
+
+See [the random-amalgamation note](CRITICAL_LRP_RANDOM_AMALGAM.md) for the new
+countable-family independence theorem, a genuinely random non-vacuity example,
+and compiled counterexamples. This advances beyond fixed `T` while retaining
+an explicit self-determination condition. The actual finite decision-tree
+transcript formulation and the full Gladkov inequality remain unproved.

@@ -168,3 +168,21 @@ uses nonempty `B` and `χ > 0`. Equality holds when the row sum is exactly χ.
 A one-point Unit model attains it. The two-copy rewriting of the cluster
 numerator and the I.4.12 gap still remain necessary. See
 [the row-sum note](CRITICAL_LRP_I411_ROW_SUM.md).
+
+## Sixth-moment accounting, without an event cover
+
+`Correlation/SixPoint/MixedK2/SixthMoment/Accounting` records the coefficient
+$9!!=945=105\cdot9$ and the exact arm/exponent arithmetic for the $p=6,k=2$
+case of Lemma I.4.16. It also exposes `six_shape_mass_eq` and
+`six_shape_mass_le`, `Fin 6` wrappers for the already-proved
+`Slot6.tsum_slotK2Six_six` evaluation: the existing two-hub slot has exact mass
+$(E|K|^2)^2(E|K|)^4$, bounded above by $(E|K|^2)^2(E|K|)^5$ using $E|K|\ge1$.
+
+No event realization, bipartite-class selection, collapsed-label bridge or
+`SixCover`/`EventCover` proof is supplied. The observation $840<945$ says only
+that the count of the earlier seven-terminal family is not the obstruction;
+it does not give that family the required mass exponent or prove its
+BK/three-star regrouping. In particular, this bookkeeping does not prove `SixthMomentMixed`.
+A root-link construction suggested in the review remains a proposed next step,
+not an established event cover, and is not a resolution of the known
+counterexample to the fixed two-hub family.

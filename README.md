@@ -212,6 +212,12 @@ replacement cover for the sixth mixed moment. See also the
 external two-intensity and susceptibility inputs, and
 [the seven-point arm realization](docs/CRITICAL_LRP_APPLICATION_PACKETS.md)
 handling collapsed terminals. The bipartite-class/mass evaluation remains open.
+`Analysis/ClusterVolumeTail/AllOrderMomentsHconv` derives the I.1.7 weak
+convergence from explicitly assumed all-order moment asymptotics; those
+moments are not supplied. See `docs/CRITICAL_LRP_MOMENT_CONVERGENCE.md`.
+`docs/CRITICAL_LRP_RANDOM_AMALGAM.md` records the self-determined random-family
+amalgamation and the still-general decision-tree gap, while
+`docs/CRITICAL_LRP_CASE1_TAIL_SCALE.md` records partial tail-scale analysis.
 `Correlation/I411/RowSum` proves the I.4.11 summation step, including its
 countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
 keeps the two-copy numerator gap explicit as remaining work.

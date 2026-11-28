@@ -46,6 +46,30 @@ I.1.6's moments, no direct volume-tail estimate and no superprocess limit.
 These results strengthen and specialize the existing analysis, not its model
 non-vacuity.
 
+# Model-level moment convergence and its retained inputs
+
+`Analysis/ClusterVolumeTail/AllOrderMomentsHconv` applies the moment method to
+the actual normalized size-biased cutoff volume laws, rather than to a bare
+family of probability laws. It defines `I16Model M A` as the paper's all-order
+moment ratios in the production `I16rhs` notation, and proves the reindexed
+`I16` schema used for size-biased moments.
+
+The moment identity has numerator $E|K|^{k+1}$, the index shift required by
+I.1.6, and denominator $(E|K|)(E|K|^2/E|K|)^k$. Normalizing by these factors
+cancels both the radius powers and the constants, yielding the chi-square
+moments. The model lemmas derive probability and nonnegative support from the
+underlying volume law, all-order integrability from `MomentFinite`, positivity
+of the first moment from the root's membership in its cluster, and strict
+positivity of the size-biased mean.
+
+Consequently `model_tendsto_Qinf_of_I16Model` derives the precise `hconv`
+interface. `model_tendsto_tail_I17_of_I16` also derives the I.1.7 conclusions
+with the printed coefficient, while retaining almost-sure cluster finiteness
+and the restoration estimate explicitly. **What remains unproved is I.1.6
+itself**, together with `MomentFinite`; for the tail application, those other
+two model inputs remain. There is no claim of canonical moment asymptotics,
+joint satisfiability of all hypotheses, or a superprocess limit.
+
 # Case 1: tail-to-median and hydrodynamic consequences
 
 `Analysis/SecondMomentCase1/Hydro` supplies the missing Case-1 direction of the
