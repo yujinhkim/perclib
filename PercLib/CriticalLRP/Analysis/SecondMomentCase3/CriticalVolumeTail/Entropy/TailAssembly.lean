@@ -695,7 +695,7 @@ the necessary `lawSusceptibility β ≠ ⊤` hypothesis.
 
 1. *The transcript relative-entropy bound (3.7) of the source.*  Fix a decision tree `T` and
    `0 < β₁ ≤ β₂`, let `ω₁, ω₂` be sampled from `P_{β₁}, P_{β₂}`, let `T_1, T_2, …` be the queried
-   edges and set `X_i = ω₂(T_i)`, `Y_i = ω₁(T_i)`, padded with `∅` after halting.  Then
+   edges and set `X_i = ω₁(T_i)`, `Y_i = ω₂(T_i)`, padded with `∅` after halting.  Then
    `X = (X_1, X_2, …)` and `Y = (Y_1, Y_2, …)` take values in `{0,1,∅}^ℕ`, and the required input
    is `D_KL(X‖Y) ≤ ((β₂-β₁)²/(2β₁)) ∑_e J_e Rev_{β₁}(T,e)`, the hypothesis `hKL` above.
    The source obtains it from the chain rule (3.3) over the query index, the per-edge Bernoulli
