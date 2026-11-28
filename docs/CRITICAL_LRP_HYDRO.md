@@ -70,6 +70,12 @@ The reconstruction uses the positive exponent appropriate to the windowed
 median estimate. This is not silently rewritten as a faithful copy of the
 printed display, nor is it used to claim a source-wide hydrodynamic theorem.
 
+The companion `Tightness/I215` proves both the cutoff and uncut median bounds
+from the explicit Theorem-I.2.13 hypothesis `SpatialTwoPointAverage`. Its
+uncut proof separately verifies translation invariance and the same positive
+window normalization; the "In fact" uncut clause is therefore included rather
+than omitted. The cited two-point estimate remains the remaining input.
+
 ## Residual scope and validation
 
 No perturbative or lace-expansion result is supplied. The input statements in

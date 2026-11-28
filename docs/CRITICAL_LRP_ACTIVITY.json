@@ -2,9 +2,9 @@
   "current_run": {
     "id": "smwzuf8hm",
     "state": "running",
-    "working": 6,
+    "working": 5,
     "accepted": 0,
-    "pending_verdicts": 0,
+    "pending_verdicts": 1,
     "topics": [
       "Full labelled-tree/BK sixth mixed moment",
       "Moment asymptotics to weak convergence",
@@ -14,7 +14,9 @@
       "Critical-tail differential comparisons"
     ],
     "accepted_packets": [],
-    "submitted_for_review": [],
+    "submitted_for_review": [
+      "Two-intensity critical-tail reduction and Case-3 moment-gap consequence"
+    ],
     "revisions_returned": [
       "Earlier SixCoverOne was accepted only as an evaluation, not as a certified cover.",
       "Uncut median was supplied only after explicitly rejecting the cutoff-only report."
@@ -29,13 +31,9 @@
   },
   "integration": {
     "state": "validated, ready to commit",
-    "batch": "six accepted source packets: spatial convergence, pinned-star reduction, I.1.7 tail, log-free obstruction, Case-1 error and second-moment lower tail",
-    "full_build_job": "jmwzu9idz",
-    "detail": "The 18-file staged snapshot passed full build, whole-production axiom audit (23791 declarations, no nonstandard axioms, no sorryAx), all 68 Python tests, all integrity guards, 1497-module closure and six direct strict elaborations.",
-    "later_accepted": [
-      "Both cutoff and uncut I.2.15 median clauses, conditional on the cited Theorem I.2.13 bound.",
-      "Single-branch exact evaluation and fully collapsed algebra, explicitly not a certified cover."
-    ]
+    "batch": "cutoff and uncut I.2.15 medians plus bounded single-branch evaluation and fully collapsed algebra",
+    "full_build_job": "jmwzuna8z",
+    "detail": "Full validation of the 11-file snapshot passed: 23850 declarations, zero nonstandard axioms, zero sorryAx, 68 Python tests, all guards, 1499-module import closure and two direct strict elaborations."
   },
   "delivery_note": "The source-only GitHub branch has been pushed and fetched back at 401dba0907e730ceb009274eb1b48cf8b70848ab. All 36 files match the validated production commit. No workflow edit, force-push, history rewrite or pull request was used.",
   "quota": {

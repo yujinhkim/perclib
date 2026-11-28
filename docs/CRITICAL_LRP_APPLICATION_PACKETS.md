@@ -111,3 +111,30 @@ formal definition is therefore FULL. Its production from HD(3), from
 large-distance HD(3), and from HD(2) with $\alpha > 2$ remains conditional as
 recorded in `CRITICAL_LRP_HYDRO.md`; Case 1 and the critical estimates are not
 supplied by these packets.
+
+## Both median clauses of Corollary I.2.15
+
+`Tightness/I215` proves the cutoff bound
+`M2I215.Mr_le_rpow_of_spatialTwoPointAverage` and the uncut bound
+`M2I215Uncut.MrCrit_le_rpow_of_spatialTwoPointAverage`. The only remaining
+source-level input is `SpatialTwoPointAverage M`, the conclusion of the cited
+Theorem I.2.13, available through an explicitly named predicate.
+
+For the uncut median, the packet does more than monotonicity: it proves critical
+translation invariance, the exact median identity, normalized-window averaging,
+the median-squared bound and the uncut two-point path-sum identity. Thus both
+source clauses are present with one uniform constant for all $r \ge 1$.
+The corrected $r^{+d}$ median inequality is used, not the inconsistent printed
+$r^{-d}$ display. The corollary remains PARTIAL because I.2.13 itself is open.
+
+## Exact single-branch calculations, not a replacement cover
+
+`Correlation/SixPoint/MixedK2/SixthMoment/HubOne` evaluates the single-branch
+variant at exactly $(E|K|^2)^2(E|K|)^3$, with pattern independence, and bounds
+it by $(E|K|^2)^2(E|K|)^5$ without moment-finiteness premises. The fully
+collapsed tuple $c=x$ supplies the expected root connection probability.
+
+The separate `SixCoverOne` predicate is an explicit unverified premise, not a
+repaired cover. No global validity is asserted for it. No compiled
+single-branch counterexample was submitted. In particular, this does not close
+`CaseTwo.SixthMomentMixed`, Case 2, or the full labelled-tree/BK decomposition.

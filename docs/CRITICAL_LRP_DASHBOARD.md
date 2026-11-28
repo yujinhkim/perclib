@@ -2,34 +2,34 @@
 
 > **THE PAPER IS NOT COMPLETELY FORMALIZED.** This dashboard separates proof checks, source coverage, model inputs and publication. Do not infer completion from an import-closure count or a clean axiom report.
 
-Generated: `2026-11-28T03:22:08.824273+00:00`. Schema: `1`. Source digest: `f91789b67e64d49aa50b0ad80d623c43a01438ce1f65866b5dd55bfed6f27951`.
+Generated: `2026-11-28T03:37:00.906245+00:00`. Schema: `1`. Source digest: `6efe077db4974d73529de88f42a61a0fecd810cd62d91902e1a8d4e11f7280a0`.
 
 ## Current snapshot
 
 | Item | Current value |
 |---|---|
 | Production branch | `work/yujinhkim-critical-lrp-orchestration` |
-| Committed production revision | `1f9940e62c1e71f1a6b764647b6cca1a08aa8d7d` |
-| Local source-only mirror | `401dba0907e730ceb009274eb1b48cf8b70848ab` |
-| Fetched GitHub mirror tip | `401dba0907e730ceb009274eb1b48cf8b70848ab` (reflected remote, fetched through the connected repository) |
+| Committed production revision | `702a43e792bf5dc3e29f98ed80d172132cae9dfb` |
+| Local source-only mirror | `7ded230c8b47b992aa65625c1b50ca7f52db3947` |
+| Fetched GitHub mirror tip | `7ded230c8b47b992aa65625c1b50ca7f52db3947` (reflected remote, fetched through the connected repository) |
 | Current integration batch | `validated, ready to commit` |
 | Current source validation | **passed_for_this_source_snapshot** |
-| Current research run | `smwzuf8hm`: `running`, 6 working, 0 accepted, 0 awaiting verdict |
+| Current research run | `smwzuf8hm`: `running`, 5 working, 0 accepted, 1 awaiting verdict |
 | Unowned workflow edit | **Excluded from every staging list and mirror patch.** |
 
 ## Source-result ledger
 
-**20 FULL · 42 PARTIAL · 13 NOT FORMALIZED**, of 75 numbered items.
+**20 FULL · 43 PARTIAL · 12 NOT FORMALIZED**, of 75 numbered items.
 These are deliberately not percentages of completion. FULL entries include printed conditional claims whose intended canonical-model inputs may still be missing.
 
 The item-by-item ledger is [CRITICAL_LRP_COVERAGE.md](CRITICAL_LRP_COVERAGE.md). The independent supporting checks are recorded in [CRITICAL_LRP_FIDELITY_AUDIT.md](CRITICAL_LRP_FIDELITY_AUDIT.md).
 
 ## Build and proof checks
 
-* Import closure: exit **0**; ok: all 1497 modules of PercLib are in the import closure of PercLib.lean.
+* Import closure: exit **0**; ok: all 1499 modules of PercLib are in the import closure of PercLib.lean.
 * Latest build log reports success: **True**.
-* Latest axiom summary: `Production declarations: 23791 ; Nonstandard axioms: 0 ; sorryAx: 0`.
-* Latest Python summary: `Ran 68 tests in 43.031s ; OK`.
+* Latest axiom summary: `Production declarations: 23850 ; Nonstandard axioms: 0 ; sorryAx: 0`.
+* Latest Python summary: `Ran 68 tests in 49.147s ; OK`.
 * These log lines are historical unless `matches_current_source` is true in the JSON.
 * The old source-only cold build timed out after one hour; it is **not** a passing verification and is not being retried unchanged.
 

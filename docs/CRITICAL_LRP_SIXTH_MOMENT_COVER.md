@@ -47,3 +47,15 @@ is also retained, not discharged, so this is **not** a completed proof of
 `CaseTwo.SixthMomentMixed`. All seven modules rebuild with strict flags and all
 reported proof axioms are standard. Their integration target passes
 `lake build --wfail PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.SixthMoment.Axioms`.
+
+## Single-branch computation: a bounded auxiliary result
+
+The subsequently reviewed `HubOne` package gives an exact single-branch
+leaf/branch evaluation $(E|K|^2)^2(E|K|)^3$, and its conditional moment
+assembly uses an explicit, unproved `SixCoverOne` premise. It proves the
+fully collapsed tuple $c=x$ case with one appropriate root link. It does not
+show that this cover holds at production's refuting tuple `(0,3,3,3,3,3)` or
+at arbitrary collapsed configurations. Its conditional assembly must not be
+confused with either real tree/BK realization or the actual sixth-moment input.
+The submitted numerical discussion of the root-first tuple is not a compiled
+single-branch counterexample and is not claimed as one here.

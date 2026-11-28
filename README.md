@@ -203,6 +203,11 @@ remaining hypotheses are in the
 particular, weak convergence, restoration, the critical moments, and the
 underlying two-point/covariance inputs are still open. The I.1.14 definition is
 now classified FULL; this does not claim an unconditional Hydro model theorem.
+`Tightness/I215` subsequently proves both cutoff and uncut median clauses of
+I.2.15 from the named I.2.13 spatial-average hypothesis. The
+[median application note](docs/CRITICAL_LRP_APPLICATION_PACKETS.md) records
+those bounds and the single-branch exact evaluation, which is not a certified
+replacement cover for the sixth mixed moment.
 
 The next integration batch adds exact sixfold Tonelli/slot computations and an
 explicit counterexample to the inadequate two-hub sixth-moment cover
@@ -224,6 +229,6 @@ sixth mixed tree/BK inequality, the critical tail, or the canonical-model
 inputs.
 
 No claim is made here that continuation-branch CI or every open source lemma
-has passed. The current ledger records 20 FULL, 42 PARTIAL, and 13 NOT FORMALIZED numbered
+has passed. The current ledger records 20 FULL, 43 PARTIAL, and 12 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired
 `disjSet` theorem is not the source `apartSet` statement.

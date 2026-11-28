@@ -1,67 +1,66 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-28T03:22:08.824273+00:00",
+  "generated_at": "2026-11-28T03:37:00.906245+00:00",
   "complete": false,
   "completion_note": "The paper is not completely formalized. Neither compilation nor the source-ledger proportions establishes source fidelity, canonical-model non-vacuity, or coverage of named external inputs.",
   "repository": {
     "production_branch": "work/yujinhkim-critical-lrp-orchestration",
-    "production_head": "1f9940e62c1e71f1a6b764647b6cca1a08aa8d7d",
+    "production_head": "702a43e792bf5dc3e29f98ed80d172132cae9dfb",
     "mirror_branch": "work/yujinhkim-critical-lrp-orchestration-source-only",
-    "mirror_head": "401dba0907e730ceb009274eb1b48cf8b70848ab",
-    "source_remote_refread_tip": "401dba0907e730ceb009274eb1b48cf8b70848ab",
+    "mirror_head": "7ded230c8b47b992aa65625c1b50ca7f52db3947",
+    "source_remote_refread_tip": "7ded230c8b47b992aa65625c1b50ca7f52db3947",
     "production_source": "working tree; may include uncommitted integration work",
     "publication": "The source-only GitHub branch has been pushed and fetched back at 401dba0907e730ceb009274eb1b48cf8b70848ab. All 36 files match the validated production commit. No workflow edit, force-push, history rewrite or pull request was used.",
     "preexisting_workflow_edit_unowned": true,
-    "source_digest": "f91789b67e64d49aa50b0ad80d623c43a01438ce1f65866b5dd55bfed6f27951",
-    "coverage_digest": "7ddd0ff372c7a47ca25e045a8aa2b398d431659ee6bc09cc17ff6ac5f41cbbf7"
+    "source_digest": "6efe077db4974d73529de88f42a61a0fecd810cd62d91902e1a8d4e11f7280a0",
+    "coverage_digest": "950d426eddddd5d075738c4094fe570cdf1fe22d7f0c7ac5c50eda543e94ba3f"
   },
   "source_ledger": {
     "total": 75,
     "FULL": 20,
-    "PARTIAL": 42,
-    "NOT_FORMALIZED": 13,
+    "PARTIAL": 43,
+    "NOT_FORMALIZED": 12,
     "document": "docs/CRITICAL_LRP_COVERAGE.md",
     "interpretation": "Statement-level ledger, not a completion percentage."
   },
   "validation": {
     "matches_current_source": true,
     "record": {
-      "verified_at": "2026-11-28T03:21:32.089592+00:00",
-      "base_commit_before_integration": "1f9940e62c1e71f1a6b764647b6cca1a08aa8d7d",
-      "source_digest": "f91789b67e64d49aa50b0ad80d623c43a01438ce1f65866b5dd55bfed6f27951",
+      "verified_at": "2026-11-28T03:35:11.464217+00:00",
+      "base_commit_before_integration": "702a43e792bf5dc3e29f98ed80d172132cae9dfb",
+      "source_digest": "6efe077db4974d73529de88f42a61a0fecd810cd62d91902e1a8d4e11f7280a0",
       "working_tree_sources_equal_staged": true,
       "status": "passed",
-      "scope": "six accepted application packets, documentation and dashboard; excluding prior workflow edit and scratch artifacts",
-      "direct_strict_modules": 6,
+      "scope": "both I.2.15 median clauses and bounded HubOne calculations; no certified sixth-moment cover",
+      "direct_strict_modules": 2,
       "checks": [
         "lake build --wfail",
         "whole-production axiom audit",
         "all Python tests",
-        "semantic-closure and frozen-anchor guard",
-        "source-restitution guard",
-        "import-closure guard",
-        "six direct strict elaborations"
+        "all integrity guards",
+        "1499-module import closure",
+        "two direct strict elaborations"
       ]
     },
     "state": "passed_for_this_source_snapshot",
-    "lean_files_in_source_digest": 1501,
+    "lean_files_in_source_digest": 1503,
     "import_closure_exit_code": 0,
-    "import_closure_detail": "ok: all 1497 modules of PercLib are in the import closure of PercLib.lean",
+    "import_closure_detail": "ok: all 1499 modules of PercLib are in the import closure of PercLib.lean",
     "latest_recorded_build_succeeded": true,
     "axiom_summary": [
-      "Production declarations: 23791",
+      "Production declarations: 23850",
       "Nonstandard axioms: 0",
       "sorryAx: 0"
     ],
     "python_summary": [
-      "Ran 68 tests in 43.031s",
+      "Ran 68 tests in 49.147s",
       "OK"
     ],
     "guards_tail": [
       "theorem_I_1_6_v1: 44 semantic source files pinned",
       "SEMANTIC-CLOSURE + FROZEN-ANCHOR GUARD OK",
       "SOURCE-RESTITUTION GUARD OK: 2838 math annotations, 287 inequality annotations, pinned hashes and locator schema verified",
-      "ok: all 1497 modules of PercLib are in the import closure of PercLib.lean"
+      "ok: all 1499 modules of PercLib are in the import closure of PercLib.lean"
     ],
     "distinction": "The logs and marker must match the current Lean digest before their passing status is applied to this working tree."
   },
@@ -69,9 +68,9 @@
     "current_run": {
       "id": "smwzuf8hm",
       "state": "running",
-      "working": 6,
+      "working": 5,
       "accepted": 0,
-      "pending_verdicts": 0,
+      "pending_verdicts": 1,
       "topics": [
         "Full labelled-tree/BK sixth mixed moment",
         "Moment asymptotics to weak convergence",
@@ -81,7 +80,9 @@
         "Critical-tail differential comparisons"
       ],
       "accepted_packets": [],
-      "submitted_for_review": [],
+      "submitted_for_review": [
+        "Two-intensity critical-tail reduction and Case-3 moment-gap consequence"
+      ],
       "revisions_returned": [
         "Earlier SixCoverOne was accepted only as an evaluation, not as a certified cover.",
         "Uncut median was supplied only after explicitly rejecting the cutoff-only report."
@@ -96,13 +97,9 @@
     },
     "integration": {
       "state": "validated, ready to commit",
-      "batch": "six accepted source packets: spatial convergence, pinned-star reduction, I.1.7 tail, log-free obstruction, Case-1 error and second-moment lower tail",
-      "full_build_job": "jmwzu9idz",
-      "detail": "The 18-file staged snapshot passed full build, whole-production axiom audit (23791 declarations, no nonstandard axioms, no sorryAx), all 68 Python tests, all integrity guards, 1497-module closure and six direct strict elaborations.",
-      "later_accepted": [
-        "Both cutoff and uncut I.2.15 median clauses, conditional on the cited Theorem I.2.13 bound.",
-        "Single-branch exact evaluation and fully collapsed algebra, explicitly not a certified cover."
-      ]
+      "batch": "cutoff and uncut I.2.15 medians plus bounded single-branch evaluation and fully collapsed algebra",
+      "full_build_job": "jmwzuna8z",
+      "detail": "Full validation of the 11-file snapshot passed: 23850 declarations, zero nonstandard axioms, zero sorryAx, 68 Python tests, all guards, 1499-module import closure and two direct strict elaborations."
     },
     "delivery_note": "The source-only GitHub branch has been pushed and fetched back at 401dba0907e730ceb009274eb1b48cf8b70848ab. All 36 files match the validated production commit. No workflow edit, force-push, history rewrite or pull request was used.",
     "quota": {
