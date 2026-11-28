@@ -223,7 +223,10 @@ proof of the single-cluster tail from finite first cutoff moments, and
 `docs/CRITICAL_LRP_DECISION_TREE_AMALGAM.md` proves the finite procedural
 transcript/reconstruction lemma; it does not claim the full Gladkov inequality.
 The [entropy core](docs/CRITICAL_LRP_ENTROPY_CORE.md) proves finite normalization,
-log-sum, and sharpened Pinsker ingredients for the cited two-intensity argument.
+log-sum, sharpened Pinsker inequalities, and the source's per-edge exponential
+KL estimate. Finite fresh-query transcript entropy and tail-assembly modules
+compose these ingredients while retaining their named probabilistic inputs.
+The infinite-volume comparison remains open.
 `Correlation/I411/RowSum` proves the I.4.11 summation step, including its
 countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
 keeps the two-copy numerator gap explicit as remaining work.

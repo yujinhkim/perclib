@@ -568,6 +568,10 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.TwoIntensityComparison
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Bernoulli
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Pinsker
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.PerEdgeKL
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.TranscriptKL
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.TailAssembly
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.TranscriptEntropy
 public import PercLib.CriticalLRP.Correlation.SixPoint.SevenPoint
 public import PercLib.CriticalLRP.Correlation.I411.RowSumCore
 public import PercLib.CriticalLRP.Correlation.I411.RowSum

@@ -102,6 +102,25 @@ the excluded mass, plus the pointwise gap inequality (I.4.12). Both are kept
 outside this summation result; neither is silently discharged by the χ²
 factorization. The source lemma consequently remains PARTIAL.
 
+## Subsequent per-edge proof
+
+`Entropy/PerEdgeKL` now proves the exact exponential-parameter KL bound of source
+Lemma 3.3/(3.4), with denominator $2\min\{a,b\}$ and the appropriate one-edge
+model instantiation. `Entropy/Pinsker` and this per-edge result discharge the
+analytic comparison and upper per-edge ingredients respectively. They do not
+provide the transcript revealment estimate or the external susceptibility bound.
+
+## Finite transcript entropy and assembly (subsequent results)
+
+`Entropy/TranscriptKL` proves fixed-depth fresh-query fibre identities and the
+corresponding entropy chain rule, with the revealment probability weighted at
+the lower intensity as in the source. `Entropy/TranscriptEntropy` discharges its
+per-edge input using `PerEdgeKL`. `Entropy/TailAssembly` then proves the finite
+and countable assembly, including degenerate event masses, exact finite tail
+sums, and the finite weighted-Bernoulli instantiation. The conditional inputs
+to that assembly are named `hKL` and `hRev`; cluster-event construction,
+revealment and infinite-volume convergence remain outside the completed step.
+
 ## Finite log-sum and Pinsker ingredients
 
 See [the entropy note](CRITICAL_LRP_ENTROPY_CORE.md). The package proves the

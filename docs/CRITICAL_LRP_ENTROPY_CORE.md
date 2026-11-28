@@ -31,3 +31,33 @@ the pure normalisation identity, and repairs deprecated names, typeclass scope,
 and individual no-op tactics without weakening the analytic statements. Both
 integrated files have passed strict shared-model elaboration and have no
 nonstandard axiom dependencies.
+
+## Per-edge exponential-parameter estimate (subsequent result)
+
+`Entropy/PerEdgeKL` proves source Lemma 3.3, equation (3.4):
+$$D_{KL}(\operatorname{Ber}(1-e^{-a})\|\operatorname{Ber}(1-e^{-b}))
+ =D_{KL}(\operatorname{Ber}(e^{-a})\|\operatorname{Ber}(e^{-b}))
+ \le\frac{(a-b)^2}{2\min\{a,b\}},\qquad a,b>0.$$
+The complement identity `bkl_one_sub` and the two-sided monotonicity proof are
+formal. `bkl_openProb_le` specializes the estimate to the shared one-edge model
+for $0<\beta_1\le\beta_2$ and $J_e>0$. This unweakened per-edge input is the
+appropriate complement to Pinsker, which bounds divergence below rather than
+above. Transcript chain algebra, revealment, and final tail assembly remain open.
+
+## Finite transcript chain rule and assembly
+
+`Entropy/TranscriptKL` models a fresh-query plan of fixed finite depth. It
+recovers exact fibre probabilities from the normalized product law, then derives
+the chain rule with the outer expectation at the **lower intensity** $\beta_1$.
+This is the orientation used by source equation (3.5), not a generic invocation
+of relative entropy. `Entropy/TranscriptEntropy` instantiates its per-edge input
+with the proved lemma, yielding `kl_le_unconditional` for the finite plan.
+
+`Entropy/TailAssembly` extends generalized Pinsker to degenerate event masses,
+proves the exact finite tail-sum identity $E[\min(|K|,n)]
+ =\sum_{k=1}^n P(|K|\ge k)$, and assembles the finite and countable versions of
+the source's tail comparison from named transcript-entropy and revealment
+inputs. It supplies precisely the next interface for the remaining exploration
+proof. These results do **not** formalize the infinite transcript limit,
+cluster-computed-event construction, revealment, infinite susceptibility, or
+canonical two-intensity comparison.
