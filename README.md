@@ -193,6 +193,17 @@ and distinguishes it from the positive limit requiring logarithmic error
 integrability. It also provides a scalar ODE example showing why regular
 variation alone does not imply a positive limiting constant.
 
+The reviewed follow-up packet adds exact spatial-moment convergence, the
+explicit I.1.7 chi-squared tail under its actual hypotheses, a conditional
+pinned-star/covariance reduction, a log-free marginal-convolution obstruction,
+and a conditional Case-1 `hHlog` measurability producer, as well as
+second-moment lower-tail tools with a conditional $n^{-1}$ bound. The details and
+remaining hypotheses are in the
+[application packets note](docs/CRITICAL_LRP_APPLICATION_PACKETS.md). In
+particular, weak convergence, restoration, the critical moments, and the
+underlying two-point/covariance inputs are still open. The I.1.14 definition is
+now classified FULL; this does not claim an unconditional Hydro model theorem.
+
 The next integration batch adds exact sixfold Tonelli/slot computations and an
 explicit counterexample to the inadequate two-hub sixth-moment cover
 ([sixth-moment note](docs/CRITICAL_LRP_SIXTH_MOMENT_COVER.md)), exact displacement
@@ -213,6 +224,6 @@ sixth mixed tree/BK inequality, the critical tail, or the canonical-model
 inputs.
 
 No claim is made here that continuation-branch CI or every open source lemma
-has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered
+has passed. The current ledger records 20 FULL, 42 PARTIAL, and 13 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired
 `disjSet` theorem is not the source `apartSet` statement.

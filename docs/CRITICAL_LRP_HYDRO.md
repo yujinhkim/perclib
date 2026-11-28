@@ -4,6 +4,14 @@
 (3), and (2) when `α > 2`. It does not create or instantiate those critical
 estimates and does not address Case 1.
 
+For Definition I.1.14 itself, `Orchestration/Defs.lean` already supplies
+`SourceModelData.Mr` as the natural-number infimum of the stated median event,
+and `SourceModelData.Hydro` as
+`M_r / r^((d+α)/2) → 0`. This agrees with the paper's minimum over `n ≥ 0`
+under the normalized-window cutoff law. The earlier NOT FORMALIZED definition
+entry was stale. Its correction concerns the predicate, not a claim that the
+canonical model has been shown to satisfy Hydro in all three cases.
+
 ## The model's own normalized-ball averaging
 
 The proof defines `ballAt x s`, the closed source-norm ball centred at `x`,

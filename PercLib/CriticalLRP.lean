@@ -537,8 +537,14 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.Source.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.RegularVariation
 public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.SixthMoment.Axioms
 public import PercLib.CriticalLRP.Analysis.GyrationMoments.Defs
+public import PercLib.CriticalLRP.Analysis.GyrationMoments.Limit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase1.Source.LogError
+public import PercLib.CriticalLRP.Analysis.ClusterVolumeTail.I17
+public import PercLib.CriticalLRP.Analysis.LatticeConvolution.LogFreeMarginal
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.PinnedStar
 public import PercLib.CriticalLRP.Models.BinaryTree.CriticalPoint.Residual
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Lower
 public import PercLib.CriticalLRP.Orchestration.SourceFidelity.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerFlux.Discontinuity
 public import PercLib.CriticalLRP.Analysis.Case3Hydro

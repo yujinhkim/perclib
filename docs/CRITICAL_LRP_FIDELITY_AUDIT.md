@@ -75,6 +75,22 @@ conditional wrappers remain legacy and are not called unconditional.
   instantiation and the sufficient two-point-weighted star constraint are
   established.
 
+## I.1.14 definition correction and the tail boundary
+
+A direct comparison of the supplied PDF with `Orchestration/Defs.lean` verifies
+that `SourceModelData.Mr` is the natural-number infimum of exactly the source
+median event under the normalized cutoff window, and `SourceModelData.Hydro`
+formalizes its $o(r^{(d+\alpha)/2})$ predicate. The definition is FULL; proving
+it for the canonical model in every case remains separate.
+
+The newer `Analysis/ClusterVolumeTail/I17` packet computes the I.3.2 constant
+only at $a=2$ and for the chi-square limit. Its first/second moment hypotheses,
+weak convergence, restoration, finite-cluster and probability/normalization
+assumptions remain explicit. In particular, it does not supply a missing
+moment-to-weak-convergence theorem or the slowly varying inverse needed for
+the critical-dimensional tail. The tail coefficient uses the same `A` as the
+frozen I.1.6 normalizer, consistent with finding N1.
+
 ## Next distinct paper segment
 
 The most illuminating genuine next assembly is the moment-to-uncut-tail route

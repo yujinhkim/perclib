@@ -2,34 +2,34 @@
 
 > **THE PAPER IS NOT COMPLETELY FORMALIZED.** This dashboard separates proof checks, source coverage, model inputs and publication. Do not infer completion from an import-closure count or a clean axiom report.
 
-Generated: `2026-11-28T03:03:15.950952+00:00`. Schema: `1`. Source digest: `da412f7737e490b4d0f4e441f61ffe3106d1cb0493cda10b7d65047cc1e60ebf`.
+Generated: `2026-11-28T03:22:08.824273+00:00`. Schema: `1`. Source digest: `f91789b67e64d49aa50b0ad80d623c43a01438ce1f65866b5dd55bfed6f27951`.
 
 ## Current snapshot
 
 | Item | Current value |
 |---|---|
 | Production branch | `work/yujinhkim-critical-lrp-orchestration` |
-| Committed production revision | `175f10881a6efbf55f4e6e67ec6c508ba91ef5e0` |
-| Local source-only mirror | `62816b7cb8090ba6f46132f2afbc36afc1e4c21e` |
-| Fetched GitHub mirror tip | `62816b7cb8090ba6f46132f2afbc36afc1e4c21e` (reflected remote, fetched through the connected repository) |
+| Committed production revision | `1f9940e62c1e71f1a6b764647b6cca1a08aa8d7d` |
+| Local source-only mirror | `401dba0907e730ceb009274eb1b48cf8b70848ab` |
+| Fetched GitHub mirror tip | `401dba0907e730ceb009274eb1b48cf8b70848ab` (reflected remote, fetched through the connected repository) |
 | Current integration batch | `validated, ready to commit` |
 | Current source validation | **passed_for_this_source_snapshot** |
-| Current research run | `smwzt36y2`: `running`, 4 working, 2 accepted, 2 awaiting verdict |
+| Current research run | `smwzuf8hm`: `running`, 6 working, 0 accepted, 0 awaiting verdict |
 | Unowned workflow edit | **Excluded from every staging list and mirror patch.** |
 
 ## Source-result ledger
 
-**19 FULL · 42 PARTIAL · 14 NOT FORMALIZED**, of 75 numbered items.
+**20 FULL · 42 PARTIAL · 13 NOT FORMALIZED**, of 75 numbered items.
 These are deliberately not percentages of completion. FULL entries include printed conditional claims whose intended canonical-model inputs may still be missing.
 
 The item-by-item ledger is [CRITICAL_LRP_COVERAGE.md](CRITICAL_LRP_COVERAGE.md). The independent supporting checks are recorded in [CRITICAL_LRP_FIDELITY_AUDIT.md](CRITICAL_LRP_FIDELITY_AUDIT.md).
 
 ## Build and proof checks
 
-* Import closure: exit **0**; ok: all 1491 modules of PercLib are in the import closure of PercLib.lean.
+* Import closure: exit **0**; ok: all 1497 modules of PercLib are in the import closure of PercLib.lean.
 * Latest build log reports success: **True**.
-* Latest axiom summary: `Production declarations: 23664 ; Nonstandard axioms: 0 ; sorryAx: 0`.
-* Latest Python summary: `Ran 68 tests in 46.593s ; OK`.
+* Latest axiom summary: `Production declarations: 23791 ; Nonstandard axioms: 0 ; sorryAx: 0`.
+* Latest Python summary: `Ran 68 tests in 43.031s ; OK`.
 * These log lines are historical unless `matches_current_source` is true in the JSON.
 * The old source-only cold build timed out after one hour; it is **not** a passing verification and is not being retried unchanged.
 
@@ -44,17 +44,16 @@ The item-by-item ledger is [CRITICAL_LRP_COVERAGE.md](CRITICAL_LRP_COVERAGE.md).
 
 ## Research activity
 
-Previous run `smwzqts7r`: 8 accepted reports, solved. Its older delayed wake notices carry no new pending submission.
+Previous run `smwzt36y2`: 8 accepted reports, solved. Its older delayed wake notices carry no new pending submission.
 
 Current participant directions (not accepted results):
 
-- Marginal two-fold convolution asymptotics
-- Conditional Corollary I.2.15 from the two-point estimate
-- Cluster lower-tail probability tools
-- Case-1 hHlog reduction
-- Tree/BK sixth mixed moment
-- Off-diagonal covariance
-- I.3.2 moment-to-tail applications
+- Full labelled-tree/BK sixth mixed moment
+- Moment asymptotics to weak convergence
+- Case-1 hydrodynamic condition
+- Gladkov inequality I.2.7
+- Four-point square inequality I.5.10
+- Critical-tail differential comparisons
 
 Only a reviewed, independently rebuilt and integrated submission counts as a result.
 A swarm remaining within its own time/step budget is not a weekly-quota signal.
@@ -62,7 +61,7 @@ Quota status: No weekly quota meter is exposed by the available session tools. D
 
 ## Delivery and maintenance
 
-The source-only GitHub mirror was fetched successfully and remains at 62816b7cb8090ba6f46132f2afbc36afc1e4c21e until this batch is pushed. The latest connector fetch of the production branch reported branch_not_found; no force-push, history rewrite, or PR is claimed.
+The source-only GitHub branch has been pushed and fetched back at 401dba0907e730ceb009274eb1b48cf8b70848ab. All 36 files match the validated production commit. No workflow edit, force-push, history rewrite or pull request was used.
 
 The `docs/` and `results/` copies are generated together. The JSON is the machine-readable record; Markdown has no live background service privilege.
 Refresh it after each accepted packet, validation, commit/push, stalled run or quota signal:

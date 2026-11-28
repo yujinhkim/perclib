@@ -74,9 +74,11 @@ def git(repo: Path, *args: str) -> str | None:
 
 def evidence() -> dict:
     import os
-    activity_path = Path(
-        os.environ.get("CRITICAL_LRP_ACTIVITY", str(ACTIVITY))
-    )
+    activity_path = Path(os.environ.get(
+        "CRITICAL_LRP_ACTIVITY",
+        str(ACTIVITY if ACTIVITY.exists()
+            else ROOT / "docs" / "CRITICAL_LRP_ACTIVITY.json"),
+    ))
     activity = json.loads(activity_path.read_text())
     digest = validation_digest()
     rows = [x for x in (ROOT / "docs" / "CRITICAL_LRP_COVERAGE.md").read_text().splitlines()

@@ -1,0 +1,53 @@
+{
+  "current_run": {
+    "id": "smwzuf8hm",
+    "state": "running",
+    "working": 6,
+    "accepted": 0,
+    "pending_verdicts": 0,
+    "topics": [
+      "Full labelled-tree/BK sixth mixed moment",
+      "Moment asymptotics to weak convergence",
+      "Case-1 hydrodynamic condition",
+      "Gladkov inequality I.2.7",
+      "Four-point square inequality I.5.10",
+      "Critical-tail differential comparisons"
+    ],
+    "accepted_packets": [],
+    "submitted_for_review": [],
+    "revisions_returned": [
+      "Earlier SixCoverOne was accepted only as an evaluation, not as a certified cover.",
+      "Uncut median was supplied only after explicitly rejecting the cutoff-only report."
+    ]
+  },
+  "previous_run": {
+    "id": "smwzt36y2",
+    "state": "solved",
+    "accepted": 8,
+    "pending_verdicts": 0,
+    "scope": "Bounded supporting and conditional packets, not completion of the main source gaps."
+  },
+  "integration": {
+    "state": "validated, ready to commit",
+    "batch": "six accepted source packets: spatial convergence, pinned-star reduction, I.1.7 tail, log-free obstruction, Case-1 error and second-moment lower tail",
+    "full_build_job": "jmwzu9idz",
+    "detail": "The 18-file staged snapshot passed full build, whole-production axiom audit (23791 declarations, no nonstandard axioms, no sorryAx), all 68 Python tests, all integrity guards, 1497-module closure and six direct strict elaborations.",
+    "later_accepted": [
+      "Both cutoff and uncut I.2.15 median clauses, conditional on the cited Theorem I.2.13 bound.",
+      "Single-branch exact evaluation and fully collapsed algebra, explicitly not a certified cover."
+    ]
+  },
+  "delivery_note": "The source-only GitHub branch has been pushed and fetched back at 401dba0907e730ceb009274eb1b48cf8b70848ab. All 36 files match the validated production commit. No workflow edit, force-push, history rewrite or pull request was used.",
+  "quota": {
+    "signal": "not_exhausted_signal_observed",
+    "meter": "No weekly quota meter is exposed by the available session tools. Do not interpret a swarm's fixed run limits as the weekly quota."
+  },
+  "next_inputs": [
+    "I.4.16: full tree/BK proof of the generalized mixed moments, notably CaseTwo.SixthMomentMixed; the collapsed two-hub route is refuted.",
+    "Cited critical volume tail: differential/triangle comparison and the two-intensity or uncut comparison, not merely a cutoff equivalence.",
+    "Nontrivial canonical critical two-point estimates, with a large-distance rather than literal unit-distance HD(3) reading.",
+    "Case-1 hHlog, Case-2 positivity and sixth-moment inputs; avoid leaking Case-3 hypotheses.",
+    "Off-diagonal HasCovBound; a uniform covariance bound does not supply the weighted star.",
+    "Actual first-order tail applications through I.3.2 and the superprocess statements; compilation and local ODE wrappers do not close these."
+  ]
+}

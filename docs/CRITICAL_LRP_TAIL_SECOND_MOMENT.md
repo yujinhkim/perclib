@@ -56,3 +56,20 @@ The proof of the cited tail bound itself has not been supplied. It needs a
 susceptibility/triangle differential inequality and a two-intensity-tail or
 cutoff-versus-uncut comparison, not merely this optimization. All 17 binary and
 abstract tail-scale exports use standard axioms in the independent rebuild.
+
+## The complementary lower bound
+
+`SecondMoment/Lower` now proves the Paley–Zygmund truncation inequalities in
+extended-real arithmetic at both integer and real thresholds. At the model it
+bounds the cutoff tail below from finite first and second moments. The
+increasing cluster-tail event then transfers these lower bounds to the uncut
+critical law, in the correct monotonicity direction.
+
+For first- and second-moment asymptotics, the explicit radius
+$r_n=(4n/\kappa)^{1/\alpha}$ yields an eventual $1/(Cn)$ lower bound on
+`M.tailProb`, including the frozen `I16rhs` and its extended-real form. The
+moment assumptions and positivity of the corresponding constants remain
+explicit. This is only an $n^{-1}$ lower result, not the sharper $n^{-1/2}$
+asymptotic tail or `CriticalVolumeTail`. The final `twoAtom_sharpness` lemma is
+arithmetical, not a full optimality theorem for every probability law, and it
+must not be cited as such.
