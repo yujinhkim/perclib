@@ -526,6 +526,7 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.I4
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.TailRoute
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.ProductGapAudit
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.I420ConsumerAudit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase1.Source.Audit
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedSimpArgs false

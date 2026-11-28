@@ -100,8 +100,12 @@ from the literal HD(3) premise, while `TailRoute` uses only `IsLogErrorFunction
 moment gap. HD(3), that tail and the other genuine model inputs remain premises.
 `QZeroRepairAudit.ProductGap` now proves the product half of the additive repair,
 but does not prove its covariance input. See [the Case-3 reduction note](docs/CRITICAL_LRP_CASE3_REDUCTIONS.md)
-for exact scopes. The older conditional Case-3 numerator/ratio assembly and
-second-moment asymptotic remain available for the optional q-zero star route.
+for exact scopes. `SecondMomentCase1.Source` proves both Case-1 clauses of
+I.4.15 from Proposition I.4.2's first-moment limit and (for the sharp clause)
+its logarithmic error, with no separate radial or Case-3 hypotheses. See
+[the Case-1 source note](docs/CRITICAL_LRP_CASE1_SOURCE.md). The older
+conditional Case-3 numerator/ratio assembly and second-moment asymptotic remain
+available for the optional q-zero star route.
 `Correlation.I417.General.QZeroStar` identifies that per-vertex numerator
 with the connected one-copy star moment and its labelled `(p+1)`-point
 expansion. It proves the exact q=0 moment-gap split and shows that the
