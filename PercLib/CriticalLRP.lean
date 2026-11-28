@@ -552,6 +552,13 @@ public import PercLib.CriticalLRP.Correlation.Gladkov.RandomAmalgam
 public import PercLib.CriticalLRP.Correlation.Gladkov.RandomAmalgamExample
 public import PercLib.CriticalLRP.Correlation.Gladkov.RandomAmalgamCounterexample
 public import PercLib.CriticalLRP.Correlation.Gladkov.AuditRandomAmalgam
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.Defs
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.Main
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.Examples
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.AdaptiveExample
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.FixedSet
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.Audit
+public import PercLib.CriticalLRP.Correlation.Gladkov.DecisionTree.AuditFull
 public import PercLib.CriticalLRP.Analysis.ClusterVolumeTail.I17
 public import PercLib.CriticalLRP.Analysis.LatticeConvolution.LogFreeMarginal
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.PinnedStar
@@ -559,6 +566,8 @@ public import PercLib.CriticalLRP.Models.BinaryTree.CriticalPoint.Residual
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Lower
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.TwoIntensityComparison
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Bernoulli
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Pinsker
 public import PercLib.CriticalLRP.Correlation.SixPoint.SevenPoint
 public import PercLib.CriticalLRP.Correlation.I411.RowSumCore
 public import PercLib.CriticalLRP.Correlation.I411.RowSum

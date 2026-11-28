@@ -101,3 +101,11 @@ The remaining model-specific work is the two-copy rewriting of the numerator of
 the excluded mass, plus the pointwise gap inequality (I.4.12). Both are kept
 outside this summation result; neither is silently discharged by the χ²
 factorization. The source lemma consequently remains PARTIAL.
+
+## Finite log-sum and Pinsker ingredients
+
+See [the entropy note](CRITICAL_LRP_ENTROPY_CORE.md). The package proves the
+finite product-model normalisation, exact cylinder mass, log-sum, and sharpened
+binary/generalised Pinsker inequalities. These are finite analytic ingredients
+for the relative-entropy proof, not a completed decision-tree revealment
+argument or the two-intensity comparison itself.

@@ -220,6 +220,10 @@ amalgamation and the still-general decision-tree gap.
 `docs/CRITICAL_LRP_CASE1_SINGLE_CLUSTER_TAIL.md` records the subsequent complete
 proof of the single-cluster tail from finite first cutoff moments, and
 `docs/CRITICAL_LRP_CASE1_TAIL_SCALE.md` retains its less complete precursor.
+`docs/CRITICAL_LRP_DECISION_TREE_AMALGAM.md` proves the finite procedural
+transcript/reconstruction lemma; it does not claim the full Gladkov inequality.
+The [entropy core](docs/CRITICAL_LRP_ENTROPY_CORE.md) proves finite normalization,
+log-sum, and sharpened Pinsker ingredients for the cited two-intensity argument.
 `Correlation/I411/RowSum` proves the I.4.11 summation step, including its
 countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
 keeps the two-copy numerator gap explicit as remaining work.

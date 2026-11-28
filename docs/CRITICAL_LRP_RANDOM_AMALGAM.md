@@ -51,3 +51,12 @@ Sources checked during review:
 [Gladkov–Zimin, Lemma 4.2](https://arxiv.org/html/2404.08873v2#S4.Thmtheorem2).
 All 16 principal exported declarations were independently elaborated and have
 only `propext`, `Classical.choice`, and `Quot.sound` as axioms.
+
+## Subsequent finite-transcript result
+
+The [finite decision-tree note](CRITICAL_LRP_DECISION_TREE_AMALGAM.md) now
+records a genuine transcript/reconstruction proof of the finite lemma. The
+countable self-determination theorem in this file remains a distinct sufficient
+case, not a substitute for it. The earlier gap statement concerns what was
+available at that time. The full Gladkov inequality, infinite-graph analogue,
+and later decision-tree applications still remain separate open inputs.
