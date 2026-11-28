@@ -112,10 +112,11 @@ theorem case3_hAend_hAmid_cutPoly_source_of_HD_case3 (M : SourceModelData)
 
 /-- **The triangle condition at the model from Kozma's `ℓ²` square root.**
 
-The only way the worktree produces `∇_{β_c} = ∇_{β_c}(0,0) < ∞` is
-`TriTail.openTriangleSelf_lt_top_of_sqrtKernel`: from a vector `ξ` whose autocorrelation
-is the open triangle.  This is the exact minimal shipped obligation behind `hTri`; it is
-*not* implied by `(HD)(3)` in the shipped library. -/
+This square-root route produces `∇_{β_c}(0,0) < ∞` from a vector `ξ` whose
+autocorrelation is the open triangle.  The newer `TriangleFromHD` package separately
+proves finite triangle mass from `(HD)(3)` by two convolution estimates; this older
+wrapper remains a conditional Gram-factorization interface, not a claim that such a
+factorization must be supplied whenever `(HD)(3)` holds. -/
 theorem openTriangleSelf_lt_top_of_source_sqrt (M : SourceModelData) {ξ : M.V → ℝ}
     (hfac : ∀ x : M.V, TriTail.openTriangle M.kernel M.kernel_nonneg M.betaCrit 0 x
       = ENNReal.ofReal (∑' y : M.V, ξ y * ξ (y - x))) :

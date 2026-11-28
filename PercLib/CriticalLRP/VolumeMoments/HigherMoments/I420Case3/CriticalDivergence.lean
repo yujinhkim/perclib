@@ -230,8 +230,8 @@ This is `case3_hAend_hAmid_cutPoly_source_of_HD_case3_flux` of
 * `hHD3` — Case 3 of (HD) (`paper.txt` p. 9), used only for the triangle tail
   (`Lemma I.4.3`) and to record the regime;
 * `htop` — `E_{β_c}|K_0| = ⊤` (`paper.txt` line 1924), replacing `hlow`;
-* `hTri` — the triangle condition `∇_{β_c} < ⊤` (not implied by `hHD3`; see
-  `openTriangleSelf_lt_top_of_source_sqrt`);
+* `hTri` — the triangle condition `∇_{β_c} < ⊤`. The newer `TriangleFromHD`
+  package derives it from `hHD3`; it remains explicit in this older wrapper's signature.
 * `h2` — finiteness of the second cutoff moment, whence the cutoff mass is finite and positive;
 * `hderiv`/`hflux` — the differentiation of the cutoff mass and the identification of its
   derivative with the model's defect (the `(I.4.6)` handoff);

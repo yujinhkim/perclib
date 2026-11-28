@@ -10,6 +10,8 @@ module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.FirstMomentSource
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Case3Composite
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.I420Connect
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.TailRoute
 
 /-! # Axiom audit -/
 
@@ -38,3 +40,17 @@ set_option linter.style.longLine false
 #print axioms
   PercLib.CriticalLRP.Orchestration.SourceModelData.secondMoment_asymptotic_case3_p21_of_model
 #print axioms PercLib.CriticalLRP.Orchestration.SourceModelData.regularlyVarying_two_p21_of_model
+
+/-! # Open-triangle-tail and higher-moment connector audits -/
+
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.rv2_momOf_cutProb_of_case3
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.tendsto_case3Driver_zero_of_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.exists_case3_bundle_of_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.p2ExclError_tendsto_zero_of_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.logIntegrable_rpow_neg
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.logIntegrable_case3Driver_of_logTail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.secondMoment_asymptotic_case3_p21_of_logTail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.secondMoment_asymptotic_case3_of_source_of_logTail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.regularlyVarying_two_of_source_p21_of_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.SourceModelData.rv2_momOf_cutProb_of_tail
+#print axioms PercLib.CriticalLRP.Orchestration.Smwzlje3fM7.case3_moment_three_asymptotic_of_HD_case3_no_hRV2

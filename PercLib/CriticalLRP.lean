@@ -517,6 +517,15 @@ public import PercLib.CriticalLRP.SharpnessInput
 public import PercLib.CriticalLRP.RayRefutation
 public import PercLib.CriticalLRP.BushRefute
 public import PercLib.CriticalLRP.Orchestration
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MomentGapAudit.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.AmbientParameters
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FiniteMoments.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.I420Connect
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.TailRoute
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.ProductGapAudit
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.I420ConsumerAudit
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedSimpArgs false

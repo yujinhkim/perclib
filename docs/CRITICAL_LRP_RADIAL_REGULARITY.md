@@ -56,3 +56,17 @@ exhausting sets are derived rather than assumed. No claim is made that those
 retained packages are jointly instantiated by the canonical critical model,
 that the critical tail or triangle condition has been proved, or that
 Proposition I.4.20 / Cases 1–2 of I.4.15 are complete.
+
+## Subsequent tail-only and HD(3) reductions
+
+`I420Connect` and `TailRoute` now expose the Case-3 regular variation in the
+higher-moment `momOf` vocabulary. The repaired bundle needs only vanishing of
+`∇_r`, not the pointwise log-radial bound; its driver becomes logarithmically
+integrable from logarithmic integrability of `∇_r` by Lemma I.4.19. The
+`p = 3` connector derives its `hRV2` premise from this chain. Its other I.4.20
+inputs are unchanged.
+
+`TriangleFromHD` independently derives a finite triangle and the logarithmic
+tail from the literal HD(3) premise. This does not instantiate HD(3) itself.
+The other reductions and their exact limitations are collected in
+[the Case-3 reduction note](CRITICAL_LRP_CASE3_REDUCTIONS.md).

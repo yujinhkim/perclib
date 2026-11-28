@@ -338,7 +338,10 @@ retains the derivative/flux handoff, second-moment finiteness, the lower
 two-point bound and cut-error measurability. `tendsto_cutError_of_tendsto_cutE1`
 reduces the vanishing error to the shipped standardization limit plus $E_1\to0$.
 `openTriangleSelf_lt_top_of_source_sqrt` is only a conditional $\ell^2$
-factorization wrapper: it does not derive finite triangle mass from HD(3).
+factorization wrapper. The newer `TriangleFromHD` package instead derives finite
+triangle mass directly from HD(3) by the two convolution estimates; the older
+wrapper remains conditional on its supplied Gram profile. See
+[the Case-3 reduction note](CRITICAL_LRP_CASE3_REDUCTIONS.md).
 
 `I420Case3.CriticalDivergence` corrects a separate interface issue. The older
 `first_moment_asymptotic_of_rpow_lower` path uses a pointwise critical two-point

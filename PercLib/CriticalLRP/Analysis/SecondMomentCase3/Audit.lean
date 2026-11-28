@@ -2,6 +2,13 @@ module
 
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.ProductGap.SourceConsumer
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.MomentGapAudit.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.AmbientParameters
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FiniteMoments.Main
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.I420Connect
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.TailRoute
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStar.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroDiagonal.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroReduction.Main
@@ -15,6 +22,8 @@ public import PercLib.CriticalLRP.Correlation.I417.General.QZeroAtlasWitness.Mai
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroCount.Audit
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroStarAtlas4.Audit
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.Audit
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.ProductGapAudit
+public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.I420ConsumerAudit
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroMarked.Main
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroMarked.NoGo
 public import PercLib.CriticalLRP.Correlation.I417.General.QZeroConsumer.Audit

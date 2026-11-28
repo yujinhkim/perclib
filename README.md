@@ -91,9 +91,17 @@ see [the product-gap note](docs/CRITICAL_LRP_PRODUCT_GAP.md).
 first-moment/radial hypotheses (`hP`, `hlogH`, `hlogE0`, AC/AE and error
 measurability), retaining the second-moment tail, uncut critical mean, moment
 gap, triangle/tail and continuity inputs. See
-[the radial-regularity note](docs/CRITICAL_LRP_RADIAL_REGULARITY.md). The older
-conditional Case-3 numerator/ratio assembly and second-moment asymptotic
-remain available for the optional q-zero star route.
+[the radial-regularity note](docs/CRITICAL_LRP_RADIAL_REGULARITY.md).
+`TriangleFromHD` subsequently derives the finite triangle and logarithmic tail
+from the literal HD(3) premise, while `TailRoute` uses only `IsLogErrorFunction
+∇_r` instead of a pointwise bound. `FiniteMoments`, `AmbientParameters` and
+`MomentGapAudit` discharge or clarify further wrapper inputs, and
+`CriticalVolumeTail` isolates the still-unproved uncut critical tail beneath the
+moment gap. HD(3), that tail and the other genuine model inputs remain premises.
+`QZeroRepairAudit.ProductGap` now proves the product half of the additive repair,
+but does not prove its covariance input. See [the Case-3 reduction note](docs/CRITICAL_LRP_CASE3_REDUCTIONS.md)
+for exact scopes. The older conditional Case-3 numerator/ratio assembly and
+second-moment asymptotic remain available for the optional q-zero star route.
 `Correlation.I417.General.QZeroStar` identifies that per-vertex numerator
 with the connected one-copy star moment and its labelled `(p+1)`-point
 expansion. It proves the exact q=0 moment-gap split and shows that the
