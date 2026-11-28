@@ -37,7 +37,9 @@ The initial inequality is a build check for the environment, not a research resu
 The `PercLib.CriticalLRP` development formalizes parts of Hutchcroft's
 *Critical long-range percolation I*. It is not a complete formalization of the
 paper. Use the [source coverage ledger](docs/CRITICAL_LRP_COVERAGE.md) for the
-item-by-item status and explicit open assumptions. Recent continuation results
+item-by-item status and explicit open assumptions. The
+[progress dashboard](docs/CRITICAL_LRP_DASHBOARD.md) separately tracks current
+validation, research, unresolved model inputs, and the source-only mirror. Recent continuation results
 include the normalized lattice-counting proof of Lemma I.4.6 and the
 arbitrary-norm rescaling used there, as well as covariance and finite-second-
 moment versions of Lemma I.4.7 for the source cutoff law. The linked notes for
@@ -190,6 +192,25 @@ variation of index 3α from its sixth-moment input and the radius identity,
 and distinguishes it from the positive limit requiring logarithmic error
 integrability. It also provides a scalar ODE example showing why regular
 variation alone does not imply a positive limiting constant.
+
+The next integration batch adds exact sixfold Tonelli/slot computations and an
+explicit counterexample to the inadequate two-hub sixth-moment cover
+([sixth-moment note](docs/CRITICAL_LRP_SIXTH_MOMENT_COVER.md)), exact displacement
+and gyration-moment identities
+([spatial-moment note](docs/CRITICAL_LRP_GYRATION_MOMENTS.md)), the exact binary
+tree critical point ([tree note](docs/CRITICAL_LRP_BINARY_TREE_CRITICAL.md)),
+and conditional singleton-flux discontinuities
+([corner note](docs/CRITICAL_LRP_CORNER_FLUX.md)). Tail bounds from finite
+moments remain per-radius estimates
+([tail/second-moment note](docs/CRITICAL_LRP_TAIL_SECOND_MOMENT.md)).
+`Analysis.Case3Hydro` proves the HD(3) and HD(2, α > 2)
+hydrodynamic implications with their critical two-point hypotheses explicit
+([Hydro note](docs/CRITICAL_LRP_HYDRO.md)). The
+[source-fidelity audit](docs/CRITICAL_LRP_FIDELITY_AUDIT.md) records ten
+independent checks, the I.1.6/I.4.15 normalization difference, and the
+higher-moment closure from large-distance HD(3). None of this discharges the
+sixth mixed tree/BK inequality, the critical tail, or the canonical-model
+inputs.
 
 No claim is made here that continuation-branch CI or every open source lemma
 has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered

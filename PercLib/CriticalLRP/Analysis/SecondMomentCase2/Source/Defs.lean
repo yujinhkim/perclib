@@ -2,7 +2,8 @@
 Copyright (c) 2026 PercLib contributors. Released under Apache 2.0.
 
 Accepted and independently rebuilt from Ultramath `smwznoz6j`, member m2.
-Latest independent rebuild at production HEAD `bd25afb1130f7fe93446b447f9a68a4d3aba08cc`; reviewed scratch source `.scratch/review-smwznoz6j/m2/Case2.lean`.
+Latest independent rebuild at production HEAD `bd25afb1130f7fe93446b447f9a68a4d3aba08cc`;
+reviewed scratch source `.scratch/review-smwznoz6j/m2/Case2.lean`.
 
 # Case 2 of Proposition I.4.15 (`d = 3α` together with (Hydro))
 
@@ -39,6 +40,13 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase1
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case2.Main
 public import PercLib.CriticalLRP.Analysis.TriangleAverage
 public import PercLib.CriticalLRP.Tightness.Universal
+
+/-! ## Case-2 error estimate and its named mixed-moment input
+
+The Cauchy–Schwarz and tightness arguments here preserve the actual cutoff
+moments and their constants; only Lemma I.4.16 at p=6,k=2 remains a premise of
+the final vanishing statement.
+-/
 
 @[expose] public section
 

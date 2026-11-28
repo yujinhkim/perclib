@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-28T03:03:15.950952+00:00",
+  "complete": false,
+  "completion_note": "The paper is not completely formalized. Neither compilation nor the source-ledger proportions establishes source fidelity, canonical-model non-vacuity, or coverage of named external inputs.",
+  "repository": {
+    "production_branch": "work/yujinhkim-critical-lrp-orchestration",
+    "production_head": "175f10881a6efbf55f4e6e67ec6c508ba91ef5e0",
+    "mirror_branch": "work/yujinhkim-critical-lrp-orchestration-source-only",
+    "mirror_head": "62816b7cb8090ba6f46132f2afbc36afc1e4c21e",
+    "source_remote_refread_tip": "62816b7cb8090ba6f46132f2afbc36afc1e4c21e",
+    "production_source": "working tree; may include uncommitted integration work",
+    "publication": "The source-only GitHub mirror was fetched successfully and remains at 62816b7cb8090ba6f46132f2afbc36afc1e4c21e until this batch is pushed. The latest connector fetch of the production branch reported branch_not_found; no force-push, history rewrite, or PR is claimed.",
+    "preexisting_workflow_edit_unowned": true,
+    "source_digest": "da412f7737e490b4d0f4e441f61ffe3106d1cb0493cda10b7d65047cc1e60ebf",
+    "coverage_digest": "aa63e5278e8004ffd8965ab90d79cadc589ac328fe4719ce732514d565b65810"
+  },
+  "source_ledger": {
+    "total": 75,
+    "FULL": 19,
+    "PARTIAL": 42,
+    "NOT_FORMALIZED": 14,
+    "document": "docs/CRITICAL_LRP_COVERAGE.md",
+    "interpretation": "Statement-level ledger, not a completion percentage."
+  },
+  "validation": {
+    "matches_current_source": true,
+    "record": {
+      "verified_at": "2026-11-28T03:01:52.613626+00:00",
+      "base_commit_before_integration": "175f10881a6efbf55f4e6e67ec6c508ba91ef5e0",
+      "source_digest": "da412f7737e490b4d0f4e441f61ffe3106d1cb0493cda10b7d65047cc1e60ebf",
+      "working_tree_sources_equal_staged": true,
+      "status": "passed",
+      "scope": "staged proof integration, excluding pre-existing workflow edit and scratch artifacts",
+      "direct_strict_modules": 20,
+      "checks": [
+        "lake build --wfail",
+        "whole-production axiom audit",
+        "all Python unittest tests",
+        "semantic-closure and frozen-anchor guard",
+        "source-restitution guard",
+        "import-closure guard",
+        "direct warning-as-error elaboration of all 20 new source modules"
+      ]
+    },
+    "state": "passed_for_this_source_snapshot",
+    "lean_files_in_source_digest": 1495,
+    "import_closure_exit_code": 0,
+    "import_closure_detail": "ok: all 1491 modules of PercLib are in the import closure of PercLib.lean",
+    "latest_recorded_build_succeeded": true,
+    "axiom_summary": [
+      "Production declarations: 23664",
+      "Nonstandard axioms: 0",
+      "sorryAx: 0"
+    ],
+    "python_summary": [
+      "Ran 68 tests in 46.593s",
+      "OK"
+    ],
+    "guards_tail": [
+      "theorem_I_1_6_v1: 44 semantic source files pinned",
+      "SEMANTIC-CLOSURE + FROZEN-ANCHOR GUARD OK",
+      "SOURCE-RESTITUTION GUARD OK: 2838 math annotations, 287 inequality annotations, pinned hashes and locator schema verified",
+      "ok: all 1491 modules of PercLib are in the import closure of PercLib.lean"
+    ],
+    "distinction": "The logs and marker must match the current Lean digest before their passing status is applied to this working tree."
+  },
+  "activity": {
+    "current_run": {
+      "id": "smwzt36y2",
+      "state": "running",
+      "working": 4,
+      "accepted": 2,
+      "pending_verdicts": 2,
+      "topics": [
+        "Marginal two-fold convolution asymptotics",
+        "Conditional Corollary I.2.15 from the two-point estimate",
+        "Cluster lower-tail probability tools",
+        "Case-1 hHlog reduction",
+        "Tree/BK sixth mixed moment",
+        "Off-diagonal covariance",
+        "I.3.2 moment-to-tail applications"
+      ],
+      "accepted_packets": [
+        {
+          "member": "m4",
+          "status": "accepted, independently rebuilt, awaiting production integration",
+          "scope": "Supremum/sum interchange, cutoff-to-uncut convergence of spatial moments, and uniform-finite-bound equivalences. No I.5.7 or Proposition I.5.2 asymptotic is established."
+        },
+        {
+          "member": "m7",
+          "status": "accepted, independently rebuilt, awaiting production integration",
+          "scope": "Conditional covariance/pinned-star reduction. Matrix-power comparisons, the q=0 star and general off-diagonal HasCovBound are not proved."
+        }
+      ],
+      "submitted_for_review": [
+        "Marginal convolution estimate and log-free obstruction",
+        "I.1.7 tail constant with explicit weak-convergence and restoration inputs"
+      ]
+    },
+    "previous_run": {
+      "id": "smwzqts7r",
+      "state": "solved",
+      "accepted": 8,
+      "pending_verdicts": 0
+    },
+    "integration": {
+      "state": "validated, ready to commit",
+      "batch": "eight accepted packets plus large-distance closure repairs and the progress dashboard",
+      "full_build_job": "jmwztiihp",
+      "detail": "The exact 36-file staged source snapshot passed lake build --wfail, the production-wide axiom audit, 68 Python tests, all integrity guards, import closure, and all 20 new-module direct strict elaborations."
+    },
+    "quota": {
+      "signal": "not_exhausted_signal_observed",
+      "meter": "No weekly quota meter is exposed by the available session tools. Do not interpret a swarm's fixed run limits as the weekly quota."
+    },
+    "next_inputs": [
+      "I.4.16: full tree/BK proof of the generalized mixed moments, notably CaseTwo.SixthMomentMixed; the collapsed two-hub route is refuted.",
+      "Cited critical volume tail: differential/triangle comparison and the two-intensity or uncut comparison, not merely a cutoff equivalence.",
+      "Nontrivial canonical critical two-point estimates, with a large-distance rather than literal unit-distance HD(3) reading.",
+      "Case-1 hHlog, Case-2 positivity and sixth-moment inputs; avoid leaking Case-3 hypotheses.",
+      "Off-diagonal HasCovBound; a uniform covariance bound does not supply the weighted star.",
+      "Actual first-order tail applications through I.3.2 and the superprocess statements; compilation and local ODE wrappers do not close these."
+    ],
+    "delivery_note": "The source-only GitHub mirror was fetched successfully and remains at 62816b7cb8090ba6f46132f2afbc36afc1e4c21e until this batch is pushed. The latest connector fetch of the production branch reported branch_not_found; no force-push, history rewrite, or PR is claimed."
+  },
+  "maintenance": {
+    "activity_snapshot": ".scratch/dashboard/activity.json",
+    "generated_files": [
+      "docs/CRITICAL_LRP_DASHBOARD.md",
+      "docs/CRITICAL_LRP_DASHBOARD.json",
+      "results/critical-lrp-dashboard.md",
+      "results/critical-lrp-dashboard.json"
+    ],
+    "update": [
+      "Refresh .scratch/dashboard/activity.json from Ultramath direction/report/verdict records.",
+      "Run the full validation suite and write current-validated-state.json with its source digest.",
+      "Refresh the connected GitHub mirror through the authorized connector before reading its tip.",
+      "From the production worktree, run python3 scripts/update_critical_lrp_dashboard.py.",
+      "Commit dashboard state with its corresponding proof/integration batch."
+    ]
+  }
+}

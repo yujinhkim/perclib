@@ -535,6 +535,14 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.Larg
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.Source.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.RegularVariation
+public import PercLib.CriticalLRP.Correlation.SixPoint.MixedK2.SixthMoment.Axioms
+public import PercLib.CriticalLRP.Analysis.GyrationMoments.Defs
+public import PercLib.CriticalLRP.Models.BinaryTree.CriticalPoint.Residual
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Defs
+public import PercLib.CriticalLRP.Orchestration.SourceFidelity.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerFlux.Discontinuity
+public import PercLib.CriticalLRP.Analysis.Case3Hydro
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.HDClosure.LargeDistance
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerContinuity.Defs
 
 set_option linter.unusedSectionVars false

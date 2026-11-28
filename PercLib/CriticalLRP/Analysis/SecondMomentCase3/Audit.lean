@@ -12,6 +12,10 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.Ta
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.AuditBridge
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerContinuity.Defs
+public import PercLib.CriticalLRP.Models.BinaryTree.CriticalPoint.Residual
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerFlux.Discontinuity
+public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.HDClosure.LargeDistance
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.HDClosure.Main
 public import PercLib.CriticalLRP.Orchestration.HDRegime.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.UniformCutoff.Defs
