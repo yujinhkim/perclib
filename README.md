@@ -166,6 +166,15 @@ are essential. Tail second-moment finiteness and the edge-exhausting family
 remain explicit; general I.4.15 and I.4.20 are not completed by these results.
 
 
+`SecondMomentCase3.CriticalVolumeTail.UniformCutoff` expresses the uncut
+critical-tail leaf as one radius-uniform cutoff tail, without constructing its
+constant. `I420Case3.HDClosure` uses HD(3) in the actual higher-moment
+interfaces, while `QZeroRepairAudit.Diagonal` proves the sharp diagonal
+covariance instance and not the off-diagonal bound. See [the dependency-closure
+note](docs/CRITICAL_LRP_HD_DEPENDENCY_CLOSURE.md). The independent
+[HD/HD+ regime audit](docs/CRITICAL_LRP_REGIME_AUDIT.md) records exact case
+boundaries and RV index algebra, not a critical HD(3) instantiation.
+
 No claim is made here that continuation-branch CI or every open source lemma
 has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired
