@@ -1,4 +1,12 @@
-# Case-1 tail: partial analytic scale calculation
+# Case-1 tail: the earlier partial analytic scale calculation
+
+**Superseded by the completed proof.** `Analysis/SecondMomentCase1/Capstone`
+now proves all regimes and the actual cutoff tail. `TailScale` is a thin
+compatibility re-export of that proof, not a duplicate partial module. See
+[the completed-tail note](CRITICAL_LRP_CASE1_SINGLE_CLUSTER_TAIL.md). The
+document below records the earlier partial checkpoint and its then-open gaps;
+those are not open obligations of the completed tail.
+
 
 `Analysis/SecondMomentCase1/TailScale` supplies two scale estimates and their
 Stirling/logarithm prerequisites for the single-cluster tail calculation. It

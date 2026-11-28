@@ -216,8 +216,10 @@ handling collapsed terminals. The bipartite-class/mass evaluation remains open.
 convergence from explicitly assumed all-order moment asymptotics; those
 moments are not supplied. See `docs/CRITICAL_LRP_MOMENT_CONVERGENCE.md`.
 `docs/CRITICAL_LRP_RANDOM_AMALGAM.md` records the self-determined random-family
-amalgamation and the still-general decision-tree gap, while
-`docs/CRITICAL_LRP_CASE1_TAIL_SCALE.md` records partial tail-scale analysis.
+amalgamation and the still-general decision-tree gap.
+`docs/CRITICAL_LRP_CASE1_SINGLE_CLUSTER_TAIL.md` records the subsequent complete
+proof of the single-cluster tail from finite first cutoff moments, and
+`docs/CRITICAL_LRP_CASE1_TAIL_SCALE.md` retains its less complete precursor.
 `Correlation/I411/RowSum` proves the I.4.11 summation step, including its
 countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
 keeps the two-copy numerator gap explicit as remaining work.

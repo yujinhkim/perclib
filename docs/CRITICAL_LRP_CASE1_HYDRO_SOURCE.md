@@ -1,5 +1,14 @@
 # Case 1: single-cluster tail to the hydrodynamic condition
 
+**Update:** `Analysis/SecondMomentCase1/Capstone` subsequently proves
+`SingleClusterTail` itself from finite first cutoff moments and the ordinary
+tree-moment bound. Its finite-moment and first-moment-asymptotic wrappers
+therefore remove the `SingleClusterTail` and `1 ≤ m` inputs of the original
+assembly. The [completed-tail note](CRITICAL_LRP_CASE1_SINGLE_CLUSTER_TAIL.md)
+records the remaining first-moment input. The text below describes the earlier
+conditional reduction and remains its historical/proof-scope record.
+
+
 `Analysis/SecondMomentCase1/Hydro` proves the Case-1 tail-to-median direction
 of Corollary I.4.14. It does not prove Proposition I.4.2 or the underlying
 single-cluster exponential tail.
