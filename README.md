@@ -207,7 +207,14 @@ now classified FULL; this does not claim an unconditional Hydro model theorem.
 I.2.15 from the named I.2.13 spatial-average hypothesis. The
 [median application note](docs/CRITICAL_LRP_APPLICATION_PACKETS.md) records
 those bounds and the single-branch exact evaluation, which is not a certified
-replacement cover for the sixth mixed moment.
+replacement cover for the sixth mixed moment. See also the
+[tail comparison note](docs/CRITICAL_LRP_TAIL_COMPARISON.md) for the exact
+external two-intensity and susceptibility inputs, and
+[the seven-point arm realization](docs/CRITICAL_LRP_APPLICATION_PACKETS.md)
+handling collapsed terminals. The bipartite-class/mass evaluation remains open.
+`Correlation/I411/RowSum` proves the I.4.11 summation step, including its
+countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
+keeps the two-copy numerator gap explicit as remaining work.
 
 The next integration batch adds exact sixfold Tonelli/slot computations and an
 explicit counterexample to the inadequate two-hub sixth-moment cover

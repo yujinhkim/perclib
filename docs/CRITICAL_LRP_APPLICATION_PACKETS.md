@@ -138,3 +138,33 @@ The separate `SixCoverOne` predicate is an explicit unverified premise, not a
 repaired cover. No global validity is asserted for it. No compiled
 single-branch counterexample was submitted. In particular, this does not close
 `CaseTwo.SixthMomentMixed`, Case 2, or the full labelled-tree/BK decomposition.
+
+## Further source-step packets
+
+`Analysis/SecondMomentCase3/CriticalVolumeTail/TwoIntensityComparison` derives
+the cited critical-tail envelope and Case-3 moment gap from a genuine
+`TwoIntensityTailComparison` and `SusceptibilityBound`. It preserves the actual
+source normalization and proves the $n\mapsto(\beta_c-n^{-1/2})$ optimization.
+The output constant is `max 1 (max (2/β_c) (2K+8AK/β_c))`. The two hypotheses
+and their canonical instantiation are not proved. The Case-3 consumer requires
+`cutMoment 2 r ≠ ⊤` for all $r \ge 1$, and supplies no other moment asymptotic.
+See [the tail comparison note](CRITICAL_LRP_TAIL_COMPARISON.md).
+The relative-entropy/decision-tree input remains open.
+
+`Correlation/SixPoint/SevenPoint` proves `exists_sevenShape`: on any countable
+simple graph with all seven terminals reachable from the root, it constructs
+one of 840 nine-arm edge-disjoint walk systems, including arbitrary collapsed
+tuples. The actual event-probability union bound follows. This avoids the hub
+collapse without claiming the bipartite-class mass estimate. Naive grouping
+would produce $\chi^6$ instead of $\chi^5$, so the actual mixed sixth moment
+remains unresolved.
+
+`Correlation/I411/RowSumCore` and `Correlation/I411/RowSum` formalize the
+summation step of I.4.11, in finite real and countable extended-real forms.
+Their declaration namespace is `PercLib.CriticalLRP.I411`, so all helper
+declarations are included by the production-wide axiom audit. Two row bounds
+give $\chi^2$ times the open-triangle sum, and the denominator normalization
+uses nonempty `B` and `χ > 0`. Equality holds when the row sum is exactly χ.
+A one-point Unit model attains it. The two-copy rewriting of the cluster
+numerator and the I.4.12 gap still remain necessary. See
+[the row-sum note](CRITICAL_LRP_I411_ROW_SUM.md).
