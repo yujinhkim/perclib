@@ -566,6 +566,7 @@ public import PercLib.CriticalLRP.Models.BinaryTree.CriticalPoint.Residual
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.SecondMoment.Lower
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.TwoIntensityComparison
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.CanonicalTail
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Bernoulli
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.Pinsker
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.Entropy.PerEdgeKL

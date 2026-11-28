@@ -121,6 +121,17 @@ sums, and the finite weighted-Bernoulli instantiation. The conditional inputs
 to that assembly are named `hKL` and `hRev`; cluster-event construction,
 revealment and infinite-volume convergence remain outside the completed step.
 
+## Canonical layer cake and finite-window limits (subsequent result)
+
+`CriticalVolumeTail/CanonicalTail` now discharges the infinite-susceptibility
+layer-cake input at `M.law β`, including the cutoff law. The extended-real tail
+sum and Markov bounds are unconditional; the real forms explicitly require
+`χ_β ≠ ⊤`. It also proves monotone finite-window tail and first-moment limits,
+and identifies `χ_β` with the two-point row sum. See
+[the canonical-tail note](CRITICAL_LRP_CANONICAL_TAIL.md) for the exact scope.
+This does not prove the remaining transcript/event/revealment inputs or
+`TwoIntensityTailComparison`.
+
 ## Finite exploration/revealment (subsequent result)
 
 The finite cluster-exploration bound is now proved in

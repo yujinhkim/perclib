@@ -26,7 +26,10 @@ term explicitly, so the interfaces are not vacuous.
 
 The theorem is finite-dimensional. It does not prove convergence of restricted
 explorations or revealment sums, compatibility of the source's infinite
-transcript space with this finite class outline, infinite susceptibility,
-or `TwoIntensityTailComparison`. The source's root-cluster computation and
+transcript space with this finite class outline, or
+`TwoIntensityTailComparison`; the separate canonical layer-cake and
+finite-window results are in
+[the canonical-tail note](CRITICAL_LRP_CANONICAL_TAIL.md). The source's
+root-cluster computation and
 weighted incidence assumptions must be established separately for the canonical
 infinite long-range model.

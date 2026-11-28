@@ -687,8 +687,11 @@ except the countable section, which lives on a countable type but still with hon
 The canonical long-range model of the source is a product measure `P_β` on `{0,1}^E` for a
 countable weighted graph `G = (V, E, J)`; production's interface is `SourceModelData`, whose
 `M.law β` is a probability measure on `Config M.V` and whose `M.lawTail β n` is
-`P_β(|K_0| ≥ n)`.  Exactly four external inputs are needed to pass from this file to
-`SourceModelData.TwoIntensityTailComparison A`, and none of them is proved here.
+`P_β(|K_0| ≥ n)`.  Four inputs were isolated here for the passage to
+`SourceModelData.TwoIntensityTailComparison A`.  The first three are not proved in this file.
+The sibling module `CriticalVolumeTail/CanonicalTail` has since discharged the fourth: its
+extended-nonnegative tail and Markov bounds are unconditional, while its real-valued forms state
+the necessary `lawSusceptibility β ≠ ⊤` hypothesis.
 
 1. *The transcript relative-entropy bound (3.7) of the source.*  Fix a decision tree `T` and
    `0 < β₁ ≤ β₂`, let `ω₁, ω₂` be sampled from `P_{β₁}, P_{β₂}`, let `T_1, T_2, …` be the queried
@@ -708,13 +711,15 @@ countable weighted graph `G = (V, E, J)`; production's interface is `SourceModel
    model has no cluster structure at all.
 3. *The revealment estimate.*  `∑_e J_e Rev_{β₁}(T,e) ≤ A ∑_{k ≤ n} P_{β₁}(|K_0| ≥ k)` with
    `A = ∑_{e ∈ E^→_o} J_e`; this is the hypothesis `hRev` above and is direction (C).
-4. *The layer-cake identity for the infinite susceptibility.*  Passing the truncated tail sum
+4. *The layer-cake identity for the infinite susceptibility — now supplied by `CanonicalTail`.*
+   Passing the truncated tail sum
    `∑_{k ≤ n} P_{β₁}(|K_0| ≥ k)` to `χ_{β₁} = E_{β₁}|K_0|` at the level of production's
    `ℝ≥0∞`-valued `lawSusceptibility` needs the layer-cake identity
    `E|K_0| = ∑_{k ≥ 1} P(|K_0| ≥ k)` for a `ℕ`-valued random variable on an infinite measure
-   space, together with summability of the tail series and `P(|K_0| ≥ n) ≤ χ/n`.  Only the finite
-   form (`sum_tailMass_eq_expect_min`, `sum_tailMass_le_expect`, `mul_tailMass_le_expect`) is
-   proved in this file.
+   space, together with summability of the tail series and `P(|K_0| ≥ n) ≤ χ/n`.
+   `CanonicalTail` proves these at `M.law β`, at the cutoff law, and for monotone finite-window
+   exhaustions.  The tail sum and Markov bounds given there, rather than the finite forms in this
+   file, are therefore the appropriate canonical-model ingredients.
 
 At the level of *paths* the step from relative entropy to the event bound is available in the form
 needed: `event_mass_le_of_kl_tsum` gives `P(X ∈ 𝒜) ≤ 2 P(Y ∈ 𝒜) + 8 κ` for any subset `𝒜` of a

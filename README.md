@@ -226,8 +226,10 @@ The [entropy core](docs/CRITICAL_LRP_ENTROPY_CORE.md) proves finite normalizatio
 log-sum, sharpened Pinsker inequalities, and the source's per-edge exponential
 KL estimate. Finite fresh-query transcript entropy and tail-assembly modules
 compose these ingredients while retaining their named probabilistic inputs.
-[Finite cluster-revealment](docs/CRITICAL_LRP_REVEALMENT.md) is also proved,
-but the infinite-volume comparison remains open.
+[Finite cluster-revealment](docs/CRITICAL_LRP_REVEALMENT.md) is also proved.
+The [canonical layer-cake package](docs/CRITICAL_LRP_CANONICAL_TAIL.md) now proves
+susceptibility/tail series, finite-window limits, and two-point row sums at the
+model law, but the infinite-volume comparison remains open.
 `Correlation/I411/RowSum` proves the I.4.11 summation step, including its
 countable extended-real form; its [row-sum note](docs/CRITICAL_LRP_I411_ROW_SUM.md)
 keeps the two-copy numerator gap explicit as remaining work.
