@@ -175,6 +175,16 @@ note](docs/CRITICAL_LRP_HD_DEPENDENCY_CLOSURE.md). The independent
 [HD/HD+ regime audit](docs/CRITICAL_LRP_REGIME_AUDIT.md) records exact case
 boundaries and RV index algebra, not a critical HD(3) instantiation.
 
+`TriangleFromHD.LargeDistance` makes the source's actual large-distance HD(3)
+input explicit and constructs a normalized-norm counterexample to its literal
+short-distance reading. `SecondMomentCase2.Source` proves the Case-2 error bound
+with its tightness constant, retaining the mixed sixth-moment inequality.
+`CornerContinuity` proves selected coefficient discontinuities and isolates the
+uniform window tail needed for the full continuity premise. See their notes:
+[large-distance HD(3)](docs/CRITICAL_LRP_HD3_LARGE_DISTANCE.md),
+[Case 2](docs/CRITICAL_LRP_CASE2_SOURCE.md), and
+[radial corners](docs/CRITICAL_LRP_RADIAL_CORNERS.md).
+
 No claim is made here that continuation-branch CI or every open source lemma
 has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired

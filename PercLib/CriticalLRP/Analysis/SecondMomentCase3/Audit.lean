@@ -9,6 +9,9 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.FiniteMoments.Main
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.I420Connect
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.TailRoute
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.AuditBridge
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerContinuity.Defs
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.HDClosure.Main
 public import PercLib.CriticalLRP.Orchestration.HDRegime.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.UniformCutoff.Defs

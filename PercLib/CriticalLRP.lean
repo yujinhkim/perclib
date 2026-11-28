@@ -531,6 +531,10 @@ public import PercLib.CriticalLRP.Correlation.I417.General.QZeroRepairAudit.Diag
 public import PercLib.CriticalLRP.VolumeMoments.HigherMoments.I420Case3.HDClosure.Main
 public import PercLib.CriticalLRP.Orchestration.HDRegime.Defs
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.UniformCutoff.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.AuditBridge
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.Audit
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.Source.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerContinuity.Defs
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedSimpArgs false

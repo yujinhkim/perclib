@@ -70,3 +70,19 @@ inputs are unchanged.
 tail from the literal HD(3) premise. This does not instantiate HD(3) itself.
 The other reductions and their exact limitations are collected in
 [the Case-3 reduction note](CRITICAL_LRP_CASE3_REDUCTIONS.md).
+
+
+## Corner-sensitive flux continuity
+
+`CornerContinuity` redirects the remaining radial-continuity investigation. The
+cutoff derivative coefficient vanishes on the left of an attained radius and is
+generically nonzero at and to its right, so it has a jump there. It is
+continuous away from attained radii under continuity of `deriv K`. The attained
+set is unbounded and countable.
+
+This does not prove that the whole summed flux is discontinuous. For the
+corrected corner-free and almost-everywhere continuity statements, continuity
+of each pivotal summand plus a locally summable dominator is sufficient. These
+remain explicit hypotheses. The monotone-window Dini reduction identifies the
+missing quantity as a radius-uniform window tail, not mere pointwise
+convergence. See [the corner note](CRITICAL_LRP_RADIAL_CORNERS.md).
