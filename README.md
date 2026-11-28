@@ -185,6 +185,12 @@ uniform window tail needed for the full continuity premise. See their notes:
 [Case 2](docs/CRITICAL_LRP_CASE2_SOURCE.md), and
 [radial corners](docs/CRITICAL_LRP_RADIAL_CORNERS.md).
 
+`SecondMomentCase2.RegularVariation` subsequently proves Case 2's regular
+variation of index 3α from its sixth-moment input and the radius identity,
+and distinguishes it from the positive limit requiring logarithmic error
+integrability. It also provides a scalar ODE example showing why regular
+variation alone does not imply a positive limiting constant.
+
 No claim is made here that continuation-branch CI or every open source lemma
 has passed. The current ledger records 19 FULL, 42 PARTIAL, and 14 NOT FORMALIZED numbered
 items. The change also corrects the former I.4.12 classification: the repaired

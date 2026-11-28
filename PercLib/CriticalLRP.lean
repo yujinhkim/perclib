@@ -534,6 +534,7 @@ public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.CriticalVolumeTail.
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.AuditBridge
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.TriangleFromHD.LargeDistance.Audit
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.Source.Defs
+public import PercLib.CriticalLRP.Analysis.SecondMomentCase2.RegularVariation
 public import PercLib.CriticalLRP.Analysis.SecondMomentCase3.RadialRegularity.CornerContinuity.Defs
 
 set_option linter.unusedSectionVars false
