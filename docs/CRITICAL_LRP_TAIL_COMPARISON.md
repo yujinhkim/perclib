@@ -121,6 +121,15 @@ sums, and the finite weighted-Bernoulli instantiation. The conditional inputs
 to that assembly are named `hKL` and `hRev`; cluster-event construction,
 revealment and infinite-volume convergence remain outside the completed step.
 
+## Finite exploration/revealment (subsequent result)
+
+The finite cluster-exploration bound is now proved in
+`Entropy/Revealment`, with exact stopping at `|K|∧n`. It supplies the
+geometric charging step and its normalized/incidence-weight forms. This uses
+actual product-Bernoulli revealment probabilities, not invented path weights.
+[The revealment note](CRITICAL_LRP_REVEALMENT.md) records the remaining
+finite-to-infinite convergence and source-model compatibility inputs.
+
 ## Finite log-sum and Pinsker ingredients
 
 See [the entropy note](CRITICAL_LRP_ENTROPY_CORE.md). The package proves the

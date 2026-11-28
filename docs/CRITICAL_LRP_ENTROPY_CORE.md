@@ -59,5 +59,6 @@ proves the exact finite tail-sum identity $E[\min(|K|,n)]
 the source's tail comparison from named transcript-entropy and revealment
 inputs. It supplies precisely the next interface for the remaining exploration
 proof. These results do **not** formalize the infinite transcript limit,
-cluster-computed-event construction, revealment, infinite susceptibility, or
-canonical two-intensity comparison.
+cluster-computed-event construction, infinite susceptibility, or canonical
+two-intensity comparison. The separate finite exploration/revealment theorem
+is documented in [the revealment note](CRITICAL_LRP_REVEALMENT.md).
